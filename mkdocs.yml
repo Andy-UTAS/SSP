@@ -2,6 +2,7 @@ site_name: Solid-state physics
 site_url: https://andy-utas.github.io/
 repo_url: https://github.com/Andy-UTAS/andy-utas.github.io
 repo_name:  andy-utas.github.io
+edit_uri: ""
 
 nav:
     - Home: index.md
@@ -26,10 +27,10 @@ nav:
     - '6: Semiconductors':
       - '6.1 - Semiconductors 101': 6-semiconductors/6-1-semiconductors.md
       - '6.2 - Doping and devices': 6-semiconductors/6-2-devices.md
-    - 'Solutions':
-      - 'Assignments': solutions/assignments.md
-      - 'Exercises': solutions/exercises.md
-      - 'Practice Exam': solutions/practice-exam.md
+    # - 'Solutions':
+    #  - 'Assignments': solutions/assignments.md
+    #  - 'Exercises': solutions/exercises.md
+    #  - 'Practice Exam': solutions/practice-exam.md
     # - '7: Magnetism':
     #   - 'Empty content': placeholder.md
     # - '8: Cool stuff':
@@ -65,7 +66,7 @@ theme:
   highlightjs: True
   icon:
     repo: fontawesome/brands/git-alt
-  # custom_dir: overrides # Initially here for banner usage, but this was not very good
+  custom_dir: overrides # Initially here for banner usage, but this was not very good
 
 plugins:
   - mkdocs-video

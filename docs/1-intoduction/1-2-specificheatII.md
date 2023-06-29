@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # The specific heat of solids II
 
 ## Introduction

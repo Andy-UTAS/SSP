@@ -2,7 +2,7 @@
 
 ## Administration
 
-The solid-state component of the course will run for seven weeks, beginning in week 7 and concluding at the end of semester. In previous years, the solid-state physics and semiconductor physics components of the course have been explicitly differentiated; however, in this iteration, the two will be more closely intertwined, with semiconductors being considered a flourish to the foundations that we shall construct during our adventures in describing matter.
+The solid-state component of the course will run for seven weeks, beginning in week 7 and concluding at the end of semester. In years gone by, the solid-state physics and semiconductor physics components of the course have been explicitly differentiated; however, in my teaching of the course, the two will be more closely intertwined, with semiconductors being considered a flourish to the foundations that we shall construct during our adventures in describing matter.
 
 !!! Danger "Prerequisite knowledge"
 
@@ -15,7 +15,7 @@ The solid-state component of the course will run for seven weeks, beginning in w
 
 ### Delivery of content
 
-The course will operate in a flipped-mode configuration, whereby the undergirding principle is that your out-of-class time is used to consume prepared content (e.g. _lectures_) and scheduled times are used for discussions in a problem-based learning framework. I prefer to refer to the lecture-style material as the _content download_, and interactive, active-learning sessions as the _content unpacking_ component.
+The course will operate in a flipped-mode configuration, whereby the undergirding principle is that your out-of-class time is used to consume prepared content (e.g. _lectures_) and scheduled times are used for applications of the prepared content, and discussions in a problem-based learning framework. I prefer to refer to the lecture-style material as the _content download_, and interactive, active-learning sessions as the _content unpacking_ component.
 
 ### Subject matter
 
@@ -60,9 +60,9 @@ The notes are designed to be consumed in concert to the video content, with cert
 
 #### The videos
 
-The video content is hosted on [Echo360](https://echo360.net.au/) and is available only to those enrolled at the University of Tasmania, and is best accessed through the course [MyLO page](https://mylo.utas.edu.au/d2l/le/content/463489/Home).
+The video content is hosted on [Echo360](https://echo360.net.au/) and is available only to those enrolled at the University of Tasmania, and is best accessed through the course [MyLO page](https://mylo.utas.edu.au/d2l/home/602930).
 
-??? abstract "_Content download_: table of contents"
+<!-- ??? abstract "_Content download_: table of contents"
 
     A brief summary of the topics discussed in the _content download_ sessions is shown below:
 
@@ -88,7 +88,7 @@ The video content is hosted on [Echo360](https://echo360.net.au/) and is availab
 
     !!! note "Timestamps"
 
-        Timestamps detailing the topics discussed for each video are available in the video descriptions.
+        Timestamps detailing the topics discussed for each video are available in the video descriptions. -->
 
 ---
 
