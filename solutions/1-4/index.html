@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://andy-utas.github.io/solutions/solutions/">
+        <link rel="canonical" href="https://andy-utas.github.io/solutions/1-4/">
       
       <link rel="icon" href="../../logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Solutions to exercises - Solid-state physics</title>
+        <title>Electrons in metals II - Solid-state physics</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#solutions-to-exercises" class="md-skip">
+        <a href="#electrons-in-metals-ii" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Solutions to exercises
+              Electrons in metals II
             
           </span>
         </div>
@@ -692,30 +692,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solutions-for-chemistry-101-exercises" class="md-nav__link">
-    Solutions for Chemistry 101 exercises
+  <a href="#exercises" class="md-nav__link">
+    Exercises
   </a>
   
-    <nav class="md-nav" aria-label="Solutions for Chemistry 101 exercises">
+    <nav class="md-nav" aria-label="Exercises">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exercise-1-shell-filling-model-of-atoms" class="md-nav__link">
-    Exercise 1: Shell-filling model of atoms
+  <a href="#preliminary-provocations" class="md-nav__link">
+    Preliminary provocations
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-2-application-of-the-lcao-model-to-the-delta-function-potential" class="md-nav__link">
-    Exercise 2: Application of the LCAO model to the delta-function potential
+  <a href="#exercise-1-potassium" class="md-nav__link">
+    Exercise 1: potassium
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-3-polarization-of-a-hydrogen-molecule" class="md-nav__link">
-    Exercise 3: Polarization of a hydrogen molecule
+  <a href="#exercise-2-a-hypothetical-material" class="md-nav__link">
+    Exercise 2: a hypothetical material
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-graphene" class="md-nav__link">
+    Exercise 3: graphene
   </a>
   
 </li>
@@ -741,116 +748,221 @@
                   
 
 
-<h1 id="solutions-to-exercises">Solutions to exercises<a class="headerlink" href="#solutions-to-exercises" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="solutions-for-chemistry-101-exercises">Solutions for <em>Chemistry 101</em> exercises<a class="headerlink" href="#solutions-for-chemistry-101-exercises" title="Permanent link">&para;</a></h2>
-<h3 id="exercise-1-shell-filling-model-of-atoms">Exercise 1: Shell-filling model of atoms<a class="headerlink" href="#exercise-1-shell-filling-model-of-atoms" title="Permanent link">&para;</a></h3>
+<h1 id="electrons-in-metals-ii">Electrons in metals II<a class="headerlink" href="#electrons-in-metals-ii" title="Permanent link">&para;</a></h1>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<h3 id="preliminary-provocations">Preliminary provocations<a class="headerlink" href="#preliminary-provocations" title="Permanent link">&para;</a></h3>
 <ol>
-<li>See lecture notes.</li>
-<li>The atomic number of Tungsten is 74:
-    <script type="math/tex; mode=display">
-    1\textrm{s}^2 2\textrm{s}^2 2\textrm{p}^6 3\textrm{s}^23p^64s^23d^{10}4p^65s^24d^{10}5p^66s^24f^{14}5d^4
-    </script>
-</li>
 <li>
+<p>Write down the expression for the total energy of particles with the density of states <script type="math/tex">g(\varepsilon)</script> and the occupation number <script type="math/tex">n_{F}(\beta(\varepsilon - \mu))</script>.</p>
 <p>
 <script type="math/tex; mode=display">
-    \begin{align}
-    \textrm{Cu} &= [\textrm{Ar}]4s^23d^9\\
-    \textrm{Pd} &= [\textrm{Kr}]5s^24d^8\\
-    \textrm{Ag} &= [\textrm{Kr}]5s^24d^9\\
-    \textrm{Au} &= [\textrm{Xe}]6s^24f^{14}5d^9
-    \end{align}
-    </script>
+E = \int \limits_0^{\infty} g(\varepsilon) n_{F}(\beta (\varepsilon - \mu)) \varepsilon \mathrm{d} \varepsilon
+</script>
 </p>
-<p>The wheels fall off as <script type="math/tex">V(\mathbf{r}) \ne 1/|r|</script>
+</li>
+<li>
+<p>Explain what happens if a material is heated up to its Fermi temperature (assuming that material where this is possible exists).</p>
+<p>The electronic heat capacity <script type="math/tex">C_e</script> approaches <script type="math/tex">3N k_B</script>.</p>
+</li>
+<li>
+<p>Why can we not use the Sommerfeld expansion with a Fermi energy of the order of the thermal energy?</p>
+<p>Thermal smearing is too significant and we can not accurately approximate the fraction of the excited electron with triangles anymore. Thus the Sommerfeld expansion breaks down.</p>
+</li>
+<li>
+<p>Is the heat capacity of a solid at temperatures near <script type="math/tex">T=0</script> dominated by electrons or vibrations?</p>
+<p>Electrons.</p>
+</li>
+</ol>
+<h3 id="exercise-1-potassium">Exercise 1: potassium<a class="headerlink" href="#exercise-1-potassium" title="Permanent link">&para;</a></h3>
+<p>The Sommerfeld model provides a good description of free electrons in alkali metals such as potassium (element K), which has a Fermi energy of <script type="math/tex">\varepsilon_{F} =  2.12</script> eV (data from Ashcroft, N. W. and Mermin, N. D., Solid State Physics, Saunders, 1976.).</p>
+<ol>
+<li>
+<p>Check the <a href="http://www.phys.ufl.edu/fermisurface/">Fermi surface database</a>. Explain why potassium and (most) other alkali metals can be described well with the Sommerfeld model.</p>
+<p>Alkali metals mostly have a spherical Fermi surface. Their energy depends only on the magnitude of the Fermi wavevector.</p>
+</li>
+<li>
+<p>Calculate the Fermi temperature, Fermi wave vector and Fermi velocity for potassium.</p>
+</li>
+<li>
+<p>Why is the Fermi temperature much higher than room temperature?</p>
+<p>Electrons are fermions and obey the Pauli exclusion principle. As electrons cannot occupy the same state, they are forced to occupy higher energy states resulting in high Fermi energy and high Fermi temperature.</p>
+</li>
+<li>
+<p>Calculate the free electron density <script type="math/tex">n</script> in potassium.</p>
+<p>
+<script type="math/tex; mode=display">
+n = \frac{N}{V} = \frac{1}{3 \pi^{2} \hbar^{3}}\left(2 m \varepsilon_{F}\right)^{3 / 2}
+</script>
+</p>
+</li>
+<li>
+<p>Compare this with the actual electron density of potassium, which can be calculated by using the density, atomic mass and atomic number of potassium. What can you conclude from this?</p>
+<p>
+<script type="math/tex; mode=display">
+n = \frac{\rho N_A Z}{M},
+</script>
+where <script type="math/tex">\rho</script> is the density, <script type="math/tex">N_A</script> is the Avogadro's constant, <script type="math/tex">M</script> is molar mass and <script type="math/tex">Z</script> is the valence of potassium atom.
+Comparing total and free electron density, only few electrons are available for conduction which is roughly 1 free electron per potassium atom.</p>
+</li>
+</ol>
+<h3 id="exercise-2-a-hypothetical-material">Exercise 2: a hypothetical material<a class="headerlink" href="#exercise-2-a-hypothetical-material" title="Permanent link">&para;</a></h3>
+<p>A hypothetical metal has a Fermi energy <script type="math/tex">\varepsilon_F = 5.2 \, \mathrm{eV}</script> and a density of states <script type="math/tex">g(\varepsilon) =  2 \times 10^{10} \, \mathrm{eV}^{-\frac{3}{2}} \sqrt{\varepsilon}</script>.</p>
+<ol>
+<li>
+<p>Give an integral expression for the total energy of the electrons in this hypothetical material in terms of the density of states <script type="math/tex">g(\varepsilon)</script>, the temperature <script type="math/tex">T</script> and the chemical potential <script type="math/tex">\mu = \varepsilon_F</script>.</p>
+<p>
+<script type="math/tex; mode=display">
+E = \int_{0}^{\infty}\varepsilon g(\varepsilon) n_{F}(\beta (\varepsilon - \mu)) \textrm{d} \varepsilon = 2.10^{10}eV^{-\frac{3}{2}}      \int_{0}^{\infty}\frac{\varepsilon^{\frac{3}{2}}}{e^\frac{\varepsilon-5.2}{k_BT}+1} \textrm{d} \varepsilon
+</script>
+</p>
+</li>
+<li>
+<p>Find the ground state energy at <script type="math/tex">T = 0</script>.</p>
+<p>
+<script type="math/tex; mode=display">
+E = \frac{4}{5} (5.2)^{\frac{5}{2}} 10^{10} eV
+</script>
+</p>
+</li>
+<li>
+<p>In order to obtain a good approximation of the integral for non-zero <script type="math/tex">T</script>, one can make use of the <a href="https://en.wikipedia.org/wiki/Sommerfeld_expansion">Sommerfeld expansion</a> (the first equation is all you need and you can neglect the <script type="math/tex">O\left(\frac{1}{\beta \mu}\right)^{4}</script> term).
+Using this expansion, find the difference between the total energy of the electrons for <script type="math/tex">T = 1000 \, \mathrm{K}</script> with that of the ground state.</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{align}
+E(T)-E(T=0) &= \frac{\pi^2}{6}(k_B T)^2\frac{\partial}{\partial \varepsilon}\left(\varepsilon g(\varepsilon)\right)\bigg|_{\varepsilon=\varepsilon _F}\\
+&\approx 8.356 10^8 eV
+\end{align}
+</script>
+</p>
+</li>
+<li>
+<p>Now, find this difference in energy by calculating the integral found in 1 numerically. Compare your result with 3.</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>You can do numerical integration in python with <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html"><code>scipy.integrate.quad(func, xmin, xmax)</code></a></p>
+</details>
+</li>
+<li>
+<p>Calculate the heat capacity for <script type="math/tex">T = 1000 \, \mathrm{K}</script> in eV/K.</p>
+<p>
+<script type="math/tex">C_v = 1.6713.10^6 eV/K</script>
+</p>
+</li>
+<li>
+<p>Numerically compute the heat capacity by approximating the derivative of energy difference found in 4 with respect to <script type="math/tex">T</script>. To this end, make use of the fact that <script type="math/tex; mode=display">\frac{dy}{dx}=\lim_{\Delta x \to 0} \frac{y(x + \Delta x) - y(x - \Delta x)}{2 \Delta x}.</script> Compare your result with 5.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">mu</span> <span class="o">=</span> <span class="mf">5.2</span>
+<span class="n">kB</span> <span class="o">=</span> <span class="mf">8.617343e-5</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1">#kelvin</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">integrate</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">seterr</span><span class="p">(</span><span class="n">over</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Fermi-Dirac distribution</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="n">E</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">kB</span><span class="o">*</span><span class="n">T</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Density of states</span>
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">E</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">2e10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+
+<span class="c1">#integration function</span>
+<span class="k">def</span> <span class="nf">integral</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="n">g</span><span class="p">(</span><span class="n">E</span><span class="p">)</span><span class="o">*</span><span class="n">E</span>
+
+<span class="c1">## Solve integral numerically using scipy&#39;s integrate</span>
+<span class="n">dE</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="n">integral</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">T</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.8e10</span> <span class="o">*</span> <span class="mf">5.2</span><span class="o">**</span><span class="p">(</span><span class="mf">5.</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">dT</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">dEplus</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="n">integral</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">T</span><span class="o">+</span><span class="n">dT</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.8e10</span> <span class="o">*</span> <span class="mf">5.2</span><span class="o">**</span><span class="p">(</span><span class="mf">5.</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">dEmin</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="n">integral</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">T</span><span class="o">-</span><span class="n">dT</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.8e10</span> <span class="o">*</span> <span class="mf">5.2</span><span class="o">**</span><span class="p">(</span><span class="mf">5.</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">CV</span> <span class="o">=</span> <span class="p">(</span><span class="n">dEplus</span> <span class="o">-</span> <span class="n">dEmin</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">dT</span><span class="p">);</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dE = </span><span class="si">{</span><span class="n">dE</span><span class="si">:</span><span class="s1">.4e</span><span class="si">}</span><span class="s1"> eV&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Cv = </span><span class="si">{</span><span class="n">CV</span><span class="si">:</span><span class="s1">.4e</span><span class="si">}</span><span class="s1"> eV/K&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="exercise-3-graphene">Exercise 3: graphene<a class="headerlink" href="#exercise-3-graphene" title="Permanent link">&para;</a></h3>
+<p>One of the most famous recently discovered materials is <a href="https://en.wikipedia.org/wiki/Graphene">graphene</a>. It consists of carbon atoms arranged in a 2D honeycomb structure.
+In this exercise, we will focus on the electrons in bulk graphene. Unlike in metals, electrons in graphene cannot be treated as 'free'.
+However, close to the Fermi level, the dispersion relation can be approximated by a linear relation:
+<script type="math/tex"> \varepsilon(\mathbf{k}) = \pm c|\mathbf{k}|.</script> Note that the <script type="math/tex">\pm</script> here means that there are two energy levels at a specified <script type="math/tex">\mathbf{k}</script>.
+The Fermi level is set at <script type="math/tex">\varepsilon_F = 0</script>.</p>
+<ol>
+<li>
+<p>Make a sketch of the dispersion relation. What other well-known particles have a linear dispersion relation?</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">((</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span>
+
+<span class="c1"># Eliminate upper and right axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mid \vec k \mid$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\varepsilon$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_coords</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_label_coords</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.49</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Using the dispersion relation and assuming periodic boundary conditions, derive an expression for the density of states of graphene.
+Do not forget spin degeneracy, and take into account that graphene has an additional two-fold 'valley degeneracy' (hence there is a total of a fourfold degeneracy instead of two).
+Your result should be linear with <script type="math/tex">|\varepsilon|</script>.</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>It is convenient to first start by only considering the positive energy contributions <script type="math/tex">\varepsilon(\mathbf{k}) = + c|\mathbf{k}|</script> and calculate the density of states for it. Then account for the negative energy contributions <script type="math/tex">\varepsilon(\mathbf{k}) = - c|\mathbf{k}|</script> by adding it to the density of states for the positive energies. You can also make use of <script type="math/tex">\frac{\rm{d} |k|}{\rm{d}k} = \frac{k}{|k|}</script>.</p>
+</details>
+<p>
+<script type="math/tex; mode=display">
+ g(\varepsilon) = 2_s 2_v 2 \pi \left(\frac{L}{2 \pi}\right)^2 \frac{\varepsilon}{c^2},
+ </script>
+ where <script type="math/tex">2_s</script> is the spin degeneracy and <script type="math/tex">2_v</script> is the valley degeneracy.
+ If we account for the negative energies as well, we obtain
+ <script type="math/tex; mode=display">
+ g(\varepsilon) = 2_s 2_v 2 \pi \left(\frac{L}{2 \pi}\right)^2 \frac{|\varepsilon|}{c^2}.
+ </script>
+</p>
+</li>
+<li>
+<p>At finite temperatures, assume that electrons close to the Fermi level (i.e. not more than <script type="math/tex">k_B T</script> below the Fermi level) will get thermally excited, thereby increasing their energy by <script type="math/tex">k_B T</script>. Calculate the difference between the energy of the thermally excited state and that of the ground state <script type="math/tex">E(T)-E_0</script>. To do so, show first that the number of electrons that will get excited is given by <script type="math/tex; mode=display">n_{ex} = \frac{1}{2} g(-k_B T) k_B T.</script>
+</p>
+<p>
+<script type="math/tex">g(\varepsilon)</script> vs <script type="math/tex">\varepsilon</script> is a linear plot. Here, the region marked by <script type="math/tex">-k_B T</script> is a triangle whose area gives the number of electrons that can be excited:
+<script type="math/tex; mode=display">
+\begin{align}
+n_{ex} &= \frac{1}{2} g(-k_B T) k_B T\\
+&= \frac{L^2 k_B^2T^2}{\pi c^2}.
+\end{align}
+</script>
+From this it follows that the energy difference is given by
+<script type="math/tex; mode=display">
+E(T) - E_0 = \frac{L^2 k_B^3T^3}{\pi c^2}.
+</script>
+</p>
+</li>
+<li>
+<p>Calculate the heat capacity <script type="math/tex">C_e</script> as a function of the temperature <script type="math/tex">T</script>.</p>
+<p>
+<script type="math/tex; mode=display">
+C_v(T) = \frac{\partial E}{\partial T} = \frac{3L^2k_B^3T^2}{\pi c^2}
+</script>
 </p>
 </li>
 </ol>
-<h3 id="exercise-2-application-of-the-lcao-model-to-the-delta-function-potential">Exercise 2: Application of the LCAO model to the delta-function potential<a class="headerlink" href="#exercise-2-application-of-the-lcao-model-to-the-delta-function-potential" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>
-<script type="math/tex; mode=display">
-      \psi(x) =
-      \begin{cases}
-          &\sqrt{κ}e^{κ(x-x_1)}, x<x_1\\
-          &\sqrt{κ}e^{-κ(x-x_1)}, x>x_1
-      \end{cases}
-  </script>
-      Where <script type="math/tex">κ = \sqrt{\frac{-2mE}{ħ^2}} = \frac{mV_0}{ħ^2}</script>.
-      The energy is given by <script type="math/tex">ϵ_1 = ϵ_2 = -\frac{mV_0^2}{2ħ^2}</script>
-      The wave function of a single delta peak is given by
-      <script type="math/tex; mode=display">
-        \psi_1(x) = \frac{\sqrt{mV_0}}{ħ}e^{-\frac{mV_0}{ħ^2}|x-x_1|}
-      </script>
-<script type="math/tex">\psi_2(x)</script> can be found by replacing <script type="math/tex">x_1</script> by <script type="math/tex">x_2</script>
-</p>
-</li>
-<li>
-<p>
-<script type="math/tex; mode=display">
-      H = -\frac{mV_0^2}{ħ^2}\begin{pmatrix}
-          1/2+\exp(-\frac{2mV_0}{ħ^2}|x_2-x_1|) &
-          \exp(-\frac{mV_0}{ħ^2}|x_2-x_1|)\\
-          \exp(-\frac{mV_0}{ħ^2}|x_2-x_1|) &
-          1/2+\exp(-\frac{2mV_0}{ħ^2}|x_2-x_1|)
-      \end{pmatrix}
-    </script>
-</p>
-</li>
-<li>
-<p>
-<script type="math/tex; mode=display">
-      ϵ_{\pm} = \beta(1/2+\exp(-2\alpha) \pm \exp(-\alpha))
-     </script>
-     Where <script type="math/tex">\beta = -\frac{mV_0^2}{ħ^2}</script> and <script type="math/tex">α = \frac{mV_0}{ħ^2}|x_2-x_1|</script>
-</p>
-</li>
-</ol>
-<h3 id="exercise-3-polarization-of-a-hydrogen-molecule">Exercise 3: Polarization of a hydrogen molecule<a class="headerlink" href="#exercise-3-polarization-of-a-hydrogen-molecule" title="Permanent link">&para;</a></h3>
-<p>1.</p>
-<p>
-<script type="math/tex; mode=display">
-      H_{\mathcal{E}} = ex\mathcal{E},
-  </script>
-</p>
-<p>2.
-  <script type="math/tex; mode=display">
-      \hat{H} = \begin{pmatrix}
-      E_0  & -t\\
-      -t & E_0
-      \end{pmatrix} +\begin{pmatrix}
-      ⟨1|ex\mathcal{E}|1⟩ & ⟨1|ex\mathcal{E}|2⟩\\
-      ⟨2|ex\mathcal{E}|1⟩ & ⟨2|ex\mathcal{E}|2⟩
-      \end{pmatrix} = \begin{pmatrix}
-      E_0 - \gamma & -t\\
-      -t & E_0 + \gamma
-      \end{pmatrix},
-  </script>
-  where <script type="math/tex">\gamma = e d \mathcal{E}/2</script> and have used <script type="math/tex; mode=display">⟨1|ex\mathcal{E}|1⟩ = -e d \mathcal{E}/2⟨1|1⟩ = -e d \mathcal{E}/2</script>
-</p>
-<p>3.</p>
-<p>The eigenstates of the Hamiltonian are given by:
-  <script type="math/tex; mode=display">
-      E_{\pm} = E_0\pm\sqrt{t^2+\gamma^2}
-  </script>
-  The ground state wave function is:
-  <script type="math/tex; mode=display">
-      \begin{split}
-          |\psi⟩ &= \frac{t}{\sqrt{(\gamma+\sqrt{\gamma^2+t^2})^2+t^2}}\begin{pmatrix}
-          \frac{\gamma+\sqrt{t^2+\gamma^2}}{t}\\
-          1
-          \end{pmatrix}\\
-          |\psi⟩ &= \frac{\gamma+\sqrt{t^2+\gamma^2}}{\sqrt{(\gamma+\sqrt{\gamma^2+t^2})^2+t^2}}|1⟩+\frac{t}{\sqrt{(\gamma+\sqrt{\gamma^2+t^2})^2+t^2}}|2⟩
-      \end{split}
-  </script>
-</p>
-<p>4.
-  <script type="math/tex; mode=display">
-      P = -\frac{2\gamma^2}{\mathcal{E}}(\frac{1}{\sqrt{\gamma^2+t^2}})
-  </script>
-</p>
 
   <hr>
 <div class="md-source-file">

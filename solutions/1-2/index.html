@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://andy-utas.github.io/solutions/solutions/">
+        <link rel="canonical" href="https://andy-utas.github.io/solutions/1-2/">
       
       <link rel="icon" href="../../logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Solutions to exercises - Solid-state physics</title>
+        <title>The specific heat of solids I - Solid-state physics</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#solutions-to-exercises" class="md-skip">
+        <a href="#the-specific-heat-of-solids-i" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Solutions to exercises
+              The specific heat of solids I
             
           </span>
         </div>
@@ -692,30 +692,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solutions-for-chemistry-101-exercises" class="md-nav__link">
-    Solutions for Chemistry 101 exercises
+  <a href="#exercises" class="md-nav__link">
+    Exercises
   </a>
   
-    <nav class="md-nav" aria-label="Solutions for Chemistry 101 exercises">
+    <nav class="md-nav" aria-label="Exercises">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exercise-1-shell-filling-model-of-atoms" class="md-nav__link">
-    Exercise 1: Shell-filling model of atoms
+  <a href="#preliminary-provocations" class="md-nav__link">
+    Preliminary provocations
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-2-application-of-the-lcao-model-to-the-delta-function-potential" class="md-nav__link">
-    Exercise 2: Application of the LCAO model to the delta-function potential
+  <a href="#exercise-1-debye-model-concepts" class="md-nav__link">
+    Exercise 1: Debye model - concepts
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-3-polarization-of-a-hydrogen-molecule" class="md-nav__link">
-    Exercise 3: Polarization of a hydrogen molecule
+  <a href="#exercise-2-debye-model-in-2d" class="md-nav__link">
+    Exercise 2: Debye model in 2D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-different-oscillation-modes" class="md-nav__link">
+    Exercise 3: Different oscillation modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-anisotropic-sound-velocities" class="md-nav__link">
+    Exercise 4: Anisotropic sound velocities
   </a>
   
 </li>
@@ -741,116 +755,157 @@
                   
 
 
-<h1 id="solutions-to-exercises">Solutions to exercises<a class="headerlink" href="#solutions-to-exercises" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="solutions-for-chemistry-101-exercises">Solutions for <em>Chemistry 101</em> exercises<a class="headerlink" href="#solutions-for-chemistry-101-exercises" title="Permanent link">&para;</a></h2>
-<h3 id="exercise-1-shell-filling-model-of-atoms">Exercise 1: Shell-filling model of atoms<a class="headerlink" href="#exercise-1-shell-filling-model-of-atoms" title="Permanent link">&para;</a></h3>
+<h1 id="the-specific-heat-of-solids-i">The specific heat of solids I<a class="headerlink" href="#the-specific-heat-of-solids-i" title="Permanent link">&para;</a></h1>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<h3 id="preliminary-provocations">Preliminary provocations<a class="headerlink" href="#preliminary-provocations" title="Permanent link">&para;</a></h3>
 <ol>
-<li>See lecture notes.</li>
-<li>The atomic number of Tungsten is 74:
-    <script type="math/tex; mode=display">
-    1\textrm{s}^2 2\textrm{s}^2 2\textrm{p}^6 3\textrm{s}^23p^64s^23d^{10}4p^65s^24d^{10}5p^66s^24f^{14}5d^4
-    </script>
+<li>
+<p>Why are there only 3 polarizations when there are 6 degrees of freedom in three-dimensions for an oscillator?</p>
+<p>The polarization is related to the direction of the amplitudes of the waves with respect to the direction of the wave. In 3D, there are only 3 different amplitude directions possible.</p>
 </li>
 <li>
-<p>
+<p>Express the two-dimensional integral <script type="math/tex">\int\mathrm{d}k_x\mathrm{d}k_y</script> in terms of polar coordinates. You can assume rotational symmetry.</p>
+<p>One can convert the integral as follows:
 <script type="math/tex; mode=display">
-    \begin{align}
-    \textrm{Cu} &= [\textrm{Ar}]4s^23d^9\\
-    \textrm{Pd} &= [\textrm{Kr}]5s^24d^8\\
-    \textrm{Ag} &= [\textrm{Kr}]5s^24d^9\\
-    \textrm{Au} &= [\textrm{Xe}]6s^24f^{14}5d^9
-    \end{align}
-    </script>
+\int k_x k_y \rightarrow \int_{0}^{2\pi} \mathrm{d} \theta \int_{0}^{\infty} k \mathrm{d} k = 2\pi \int_{0}^{\infty} k \mathrm{d} k
+</script>
 </p>
-<p>The wheels fall off as <script type="math/tex">V(\mathbf{r}) \ne 1/|r|</script>
+</li>
+<li>
+<p>The Einstein model has a material-dependent frequency <script type="math/tex">\omega_0 = k_\mathrm{B} T_E/\hbar</script> of the quantum harmonic oscillators as a free fitting parameter.
+What is the material-dependent parameter that plays a similar role in the Debye model?</p>
+<p>The Debye frequency <script type="math/tex">\omega_d</script>.</p>
+</li>
+<li>
+<p>Derive an expression for the shortest possible wavelength in the Debye model it in terms of the interatomic distance <script type="math/tex">a</script>. Hint: assume that the number of atoms is given by <script type="math/tex">N=V/a^3</script>. Discuss if the answer is reasonable.</p>
+<p>From the definition of the Debye frequency, one can calculate that the wavelength is of the order of the interatomic spacing:
+<script type="math/tex; mode=display">
+\lambda = \left(\frac{4}{3}\pi\right)^{1/3} a.
+</script>
 </p>
 </li>
 </ol>
-<h3 id="exercise-2-application-of-the-lcao-model-to-the-delta-function-potential">Exercise 2: Application of the LCAO model to the delta-function potential<a class="headerlink" href="#exercise-2-application-of-the-lcao-model-to-the-delta-function-potential" title="Permanent link">&para;</a></h3>
+<h3 id="exercise-1-debye-model-concepts">Exercise 1: Debye model - concepts<a class="headerlink" href="#exercise-1-debye-model-concepts" title="Permanent link">&para;</a></h3>
+<p>Consider the probability to find an atom of a 1D solid that originally had a position <script type="math/tex">x</script> at a displacement <script type="math/tex">\delta x</script> shown below:</p>
+<p><img alt="" src="../../1-intoduction/images/02_Debye_ex1.svg" /></p>
 <ol>
 <li>
+<p>Describe which <script type="math/tex">k</script>-states are occupied. Explain your answer.</p>
+<p>It is clear that <script type="math/tex">n=4</script>, and thus <script type="math/tex">k = \frac{2 \pi n}{L} = \pm \frac{4\pi}{L}</script>.</p>
+</li>
+<li>
+<p>Describe the concept of <script type="math/tex">k</script>-space. What momenta are allowed in a 2D system with dimensions <script type="math/tex">L\times L</script>?</p>
+<p>
+<script type="math/tex">k</script> space is the space of possible momentum states. In 2 dimensions, a period system with dimensions <script type="math/tex">L\times L</script> will have allowed states</p>
 <p>
 <script type="math/tex; mode=display">
-      \psi(x) =
-      \begin{cases}
-          &\sqrt{κ}e^{κ(x-x_1)}, x<x_1\\
-          &\sqrt{κ}e^{-κ(x-x_1)}, x>x_1
-      \end{cases}
+  k_{x,y} = \frac{2\pi}{L} n_{x,y}
   </script>
-      Where <script type="math/tex">κ = \sqrt{\frac{-2mE}{ħ^2}} = \frac{mV_0}{ħ^2}</script>.
-      The energy is given by <script type="math/tex">ϵ_1 = ϵ_2 = -\frac{mV_0^2}{2ħ^2}</script>
-      The wave function of a single delta peak is given by
-      <script type="math/tex; mode=display">
-        \psi_1(x) = \frac{\sqrt{mV_0}}{ħ}e^{-\frac{mV_0}{ħ^2}|x-x_1|}
-      </script>
-<script type="math/tex">\psi_2(x)</script> can be found by replacing <script type="math/tex">x_1</script> by <script type="math/tex">x_2</script>
 </p>
 </li>
 <li>
-<p>
-<script type="math/tex; mode=display">
-      H = -\frac{mV_0^2}{ħ^2}\begin{pmatrix}
-          1/2+\exp(-\frac{2mV_0}{ħ^2}|x_2-x_1|) &
-          \exp(-\frac{mV_0}{ħ^2}|x_2-x_1|)\\
-          \exp(-\frac{mV_0}{ħ^2}|x_2-x_1|) &
-          1/2+\exp(-\frac{2mV_0}{ħ^2}|x_2-x_1|)
-      \end{pmatrix}
-    </script>
-</p>
+<p>Explain the concept of density of states.</p>
+<p>The density of states <script type="math/tex">g(\omega)</script> is the number of states per frequency</p>
 </li>
 <li>
+<p>Calculate the density of states <script type="math/tex">g(\omega)</script> for oscillations of a 3D, 2D and 1D solid with linear dispersion <script type="math/tex">\omega=v_s|\mathbf{k}|</script>.</p>
 <p>
 <script type="math/tex; mode=display">
-      ϵ_{\pm} = \beta(1/2+\exp(-2\alpha) \pm \exp(-\alpha))
-     </script>
-     Where <script type="math/tex">\beta = -\frac{mV_0^2}{ħ^2}</script> and <script type="math/tex">α = \frac{mV_0}{ħ^2}|x_2-x_1|</script>
+  g(\omega) = \frac{dN}{d\omega} = \frac{dN}{dk}\frac{dk}{d\omega} = \frac{1}{v}\frac{dN}{dk}.
+  </script>
 </p>
+<p>We assume that in <script type="math/tex">d</script> dimensions there are <script type="math/tex">d</script> polarizations.</p>
+<p>For 1D we have that <script type="math/tex">N = \frac{L}{2\pi}\int_{-k}^{k} dk</script>, hence <script type="math/tex">g(\omega) = \frac{L}{\pi v}</script>.</p>
+<p>For 2D we have that <script type="math/tex">N = 2\left(\frac{L}{2\pi}\right)^2\int d^2k = 2\left(\frac{L}{2\pi}\right)^2\int 2\pi kdk</script>, hence <script type="math/tex">g(\omega) = \frac{L^2\omega}{\pi v^2}</script>.</p>
+<p>For 3D we have that <script type="math/tex">N = 3\left(\frac{L}{2\pi}\right)^3\int d^3k = 3\left(\frac{L}{2\pi}\right)^3\int 4\pi k^2dk</script>, hence <script type="math/tex">g(\omega) = \frac{3L^3\omega^2}{2\pi^2v^3}</script>.</p>
 </li>
 </ol>
-<h3 id="exercise-3-polarization-of-a-hydrogen-molecule">Exercise 3: Polarization of a hydrogen molecule<a class="headerlink" href="#exercise-3-polarization-of-a-hydrogen-molecule" title="Permanent link">&para;</a></h3>
-<p>1.</p>
+<h3 id="exercise-2-debye-model-in-2d">Exercise 2: Debye model in 2D<a class="headerlink" href="#exercise-2-debye-model-in-2d" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>State the assumptions of the Debye model.</p>
+<p>The Debye model treats oscillations as sound waves with no fitting parameters</p>
+<ul>
+<li>
+<script type="math/tex">\omega = v|k|</script> similar to light (but with 3 polarisations)</li>
+<li>Quantisation of waves similar to Planck quantisation of light</li>
+<li>Maximum cut-off frequency which is necessary to obtain total of <script type="math/tex">3N</script> degrees of freedom</li>
+</ul>
+</li>
+<li>
+<p>Determine the energy of a two-dimensional solid as a function of <script type="math/tex">T</script> using the Debye approximation. You do not have to solve the integral.</p>
 <p>
 <script type="math/tex; mode=display">
-      H_{\mathcal{E}} = ex\mathcal{E},
-  </script>
+\begin{align}
+E &= \int_{0}^{\omega_D}g(\omega)\hbar\omega\left(\frac{1}{e^{\beta\hbar\omega} - 1} + \frac{1}{2}\right)d\omega \\
+&= \frac{L^2}{\pi v^2\hbar^2\beta^3}\int_{0}^{\beta\hbar\omega_D}\frac{x^2}{e^{x} - 1}dx + C.
+\end{align}
+</script>
 </p>
-<p>2.
-  <script type="math/tex; mode=display">
-      \hat{H} = \begin{pmatrix}
-      E_0  & -t\\
-      -t & E_0
-      \end{pmatrix} +\begin{pmatrix}
-      ⟨1|ex\mathcal{E}|1⟩ & ⟨1|ex\mathcal{E}|2⟩\\
-      ⟨2|ex\mathcal{E}|1⟩ & ⟨2|ex\mathcal{E}|2⟩
-      \end{pmatrix} = \begin{pmatrix}
-      E_0 - \gamma & -t\\
-      -t & E_0 + \gamma
-      \end{pmatrix},
-  </script>
-  where <script type="math/tex">\gamma = e d \mathcal{E}/2</script> and have used <script type="math/tex; mode=display">⟨1|ex\mathcal{E}|1⟩ = -e d \mathcal{E}/2⟨1|1⟩ = -e d \mathcal{E}/2</script>
+</li>
+<li>
+<p>Calculate the heat capacity in the high <script type="math/tex">T</script> limit.</p>
+<p>High temperature implies <script type="math/tex">\beta \rightarrow 0</script>, hence <script type="math/tex">E = \frac{L^2}{\pi v^2\hbar^2\beta^3}\frac{(\beta\hbar\omega_D)^2}{2} + C</script>, and then <script type="math/tex">C = \frac{k_BL^2\omega^2_D}{2\pi v^2} = 2Nk_B</script>. We've used the value for <script type="math/tex">\omega_D</script> calculated from <script type="math/tex">2N = \int_{0}^{\omega_D}g(\omega)d\omega</script>.</p>
+</li>
+<li>
+<p>At low <script type="math/tex">T</script>, show that <script type="math/tex">C_V=KT^{n}</script>. Find <script type="math/tex">n</script>. Express <script type="math/tex">K</script> as an indefinite integral.</p>
+<p>In the low temperature limit we have that <script type="math/tex">\beta \rightarrow \infty</script>, hence <script type="math/tex">E \approx \frac{L^2}{\pi v^2\hbar^2\beta^3}\int_{0}^{\infty}\frac{x^2}{e^{x} - 1}dx + C = \frac{2\zeta(3)L^2}{\pi v^2\hbar^2\beta^3} + C</script>. Finally <script type="math/tex">C = \frac{6\zeta(3)k^3_BL^2}{\pi v^2\hbar^2}T^2</script>. We used the fact that <script type="math/tex">\int_{0}^{\infty}\frac{x^2}{e^{x} - 1}dx = 2\zeta(3)</script> where <script type="math/tex">\zeta</script> is the Riemann zeta function.</p>
+</li>
+</ol>
+<h3 id="exercise-3-different-oscillation-modes">Exercise 3: Different oscillation modes<a class="headerlink" href="#exercise-3-different-oscillation-modes" title="Permanent link">&para;</a></h3>
+<p><em>(adapted from exercise 2.6a of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a>)</em></p>
+<p>During the lecture we derived the low-temperature heat capacity assuming that all the modes of oscillation have the same sound velocity <script type="math/tex">v</script>. In reality, the longitudinal and transverse modes have different sound velocities (see <a href="https://en.wikipedia.org/wiki/Sound#Longitudinal_and_transverse_waves">Wikipedia</a> for an illustration of different sound wave types).</p>
+<p>Assume that there are two types of excitations:</p>
+<ul>
+<li>One longitudinal mode with <script type="math/tex">\omega = v_\parallel |k|</script>
+</li>
+<li>Two transverse modes with <script type="math/tex">\omega = v_\bot |k|</script>
+</li>
+</ul>
+<!-- Separate a bullet list from enumeration; fixes a markdown rendering bug -->
+<ol>
+<li>
+<p>Write down the total energy of oscillations in this material.</p>
+<p>
+<script type="math/tex; mode=display">
+g(\omega) = \sum_{\text{polarizations}}\frac{dN}{dk}\frac{dk}{d\omega} = \left(\frac{L}{2\pi}\right)^3\sum_{\text{polarizations}}4\pi k^2\frac{dk}{d\omega} =     \frac{L^3}{2\pi^2}\left(\frac{2}{v_\perp^3} + \frac{1}{v_\parallel^3}\right)\omega^2
+</script>
+<script type="math/tex; mode=display">
+E = \int_{0}^{\omega_D}g(\omega)\hbar\omega\left(\frac{1}{e^{\beta\hbar\omega} - 1} + \frac{1}{2}\right)d\omega = \frac{L^3}{2\pi^2\hbar^3\beta^4}\left(\frac{2}{v_\perp^3} +     \frac{1}{v_\parallel^3}\right)\int_{0}^{\beta\hbar\omega_D}\frac{x^3}{e^{x} - 1}dx + C.
+</script>
 </p>
-<p>3.</p>
-<p>The eigenstates of the Hamiltonian are given by:
-  <script type="math/tex; mode=display">
-      E_{\pm} = E_0\pm\sqrt{t^2+\gamma^2}
-  </script>
-  The ground state wave function is:
-  <script type="math/tex; mode=display">
-      \begin{split}
-          |\psi⟩ &= \frac{t}{\sqrt{(\gamma+\sqrt{\gamma^2+t^2})^2+t^2}}\begin{pmatrix}
-          \frac{\gamma+\sqrt{t^2+\gamma^2}}{t}\\
-          1
-          \end{pmatrix}\\
-          |\psi⟩ &= \frac{\gamma+\sqrt{t^2+\gamma^2}}{\sqrt{(\gamma+\sqrt{\gamma^2+t^2})^2+t^2}}|1⟩+\frac{t}{\sqrt{(\gamma+\sqrt{\gamma^2+t^2})^2+t^2}}|2⟩
-      \end{split}
-  </script>
+</li>
+<li>
+<p>Verify that at high <script type="math/tex">T</script> you reproduce the Dulong-Petit law.</p>
+<p>Note that we can get <script type="math/tex">\omega_D</script> from <script type="math/tex">3N = \int_{0}^{\omega_D}g(\omega)</script> so everything cancels as usual and we are left with the Dulong-Petit law <script type="math/tex">C = 3Nk_B</script>.</p>
+</li>
+<li>
+<p>Compute the behaviour of heat capacity at low <script type="math/tex">T</script>.</p>
+<p>In the low temperature limit we have that <script type="math/tex">C \sim \frac{2\pi^2k_B^4L^3}{15\hbar^3}\left(\frac{2}{v_\perp^3} + \frac{1}{v_\parallel^3}\right)T^3</script>. We used that <script type="math/tex">\int_{0}^{\infty}\frac{x^3}{e^{x} - 1}dx = \frac{\pi^4}{15}</script>.</p>
+</li>
+</ol>
+<h3 id="exercise-4-anisotropic-sound-velocities">Exercise 4: Anisotropic sound velocities<a class="headerlink" href="#exercise-4-anisotropic-sound-velocities" title="Permanent link">&para;</a></h3>
+<p><em>(adapted from exercise 2.6b of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a>)</em></p>
+<p>Suppose now that the velocity is anisotropic (<script type="math/tex">v_x \neq v_y \neq v_z</script>) and <script type="math/tex">\omega = \sqrt{v_x^2 k_x^2 + v_y^2 k_y^2 + v_z^2 k_z^2}</script>. How does this change the Debye result for the heat capacity?</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>Write down the total energy as an integral over <script type="math/tex">k</script>, then change the integration variables so that the spherical symmetry of the integrand is restored.</p>
+</details>
+<p>
+<script type="math/tex; mode=display">
+\begin{align}
+E & = 3\left(\frac{L}{2\pi}\right)^3\int d^3k\hbar\omega(\mathbf{k})\left(n_B(\beta\hbar\omega(\mathbf{k})) + \frac{1}{2}\right) \\
+& = 3\left(\frac{L}{2\pi}\right)^3\frac{1}{v_xv_yv_z}\int d^3\kappa\frac{\hbar\kappa}{e^{\beta\hbar\kappa} - 1} + C,
+\end{align}
+</script>
 </p>
-<p>4.
-  <script type="math/tex; mode=display">
-      P = -\frac{2\gamma^2}{\mathcal{E}}(\frac{1}{\sqrt{\gamma^2+t^2}})
-  </script>
+<p>where we used the substitutions <script type="math/tex">\kappa_x = k_xv_x,\kappa_y = k_yv_y, \kappa_z = k_zv_z</script>. Finally</p>
+<p>
+<script type="math/tex; mode=display">
+E = \frac{3\hbar L^3}{2\pi^2}\frac{1}{v_xv_yv_z}\int_0^{\kappa_D} d\kappa\frac{\kappa^3}{e^{\beta\hbar\kappa} - 1} + C = \frac{3L^3}{2\pi^2\hbar^3\beta^4}\frac{1}{v_xv_yv_z}\int_0^{\beta\hbar\kappa_D} dx\frac{x^3}{e^{x} - 1} + C,
+</script>
 </p>
+<p>hence <script type="math/tex">C = \frac{\partial E}{\partial T} = \frac{6k_B^4L^3T^3}{\pi^2\hbar^3}\frac{1}{v_xv_yv_z}\int_0^{\beta\hbar\kappa_D} dx\frac{x^3}{e^{x} - 1}</script>. We see that the result is similar to the one with the linear dispersion, the only difference is the factor <script type="math/tex">1/v_xv_yv_z</script> instead of <script type="math/tex">1/v^3</script>.</p>
 
   <hr>
 <div class="md-source-file">
