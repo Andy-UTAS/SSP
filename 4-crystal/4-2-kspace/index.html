@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://andy-utas.github.io/4-crystal/4-2-kspace/">
       
+      
+        <link rel="prev" href="../4-1-realspace/">
+      
+      
+        <link rel="next" href="../4-3-scattering/">
+      
       <link rel="icon" href="../../logo.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -84,7 +89,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Solid-state physics" class="md-header__button md-logo" aria-label="Solid-state physics" data-md-component="logo">
       
@@ -111,29 +118,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
           
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-          
-          
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -163,7 +172,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -175,7 +184,7 @@
         <a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     andy-utas.github.io
@@ -219,7 +228,7 @@
       <a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     andy-utas.github.io
@@ -272,17 +281,18 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           1: An introduction to solid-state physics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="1: An introduction to solid-state physics" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           1: An introduction to solid-state physics
@@ -358,10 +368,46 @@
   
   
   
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          2: Chemistry
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          2: Chemistry
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../2-chemistry/2-1-chemistry/" class="md-nav__link">
-        2: Chemistry 101
+        2.1 - Chemistry 101
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -379,17 +425,18 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           3: One-dimensional solids
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="3: One-dimensional solids" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           3: One-dimensional solids
@@ -459,17 +506,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           4: Crystallography
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="4: Crystallography" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           4: Crystallography
@@ -499,7 +547,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -620,22 +668,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-1-equivalence-of-direct-and-reciprocal-lattice" class="md-nav__link">
-    Exercise 1: Equivalence of direct and reciprocal lattice
+  <a href="#exercise-1-directions-and-spacings-of-miller-planes" class="md-nav__link">
+    Exercise 1: Directions and Spacings of Miller planes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-2-miller-planes-and-reciprocal-lattice-vectors" class="md-nav__link">
-    Exercise 2: Miller planes and reciprocal lattice vectors
+  <a href="#exercise-2-the-reciprocal-lattice-of-the-bcc-and-fcc-lattices" class="md-nav__link">
+    Exercise 2: The reciprocal lattice of the BCC and FCC lattices
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-3-directions-and-spacings-of-miller-planes" class="md-nav__link">
-    Exercise 3: Directions and Spacings of Miller planes
+  <a href="#exercise-3-miller-planes-and-reciprocal-lattice-vectors" class="md-nav__link">
+    Exercise 3: Miller planes and reciprocal lattice vectors
   </a>
   
 </li>
@@ -687,17 +735,18 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           5: Electrons in solids
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="5: Electrons in solids" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           5: Electrons in solids
@@ -751,17 +800,18 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
           6: Semiconductors
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="6: Semiconductors" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           6: Semiconductors
@@ -809,10 +859,46 @@
   
   
   
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../additional/" class="md-nav__link">
-        Additional resources
+        Additional material
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -934,22 +1020,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-1-equivalence-of-direct-and-reciprocal-lattice" class="md-nav__link">
-    Exercise 1: Equivalence of direct and reciprocal lattice
+  <a href="#exercise-1-directions-and-spacings-of-miller-planes" class="md-nav__link">
+    Exercise 1: Directions and Spacings of Miller planes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-2-miller-planes-and-reciprocal-lattice-vectors" class="md-nav__link">
-    Exercise 2: Miller planes and reciprocal lattice vectors
+  <a href="#exercise-2-the-reciprocal-lattice-of-the-bcc-and-fcc-lattices" class="md-nav__link">
+    Exercise 2: The reciprocal lattice of the BCC and FCC lattices
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-3-directions-and-spacings-of-miller-planes" class="md-nav__link">
-    Exercise 3: Directions and Spacings of Miller planes
+  <a href="#exercise-3-miller-planes-and-reciprocal-lattice-vectors" class="md-nav__link">
+    Exercise 3: Miller planes and reciprocal lattice vectors
   </a>
   
 </li>
@@ -975,10 +1061,11 @@
                   
 
 
-<h1 id="the-reciprocal-lattice">The reciprocal lattice<a class="headerlink" href="#the-reciprocal-lattice" title="Permanent link">&para;</a></h1>
+<div><h1 id="the-reciprocal-lattice">The reciprocal lattice<a class="headerlink" href="#the-reciprocal-lattice" title="Permanent link">¶</a></h1>
 <p>Learn the <em>reciprocal</em> secrets of crystals<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../images/4-2-kspaceheader.jpg" /></p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p><img alt="" src="../images/4-2-kspaceheader.jpg"></p>
+<p>Armed with our newly minted crystallographic terminology and descriptions of crystal structure, we are going to explore the other side: reciprocal space. We have explored the ideas of reciprocal space throughout this course, but here we are going to put on the spelunking gear and get to the bottom of things.</p>
 <div class="admonition danger">
 <p class="admonition-title">Expected competencies</p>
 <p>It is assumed that you have familiarity with the following concepts/techniques:</p>
@@ -988,68 +1075,60 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Text reference</p>
-<p>The material covered here is discussed in section(s) <script type="math/tex">\S 13.1, 13.2</script> of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a></p>
+<p>The material covered here is discussed in section(s) <script type="math/tex">\S 13.1</script> of <a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&amp;lang=en&amp;">The Oxford Solid State Basics</a></p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Computational content</p>
 <p>The Jupyter notebook associated with this section can be accessed by clicking the icon below:
 <a class="text-center" href="https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&amp;urlpath=tree%2FSolid-state%2F4-2-kspace.ipynb&amp;branch=master" style="margin-left: 45%"><i class="fab fa-python fa-5x"></i></a></p>
 </div>
-<hr />
-<p>In the last lecture, we learned crystallographic terminology in order to describe crystal structures.
-Now our goal is twofold, we will:
-- Study what consequences does a lattice have in reciprocal space (with the goal of considering dispersion relations)</p>
-<h2 id="reciprocal-lattice-motivation-1d-case">Reciprocal lattice motivation 1D case<a class="headerlink" href="#reciprocal-lattice-motivation-1d-case" title="Permanent link">&para;</a></h2>
-<p>Previously, we discussed the reciprocal space of a simple 1D lattice.
-To obtain the dispersion relation we considered waves of the form
+<hr>
+<h2 id="reciprocal-lattice-motivation-1d-case">Reciprocal lattice motivation 1D case<a class="headerlink" href="#reciprocal-lattice-motivation-1d-case" title="Permanent link">¶</a></h2>
+<p>Previously, we discussed the reciprocal space of a simple 1D lattice. To obtain the dispersion relation we considered waves of the form</p>
+<p>
 <script type="math/tex; mode=display">
 e^{ikx_n} = e^{ikna}, \quad n \in \mathbb{Z},
 </script>
-where <script type="math/tex">x_n = na</script> is the 1D lattice point.
-We then observed that these waves with wave vectors <script type="math/tex">k</script> and <script type="math/tex">k+G</script>, where <script type="math/tex">G=2\pi m/a</script> with integer <script type="math/tex">m</script>, are exactly the same:</p>
+</p>
+<p>where <script type="math/tex">x_n = n \times a</script> is the 1D lattice point. We then observed that the waves with wave vectors <script type="math/tex">k</script> and <script type="math/tex">k+G</script> where <script type="math/tex">G=2\pi m/a</script> with integer <script type="math/tex">m</script>, are exactly the same:</p>
 <p>
 <script type="math/tex; mode=display">
-e^{i(k+G)na} = e^{ikna+im2\pi n} =  e^{ikna},
+e^{i(k+G)na} = e^{ikna+im2\pi n} =  e^{ikna}
 </script>
 </p>
-<p>where we used</p>
+<p>where we have used</p>
 <p>
 <script type="math/tex; mode=display">
 e^{iGx_n} = e^{i2\pi mn} =  1.
 </script>
 </p>
-<p>The set of points <script type="math/tex">G=2\pi m/a</script> forms the <strong>reciprocal lattice</strong>.
-Let us now generalize the same idea to describe the reciprocal lattice in 3D.</p>
-<h2 id="extending-to-higher-dimensions">Extending to higher dimensions<a class="headerlink" href="#extending-to-higher-dimensions" title="Permanent link">&para;</a></h2>
+<p>The set of points <script type="math/tex">G=2\pi m/a</script> forms the <strong>reciprocal lattice</strong>. Let us now generalize the same idea to describe the reciprocal lattice in higher dimensions.</p>
+<h2 id="extending-to-higher-dimensions">Extending to higher dimensions<a class="headerlink" href="#extending-to-higher-dimensions" title="Permanent link">¶</a></h2>
 <p>We start from a lattice in real space:</p>
 <p>
 <script type="math/tex; mode=display">
 \mathbf{R}=n_1\mathbf{a}_1+n_2\mathbf{a}_2+n_3\mathbf{a}_1, \quad \{n_1, n_2, n_3\} \in \mathbb{Z},
 </script>
 </p>
-<p>where <script type="math/tex">\mathbf{a}_1</script>, <script type="math/tex">\mathbf{a}_2</script> and <script type="math/tex">\mathbf{a}_3</script> are the lattice vectors.
-The reciprocal lattice is also a lattice, but in the <script type="math/tex">k</script>-space:</p>
+<p>where <script type="math/tex">\mathbf{a}_1</script>, <script type="math/tex">\mathbf{a}_2</script> and <script type="math/tex">\mathbf{a}_3</script> are the lattice vectors. The reciprocal lattice is also a lattice, but in the <script type="math/tex">k</script>-space:</p>
 <p>
 <script type="math/tex; mode=display">
-\mathbf{G}=m_1\mathbf{b}_1+m_2\mathbf{b}_2+m_3\mathbf{b_3}, \quad \{m_1, m_2, m_3\} \in \mathbb{Z}.
+\mathbf{G}=m_1\mathbf{b}_1+m_2\mathbf{b}_2+m_3\mathbf{b_3}, \quad \{m_1, m_2, m_3\} \in \mathbb{Z}
 </script>
 </p>
-<p>The vectors <script type="math/tex">\mathbf{b}_1</script>, <script type="math/tex">\mathbf{b}_2</script> and <script type="math/tex">\mathbf{b}_2</script> are the <strong>reciprocal lattice vectors</strong>.
-Let us now determine the reciprocal lattice vectors by requiring that waves that differ by a reciprocal lattice vector are indistinguishable.
-In other words, we require that</p>
+<p>where the vectors <script type="math/tex">\mathbf{b}_1</script>, <script type="math/tex">\mathbf{b}_2</script> and <script type="math/tex">\mathbf{b}_2</script> are the <strong>reciprocal lattice vectors</strong>. Let us now determine the reciprocal lattice vectors by requiring that waves that differ by a reciprocal lattice vector are indistinguishable. That is, we require that</p>
 <p>
 <script type="math/tex; mode=display">
 e^{i\mathbf{k}\mathbf{R}} = e^{i(\mathbf{k} + \mathbf{G})\mathbf{R}},
 </script>
 </p>
-<p>for any <script type="math/tex">\mathbf{R}</script> in the lattice.
-Substituting the definitions of <script type="math/tex">\mathbf{R}</script> and <script type="math/tex">\mathbf{G}</script> we get</p>
+<p>for any <script type="math/tex">\mathbf{R}</script> in the lattice. Substituting the definitions of <script type="math/tex">\mathbf{R}</script> and <script type="math/tex">\mathbf{G}</script> we get</p>
 <p>
 <script type="math/tex; mode=display">
 \mathrm{e}^{i\mathbf{G}\cdot\mathbf{R}} = \mathrm{e}^{i\sum_{\{i,j\}=1}^{3} n_i m_j \mathbf{a}_i \cdot \mathbf{b}_j}=1.
 </script>
 </p>
-<p>This relation holds only if</p>
+<p>This relation only holds if</p>
 <p>
 <script type="math/tex; mode=display">
 \mathbf{a_i}\cdot\mathbf{b_j}=2\pi\delta_{ij}.
@@ -1061,35 +1140,39 @@ Substituting the definitions of <script type="math/tex">\mathbf{R}</script> and 
 \mathrm{e}^{i\mathbf{G}\cdot\mathbf{R}} = \mathrm{e}^{2\pi i(n_1 m_1 + n_2 m_2 + n_3 m_3)}.
 </script>
 </p>
-<p>Because <script type="math/tex">n_i</script> and <script type="math/tex">m_j</script> are both integers, the exponent evaluates to 1.</p>
+<p>Because <script type="math/tex">n_i</script> and <script type="math/tex">m_j</script> are both integers, the exponent necessarily evaluates to 1.</p>
 <p>The relation <script type="math/tex">\mathbf{a_i}\cdot\mathbf{b_j}=2\pi\delta_{ij}</script> means that if we write the lattice vectors as rows of a matrix, the reciprocal lattice vectors are <script type="math/tex">2\pi</script> times the columns of the inverse of that matrix.</p>
-<h3 id="2d-example-triangular-lattice">2D example: triangular lattice<a class="headerlink" href="#2d-example-triangular-lattice" title="Permanent link">&para;</a></h3>
+<h3 id="2d-example-triangular-lattice">2D example: triangular lattice<a class="headerlink" href="#2d-example-triangular-lattice" title="Permanent link">¶</a></h3>
 <p>In order to gain extra intuition of the properties of the reciprocal lattice, let us study a specific example.</p>
-<p>In the previous lecture we studied the triangular lattice, which is shown in the figure below.
-The left panel show the real-space lattice with lattice vectors <script type="math/tex">\mathbf{a}_1 = a \mathbf{\hat{x}}</script> and <script type="math/tex">\mathbf{a}_2 = a/2\mathbf{\hat{x}} + \sqrt{3}a/2 \mathbf{\hat{y}}</script>.
-While the right panel shows the corresponding reciprocal lattice and its reciprocal lattice vectors <script type="math/tex">\mathbf{b}_1</script> and <script type="math/tex">\mathbf{b}_2</script>.</p>
-<object type="text/html" data="../images/4-2-reciprocal.html"  frameborder="0" width=850 height=450 class=center></object>
+<p>Consider a triangular lattice, which is shown in the figure below. The left panel show the real-space lattice with lattice vectors <script type="math/tex">\mathbf{a}_1 = a \mathbf{\hat{x}}</script> and <script type="math/tex">\mathbf{a}_2 = a/2\mathbf{\hat{x}} + \sqrt{3}a/2 \mathbf{\hat{y}}</script>. While the right panel shows the corresponding reciprocal lattice and its reciprocal lattice vectors <script type="math/tex">\mathbf{b}_1</script> and <script type="math/tex">\mathbf{b}_2</script>.</p>
+<object type="text/html" data="../images/4-2-reciprocal.html" frameborder="0" width="800" height="450" class="center"></object>
 
-<p>To find the reciprocal lattice vectors, we use the relation
+<p>To find the reciprocal lattice vectors, we use the relation</p>
+<p>
 <script type="math/tex; mode=display">
 \mathbf{a_i}\cdot\mathbf{b_j}=2\pi\delta_{ij},
 </script>
-which gives us the following equations:
+</p>
+<p>which gives us the following equations:</p>
+<p>
 <script type="math/tex; mode=display">
 \mathbf{a}_1\cdot\mathbf{b}_2=\mathbf{a}_2\cdot\mathbf{b}_1=0,
 </script>
-and
+</p>
+<p>and</p>
+<p>
 <script type="math/tex; mode=display">
 \mathbf{a}_1\cdot\mathbf{b}_1=\mathbf{a}_2\cdot\mathbf{b}_2=2\pi.
 </script>
-We substitute <script type="math/tex">\mathbf{a_i}\cdot\mathbf{b_i} = \lvert \mathbf{a_i} \rvert \lvert \mathbf{b_i} \rvert \cos(\theta_i)</script>:
+</p>
+<p>We substitute <script type="math/tex">\mathbf{a_i}\cdot\mathbf{b_i} = \lvert \mathbf{a_i} \rvert \lvert \mathbf{b_i} \rvert \cos(\theta_i)</script>:</p>
+<p>
 <script type="math/tex; mode=display">
 \lvert \mathbf{a}_1 \rvert \lvert \mathbf{b}_1 \rvert =\frac{2\pi}{\cos(\theta_1)} \:\: \text{and} \:\: \lvert \mathbf{a}_2 \rvert \lvert \mathbf{b}_2 \rvert =\frac{2\pi}{\cos(\theta_2)},
 </script>
-where <script type="math/tex">\theta_i</script> is the angle between the vectors <script type="math/tex">\mathbf{a}_i</script> and <script type="math/tex">\mathbf{b}_i</script>.
-To find the angles <script type="math/tex">\theta_1</script> and <script type="math/tex">\theta_2</script>, we use the orthogonality relations above and the fact that the angle between <script type="math/tex">\mathbf{a}_1</script> and <script type="math/tex">\mathbf{a}_2</script> is <script type="math/tex">60^\circ</script>.
-From this we conclude that <script type="math/tex">\theta_1 = \theta_2 = 30^\circ</script>.
-Because <script type="math/tex">\lvert \mathbf{a}_1 \rvert = \lvert \mathbf{a}_2 \rvert = a</script>, we find
+</p>
+<p>where <script type="math/tex">\theta_i</script> is the angle between the vectors <script type="math/tex">\mathbf{a}_i</script> and <script type="math/tex">\mathbf{b}_i</script>.</p>
+<p>To find the angles <script type="math/tex">\theta_1</script> and <script type="math/tex">\theta_2</script>, we use the orthogonality relations above and the fact that the angle between <script type="math/tex">\mathbf{a}_1</script> and <script type="math/tex">\mathbf{a}_2</script> is <script type="math/tex">60^\circ</script>. From this we conclude that <script type="math/tex">\theta_1 = \theta_2 = 30^\circ</script>. Because <script type="math/tex">\lvert \mathbf{a}_1 \rvert = \lvert \mathbf{a}_2 \rvert = a</script>, we find
 <script type="math/tex; mode=display">
 \lvert \mathbf{b}_1 \rvert = \lvert \mathbf{b}_2 \rvert = \frac{4\pi}{a\sqrt{3}}.
 </script>
@@ -1106,16 +1189,15 @@ With <script type="math/tex">\lvert \mathbf{b}_2 \rvert</script> and <script typ
 </script>
 </p>
 <details class="question">
-<summary>Is the choice of a set of reciprocal lattice vectors unique? If not, which other ones are possible?</summary>
-<p>There are many equivalent ways to choose lattice vectors of the reciprocal lattice. In the example above we could as well use
+<summary>4.2.1 Is the choice of a set of reciprocal lattice vectors unique? If not, which other ones are possible?</summary>
+<!-- There are many equivalent ways to choose lattice vectors of the reciprocal lattice. In the example above we could as well use
 <script type="math/tex; mode=display">
 \mathbf{b}_1 = \frac{4\pi}{a\sqrt{3}} \left(-\frac{\sqrt{3}}{2} \mathbf{\hat{x}} + \frac{1}{2}\mathbf{\hat{y}} \right) \quad \text{and} \quad \mathbf{b}_2 = -\frac{4\pi}{a\sqrt{3}} \mathbf{\hat{y}}.
 </script>
-There is however only one choice that satisfies the relations <script type="math/tex">\mathbf{a_i}\cdot\mathbf{b_j}=2\pi\delta_{ij}</script>.</p>
+There is however only one choice that satisfies the relations <script type="math/tex">\mathbf{a_i}\cdot\mathbf{b_j}=2\pi\delta_{ij}</script>. -->
 </details>
-<h3 id="3d-lattice-example">3D lattice example<a class="headerlink" href="#3d-lattice-example" title="Permanent link">&para;</a></h3>
-<p>Let us now consider a more involved example of the 3D lattice.
-The explicit expression for the reciprocal lattice vectors in terms of their real space counterparts is:</p>
+<h3 id="3d-lattice-example">3D lattice example<a class="headerlink" href="#3d-lattice-example" title="Permanent link">¶</a></h3>
+<p>Let us now consider the more involved example of a 3D lattice. The explicit expression for the reciprocal lattice vectors in terms of their real space counterparts is:</p>
 <p>
 <script type="math/tex; mode=display">
 \mathbf{b}_1=\frac{2\pi(\mathbf{a}_2\times\mathbf{a}_3)}{ \mathbf{a}_1\cdot(\mathbf{a}_2\times\mathbf{a_3})}
@@ -1132,10 +1214,8 @@ The explicit expression for the reciprocal lattice vectors in terms of their rea
 </script>
 </p>
 <p>Note that the denominator <script type="math/tex">\mathbf{a}_1\cdot(\mathbf{a}_2\times\mathbf{a_3})</script> is the volume <script type="math/tex">V</script> of the real-space unit cell spanned by the lattice vectors <script type="math/tex">\mathbf{a}_1</script>, <script type="math/tex">\mathbf{a}_2</script> and <script type="math/tex">\mathbf{a}_3</script>.</p>
-<h3 id="the-reciprocal-lattice-as-a-fourier-transform">The reciprocal lattice as a Fourier transform<a class="headerlink" href="#the-reciprocal-lattice-as-a-fourier-transform" title="Permanent link">&para;</a></h3>
-<p>One can also think of the reciprocal lattice as a Fourier transform of the real-space lattice.
-For simplicity, we illustrate this for a 1D lattice (the same principles apply to a 3D lattice).
-We model the real-space lattice as a density function consisting of delta peaks:</p>
+<h3 id="the-reciprocal-lattice-as-a-fourier-transform">The reciprocal lattice as a Fourier transform<a class="headerlink" href="#the-reciprocal-lattice-as-a-fourier-transform" title="Permanent link">¶</a></h3>
+<p>One can also think of the reciprocal lattice as a Fourier transform of the real-space lattice. For simplicity, we illustrate this for a 1D lattice (the same principles apply to a 3D lattice). We model the real-space lattice as a density function consisting of delta peaks:</p>
 <p>
 <script type="math/tex; mode=display">
 \rho(x)=\sum_{n} \delta(x-na)
@@ -1144,7 +1224,7 @@ We model the real-space lattice as a density function consisting of delta peaks:
 <p>We take the Fourier transform of this function to find:</p>
 <p>
 <script type="math/tex; mode=display">
-{\mathcal F}_{k}\left[\rho(x)\right]=\int_{-\infty}^\infty \mathrm{d}x\ \mathrm{e}^{ikx} \rho(x)=\sum_{n} \int_{-\infty}^\infty \mathrm{d}x\ \mathrm{e}^{ikx} \delta(x-na)=\sum_{n} \mathrm{e}^{ikna}
+{\mathcal F}\left\{\rho(x); x \rightarrow k \right\}=\int_{-\infty}^\infty \mathrm{d}x\ \mathrm{e}^{ikx} \rho(x)=\sum_{n} \int_{-\infty}^\infty \mathrm{d}x\ \mathrm{e}^{ikx} \delta(x-na)=\sum_{n} \mathrm{e}^{ikna}
 </script>
 </p>
 <p>This sum is non-zero only if <script type="math/tex">k=2\pi m/a</script>.
@@ -1152,84 +1232,114 @@ If we recall the beginning of the lecture, then these points correspond to recip
 Therefore, we rewrite this into the form</p>
 <p>
 <script type="math/tex; mode=display">
-{\mathcal F}_{k}\left[\rho(x)\right]=\frac{2\pi}{|a|}\sum_{m} \delta\left(k-G\right).
+{\mathcal F}\left\{\rho(x); x \rightarrow k \right\}=\frac{2\pi}{|a|}\sum_{m} \delta\left(k-G\right).
 </script>
 Therefore, we see that the Fourier transform is non-zero only at reciprocal lattice points.
 In other words, Fourier transforming a real-space lattice yields a reciprocal lattice!
 The above result generalizes directly to three dimensions:</p>
 <p>
 <script type="math/tex; mode=display">
-{\mathcal F}_\mathbf{k}\left[\rho(\mathbf{r})\right]=\int \mathrm{d}\mathbf{r}\ \mathrm{e}^{i\mathbf{k}\cdot\mathbf{r}} \rho(\mathbf{r}) = \sum_\mathbf{G}\delta(\mathbf{k}-\mathbf{G}).
+{\mathcal F}\left\{\rho(x); x \rightarrow k \right\}=\int \mathrm{d}\mathbf{r}\ \mathrm{e}^{i\mathbf{k}\cdot\mathbf{r}} \rho(\mathbf{r}) = \sum_\mathbf{G}\delta(\mathbf{k}-\mathbf{G}).
 </script>
 </p>
-<h2 id="periodicity-of-the-reciprocal-lattice">Periodicity of the reciprocal lattice<a class="headerlink" href="#periodicity-of-the-reciprocal-lattice" title="Permanent link">&para;</a></h2>
-<p>In order to describe a reciprocal lattice, we need to define a primitive unit cell in reciprocal space.
-Previously, we learned that the choice of a primitive unit cell is not unique.
-However, a general convention in reciprocal space is to use the Wigner-Seitz cell which is called the <strong>1st Brillouin zone</strong>.
-Because the Wigner-Seitz cell is primitive, the 1st Brillouin zone (1BZ) contains a set of unique <script type="math/tex">\mathbf{k}</script> vectors.
-This means that all <script type="math/tex">\mathbf{k}</script> vectors outside the 1st Brillouin zone are a copy of those inside the 1st Brillouin zone.
-For example, any <script type="math/tex">\mathbf{k'}</script> outside the 1BZ is related to a wave vector inside 1BZ <script type="math/tex">\mathbf{k}</script> by shifting it by reciprocal lattice vectors: <script type="math/tex">\mathbf{k'} = \mathbf{k}+\mathbf{G}</script>
+<h2 id="periodicity-of-the-reciprocal-lattice">Periodicity of the reciprocal lattice<a class="headerlink" href="#periodicity-of-the-reciprocal-lattice" title="Permanent link">¶</a></h2>
+<p>In order to describe a reciprocal lattice, we need to define a primitive unit cell in reciprocal space. Previously, we learned that the choice of a primitive unit cell is not unique. However, a general convention in reciprocal space is to use the Wigner-Seitz cell which is called the <strong>1st Brillouin zone</strong>. Because the Wigner-Seitz cell is primitive, the 1st Brillouin zone contains a set of unique <script type="math/tex">\mathbf{k}</script> vectors. This means that all <script type="math/tex">\mathbf{k}</script> vectors outside the 1st Brillouin zone are a copy of those inside the 1st Brillouin zone. For example, any <script type="math/tex">\mathbf{k'}</script> outside the 1st Brillouin zone is related to a wave vector inside 1st Brillouin zone <script type="math/tex">\mathbf{k}</script> by shifting it by reciprocal lattice vectors: <script type="math/tex">\mathbf{k'} = \mathbf{k}+\mathbf{G}</script>
 </p>
 <p>We have already learned how to construct Wigner-Seitz cells, however here is a reminder of how a Brillouin zone looks like:</p>
-<p><img alt="" src="../images/brillouin_mod.svg" /></p>
-<h3 id="miller-planes">Miller planes<a class="headerlink" href="#miller-planes" title="Permanent link">&para;</a></h3>
-<p>When fabricating crystals it is important to know both the orientation and the surface of the crystal.
-Different cuts of a crystal lead to different surfaces.
-In the chemical industry, this is especially significant because different surfaces lead to different chemical properties and thus is one of the foundations of research in catalysts.
-Therefore, we seek a way to describe different planes of a crystal within our developed framework.
-This leads us to a very important concept - <strong>Miller planes</strong>.
-To explain Miller planes, let's start off with a simple cubic lattice:</p>
-<p><img alt="" src="../images/4-2-cubic_mod.svg" /></p>
+<p><img alt="" src="../images/brillouin_mod.svg"></p>
+<h3 id="miller-planes">Miller planes<a class="headerlink" href="#miller-planes" title="Permanent link">¶</a></h3>
+<p>When fabricating crystals it is important to know both the orientation and the surface of the crystal. Different cuts of a crystal lead to different surfaces. In the chemical industry, this is especially significant because different surfaces lead to different chemical properties and thus is one of the foundations of research in catalysts. Therefore, we seek a way to describe different planes of a crystal within our developed framework. This leads us to a very important concept - <strong>Miller planes</strong>. To explain Miller planes, let's start off with a simple cubic lattice:</p>
+<p><img alt="" src="../images/4-2-cubic_mod.svg"></p>
 <p>Where <script type="math/tex">|{\bf a}_1|=|{\bf a}_2|=|{\bf a}_3|\equiv a</script>.</p>
 <p>We can cut multiple planes through the cubic lattice.
 Miller planes describe such planes with a set of indices.
 The plane designated by Miller indices <script type="math/tex">(u,v,w)</script> intersects lattice vector <script type="math/tex">{\bf a}_1</script> at <script type="math/tex">\frac{|{\bf a}_1|}{u}</script>, <script type="math/tex">{\bf a}_2</script> at <script type="math/tex">\frac{|{\bf a}_2|}{v}</script> and <script type="math/tex">{\bf a}_3</script> at <script type="math/tex">\frac{|{\bf a}_3|}{w}</script>.</p>
-<p><img alt="" src="../images/4-2-miller.svg" /></p>
-<p>Miller index 0 means that the plane is parallel to that axis (intersection at "<script type="math/tex">\frac{|{\bf a}_3|}{0}\rightarrow\infty</script>"). A bar above a Miller index means intersection at a negative coordinate.</p>
-<p>If a crystal is symmetric under <script type="math/tex">90^\circ</script> rotations, then <script type="math/tex">(100)</script>, <script type="math/tex">(010)</script> and <script type="math/tex">(001)</script> are physically indistinguishable.
-Therefore, we use the notation <script type="math/tex">\{100\}</script> to indicate a whole family of these symmetry-related planes.
-In a cubic crystal, <script type="math/tex">[100]</script> (this is a vector) is perpendicular to <script type="math/tex">(100)</script>
+<p><img alt="" src="../images/4-2-miller.svg"></p>
+<p>A Miller index 0 means that the plane is parallel to that axis (or equivalently, the intersection is at "<script type="math/tex">\frac{|{\bf a}_3|}{0}\rightarrow\infty</script>"). A bar above a Miller index means intersection at a negative coordinate.</p>
+<p>If a crystal is symmetric under <script type="math/tex">90^\circ</script> rotations, then <script type="math/tex">(100)</script>, <script type="math/tex">(010)</script> and <script type="math/tex">(001)</script> are physically indistinguishable. Therefore, we use the notation <script type="math/tex">\{100\}</script> to indicate a whole family of these symmetry-related planes. In a cubic crystal, <script type="math/tex">[100]</script> (this is a vector) is perpendicular to <script type="math/tex">(100)</script>
 <script type="math/tex">\rightarrow</script> proof in problem set.</p>
-<p>Why are these Miller planes usefull?
-It allows us to know the exact orientation of a crystal structure if the crystal structure is known.</p>
-<hr />
-<h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>4.2.2 Why are these Miller planes usefull?</summary>
+<!-- It allows us to know the exact orientation of a crystal structure if the crystal structure is known. -->
+</details>
+<div class="admonition example">
+<p class="admonition-title">Examples of crystal planes</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">1</label><label for="__tabbed_1_2">2</label><label for="__tabbed_1_3">3</label><label for="__tabbed_1_4">4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" class="center" src="../images/4-2-crystal-miller-1.jpg"></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" class="center" src="../images/4-2-crystal-miller-2.jpg"></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" class="center" src="../images/4-2-crystal-miller-3.jpg"></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" class="center" src="../images/4-2-crystal-miller-4.jpg"></p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">¶</a></h2>
 <ul>
-<li>We described how to construct a reciprocal lattice from a real-space lattice.</li>
+<li>The reciprocal lattice is constructed from the reciprocal lattice vectors which are turn constructed from the real-space lattice vectors.</li>
 <li>Points in reciprocal space that differ by a reciprocal lattice vector are equivalent.</li>
+<li>The reciprocal lattice is related to the real-space lattice by the Fourier transform</li>
 </ul>
-<hr />
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
-<h3 id="preliminary-provocations">Preliminary provocations<a class="headerlink" href="#preliminary-provocations" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">¶</a></h2>
+<h3 id="preliminary-provocations">Preliminary provocations<a class="headerlink" href="#preliminary-provocations" title="Permanent link">¶</a></h3>
 <ol>
 <li>Calculate <script type="math/tex">\mathbf{a}_1 \cdot \mathbf{b}_1</script> and <script type="math/tex">\mathbf{a}_2 \cdot \mathbf{b}_1</script> using the definitions of the reciprocal lattice vectors given in the lecture. Is the result what you expected?</li>
 </ol>
-<h3 id="exercise-1-equivalence-of-direct-and-reciprocal-lattice">Exercise 1: Equivalence of direct and reciprocal lattice<a class="headerlink" href="#exercise-1-equivalence-of-direct-and-reciprocal-lattice" title="Permanent link">&para;</a></h3>
-<p>The volume of a primitive cell of a lattice with lattice vectors <script type="math/tex">\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3</script>
-<a href="https://en.wikipedia.org/wiki/Parallelepiped#Volume">equals</a> <script type="math/tex">V = |\mathbf{a}_1\cdot(\mathbf{a}_2\times\mathbf{a}_3)|</script>.</p>
+<h3 id="exercise-1-directions-and-spacings-of-miller-planes">Exercise 1: Directions and Spacings of Miller planes<a class="headerlink" href="#exercise-1-directions-and-spacings-of-miller-planes" title="Permanent link">¶</a></h3>
 <ol>
-<li>Find the volume of a primitive unit cell <script type="math/tex">V^* = \left| \mathbf{b}_1 \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right|</script> of the corresponding reciprocal lattice.</li>
 <li>
-<p>Derive the expressions for the lattice vectors <script type="math/tex">\mathbf{a}_i</script> through the reciprocal lattice <script type="math/tex">\mathbf{b}_i</script>.</p>
-<details class="hint">
+<p>Explain the terms Miller planes and Miller indices.</p>
+</li>
+<li>
+<p>Consider a cubic crystal with one atom in the basis and a set of orthogonal primitive lattice vectors <script type="math/tex">a\hat{x}</script>, <script type="math/tex">a\hat{y}</script> and <script type="math/tex">a\hat{z}</script>. Show that the direction <script type="math/tex">[hkl]</script> in this crystal is normal to the planes with Miller indices <script type="math/tex">(hkl)</script>.</p>
+</li>
+<li>
+<p>Show that this is not true in general. Consider for instance an orthorhombic crystal, for which the primitive lattice vectors are still orthogonal but have different lengths.</p>
+</li>
+<li>
+<p>Any set of Miller indices corresponds to a family of planes separated by a distance <script type="math/tex">d</script>. Show that the spacing <script type="math/tex">d</script> of the <script type="math/tex">(hkl)</script> set of planes in a cubic crystal with lattice parameter <script type="math/tex">a</script> is <script type="math/tex">d = \frac{a}{\sqrt{h^2 + k^2 + l^2}}</script>.</p>
+<details class="note">
 <summary>Hint</summary>
-<p>Make use of the vector identity
-<script type="math/tex; mode=display">\mathbf{A}\times(\mathbf{B}\times\mathbf{C}) = \mathbf{B}(\mathbf{A}\cdot\mathbf{C}) - \mathbf{C}(\mathbf{A}\cdot\mathbf{B})</script>
-</p>
+<p>Recall that a family of lattice planes is an infinite set of equally separated parallel planes which taken all together contain all points of the lattice.</p>
+<p>Try computing the distance between the plane that contains the site <script type="math/tex">(0,0,0)</script> of the conventional unit cell and a plane defined by the <script type="math/tex">(hkl)</script> indices.</p>
 </details>
 </li>
-<li>
-<p>Write down the primitive lattice vectors of the <a href="https://solidstate.quantumtinkerer.tudelft.nl/test_builds/lecture_9/9_crystal_structure/#body-centered-cubic-lattice">BCC lattice</a> and calculate its reciprocal lattice vectors.
-Which type of lattice is the reciprocal lattice of a BCC crystal?</p>
-</li>
-<li>Determine the shape of the 1st Brillouin zone.</li>
 </ol>
-<h3 id="exercise-2-miller-planes-and-reciprocal-lattice-vectors">Exercise 2: Miller planes and reciprocal lattice vectors<a class="headerlink" href="#exercise-2-miller-planes-and-reciprocal-lattice-vectors" title="Permanent link">&para;</a></h3>
+<h3 id="exercise-2-the-reciprocal-lattice-of-the-bcc-and-fcc-lattices">Exercise 2: The reciprocal lattice of the BCC and FCC lattices<a class="headerlink" href="#exercise-2-the-reciprocal-lattice-of-the-bcc-and-fcc-lattices" title="Permanent link">¶</a></h3>
+<p>The content on this page investigates how to construct the reciprocal lattice from a real-space lattice. We will now zoom in the properties of the FCC and BCC lattices, which are two of the most common lattices encountered in crystal structures. We analyse the reciprocal lattices and the shape of the first Brillouin zone. This helps us understanding e.g. the periodicity of 3D band structures and the Fermi surface database shown in the Attic.</p>
+<p>We consider a bcc lattice of which the conventional unit cell has a side length <script type="math/tex">a</script> and volume <script type="math/tex">V=a^3</script>.</p>
+<ol>
+<li>
+<p>Write down the primitive lattice vectors of the BCC lattice. Calculate the volume of the primitive unit cell. Is the volume the expected fraction of <script type="math/tex">V</script>?</p>
+</li>
+<li>
+<p>Calculate the reciprocal lattice vectors associated with the primitive lattice vectors you found in the previous subquestion.</p>
+</li>
+<li>
+<p>Sketch the reciprocal lattice. Which type of lattice is it? What is the volume of its conventional unit cell?</p>
+</li>
+<li>
+<p>Describe the shape of the 1st Brillouin zone. How many sides does it have? (Note that the Brillouin zones are sketched in the Fermi surface periodic table in the Attic). Calculate the volume of the 1st Brillouin zone and check if it is the expected fraction of the volume you found in the previous subquestion.</p>
+</li>
+<li>
+<p>Based on the insight gained in this question, argue what lattice is the reciprocal lattice of the <em>FCC</em> lattice.</p>
+</li>
+</ol>
+<h3 id="exercise-3-miller-planes-and-reciprocal-lattice-vectors">Exercise 3: Miller planes and reciprocal lattice vectors<a class="headerlink" href="#exercise-3-miller-planes-and-reciprocal-lattice-vectors" title="Permanent link">¶</a></h3>
 <p>Consider a family of Miller planes <script type="math/tex">(hkl)</script> in a crystal.</p>
 <ol>
 <li>
 <p>Prove that the reciprocal lattice vector <script type="math/tex">\mathbf{G} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_3</script> is perpendicular to the Miller plane <script type="math/tex">(hkl)</script>.</p>
-<details class="hint">
+<details class="note">
 <summary>Hint</summary>
 <p>Choose two vectors that lie within the Miller plane and are not parallel to each other.</p>
 </details>
@@ -1237,37 +1347,25 @@ Which type of lattice is the reciprocal lattice of a BCC crystal?</p>
 <li>
 <p>Show that the distance between two adjacent Miller planes <script type="math/tex">(hkl)</script> of any lattice is  <script type="math/tex">d = 2\pi/|\mathbf{G}_\textrm{min}|</script>, where <script type="math/tex">\mathbf{G}_\textrm{min}</script> is the shortest reciprocal lattice vector perpendicular to these Miller planes.</p>
 </li>
-<li>Find the family of Miller planes of the BCC lattice that has the highest density of lattice points. To solve this problem use that the density of lattice points per unit area on a Miller plane is <script type="math/tex">\rho = d/V</script>. Here <script type="math/tex">V</script> is the volume of the primitive unit cell and <script type="math/tex">d</script> is the distance between adjacent planes given in 2.2.</li>
-</ol>
-<h3 id="exercise-3-directions-and-spacings-of-miller-planes">Exercise 3: Directions and Spacings of Miller planes<a class="headerlink" href="#exercise-3-directions-and-spacings-of-miller-planes" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Explain what is meant by the terms Miller planes and Miller indices.</li>
-<li>Consider a cubic crystal with one atom in the basis and a set of orthogonal primitive lattice vectors <script type="math/tex">a\hat{x}</script>, <script type="math/tex">a\hat{y}</script> and <script type="math/tex">a\hat{z}</script>. Show that the direction <script type="math/tex">[hkl]</script> in this crystal is normal to the planes with Miller indices <script type="math/tex">(hkl)</script>.</li>
-<li>Show that this is not true in general. Consider for instance an orthorhombic crystal, for which the primitive lattice vectors are still orthogonal but have different lengths.</li>
 <li>
-<p>Any set of Miller indices corresponds to a family of planes separated by a distance <script type="math/tex">d</script>. Show that the spacing <script type="math/tex">d</script> of the <script type="math/tex">(hkl)</script> set of planes in a cubic crystal with lattice parameter <script type="math/tex">a</script> is <script type="math/tex">d = \frac{a}{\sqrt{h^2 + k^2 + l^2}}</script>.</p>
-<details class="hint">
-<summary>Hint</summary>
-<p>Recall that a family of lattice planes is an infinite set of equally separated parallel planes which taken all together contain all points of the lattice.</p>
-<p>Try computing the distance between the plane that contains the site <script type="math/tex">(0,0,0)</script> of the conventional unit cell and a plane defined by the <script type="math/tex">(hkl)</script> indices.</p>
-</details>
+<p>In exercise 2, you derived the reciprocal lattice vectors of the BCC lattice from a set of primitive lattice vectors. Use these vectors to find the family of Miller planes that has the highest density of lattice points <script type="math/tex">\rho</script>. Use that <script type="math/tex">\rho = d/V</script>, where <script type="math/tex">V</script> is the volume of the primitive unit cell and <script type="math/tex">d</script> is the distance between adjacent planes derived in the previous subquestion. Formulate the Miller plane indices with respect to the primitive lattice vectors.</p>
 </li>
 </ol>
 <div class="footnote">
-<hr />
+<hr>
 <ol>
 <li id="fn:1">
-<p>This is only funny if you noticed the <a href="../../4-crystal/4-1-realspace/#crystal-structure">tagline of the previous section</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>This is only funny if you noticed the <a href="../../4-crystal/4-1-realspace/#crystal-structure">tagline of the previous section</a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
-</div>
+</div></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 3, 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2023</span>
       
     
   </small>
@@ -1336,50 +1434,14 @@ Which type of lattice is the reciprocal lattice of a BCC crystal?</p>
           
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
-          </a>
+          </button>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../4-1-realspace/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4.1 - Crystals" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              4.1 - Crystals
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../4-3-scattering/" class="md-footer__link md-footer__link--next" aria-label="Next: 4.3 - Scattering" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              4.3 - Scattering
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1406,20 +1468,30 @@ Which type of lattice is the reciprocal lattice of a BCC crystal?</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.sections", "search.highlight"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML"></script>
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML"></script>
+        
       
-        <script src="https://unpkg.com/thebelab@0.5.0/lib/index.js"></script>
+        
+          <script src="https://unpkg.com/thebelab@0.5.0/lib/index.js"></script>
+        
       
-        <script src="../../scripts/mathjaxhelper.js"></script>
+        
+          <script src="../../scripts/mathjaxhelper.js"></script>
+        
       
-        <script src="../../scripts/thebelabhelper.js"></script>
+        
+          <script src="../../scripts/thebelabhelper.js"></script>
+        
       
-        <script src="../../scripts/x3dom.js"></script>
+        
+          <script src="../../scripts/x3dom.js"></script>
+        
       
     
   </body>
