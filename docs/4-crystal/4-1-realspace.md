@@ -88,7 +88,7 @@ We identify that definition (ii) is the more intuitive definition. For example, 
   <img src="../images/4-1-graphene-single.png">
 </figure>
 
-??? question  "4.1.1: Is the honeycomb structure a lattice?"
+??? question "4.1.1 Is the honeycomb structure a lattice?"
 
     <!-- No, despite seeming like it should be! It is most easily seen as the environment around all points should look the same, and if we look at the point at the tip of a given hexagon, and the point to either the left or right of this point, it is clear that they are not the same! -->
 
@@ -107,7 +107,7 @@ The unit cell, which was conveniently chosen in panel `B`, defines a primitive u
 As previously mentioned, the choice of the primitive lattice vectors is _not_ unique. For example, we could have easily chosen another set of lattice vectors - as shown in panel `C` - which produce primitive unit cells.
 Both choices are primitive unit cells and thus make it possible to map out the entire lattice!
 
-??? Question "4.2.2: Looking the primitive cell in panel `C`, how much does each lattice point "occupy" the unit cell?"
+??? Question "4.1.2 Looking the primitive cell in panel `C`, how much does each lattice point "occupy" the unit cell?"
 
     <!-- Two points occupy it for one eight and two points for three eights. -->
 
@@ -162,7 +162,7 @@ In our case, the basis is `hourglass` $(0,0)$ which is specifying the location o
 
 Similar to primitive lattice vectors, the choice of a lattice **not** unique. For example, shown in panel `C`, the same periodic structure is shown, but with the lattice translated by $1/2 \mathbf{a}_1$. The choice still fulfils the definition of a lattice: the environment of each lattice point is the same, with the only difference being that the lattice is translated and thus we keep using the same primitive lattice vectors.
 
-??? Question "4.2.3: What is the basis for translated lattice as shown in panel `C`? What are the positions of each of the hourglasses in the lattice?"
+??? Question "4.1.3 What is the basis for translated lattice as shown in panel `C`? What are the positions of each of the hourglasses in the lattice?"
 
 <!-- The hourglasses are no longer situated on the lattice points, rather they are located at $[1/2,0]$, which is half of $\mathbf{a}_1$, and therefore the basis hourglass $(1/2, 0)$.
 
@@ -197,7 +197,7 @@ for $ n_{1}, n_{2} \in \mathbb{Z}$.
 
 Alternatively, one can think of the crystal structure being made up from two intersecting orthogonal lattices - one centred at $[0,0]$ and another at $[1/2,1/2]$, each with basis $(0,0)$.
 
-??? Question "4.2.4: For what type of lattice is the conventional unit cell also primitive?"
+??? Question "4.1.4 For what type of lattice is the conventional unit cell also primitive?"
 
     <!-- A simple square lattice -->
 
@@ -265,7 +265,7 @@ Primitive unit cells are not unique; however, there exists a unique primitive ce
 
 This procedure will produce the Wigner-Seitz cell, and panel `E` in the graphene example shows the Wigner-Seitz cell for graphene. We note that the Wigner-Seitz cell only contains a single lattice point in the middle, but it does however contain other atoms, which must be specified in the basis.
 
-??? Question "How many carbon atoms are inside the Wigner-Seitz cell of graphene?"
+??? Question "4.1.5 How many carbon atoms are inside the Wigner-Seitz cell of graphene?"
 
     There are two methods to calculate this. We either translate the lattice and thus the Wigner-Seitz cell a bit and observe that there are two carbon atoms inside the cell.
     Another way to calculate the number of atoms inside the cell is by realizing that there is an atom at the lattice point itself and there is 1/3'rd of an atom at three corners of the cell.
@@ -301,7 +301,7 @@ Thus far we have looked at two-dimensional periodic structures, but as mentioned
         </figure>
 
 
-??? Question "4.2.5: How many lattice points are there in the unit cell for the simple cubic lattice?"
+??? Question "4.1.6 How many lattice points are there in the unit cell for the simple cubic lattice?"
 
     <!-- Each corner of the cell contains a lattice point, but only one eighth of each lattice point is in the cell, thus there is a single lattice point in the cell and it is therefore a primitive unit cell. -->
 
@@ -320,7 +320,7 @@ To understand this, and other systems, we must consider additional classes of cu
 
 The image above (panel `A`) shows a simple cubic lattice. Now, perhaps the simplest adjustment one can imagine making the simple cubic structure is the addition of a lattice point to the centre of the simple cubic cell, which is shown in panel `B`. This structure is known as the  **Body-Centred Cubic** (**BCC**) lattice. In the BCC lattice, there are 8 lattice points on the corners of the cell and one in the centre and thus the conventional unit cell contains $8\times 1/8+1 = 2$ lattice points, and is therefore not primitive.
 
-??? Question "What is the basis of the bcc lattice?"
+??? Question "4.1.7 What is the basis of the bcc lattice?"
 
     $(0,0,0)$ and $(1/2, 1/2, 1/2)$
 
@@ -379,7 +379,7 @@ Here $N_{\mathrm{atom}}$ is the number of atoms in the unit cell and $V_{\mathrm
 
     or put another way, approximately $74 \%$ of the FCC unit cell is occupied by atoms.
 
-??? Question "4.2.5: Can you think of another lattice structure with a higher filling factor?"
+??? Question "4.1.8 Can you think of another lattice structure with a higher filling factor?"
 
     <!-- The packing limit was theorized by Kepler in 1571 – 1630 and proven by Hales _et al._ in 1998!. -->
 
@@ -419,7 +419,7 @@ Consider the following two-dimensional diatomic crystal:
 </figure>
 
   1. Sketch the Wigner-Seitz unit cell and two other possible primitive unit cells of the crystal.
-  2. If the distance between the filled cirles is $a=0.28$ nm, what is the area of the primitive unit cell?
+  2. If the distance between the filled circles is $a=0.28$ nm, what is the area of the primitive unit cell?
   How would this area change if all the empty circles and the filled circles were identical?
   3. Write down one set of primitive lattice vectors and the basis for this crystal.
   What happens to the number of elements in the basis if all empty and filled circles were identical?
@@ -427,10 +427,13 @@ Consider the following two-dimensional diatomic crystal:
   The figure below shows the new arrangement of the atoms.
   What lattice do we obtain?
   Write down the basis of the three-dimensional crystal.
+
+      <object type="text/html" data="../images/4-1-diatomic.html"  frameborder="0" width=650 height=650 class=center></object>
+
   5. If we consider all atoms to be the same, what lattice do we obtain?
   Compute the filling factor in the case where all atoms are the same.
 
-<object type="text/html" data="../images/4-1-diatomic.html"  frameborder="0" width=650 height=650 class=center></object>
+
 
 ### Exercise 2: Diamond lattice
 

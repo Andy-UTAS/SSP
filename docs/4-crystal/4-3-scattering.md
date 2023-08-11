@@ -1,8 +1,12 @@
 # Scattering
 
+Become Neo
+
 ## Introduction
 
 ![](images/4-3-diffractionheader.jpg)
+
+It is all too often claimed that physics is beautiful. It is true that there are some truly flooring results with deep connections to myriad areas of physics, mathematics, and further afield, but the tastiest treats are reserved for those those whom have worked around the edges of something in numerous contexts, and then the final pieces are put into place and everything just clicks. Strap in: we have arrived at that moment.
 
 !!! danger  "Expected competencies"
 
@@ -113,9 +117,9 @@ Laue conditions allow scattering as long as the scattering wave vector is a reci
 However if we consider a non-primitive unit cell of the direct lattice, the reciprocal lattice contains more lattice points, seemingly leading to additional interference peaks.
 Computing the structure factor allows us to resolve this apparent contradiction.
 
-??? Question "Calculate the structure factor in which there is a single atom the unit cell located at the lattice point. Do any diffraction peaks dissapear?"
-    $\mathbf{r}_1=(0,0,0)\rightarrow S=f_1$.
-    In this case, each reciprocal lattice point gives one interference peak, none of which are absent.
+??? Question "4.3.1 Calculate the structure factor in which there is a single atom the unit cell located at the lattice point. Do any diffraction peaks dissapear?"
+    <!-- $\mathbf{r}_1=(0,0,0)\rightarrow S=f_1$.
+    In this case, each reciprocal lattice point gives one interference peak, none of which are absent. -->
 
 
 As a demonstration of how it happens, let us compute the structure factor of the FCC lattice using the conventional unit cell in the real space.
@@ -227,24 +231,38 @@ Bragg's law allows us to obtain atomic distances in the crystal $d_{hkl}$ throug
 
 ### Preliminary provocations
 
-2. Why is the amplitude of a scattered wave zero if $\mathbf{k'}-\mathbf{k} \neq \mathbf{G}$?
-3. Suppose we have a unit cell with a single atom in it.
-Can any intensity peaks dissapear as a result of the structure factor?
-4. Can increasing the unit cell in real space introduce new diffraction peaks due to reciprocal lattice having more points?
+  1. Why is the amplitude of a scattered wave zero if $\mathbf{k'}-\mathbf{k} \neq \mathbf{G}$?
 
-### Exercise 3: X-ray scattering in 2D
+  2. Suppose we have a unit cell with a single atom in it. Can any intensity peaks disappear as a result of the structure factor?
 
-Consider a two-dimensional crystal with a rectangular lattice and lattice vectors $\mathbf{a}_1 = (0.468, 0)$ nm and $\mathbf{a}_2 = (0, 0.342)$ nm (so that $\mathbf{a}_1$ points along $x$-axis and $\mathbf{a}_2$ points along $y$-axis).
+  3. Can increasing the unit cell in real space introduce new diffraction peaks due to reciprocal lattice having more points?
 
-1. Sketch the reciprocal lattice of this crystal.
-2. Consider an X-ray diffraction experiment performed on this crystal using monochromatic X-rays with wavelength $0.166$ nm. By assuming elastic scattering, find the magnitude of the wave vectors of the incident and reflected X-ray beams.
-3. On the reciprocal lattice sketched in 3.1, draw the "scattering triangle" corresponding to the diffraction from (210) planes. To do that use the Laue condition $\Delta \mathbf{k} = \mathbf{G}$ for the constructive interference of diffracted beams.
+### Exercise 1: X-ray scattering in 2D
 
-### Exercise 4: Structure factors and powder diffraction
+  Using x-ray scattering, we can infer information on the crystal structure of a material. Here we visualize the geometry of this procedure by analyzing an elementary 2D crystal structure.
 
-1. Compute the structure factor $\mathbf{S}$ of the BCC lattice.
-2. Which diffraction peaks are missing?
-3. How does this structure factor change if the atoms in the center of the conventional unit cell have a different form factor from the atoms at the corner of the conventional unit cell?
-4. A student carried out X-ray powder diffraction on Chromium (Cr) which is known to have a BCC structure. The first five diffraction peaks are given below. Furthermore, the student took the liberty of assigning Miller indices to the peaks. Were the peaks assigned correctly? Fix any mistakes and explain your reasoning.
-![](images/cr_xray_exercise.svg)
-5. Calculate the lattice constant, $a$, of the chromium bcc unit cell. Note that X-ray diffraction was carried out using Cu K-$\alpha$ ($1.5406 \unicode{xC5}$) radiation.
+  Consider a two-dimensional crystal with a rectangular lattice and primitive lattice vectors $\mathbf{a}_1 = d_1\mathbf{\hat{x}}$ and $\mathbf{a}_2 = d_2\mathbf{\hat{y}}$, where $d_1=0.47$ nm and $d_2=0.34$ nm. We conduct an X-ray scattering experiment using monochromatic X-rays with wavelength $\lambda = 0.166$ nm. The wavevectors of the incident and reflected X-ray beams are $\mathbf{k}$ and $\mathbf{k'}$ respectively.
+
+  1. Calculate the reciprocal lattice vectors and sketch both the real- and the reciprocal lattice of this crystal.
+
+  2. Consider an X-ray diffraction experiment performed on this crystal using monochromatic X-rays with wavelength $\lambda = 0.166$ nm. By assuming elastic scattering, find the magnitude $k$ of the wavevectors of the incident and reflected X-ray beams.
+
+  3. In the sketch of the real-space lattice of subquestion 1, indicate a (210) Miller plane. Indicatet the associated reciprocal lattice vector $\mathbf{G}$ in the sketch of the reciprocal lattice. Also sketch the "scattering triangle" formed by the vectors $\mathbf{k}$, $\mathbf{k'}$, and $\mathbf{G}$ corresponding to diffraction from (210) planes.
+
+  4. Sketch the first 5 peaks in an x-ray powder diffraction spectrum of this crystal as a function of $\sin 2\theta$, where $\theta$ is the deflection angle. Label the peaks according the Miller indices. Make sure you have the correct order of the peaks. Are there missing peaks because of the structure factor?
+
+### Exercise 2: Structure factors and powder diffraction
+
+  In this question, we analyse the diffraction pattern we expect for an x-ray experiment on a 3D material with a BCC crystal structure.
+
+  1. Using a conventional unit cell plus a basis to construct the BCC crystal structure, calculate the structure factor $\mathbf{S}$. (assume all the atoms to be the same).
+
+  2. Which diffraction peaks are missing because of the structure factor? Discuss why they are missing in relation to the crystal structure and the conventional unit cell.
+
+  3. How does this structure factor change if the atom in the centre of the conventional unit cell has a different form factor from the atoms at the corners?
+
+  4. A student carried out an X-ray powder diffraction experiment on chromium (Cr) which is known to have a BCC structure. The measured spectrum is shown given below. Furthermore, the student assigned Miller indices to the peaks. Were these indices assigned correctly? Fix any mistakes and explain your reasoning.
+
+    ![](images/cr_xray_exercise.svg)
+
+  5. Calculate the lattice constant $a$ of the conventional chromium bcc unit cell. Use that the X-ray diffraction experiment was carried out using Cu K-$\alpha$ (wavelength $\lambda = 1.5406$ Å) radiation.

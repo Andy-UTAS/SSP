@@ -1,5 +1,7 @@
 # Vibrations
 
+Spring into action
+
 ## Introduction
 
 ![](images/3-1-slinky.jpg)
@@ -51,7 +53,7 @@ $$
 
 we have deliberately excluded term linear in $x_{\mathrm{eq}}$, as its inclusion would remove the minimum! In the usual way, we are only going to consider small displacements around $x_{\mathrm{eq}}$ and then throw all terms other than the constant and the quadratic in the bin, greatly simplifying our life.
 
-??? question  "3.1.1: With a potential of the form $V(x) = V_0 + a x^2$, what will be the motion of an atom in the potential?"
+??? question  "3.1.1 With a potential of the form $V(x) = V_0 + a x^2$, what will be the motion of an atom in the potential?"
 
     <!-- Quadratic potentials give rise to harmonic motion: harmonic oscillator here we come! -->
 
@@ -143,7 +145,7 @@ $$
 \delta x_n = A e^{i \omega t - i k x_{n, \textrm{eq}}} = A e^{i \omega t - i k n a}
 $$
 
-??? question "3.1.2: Assuming plain-wave solutions, show that $\omega = 2 \sqrt{\kappa/m} |\sin(ka/2)|$"
+??? question "3.1.2 Assuming plain-wave solutions, show that $\omega = 2 \sqrt{\kappa/m} |\sin(ka/2)|$"
 
 <!-- Plug and play:
 
@@ -167,7 +169,7 @@ $$
 
 which in contrast to that we have seen previously in the Debye model, $\omega = v_s |k|$, is very different.
 
-??? question "3.1.3: What can one say about the relationship between the dispersion relationship for a 1D chain of oscillators and that of the Debye model?"
+??? question "3.1.3 What can one say about the relationship between the dispersion relationship for a 1D chain of oscillators and that of the Debye model?"
 
 <!-- In the Debye model, we were explicitly looking at sound waves, which have are long wavelength or small wavenumber waves, so if we look at the low $k$ behaviour of the dispersion relation $\omega = 2 \sqrt{\kappa/m} |\sin(ka/2)|$:
 
@@ -200,7 +202,7 @@ $$
 \delta x_n = A e^{i \omega t - i k n a}
 $$
 
-??? question  "3.1.4: What happens to a given mode of oscillation under the transformation $k \rightarrow k + 2\pi/a$?"
+??? question  "3.1.4 What happens to a given mode of oscillation under the transformation $k \rightarrow k + 2\pi/a$?"
 
 <!-- $$
 \begin{align}
@@ -233,7 +235,7 @@ $$
 
 but if $k$ and $k + n \times 2\pi/a$ are equivalent, what is heck is going on?
 
-??? question  "3.1.5: What the heck is going on?"
+??? question  "3.1.5 What the heck is going on?"
 
     <!-- ![](images/3-1-aliasing.svg) -->
 
@@ -281,7 +283,7 @@ $$
 E_k = \hbar\omega(k)\left(n_\mathrm{B}(\beta\hbar\omega(k))+\frac{1}{2}\right)
 $$
 
-??? question  "3.1.6: Use the energy $E_k$ to get obtain an expression for the _total_ energy in the system in terms of an integral over $k$"
+??? question  "3.1.6 Use the energy $E_k$ to get obtain an expression for the _total_ energy in the system in terms of an integral over $k$"
 
 With this, we now have a well-formulated quantum system from which we can calculate quantities of interest, but also extend to model systems that are not just infinite chains of identical particles.
 
@@ -297,6 +299,7 @@ With this, we now have a well-formulated quantum system from which we can calcul
 ---
 
 ## Exercises
+
 ### Preliminary provocations
 
   1. What is the motion of adjacent masses when the chain is oscillating at the its maximum frequency?

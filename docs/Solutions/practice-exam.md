@@ -1,6 +1,6 @@
 # Practice exam
 
-The practice exam can be found [here](../exams/Mockexam.pdf), and it was written to provide a flavour for the style of examination one can expect from the course as taught by me, rather than the past examinations which have followed a different course structure. Given this is pitched as a learning tool, I have included some discussion that would not be expected in an exam, but in addition to helping you achieve the best possible result on the exam, I care much more about you learning and understanding the content: hopefully this resource proves useful.
+The practice exam can be found [here](exams/Mockexam.pdf), and it was written to provide a flavour for the style of examination one can expect from the course as taught by me, rather than the past examinations which have followed a different course structure. Given this is pitched as a learning tool, I have included some discussion that would not be expected in an exam, but in addition to helping you achieve the best possible result on the exam, I care much more about you learning and understanding the content: hopefully this resource proves useful.
 
 ## Question 1
 
@@ -101,7 +101,7 @@ You are going to derive the dispersion relation for this system.
 
         See an image shamelessly pulled from assignment 3. Given I made it, I feel I can own "sketching" this:
 
-        ![](../images/PE-chain.png)
+        ![](images/PE-chain.png)
 
     2. Denoting the position of the $n^{\textrm{th}}$ particle of mass $m_1$ as $x_n$ and the position of the $n^{\textrm{th}}$ particle of mass $m_2$ as $y_n$, show that the equations of motion for the system are
     \begin{align*}
@@ -205,7 +205,7 @@ You are going to derive the dispersion relation for this system.
 
 3. The one-dimensional chain provides an excellent model for understanding the properties of solids in one dimension. With explicit reference to covalent bonding as modelled through the linear combination of atomic orbitals, explain why it that we can use a harmonic potential to well describe the interatomic potential.
 
-    If we consider two distinct atoms, with some interatomic separation $\Delta x$, to model the electronic states of the system we must consider the influence of both nuclei and the other electron for a given electron, for which we construct a Hamiltonian $\hat{H} = \hat{V}_1 + \hat{V}_2 + \hat{K}$. In the simplest case of LCAO, we consider only the ground state for each atom and make an assumption: that the states of out new (combined) system will be a linear combination of our original states. To calculate the energy of these new states, we use the variational method (which is done in its full glory in the [Chemistry section of the notes](../../2-chemistry/2-1-chemistry)) but the ultimate outcome is that we end up with bonding and antibonding states which have an energy determined by the interatomic spacing, as shown in the plot below:
+    If we consider two distinct atoms, with some interatomic separation $\Delta x$, to model the electronic states of the system we must consider the influence of both nuclei and the other electron for a given electron, for which we construct a Hamiltonian $\hat{H} = \hat{V}_1 + \hat{V}_2 + \hat{K}$. In the simplest case of LCAO, we consider only the ground state for each atom and make an assumption: that the states of out new (combined) system will be a linear combination of our original states. To calculate the energy of these new states, we use the variational method (which is done in its full glory in the [Chemistry section of the notes](../2-chemistry/2-1-chemistry)) but the ultimate outcome is that we end up with bonding and antibonding states which have an energy determined by the interatomic spacing, as shown in the plot below:
 
     ![](2-1-separation)
 
@@ -228,12 +228,12 @@ This question focuses on the describing the geometry of, and the scattering from
     1. Draw the lattice described by the above basis vectors (draw at least $3 \times 3$ lattice points)
 
         Digitial how about I do it in `python`?
-        ![](../images/PE-lattice.svg){: .center}
+        ![](images/PE-lattice.svg){: .center}
 
     2. On the lattice above, draw both the primitive unit cell as defined by the primitive lattice vectors and the Wigner-Seitz cell
 
         Coneventional cell included at no extra cost
-        ![](../images/PE-3-cells.png)
+        ![](images/PE-3-cells.png)
 
     3. Find the primitive lattice vectors of the reciprocal lattice
 
@@ -258,7 +258,7 @@ This question focuses on the describing the geometry of, and the scattering from
     1/3(\mathbf{a_1} + \mathbf{a_2}) \quad \textrm{and} \quad 2/3(\mathbf{a_1} + \mathbf{a_2})
     $$
 
-    ![](../images/PE_honeycomb.png){: .center}
+    ![](images/PE_honeycomb.png){: .center}
 
 3. Now consider the structure of CsCl: a simple cubic with the basis Cs at $[0,0,0]$ and Cl at $[1/2, 1/2, 1/2]$
 
@@ -323,18 +323,18 @@ This question focuses on band structure and its applications
 
         Rather than just providing a sketch, this is a full calculation and so obviously beyond what would be expected. The dispersion relation - a surface in 2D - is shown, along with a contour plot of this surface. As each $k$ state can hold 2 electrons, $50\%$ of the Brillouin zone will be filled (in this case area) with the lowest states being preferentially filled. The free-electron dispersion relationship is a parabaloid, and hence we get a circular Fermi surface, with the Fermi sea being the interior of this circle.
 
-        ![](../images/PE-free.svg)
+        ![](images/PE-free.svg)
 
     2. Repeat the process above for both a weak and strong periodic potential
 
         Shown below is the dispersion surface in the tight-binding model (which you can think of as a _very_ strong periodic potential), which in contrast to the Fermi circle of a free-electron, makes a Fermi square:
 
-        ![](../images/PE-tightbinding.svg)
+        ![](images/PE-tightbinding.svg)
 
         A weaker periodic potential would be in-between these extremes, a circle with the points closest to the Brillouin zone boundaries filled more due to band bending.
 
 3. Barium ($Z = 56$) is a divalent atom, and the Fermi surface is shown below:
-![](../images/PE-Ba.jpg){: .center}
+![](images/PE-Ba.jpg){: .center}
 Explain the features of this surface, explicitly referencing the 2D analogues from the previous section, and what statements (if any) can be made about the conductivity and specific heat of barium based upon the Fermi surface alone?
 
     **Still needs to be finished**, but the if we consider a square BZ, a divalent nearly-free electron system would have a Fermi surface something like a circle with the same area as the BZ, but with points outside the square, that is bits that protrude into the 2nd BZ. Think of this like the extended/reduced zone schemes in 1D: when something is in the 2nd BZ (in the extended zone) this is the same as the excited 1st branch in the reduced zone scheme: we are just seeing this is 3D. The fact that there is a Fermi surface at all mean that there are nearby states which electrons can occupy, and thus the system can absorb energy: this will be a metal, and conduct both heat and electricity. It is also Barium, which you (may) know is a metal!

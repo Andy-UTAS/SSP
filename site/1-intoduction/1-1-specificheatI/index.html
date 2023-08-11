@@ -79,16 +79,6 @@
     </div>
     <div data-md-component="announce">
       
-        <aside class="md-banner">
-          <div class="md-banner__inner md-grid md-typeset">
-            
-            
-  Get excited: POLUS is getting a comment system! To comment, you require a <a href="https://github.com/">GitHub account</a> <i class="fa-brands fa-github"></i>
-
-          </div>
-          
-        </aside>
-      
     </div>
     
     
@@ -1008,7 +998,7 @@ C/N= 3 k_\mathrm{B}
 <p>Whilst this may seem like a major leap forward, it is worth considering what the explaination for this behaviour had been prior to this proposal: <em>nothing</em>. Then, using the recently minted ideas such as the <em>equipartition theorem</em>, it was clear why the <script type="math/tex">C/N= 3 k_\mathrm{B}</script>. To see this, recall that for a <em>gas</em> in thermal equilibrium, we have</p>
 <p>
 <script type="math/tex; mode=display">
-C_V/N = f/2 k_\mathrm{B}
+C_V/N = f/2 \times k_\mathrm{B}
 </script>
 </p>
 <p>where <script type="math/tex">f</script> is the number of thermodynamic degrees of freedom, or stated another way: each degree of freedom contributes <script type="math/tex">k_\mathrm{B}/2</script> to the heat capacity. Immediately, we can see that the Dulong–Petit law is of this form, but suggests that the number of <abbr title="Degrees of Freedom">DoF</abbr> is six, i.e. twice that of an ideal monatomic gas.</p>
@@ -1187,7 +1177,7 @@ C = 3k_{\mathrm{B}}(\beta\hbar\omega)^2\frac{\exp(\beta\hbar\omega)}{(\exp(\beta
 <span class="c1"># Define a function to calculate the heat capacity</span>
 <span class="k">def</span> <span class="nf">c_einstein</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calculate the specific heat capacity according to the Einstein model of a solid</span>
 
 <span class="sd">    Input:</span>
@@ -1274,15 +1264,15 @@ C = 3k_{\mathrm{B}}(\beta\hbar\omega)^2\frac{\exp(\beta\hbar\omega)}{(\exp(\beta
 <h3 id="preliminary-provocations">Preliminary provocations<a class="headerlink" href="#preliminary-provocations" title="Permanent link">&para;</a></h3>
 <ol>
 <li>What is the high-temperature heat capacity of an atom in a solid with two momentum and two spatial coordinate degrees of freedom?</li>
-<li>Sketch the Bose Einstein distribution as a function of <script type="math/tex">\omega</script> for two different values of <script type="math/tex">T</script>
+<li>Sketch the Bose-Einstein distribution as a function of <script type="math/tex">\omega</script> for two different values of <script type="math/tex">T</script>
 </li>
 </ol>
 <h3 id="exercise-1-total-heat-capacity-of-a-diatomic-material">Exercise 1: Total heat capacity of a diatomic material<a class="headerlink" href="#exercise-1-total-heat-capacity-of-a-diatomic-material" title="Permanent link">&para;</a></h3>
 <p>One of the assumptions of the Einstein model states that every atom in a solid oscillates with the same frequency <script type="math/tex">\omega_0</script>. However, if the solid contains different types of atoms, it is unreasonable to assume that the atoms oscillate with the same frequency. One example of such a solid is a lithium crystal, which consists of the <a href="https://en.wikipedia.org/wiki/Isotopes_of_lithium">two stable isotopes</a> <script type="math/tex">^6</script>Li (7.5%) and <script type="math/tex">^7</script>Li (92.5%) in their natural abundance. Let us extend the Einstein model to take into account the different masses of these different isotopes. Assume that the solid is 1D (1D quantum harmonic oscillator).</p>
 <ol>
-<li>Assume that the strength of the returning force <script type="math/tex">k</script> experienced by each atom is the same. What is the difference in the oscillation frequencies of the two different isotopes in the lithium crystal?</li>
+<li>Assume that the strength of the returning force <script type="math/tex">\kappa</script> experienced by each atom is the same. What is the difference in the oscillation frequencies of the two different isotopes in the lithium crystal?</li>
 <li>Write down the total energy stored in the vibrations of each atom of the lithium crystal, assuming that all <script type="math/tex">^6</script>Li atoms are in <script type="math/tex">n=2</script> vibrational mode and all <script type="math/tex">^7</script>Li atoms are in <script type="math/tex">n=4</script> vibrational mode.</li>
-<li>In the case where the oscilators can occupy any vibrational mode, write down the total energy stored in the vibrations of each atom in the lithium crystal at a temperature <script type="math/tex">T</script> by modifying the Einstein model.</li>
+<li>In the case where the oscillators can occupy any vibrational mode, write down the total energy stored in the vibrations of each atom in the lithium crystal at a temperature <script type="math/tex">T</script> by modifying the Einstein model.</li>
 <li>Compute the heat capacity of the lithium crystal as a function of <script type="math/tex">T</script>.</li>
 </ol>
 <div class="footnote">
@@ -1305,7 +1295,7 @@ C = 3k_{\mathrm{B}}(\beta\hbar\omega)^2\frac{\exp(\beta\hbar\omega)}{(\exp(\beta
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 28, 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 29, 2023</span>
       
     
   </small>

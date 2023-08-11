@@ -81,7 +81,7 @@ A_y
 \end{pmatrix}
 $$
 
-??? question "3.2.1: Explicitly verify that the trail solutions lead to the above matrix equation"
+??? question "3.2.1 Explicitly verify that the trail solutions lead to the above matrix equation"
 
 <!-- This is tedious but straightforward:
 
@@ -111,7 +111,7 @@ $$
 \omega_\pm^2 = \frac{\kappa_1+\kappa_2}{m} \pm \sqrt{\frac{(\kappa_1+\kappa_2)^2 - 4\kappa_1\kappa_2\sin^2(ka/2)}{m^2}}
 $$
 
-??? question "3.2.2: Solve the eigenvalue equation and verify the result for $\omega_\pm$"
+??? question "3.2.2 Solve the eigenvalue equation and verify the result for $\omega_\pm$"
 
 <!-- Subtracting the eigenvalue $m\omega^2$ from the diagonal elements of the matrix and then solving when the determinant evaluates to zero:
 
@@ -166,7 +166,7 @@ One may ask why the second branch appears, which is an good question, and is und
 
 Looking at the $\omega_-$ mode, we notice that as $k \rightarrow 0$, the dispersion relationship is linear. In this regime, the modes behave like sound waves (i.e. $\omega = v |k|$) and consequently, the mode is referred to as the _acoustic mode_. On the other hand, modes which intersect with optical dispersion modes (i.e. $\omega = c|k|$) are referred to as _optical modes_.
 
-??? question  "3.2.3: Plot the dispersion modes, along with an optical dispersion curve for visible light. What are the implications intersecting curves?"
+??? question  "3.2.3 Plot the dispersion modes, along with an optical dispersion curve for visible light. What are the implications intersecting curves?"
 
 We can look at the behaviour of the curves at specific values of $k$, for example at the zone boundary, $\omega_{+}(\pi/a) = \sqrt{2\kappa_1/m}$ and $\omega_{+}(\pi/a) = \sqrt{2\kappa_2/m}$. At this point, it is useful to consider the idea of an _extended_ Brillouin zone: the Brillouin zone houses all unique values of $k$, but in this case, there are multiple frequencies for each value of $k$. By extending the Brillouin zone, unfolding the higher-order mode(s) out to a the neighbouring unit cell in reciprocal space, we can obtain a plot which was unique frequencies for each $k$. A plot illustrating the extended scheme is shown below:
 
@@ -174,7 +174,7 @@ We can look at the behaviour of the curves at specific values of $k$, for exampl
 
 But why would we do this? Well, consider the case of $\kappa_1 \approx \kappa_2$ and the limit of $\kappa_1 = \kappa_2$. We can clearly observe an "opening" between the bands which depends on the values of $\kappa_1$ and $\kappa_2$, but physically, what would one expect to happen when $\kappa_1 = \kappa_2 = \kappa$?
 
-??? question  "3.2.4: Make a prediction for what will be the consequences of setting $\kappa_1 = \kappa_2$ and how this relates to the monatomic chain."
+??? question  "3.2.4 Make a prediction for what will be the consequences of setting $\kappa_1 = \kappa_2$ and how this relates to the monatomic chain."
 
     Hopefully it is clear that with identical spring constants, we are back at the case of a monatomic chain. In the case of the band splitting, this will go to zero as the difference between $\kappa_1$ and $\kappa_2$ goes to zero:
 
@@ -207,6 +207,7 @@ where sum goes over all states at a given energy. In this case, we must ensure t
 ---
 
 ## Exercises
+
 ### Preliminary provocations
   1. Verify that the expression for $\omega^2$ is always positive. Why is this important?
   2. When calculating the DOS, we only look at the first Brillouin zone. Why?

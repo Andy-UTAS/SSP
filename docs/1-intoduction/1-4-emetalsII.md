@@ -1,5 +1,7 @@
 # Electrons in metals II
 
+Hoist the mainsail: next stop the (Fermi) sea.
+
 ## Introduction
 
 ![](images/04_iron.jpg)
@@ -19,7 +21,7 @@ The kinetic theory of Drude was a great first step in trying to answer the quest
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F04metalsII.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F1-4-metalsII.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
@@ -65,7 +67,7 @@ $$
 
 Where we have again replaced a discrete sum over $k$ with a volume integral.
 
-??? question "From where does the factor of 2 come from in the above equation? Contrast this to the Debye model."
+??? question "1.4.1 From where does the factor of 2 come from in the above equation? Contrast this to the Debye model."
 
     The factor $2$ accounts for the spin degeneracy, whereas in the Debye model we had a factor of 3 to account for the distinct polarisations. To keep track of the origin of this term we will denote the spin degeneracy as $2_s$.
 
@@ -126,7 +128,7 @@ $$
 \mathbf{v}_F = \frac{\mathbf{p}_F}{m} = \frac{\hbar \mathbf{k}_F}{m}.
 $$
 
-??? question "The Fermi energy of copper is ~7 eV. What is the corresponding Fermi velocity?"
+??? question "1.4.2 The Fermi energy of copper is ~7 eV. What is the corresponding Fermi velocity?"
 
     The Fermi velocity $v_F\approx$ 1700 km/s or 0.3% of the speed of light!
 
@@ -176,7 +178,7 @@ $$
 g(\varepsilon) \mathrm{d} \varepsilon = \frac{3n}{2\varepsilon_F}\left(\frac{\varepsilon}{\varepsilon_F}\right)^{1/2}
 $$
 
-??? question  "Verify the above expression. A good starting point would be to find a value for the number of electrons inside the sphere defined by $k_F$ for $T=0$"
+??? question  "1.4.3 Verify the above expression. A good starting point would be to find a value for the number of electrons inside the sphere defined by $k_F$ for $T=0$"
 
     _Do the maths_, integral of the Heaviside just means intergral is the volume of a sphere.
 
@@ -252,7 +254,7 @@ So what does all of this mean? Well, our algebraic journey has left us with a he
 </figure>
 
 
-??? question  "What is the expected behaviour of the plot above as predicted by the Debye model and the Sommerfeld model?"
+??? question  "1.4.4 What is the expected behaviour of the plot above as predicted by the Debye model and the Sommerfeld model?"
 
     We now have two contributions to the heat capacity $C_{\textrm{Sommerfeld}} = \gamma T$ and $C_{\textrm{Debye}} = \alpha T^3$, which should manifest as
 
@@ -339,8 +341,7 @@ However, close to the Fermi level, the dispersion relation can be approximated b
 $ \varepsilon(\mathbf{k}) = \pm c|\mathbf{k}|.$ Note that the $\pm$ here means that there are two energy levels at a specified $\mathbf{k}$.
 The Fermi level is set at $\varepsilon_F = 0$.
 
-1. Make a sketch of the dispersion relation.
-What other well-known particles have a linear dispersion relation?
+1. Make a sketch of the dispersion relation. What other well-known particles have a linear dispersion relation?
 2. Using the dispersion relation and assuming periodic boundary conditions, derive an expression for the density of states of graphene.
 Do not forget spin degeneracy, and take into account that graphene has an additional two-fold 'valley degeneracy' (hence there is a total of a fourfold degeneracy instead of two).
 Your result should be linear with $|\varepsilon|$.

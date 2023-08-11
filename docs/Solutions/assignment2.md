@@ -1,448 +1,707 @@
-# Assignment 2: Bonding and harmonic chains
+# Assignment 2: One-dimensional solids (welcome to the diatomic party)
 
-The second assignment can be found [here](../assignments/Assignment two.pdf).
+The second assignment can be found [here](../assignments/Assignmentfive.pdf)
 
-## Exercise 1 - Bonding: not LCAO
+## Exercise 1 - Dispersion
 
-1. In you own words, explain why ionic bonds occur, and what properties one would expect from and ionic solid.
+1. Use the dispersion relation to compute the group velocity $v_g$
 
-    Ionic bonds occur as an electron is transferred from one atom to another, and the resulting ions attract each other. Typical properties are due to the nature of the bond being very strong, with materials having high melting temperatures, and usually being hard, brittle, and electrically insulating. They are also mostly soluble, but this is not of so much relevance here.
+    The group velocity is given by
 
-2. The (first) ionisation energy of sodium is roughly $5.14\mathrm{eV}$, and the electron affinity of chlorine is roughly $3.62$, and the bond length between the two atoms when a sodium chloride molecule is formed is roughly $0.236\mathrm{nm}$. Assuming that _all_ of the cohesive energy is due to the Coulomb interaction, calculate the bonding energy.
+    \begin{align}
+    v_g(k) & =\frac{\partial \omega(k)}{\partial k}\\
+    & = a \sqrt{\frac{\kappa}{m}}\cos\left(\frac{ka}{2}\right) \frac{\sin(ka/2)}{|\sin(ka/2)|}
+    \end{align}
 
-    The cohesive energy is related to the bond distance $d$ via
+2. What is the relationship between the group velocity $v_g$ and the density of states $g(\omega)$? Use this to calculate $g(\omega)$
 
-    $$
-    E_{coh} = \frac{e^2}{4\pi\epsilon_0 d}.
-    $$
-
-    Using the value $d= 2.36 \unicode{x212B}$ one finds a cohesive enrgy of $6.10\mathrm{eV}$ and thus the total binding energy is
-
-    $$
-    E = -5.14 + 3.62 + 6.10 = 4.58 \mathrm{eV}
-    $$
-
-3. The measured value of the bonding energy of sodium chloride is $4.26\mathrm{eV}$. How does this compare to your value above? Justify your response.
-
-    The calculated value above is slightly larger than the measured value with the reason for the discrepancy being there must be a repulsive fore between the ions (otherwise the would collapse into a singularity!) in addition to the Coulomb attraction, therefore reducing the size of the cohesive (binding) energy.
-
-4. In our discussion of bonding, we did not explicitly discuss van der Waals bonding. Research what is the nature of the van der Waals bond, explicitly describing the origin of the attractive force formation and reason as to why the force is of the form $R^{-7}$
-
-    Van der Waals forces are from correlated dipole fluctuations. If the electron is a given fixed position, there is a dipole moment $\mathbf{p} = e\mathbf{r}$ where $\mathbf{r}$ is the vector from the electron to the proton. With the electron "orbiting" (i.e, in an eigenstate), the average dipole moment is zero. However, if an electric field is applied to the atom, the atom will develop a polarisation (i.e., it will be more likely for the electron to be found on one side of the nucleus than on the other). We write
+    The relationship is
 
     $$
-    \mathbf{p} = \chi \mathbf{E}
+    g(\omega) = \frac{L}{\pi} \left|\frac{1}{v_g}\right|
     $$
 
-    with $\chi$ the polarisability. Now, let us suppose we have two such atoms, separated a distance $r$ in the $\hat{x}$ direction. Suppose one atom momentarily has a dipole moment $\mathbf{p}_1$ (for definiteness, suppose this dipole moment is in the $\hat{z}$ direction). Then the second atom will feel an electric field
+    into which the equation from part (i) can be inserted:
 
-    $$
-    E = \frac{p_1}{4\pi\epsilon_0 r^3}
-    $$
+    \begin{align}
+    g(\omega) & = \frac{L}{a \pi} \sqrt{\frac{m}{\kappa}}\frac{1}{\cos(ka/2)}\\
+    & = \frac{L}{a \pi} \sqrt{\frac{m}{\kappa}}\frac{1}{\sqrt{1-\sin^2(ka/2)}}\\
+    & = \frac{2L}{a \pi} \frac{1}{\sqrt{4\kappa / m - \omega^2}}
+    \end{align}
 
-    in the negative $\hat{z}$ direction. The second atom then, due to its polarisability, develops a dipole moment $p_2 = \chi E$ which in turn is attracted to the first atom. The potential energy between these two dipoles is
+3. Sketch or plot both $v_g$ and $g(\omega)$
 
-    $$
-    U=\frac{-\left|p_{1}\right|\left|p_{2}\right|}{4 \pi \epsilon_{0} r^{3}}=\frac{-p_{1} \chi E}{\left(4 \pi \epsilon_{0}\right) r^{3}}=\frac{-\left|p_{1}\right|^{2} \chi}{\left(4 \pi \epsilon_{0} r^{3}\right)^{2}}
-    $$
+    The group velocity is shown below
 
-    corresponding to a force which is attractive and proportional to $1/r7$. Note that while for a single isolated atom $\langle p \rangle = 0$ the result is proportional instead to $\langle |p|^2 \rangle \sim \langle |r|^2 \rangle$ with r the position of an electron, is nonzero.
+    ![](../images/A3-1-v.svg)
 
-## Exercise 2 - Bonding: LCAO
-
-In our formulation of the LCAO formulation we assumed that orbitals were orthogonal, with the justification that the qualitative behaviour was still going to be fine.
-
-Assume that we introduce a trial wavefunction:
-
-\[
-|\psi \rangle = \sum_{i=1}^{N} \phi_i |i\rangle
-\]
-
-however, we are not going to enforce that the state be orthogonal. Rather, we define an overlap matrix $\mathcal{S}$ with elements
-
-\[
-\mathcal{S}_{i,j} = \langle i | j \rangle
-\]
-
-1. Show that with the above conditions, one arrives at an _effective_ Schrödinger equation
-
-    \[
-    \mathcal{H} \phi = E\mathcal{S}\phi
-    \]
-
-    where
-
-    \[
-    \mathcal{H}_{i,j} = \langle i | \hat{H} | j \rangle
-    \]
-
-    and $\phi$ is the vector of the coefficients for the $\phi_i$.
-
-    This is the variational method 101. It is necessary to compute $E$ through
-
-    $$
-    E=\frac{\langle\psi|H| \psi\rangle}{\langle\psi \mid \psi\rangle}=\frac{\sum_{n, m} \phi_{n}^{*} \mathcal{H}_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}}
-    $$
-
-    which must then be minimised with respect to the $\phi_n$. This is most simply done by differentiating with respect to $\phi_n^*$ and solving for the root(s):
-
-    $$
-    \begin{aligned}
-    0 =\frac{\partial E}{\partial \phi_{n}^{*}} & =\frac{\sum_{m} \mathcal{H}_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}}-\left(\frac{\sum_{n, m} \phi_{n}^{*} \mathcal{H}_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}}\right) \frac{\sum_{n, m} S_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}} \\
-    & =\sum_{m} \mathcal{H}_{n m} \phi_{m}-E \sum_{m} S_{n m} \phi_{m}
-    \end{aligned}
-    $$
-
-    where we have used the definition of $E$ above to simplify the 2nd term in the top line. This is exactly the result required.
-
-2. Consider the case where N=2 (i.e. the diatomic case) and the orbitals are $s$ ($l=0$) orbitals. Use the above equation to solve for the energy eigenvalues of the system.
-
-    Firstly, the reason we consider $s$ states is because an $s$ orbital can be taken to be manifestly positive everywhere (it has no nodes), so overlaps $S_{ij}$ must be real and positive, making life a little easier.
-
-    In order to solve the equation
-
-    \[
-    \mathcal{H} \phi = E\mathcal{S}\phi
-    \]
-
-    it is simplest to solve the eigenvalue problem
-
-    \[
-    \mathcal{S}^{-1}\mathcal{H} \phi = E\phi.
-    \]
-
-    As we normally do, we write the Hamiltonian $\mathcal{H}$ as
-
-    $$
-    \mathcal{H}=\left(\begin{array}{cc}
-    \epsilon & t \\
-    t^{*} & \epsilon
-    \end{array}\right)
-    $$
-
-    with $t$ the hopping and $\epsilon = \epsilon_0 + V_{\mathrm{cross}}$, and the overlap matrix is just
-
-    $$
-    \mathcal{S}=\left(\begin{array}{cc}
-    1 & S \\
-    S & 1
-    \end{array}\right)
-    $$
-
-    where we have defined the only non-trivial element $\mathcal{S}_{12} = S$. We then need to diagonalise
-
-    $$
-    \mathcal{S}^{-1} \mathcal{H}=\frac{1}{1-S^{2}}\left(\begin{array}{cc}
-    \epsilon-S t & t-\epsilon S \\
-    t-\epsilon S & \epsilon-S t
-    \end{array}\right)
-    $$
-
-    which has eigenvalues
-
-    \begin{equation}
-    E_{\pm} = \frac{1}{1-S^2}\left( |\epsilon - S t| \pm |t - \epsilon S| \right).
-    \end{equation}
-
-## Exercise 3 - Quantum thermal expansion
-
-In a _content unpacking_ session, we discussed thermal expansion arising from the anharmonic term in the interatomic potential. Assume masses $m_1$ and $m_2$ for the interacting particles and let's consider an anharmonic perturbation $\delta V$
-
-\[
-\delta V = -\frac{\kappa_3}{6}(x-x_0)^3
-\]
-
-to the one-dimensional quantum harmonic oscillator $H_0$:
-
-\[
-H_0 = \frac{p^2}{2m}+\frac{\kappa}{2}(x-x_0)^2.
-\]
-
-To first order in $\kappa_3$, it can be shown that
-
-\[
-\langle n | x | n \rangle = x_0 + \frac{E_n \kappa_3}{2\kappa^2}
-\]
-
-where $|n\rangle$ is the eigenstate of the harmonic oscillator with
-
-\[
-E_n = \hbar\omega \left(n+\frac{1}{2}\right)
-\]
-
-1. What is the value of $\omega$ in terms of $m_1$ and $m_2$?
-
-    The relationship between frequency and mass for a harmonic oscillator is
-
-    $$
-    \omega = \sqrt{\frac{\kappa}{m}}
-    $$
-
-    and given our system is comprised of two masses $m_1$ and $m_2$, we should use the _reduced_ mass $\mu$:
-
-    $$
-    \mu = \frac{m_1 m_2}{m_1 + m_2}
-    $$
-
-2. What is the interpretation of the $|0\rangle$ state?
-
-    The $|0\rangle$ state is the ground state of the harmonic oscillator, which has some notable features, but most relevant is that the energy is not equal to the minimum of the potential, but rather $\hbar\omega/2$ above the minimum, and therefore the will be fluctuations in both the position and momentum of the trapped particle around the minimum which is what gives rise to the average separation of atoms.
-
-
-3. The expectation value of $x$ as a function of temperature is written as
-
-    \[
-    \langle x \rangle_{\beta} = \frac{\sum_n \langle n | x | n \rangle e^{-\beta E_n}}{\sum_n e^{-\beta E_n}}
-    \]
-
-    1. Find the coefficient of thermal expansion
-
-        Just crank the handle:
-
-        $$
-        \begin{aligned}
-        \langle x\rangle_{\beta} &=\frac{\sum_{n}\langle n|x| n\rangle e^{-\beta E_{n}}}{\sum_{n} e^{-\beta E_{n}}}=\frac{\sum_{n} \left(x_{0}+E_{n} \kappa_{3} /\left(2 \kappa^{2}\right) \right) e^{-\beta E_{n}}}{\sum_{n} e^{-\beta E_{n}}} \\
-        &=x_{0}+\frac{\langle E\rangle_{\beta} \kappa_{3}}{2 \kappa^{2}}
-        \end{aligned}
-        $$
-
-        where $\langle E \rangle_\beta$ is the energy expectation of a harmonic oscillator of frequency $\omega$ at temperature $\beta = 1/(k_{\mathrm{B}} T)$. It is fine to use the result that  $\langle E \rangle_\beta$ directly:
-
-        $$
-        \begin{aligned}
-        \langle E\rangle_\beta &=-(1 / Z) \partial Z / \partial \beta=(\hbar \omega / 2) \operatorname{coth}(\beta \hbar \omega / 2) \\
-        &=\hbar \omega\left(n_{B}(\beta \hbar \omega)+\frac{1}{2}\right)
-        \end{aligned}
-        $$
-
-        but this can be derived easily enough from the partition function:
-
-        $$
-        \begin{aligned}
-        Z_{1 d} &=\sum_{n \geq 0} e^{-\beta \hbar \omega(n+1 / 2)} \\
-        &=e^{-\beta \hbar \omega / 2} 1 /\left(1-e^{-\beta \hbar \omega}\right) \\
-        &=1 /[2 \sinh (\beta \hbar \omega / 2)]
-        \end{aligned}
-        $$
-
-        Combining the above equations one arrives at
-
-        $$
-        \langle x\rangle_{\beta}=x_{0}+\left(\kappa_{3} \hbar \omega /\left(4 \kappa^{2}\right)\right) \operatorname{coth}(\beta \hbar \omega / 2)
-        $$
-
-        and then the coefficient of thermal expansion is then
-
-        $$
-        \alpha=\frac{1}{x_{0}} \frac{d\langle x\rangle_{\beta}}{d T}=\frac{\kappa_{3}}{2 x_{0} \kappa^{2}} \frac{d\langle E\rangle}{d T}
-        $$
-
-        The term $\frac{d\langle E\rangle}{d T}$ is identified as the specific heat $C$, and the specific heat of the a harmonic oscillator was covered when discussing the Einstein model of a solid, but can be calculated directly from the equation for $\langle E \rangle_\beta$ to yield
-
-        \begin{equation}
-        \alpha=\frac{\kappa_{3} C}{2 x_{0} \kappa^{2}}=\frac{\kappa_{3}}{2 x_{0} \kappa^{2}} k_{b}(\beta \hbar \omega)^{2} \frac{e^{\beta \hbar \omega}}{\left(e^{\beta \hbar  \omega}-1\right)^{2}}
-        \end{equation}
-
-
-    2. What is the behaviour of the coefficient at both high and low temperature, and comment on the physical significance of these results.
-
-    In the low-temperature limit, the modes "freeze" out, entirely analogous to the specific heat dropping out at low temperature (there needs to be a minimum energy put into the system to enact change because of the quantised states of the harmonic oscillator).
-
-    In the high-temperature limit, $C \rightarrow k_{\mathrm{B}}$ so one obtains
-
-    $$
-    \alpha = \frac{\kappa_3 k_{\mathrm{B}}}{2 x_0 \kappa^2}
-    $$
-
-    in agreement with the classical result, and this result is valid when $k_{\mathrm{B}} T \gg \hbar \omega.$
-
-## Exercise 4 - One-dimensional oscillations
-
-1. Explain what is meant by a _normal mode_ and a _phonon_
-
-    A _normal mode_ is a periodic collective motion where all particles move at the same frequency. A _phonon_ is a quantum of vibration.
-
-    People tend to be confused by phonons, so to explicitly connect the two and explain why phonons are bosons: each classical normal mode of vibration corresponds to a quantum mode of vibration which can be excited multiple times. A single mode may be occupied by a single phonon, or it may be occupied with multiple phonons corresponding to a larger amplitude oscillation. The fact that the same state may be multiply occupied by phonons means that phonons must be bosons.
-
-2. Derive the dispersion relation for longitudinal oscillations of an infinite one-dimensional chain of identical atoms, assuming mass $m$, spring constant $\kappa$, and lattice spacing $a$
-
-    The equation of motion of the $n^{\textrm{th}}$ particle along the chain is given by
-
-    $$
-    m \ddot{x}_{n}=\kappa\left(x_{n+1}-x_{n}\right)+\kappa\left(x_{n-1}-x_{n}\right)=\kappa\left(x_{n+1}+x_{n-1}-2 x_{n}\right)
-    $$
-
-    where $na$ is the equilibrium position of the $n^{\textrm{th}}$ particle. Looking for solutions of the form
-
-    $$
-    x_n = A e^{i\omega t - i k n a}
-    $$
-
-    one obtains
-
-    $$
-    \begin{aligned}
-    -\omega^{2} m e^{i \omega t-i k n a} &=\kappa e^{i \omega t}\left(e^{i k(n+1) a}+e^{i k(n-1) a}-2 e^{i k n}\right) \\
-    \omega^{2} m &=2 \kappa(\cos (k a)-1)
-    \end{aligned}
-    $$
-
-    which can be recast as
-
-    $$
-    \omega = \sqrt{\frac{2\kappa}{m}\left(\cos(ka)-1\right)} = 2\sqrt{\frac{\kappa}{m}}\left|\sin\left(\frac{ka}{2}\right)\right|
-    $$
-
-3. Show that a the mode with wavevector $k$ is equivalent to the mode $k + 2\pi/a$
-
-    $$
-    e^{-i(k+2\pi/a)na} = e^{-i k n a} e^{-i 2\pi n} = e^{-i k n a}
-    $$
-
-4. Assuming periodic boundary conditions, how many different modes are there?
-
-    If one assumes periodic boundary conditions, then $k = 2 \pi m/L$, but $k$ is identified with $k + 2 \pi /a$ so that there are therefore exactly $N = L/a$ different normal modes.
-
-5. Find expressions for and plot both the group and phase velocities
-
-    The phase velocity is calculated via
-
-    $$
-    v_p = \omega/k = \frac{2\sqrt{\frac{\kappa}{m}}\left|\sin\left( \frac{ka}{2} \right)\right|}{k}
-    $$
-
-    and the group velocity is
-
-    $$
-    v_g = \frac{d\omega}{dk} = a\sqrt{\frac{\kappa}{m}} \cos\left(\frac{|k|a}{2}\right) = \frac{a \omega_0}{2}\sqrt{1-\frac{\omega^2}{\omega_0^2}}
-    $$
-
-    where $\omega_0 = 2\sqrt{\kappa/m}$.
-
-    To plot this, code such as that below
+    and was produced using the following code:
 
     ``` python
-    kappa = 1
-    m = 1
-    a = 1
-
-    def omega(k):
-       return 2 * np.sqrt(kappa/m) * abs(np.sin(k * a / 2))
-
-    def v_p(k):
-       return omega(k)/k
-
-    def v_g(k):
-       omega_0 = 2 * np.sqrt(kappa/m)
-       return omega_0 * (a/2) * np.sqrt(1 - (omega(k)/omega_0) ** 2)
-
     fig, ax = plt.subplots()
     k = np.linspace(-np.pi+0.01, np.pi-0.01, 300)
-
-    ax.plot(k[0:149], v_p(k[0:149]), color = 'C0', label = 'Phase velocity');
-    ax.plot(k[150:300], v_p(k[150:300]), color = 'C0');
-    ax.plot(k[0:149], -v_g(k[0:149]), color = 'C1', label = 'Group velocity');
-    ax.plot(k[150:300], v_g(k[150:300]), color = 'C1');
-    ax.set_title('Velocities')
+    ax.plot(k[0:149], np.sin(k[0:149])/(np.sqrt(1-np.cos(k[0:149]))), color = 'C0');
+    ax.plot(k[150:300], np.sin(k[150:300])/(np.sqrt(1-np.cos(k[150:300]))), color = 'C0');
+    ax.set_title('Group velocity')
     ax.set_xlabel(r'$k$');
     ax.set_ylabel('$v(k)$');
     plt.xticks([-np.pi, 0, np.pi], [r'$-\pi/a$', 0, r'$\pi/a$']);
-    plt.yticks([-1, 0, 1], [r'$-2\sqrt{\frac{\kappa}{m}}$', 0, r'$2\sqrt{\frac{\kappa}{m}}$']);
-    plt.legend();
+    plt.yticks([-np.sqrt(2), 0, np.sqrt(2)], [r'$-2\sqrt{\frac{\kappa}{m}}$', 0, r'$2\sqrt{\frac{\kappa}{m}}$']);
     plt.tight_layout();
 
-    plt.savefig('A2-4-v.pdf', facecolor='white', transparent=False)
+    plt.savefig('A3-1-v.pdf', facecolor='white', transparent=False)
 
     plt.show()
     ```
 
-    will yield this plot:
+    The density of states is shown below
 
-    ![](../images/A2-4-v.svg)
+    ![](../images/A3-1-dos.svg)
 
-6. Find an expression for the density of states $g(\omega)$ and plot $g(\omega)$
+    and was produced using the (near identical) code:
 
-    The density of states is uniform in $k$: if there are $N$ sites in the system, there are $N$ modes total and the density of states is therefore $dN/dk = Na/(2\pi) = L/(2\pi)$ where $L$ is the length of the system. We then have
+    ``` python
+    fig, ax = plt.subplots()
+
+    w = np.linspace(0, 0.95, 300);
+    g = 1/np.sqrt(1-w**2);
+
+    ax.plot(w, g, 'C0');
+    ax.set_xlabel(r'$\omega$');
+    ax.set_ylabel('$g(\omega)$');
+    ax.set_title('Density of states')
+    plt.xticks([0, 1], [0, r'$2\sqrt{\frac{k}{m}}$']);
+    plt.yticks([0.5, 1], [0, r'$\frac{L}{2\pi a}\sqrt{\frac{\kappa}{m}}$']);
+    plt.tight_layout();
+
+    plt.savefig('A3-1-dos.pdf', facecolor='white', transparent=False)
+
+    plt.show()
+    ```
+
+4. Consider the dispersion curve below:
+
+    ![](../images/A3-1.svg)
+
+
+    1. Sketch the group velocity $v_g(k)$
+
+        One needs to sketch the derivative, which could be done by hand or computationally
+
+        ![](../images/A3-1-4-gv.svg)
+
+        with the code to compute and plot the derivative shown below:
+
+        ``` python
+        k = k_vals[1] - k_vals[0]
+        y = nn(k_vals)
+        gradient = np.gradient(y, dk)
+        fig, ax = plt.subplots()
+        ax.plot(k_vals[k_vals<0], gradient[k_vals<0], 'C0');
+        ax.plot(k_vals[k_vals>.1], gradient[k_vals>.1], 'C0');
+        ax.set_xlabel(r'$k$');
+        ax.set_ylabel(r'$\frac{\partial\omega}{\partial k}$');
+        ax.set_xlim(-2,2)
+        ax.set_title('Group velocity')
+        plt.xticks([-np.pi/a, 0, np.pi/a], [r'$-\pi/a$', 0, r'$\pi/a$']);
+        plt.tight_layout();
+
+        plt.savefig('A3-1-gv.pdf', facecolor='white', transparent=False)
+
+        plt.show()
+        ```
+
+    2. Produce a visualisation (e.g. a plot or histogram) of the density of states $g(\omega)$
+
+        A histogram well displays the density of states
+
+        ![](../images/A3-1-4-dos.svg)
+
+        which can be compute using the following code:
+
+        ``` python
+        k_dos = np.linspace(0, np.pi/a, 25) # dk value (2\pi/L)
+
+        # Make the band plot
+        fig, (ax, ax2) = plt.subplots(ncols=2, sharey=True, figsize=(12, 5))
+        ax.plot(k_vals, nn(k_vals));
+        ax.vlines(k_dos, 0, nn(k_dos),
+                 colors=(0.5, 0.5, 0.5, 0.5))
+
+        ax.hlines(
+           np.hstack(nn(k_dos)),
+           np.hstack(k_dos),
+           np.pi/a,
+           colors=(0.5, 0.5, 0.5, 0.5)
+        )
+
+        ax.set_xlabel('$k$')
+        ax.set_ylabel(r'$ω$')
+        ax.set_xticks([0, np.pi/2])
+        ax.set_xticklabels(['$0$', r'$\pi/a$'])
+        ax.set_yticks([])
+        ax.set_yticklabels([])
+        ax.set_xlim(-0.05, max(k) + .05)
+
+        k = np.linspace(0, np.pi, 1000)
+        omegas = nn(k)
+
+        ax2.hist(omegas, orientation='horizontal', bins=75)
+        ax2.set_xlabel(r'$g(ω)$')
+        ax2.set_xticks([])
+
+        plt.savefig('A3-1-4-dos.pdf', facecolor='white', transparent=False, bbox_inches='tight')
+
+        plt.show()
+        ```  
+
+## Exercise 2 - Normal modes of a one-dimensional diatomic chain
+
+1. What is the difference between an acoustic mode and optical mode? Describe the motion of atoms in the unit cell for long wavelength oscillations.
+
+    In acoustic waves, the dispersion goes to zero and $k$ and $\omega \sim k$ for small $k$, whereas optical modes have an intercept with $\omega = c k$ where $c$ is the speed of light.
+
+    In the acoustic case, all atoms in a unit cell move in-phase with a slow spatial modulation, whereas in the optical case, adjacent atoms move out of phase with one another.
+
+
+2. Derive the dispersion relation for the longitudinal oscillations of a one-dimensional diatomic mass-and-spring crystal with unit cell length $a$ and where each unit cell contains one atom of mass $m_1$ and one atom of mass $m_2$ connected by a spring with spring constant $\kappa$.
+
+    ![](../images/3-2.png)
+
+    From the image, we write the position of the $n^{\textrm{th}}$ particle with mass $m_1$ as $x_n$ and the position of the $n^{\textrm{th}}$ particle with mass $m_2$ as $y_n$. We assume that the equilibrium position of $x_n$ is $n a$ and the equilibrium position is $n a + d$.
+
+    We then write the equations of motion for the deviations from the equilibrium positions as $\delta x_n$ and $\delta y_n$
 
     $$
     \begin{aligned}
-    g(\omega) &=d N / d \omega=(d N / d k)(d k / d \omega)=\frac{N a}{2 \pi v_{\text {group }}} \\
-    &=\frac{N}{2 \pi \sqrt{\kappa / m} \cos (|k| a / 2)} \\
-    &=\frac{2 N}{2 \pi \sqrt{(\kappa / m)-(\omega(k) / 2)^{2}}}
+    &m_{1} \ddot{\delta x}_{n} \quad=-\kappa\left(\delta x_{n}-\delta y_{n-1}\right)-\kappa\left(\delta x_{n}-\delta y_{n}\right) \\
+    &m_{2} \dot{\delta} y_{n}=-\kappa\left(\delta y_{n}-\delta x_{n}\right)-\kappa\left(\delta y_{n}-\delta x_{n+1}\right)
     \end{aligned}
     $$
 
-    where we have used
+    We then assume solutions of the form
 
     $$
-    \left(\frac{\omega}{2}\right)^2 + \left(\frac{v_g}{a}\right)^2 = \frac{\kappa}{m}
+    \begin{aligned}
+    \delta x_{n} &=A_{x} e^{i k a n-i \omega t} \\
+    \delta y_{n} &=A_{y} e^{i k a n-i \omega t}
+    \end{aligned}
     $$
 
-    where in turn we have used the equation for the group velocity (previous question) to obtain the above identity.
-
-    Note that the additional factor of 2 that appears in the numerator is to account for the fact that for each value of $\omega > 0$ there are actually two values of $k$ with that $\omega$, to ensure that if you integrate over frequency you correctly get back $N$ degrees of freedom.
-
-    ![](../images/A2-4-dos.svg)
-
-    The above plot was produced using the code below
-
-    ``` python
-    N = 1
-    fig, ax = plt.subplots()
-    w = np.linspace(0, np.pi/a - 1.15, 300);
-    g = (2*N)/(2 * np.pi * np.sqrt((kappa/m)-(w/2)**2));
-    ax.plot(w, g, 'C0');
-    ax.set_xlabel(r'$\omega$');
-    ax.set_ylabel('$g(\omega) [N/(\pi \sqrt{k/m})]$');
-    ax.set_title('Density of states')
-    plt.yticks([N/(np.pi * np.sqrt(kappa/m)), 2, 3], [1, 2, 3]);
-    ax.set_ylim(0,3)
-    plt.tight_layout();
-    plt.savefig('A2-4-dos.pdf', facecolor='white', transparent=False)
-    plt.show()
-    ```  
-
-7. Using $g(\omega)$, find an expression for the heat capacity and use any tools at your disposal to plot the heat capacity versus temperature
-
-    The energy stored in the chain is given by
+    from which we obtain the equations
 
     $$
-    U = \int d\omega~g(\omega)~\hbar \omega \left(n_{\textrm{B}}(\omega)+1/2\right)
+    \begin{aligned}
+    -m_{1} \omega^{2} A_{x} e^{i k n a} &=-2 \kappa A_{x} e^{i k n a}+\kappa A_{y}\left(e^{i k n a}+e^{i k(n-1) a}\right) \\
+    -m_{2} \omega^{2} A_{y} e^{i k n a} &=-2 \kappa A_{y} e^{i k n a}+\kappa A_{x}\left(e^{i k n a}+e^{i k(n+1) a}\right)
+    \end{aligned}
     $$
 
-    and so the heat capacity is $\partial U/\partial T$. The factor of 1/2 can be ignored as it is a temperature independent constant and thus will vanish upon differentiation.
+    which simplify to
 
-    Plotting this requires numerical integration of the above equation, and one should get a plot similar to that as shown below, with the values on the $x$ axis changing with the parameters $\kappa$, $m$, and $a$.
+    $$
+    \begin{aligned}
+    \omega^{2} A_{x} &=2\left(\kappa / m_{1}\right) A_{x}-\left(\kappa / m_{1}\right)\left(1+e^{-i k a}\right) A_{y} \\
+    \omega^{2} A_{y} &=2\left(\kappa / m_{2}\right) A_{y}-\left(\kappa / m_{2}\right)\left(1+e^{i k a}\right) A_{x}
+    \end{aligned}
+    $$
 
-    Code to perform the numerical integration appears below, with the highlighted lines actually performing the integration
+    which defines an eigenvalue problem for $\omega^2$. Therefore we must find the roots of the determinant
 
-    ``` python hl_lines="9-16"
-    a = 1e-10
+    $$
+    \left|\begin{array}{cc}
+    2\left(\kappa / m_{1}\right)-\omega^{2} & -\left(\kappa / m_{1}\right)\left(1+e^{-i k a}\right) \\
+    -\left(\kappa / m_{2}\right)\left(1+e^{i k a}\right) & 2\left(\kappa / m_{2}\right)-\omega^{2}
+    \end{array}\right|
+    $$
 
-    def integrand(w):
-      b = 1/T
-      nb = 1/(np.exp(b * w) - 1)
-      g = (2*N)/(2 * np.pi * np.sqrt((kappa/m)-(w/2)**2))
-      return g * w * nb
+    which yields the equation
 
-    temp = np.linspace(0.01, 5, 150)
-    U = []
+    $$
+    \begin{aligned}
+    &0=\omega^{4}-\omega^{2}\left(2 \kappa\left(1 / m_{1}+1 / m_{2}\right)\right)+\frac{\kappa^{2}}{m_{1} m_{2}}\left(4-\left(1+e^{i k a}\right)\left(1+e^{-i k a}\right)\right) \\
+    &\left.0=\omega^{4}-\omega^{2}\left(\frac{2\left(m_{1}+m_{2}\right) \kappa}{m_{1} m_{2}}\right)+\frac{\kappa^{2}}{m_{1} m_{2}}(2-2 \cos (k a))\right)
+    \end{aligned}
+    $$
 
-    for T in temp:
-      U.append(integrate.quad(integrand, 0, 2*np.sqrt(kappa/m))[0])
+    and ultimately
 
-    dt = temp[1]-temp[0]
-    dudt = np.gradient(U, dt)
+    $$
+    \begin{aligned}
+    \omega^{2} &=\frac{\kappa}{m_{1} m_{2}}\left(m_{1}+m_{2} \pm \sqrt{m_{1}^{2}+m_{2}^{2}+2 m_{1} m_{2} \cos (k a)}\right) \\
+    &=\frac{\kappa}{m_{1} m_{2}}\left(m_{1}+m_{2} \pm \sqrt{\left(m_{1}+m_{2}\right)^{2}-4 m_{1} m_{2} \sin ^{2}(k a / 2)}\right)
+    \end{aligned}
+    $$
 
-    fig, ax = plt.subplots()
-    ax.plot(temp, dudt)
-    ax.set_xlabel('$T$ [K]')
-    ax.set_ylabel('$C/k_\mathrm{B}$')
-    ax.set_title('Specific heat')
-    plt.savefig('A2-4-c.pdf', facecolor='white', transparent=False)
-    plt.show()
-    ```
+3. Determine the frequencies of the acoustic and optical modes at $k=0$ and at the Brillouin zone boundary
 
-    the output of which is shown here:
+    At $k=0$, $\cos(ka)=1$ and therefore the acoustic mode has zero energy whereas the optical mode has energy
 
-    ![](../images/A2-4-c.svg)
+    $$
+    \omega = \sqrt{\frac{2\kappa(m_1+m_2)}{m_1 m_2}}
+    $$
+
+    At the Brilllouin zone boundary, $\cos(ka)=-1$ and so the energies of the two modes are
+
+    $$
+    \omega = \sqrt{\frac{2\kappa(m_1)}{m_1 m_2}} \quad \sqrt{\frac{2\kappa(m_2)}{m_1 m_2}}
+    $$
+
+4. Determine the sound velocity, and show that the group velocity is zero at the zone boundary ()
+
+    To find the sound velocity, one must expand around $k=0$ for the acoustic mode and then one end with an equation of the from $\omega = v k$ with
+
+    $$
+    v = a \sqrt{\frac{\kappa}{2(m_1 + m_2)}}
+    $$
+
+    The group velocity $v_g$ is given by $\mathrm{d}\omega/\mathrm{k}$ and whilst the form of $\omega$ is a bit ugly, if we write $f = \omega^2$, we are interested in the derivative of the function $g = f^{1/2}$. So by the chain rule,
+
+    $$
+    \frac{\mathrm{d}g}{\mathrm{k}} = \frac{\mathrm{d}g}{\mathrm{d}f} \frac{\mathrm{d}f}{\mathrm{d}k}
+    $$
+
+    which means
+
+    $$
+    v_g = \frac{1}{2}\frac{1}{f^{1/2}} \frac{\mathrm{d}f}{\mathrm{d}k}.
+    $$
+
+    Now $f$ is well behaved around $k = \pm\pi/a$, so we only need look at $\frac{\mathrm{d}f}{\mathrm{d}k}$. Again, $f$ is a bit ugly, but is essentially
+
+    $$
+    f = c_1 \pm \sqrt{c_2 + c_3 \cos(k a)}
+    $$
+
+    with constants $c_i$, and therefore, once again using the chain rule
+
+    $$
+    \mathrm{d}f/\mathrm{d}k \sim \pm \frac{c_4 \sin(k a)}{\sqrt{c_2 + c_3 \cos(k a)}}
+    $$
+
+    which goes to zero for $k = \pi/a$ and therefore $v_g \rightarrow 0$
+
+5. Sketch or plot the dispersion in both the reduced and extended zone scheme
+
+    The dispersion in the reduced zone scheme:
+
+    ![](../images/A3-2-brillouin.svg)
+
+    The dispersion in the extended zone scheme:
+
+    ![](../images/A3-2-extended.svg)
+
+    The above plots were computed using the code below:
+
+    ??? example "Much code"
+        ``` python
+        # Define a function to return the dispersion
+
+        def dispersion_diatomic(k, kappa = 1, m1 = 2, m2 = 1, acoustic=True):
+
+            cons = m1 + m2
+            sq = np.sqrt((cons ** 2) - (4 * m1 * m2 * np.sin(k * a/2) ** 2))
+            if acoustic:
+                sq *= -1
+            return np.sqrt(kappa/(m1*m2) * (cons + sq)/m)
+
+
+        scale = 3 # Set the sclae for plotting past the Brillouin zone
+        a = 2 # Set the lattice constant
+
+        brillouin = np.linspace(-np.pi/a, np.pi/a, 500) # k values in the Brillouin zone
+        ks = brillouin * scale # k values further afield - obviously less well sampled
+
+        kappa = 1
+
+        # Plot the dispersion
+        fig, ax = plt.subplots()
+        ax.plot(brillouin, dispersion_diatomic(brillouin), color = 'C0', label = 'Acoustic')
+        ax.plot(brillouin, dispersion_diatomic(brillouin, acoustic = False), color = 'C1', label = 'Optical')
+
+        ## The labelling is very tedious, there is little value to be found here
+
+        # Plot and annotate the Brillouin zone boundary
+        xvals = [-np.pi/a, np.pi/a]
+        for v in xvals:
+            ax.axvline(x=v, color = 'black')
+
+            offset = 0.3
+            if v < 0:
+                sign = '-'
+            elif v > 0:
+                sign = '+'
+                offset = -offset
+
+            # Label the Brillouin range
+            ax.text(v + offset, .1 , f'$k ={sign}\pi/a$',
+                     horizontalalignment='center', fontsize=16)
+
+        # Make the plot pretty
+        ax.set_xlabel('$k$')
+        ax.set_ylabel('$\omega$')
+        ax.set_xlim(1.1*min(xvals),1.1*max(xvals))
+        plt.legend(bbox_to_anchor=(.5, -.125), loc='lower center', ncol=2)
+
+        draw_classic_axes(ax)
+        plt.savefig('A3-2-brillouin.svg', facecolor='white', transparent=False, bbox_inches='tight')
+
+        plt.show()
+
+        # Make arrays for the first and second Brillouin zones
+        # first Bz
+        brillouin = np.linspace(-np.pi/a, np.pi/a, 500)
+        # second Bz
+        # You may be tempted to have a single array here, but if you do this, your plot will be ugly!
+        # Verify this for yourself: you will find the function "numpy.concatenate" useful.
+        first_ex = np.linspace(-2*np.pi/a, -np.pi/a,250)
+        second_ex = np.flip(first_ex * -1)
+
+        # Plot the Brillouin zones
+        fig, ax = plt.subplots()
+
+        ax.plot(brillouin, dispersion_diatomic(brillouin), color = 'C0', label = 'acoustic')
+        ax.plot(first_ex, dispersion_diatomic(first_ex, acoustic = False), color = 'C1', label = 'optical')
+        ax.plot(second_ex, dispersion_diatomic(second_ex, acoustic = False), color = 'C1') # Only use one label to avoid double-tagging
+
+        ## The labelling is very tedious, there is little value to be found here
+
+        # Plot and annotate the Brillouin zone boundaries - this is painfully manual
+        xvals = [-2*np.pi/a, -np.pi/a, np.pi/a, 2*np.pi/a]
+        for n, v in enumerate(xvals):
+            ax.axvline(x=v, color = 'black', linestyle = '--')
+
+            offset = 0.3
+            if v < 0:
+                sign = '-'
+                if n == 0:
+                    text = f'${sign}$'+r'$\frac{2\pi}{a}$'
+                else:
+                    n = text = f'${sign}$'+r'$\frac{\pi}{a}$'
+            elif v > 0:
+                sign = '+'
+                offset = -offset
+                if n == 3:
+                    text = f'${sign}$'+r'$\frac{2\pi}{a}$'
+                else:
+                    n = text = f'${sign}$'+r'$\frac{\pi}{a}$'
+
+            # Label the Brillouin range
+            text
+            ax.text(v + offset, .1 , text,
+                     horizontalalignment='center', fontsize=16)
+
+        omega_plus = np.sqrt(2*kappa/m)
+        omega_minus = np.sqrt(2*kappa/2*m)
+        gap = (omega_plus + omega_minus) / 2 # Band gap for arrows
+
+        # Label the 1st Bz
+        ax.text(0, gap - offset/2 , '1st Brillouin zone',
+                 horizontalalignment='center', fontsize=16)
+        ax.annotate(text='', xy=(-np.pi/a, gap), xytext=(np.pi/a, gap),
+                    arrowprops=dict(arrowstyle='<->', shrinkA=0, shrinkB=0))
+
+        # Label the 2nd Bz (<0)
+        ax.text(-3*np.pi/(2*a), gap + 1.75 * offset , '2nd Brillouin\nzone',
+                 horizontalalignment='center', fontsize=16)
+        ax.annotate(text='', xy=(-2*np.pi/a, gap-.1), xytext=(-np.pi/a, gap-.1),
+                    arrowprops=dict(arrowstyle='<->', shrinkA=0, shrinkB=0))
+
+        # Label the 2nd Bz(>0)
+        ax.text(3*np.pi/(2*a), gap + 1.75 * offset , '2nd Brillouin\nzone',
+                 horizontalalignment='center', fontsize=16)
+        ax.annotate(text='', xy=(np.pi/a, gap-.1), xytext=(2*np.pi/a, gap-.1),
+                    arrowprops=dict(arrowstyle='<->', shrinkA=0, shrinkB=0))
+
+        # Make the plot pretty
+        ax.set_xlabel('$k$')
+        ax.set_ylabel('$\omega$')
+        ax.set_title('Extended zone scheme');
+        plt.legend(bbox_to_anchor=(.5, -.25), loc='lower center', ncol=2)
+
+        plt.savefig('A3-2-extended.svg', facecolor='white', transparent=False, bbox_inches='tight')
+
+        plt.show()
+
+        ```
+
+6. Assuming that there are $N$ unit cells, how many different normal modes are there? And how many branches of excitation are there?
+
+    If there are $N$ unit cells, therefore $2N$ atoms, there are $2N$ modes. As there are 2 modes for $k$ in the reduced zone scheme, there are two branches
+
+7. What happens when $m_1 = m_2 $
+
+    When the masses as equal, the unit cell is now of size $a/2$ to the Brillouin zone is double in size, and the gap between the branches vanishes, and the system looks identical to the monatomic chain (the image from the extended zone scheme works well here)
+
+## Exercise 3 - Diatomic tight binding chain
+
+We have seen the both the diatomic chain and the tight-binding chain, so we are going to combine the two. Consider the system shown below
+
+![](../images/3-3.png)
+
+Suppose that the _onsite_ energy of atom $A$ is different for atom $B$, that is $\langle n | H | n \rangle = \epsilon_A$ for $| n \rangle $ being on site $A$ and $\langle n | H | n \rangle = \epsilon_B$ for $| n \rangle$ being on site $B$. We assume that the hopping $-t$ is unchanged from the monatomic case.
+
+1. Derive the dispersion curve for electrons
+
+    The unit cell $a$ is the distance from an $A$ atom to another $A$ atom. Let $\phi_n^A$ be the amplitude of the wavefunction on the $n^{\mathrm{th}}$ site of type $A$ and $\phi_n^B$ be the amplitude of the wavefunction on the $n^{\mathrm{th}}$ site of type $B$. We assume a trial wavefunction of the form
+
+    $$
+    | \psi \rangle = \sum_n (\phi_n^A + \phi_n^B) | \psi \rangle
+    $$
+
+    and put this into the Schrödinger equation and find an _effective_ Schrödinger equation of the form
+
+    $$
+    \begin{aligned}
+    E \phi_{n}^{A} &=\epsilon_{A} \phi_{n}^{A}-t\left(\phi_{n}^{B}+\phi_{n-1}^{B}\right) \\
+    E \phi_{n}^{B} &=\epsilon_{B} \phi_{n}^{B}-t\left(\phi_{n}^{A}+\phi_{n+1}^{A}\right)
+    \end{aligned}
+    $$
+
+    Assuming solutions of the form
+
+    $$
+    \begin{aligned}
+    \phi_{n}^{A} &=A e^{i k n a} \\
+    \phi_{n}^{B} &=B e^{i k n a}
+    \end{aligned}
+    $$
+
+    gives
+
+    $$
+    \begin{aligned}
+    E A &=\epsilon_{A} A-t\left(1+e^{-i k a}\right) B \\
+    E B &=\epsilon_{B} B-t\left(1+e^{i k a}\right) A
+    \end{aligned}
+    $$
+
+    again giving a $2 \times 2$ eigenvalue problem. We solve for the roots of the determinant
+
+    $$
+    \left|\begin{array}{cc}
+    \epsilon_{A}-E & -t\left(1+e^{-i k a}\right) \\
+    -t\left(1+e^{i k a}\right) & \epsilon_{B}-E
+    \end{array}\right|
+    $$
+
+    which givens the equation
+
+    $$
+    0=E^{2}-E\left(\epsilon_{A}+\epsilon_{B}\right)+\left(\epsilon_{A} \epsilon_{B}-t^{2}(2+2 \cos (k a))\right)
+    $$
+
+    $$
+    E_{\pm}(k)=\frac{1}{2}\left(\epsilon_{A}+\epsilon_{B} \pm \sqrt{\left(\epsilon_{A}-\epsilon_{B}\right)^{2}+4 t^{2}(2+2 \cos (k a))}\right)
+    $$
+
+2. Sketch or plot the above dispersion relation in both the reduced and extended zone schemes
+
+    The dispersion in the reduced zone scheme:
+
+    ![](../images/A3-3-brillouin.svg)
+
+    The dispersion in the extended zone scheme:
+
+    ![](../images/A3-3-extended.svg)
+
+    The above plots were computed using the code below:
+
+    ??? example "Very code"
+        ``` python
+        def energy(k, ea = 5, eb = 3, t = 1, low = True):
+
+        const = ea - eb
+        sqrt = np.sqrt(const ** 2 + 4 * t ** 2 * (2+2*np.cos(k*a)))
+        if low:
+            sqrt *= -1
+
+        return 1/2 * (ea + eb + sqrt)
+
+        scale = 3 # Set the sclae for plotting past the Brillouin zone
+        a = 2 # Set the lattice constant
+
+        brillouin = np.linspace(-np.pi/a, np.pi/a, 500) # k values in the Brillouin zone
+        ks = brillouin * scale # k values further afield - obviously less well sampled
+
+        # Plot the dispersion
+        fig, ax = plt.subplots()
+        ax.plot(brillouin, energy(brillouin), color = 'C0', label = 'Low E')
+        ax.plot(brillouin, energy(brillouin, low = False), color = 'C1', label = 'High E')
+
+        ## The labelling is very tedious, there is little value to be found here
+
+        # Plot and annotate the Brillouin zone boundary
+        xvals = [-np.pi/a, np.pi/a]
+        for v in xvals:
+            ax.axvline(x=v, color = 'black')
+
+            offset = 0.3
+            if v < 0:
+                sign = '-'
+            elif v > 0:
+                sign = '+'
+                offset = -offset
+
+            # Label the Brillouin range
+            ax.text(v + offset, 2 , f'$k ={sign}\pi/a$',
+                     horizontalalignment='center', fontsize=16)
+
+        # Make the plot pretty
+        ax.set_xlabel('$k$')
+        ax.set_ylabel('$E$')
+        ax.set_xlim(1.1*min(xvals),1.1*max(xvals))
+        plt.legend(bbox_to_anchor=(.5, -.25), loc='lower center', ncol=2)
+
+        plt.savefig('A3-3-brillouin.svg', facecolor='white', transparent=False, bbox_inches='tight')
+
+        plt.show()
+
+        # Make arrays for the first and second Brillouin zones
+        # first Bz
+        brillouin = np.linspace(-np.pi/a, np.pi/a, 500)
+        # second Bz
+        # You may be tempted to have a single array here, but if you do this, your plot will be ugly!
+        # Verify this for yourself: you will find the function "numpy.concatenate" useful.
+        first_ex = np.linspace(-2*np.pi/a, -np.pi/a,250)
+        second_ex = np.flip(first_ex * -1)
+
+        # Plot the Brillouin zones
+        fig, ax = plt.subplots()
+
+        ax.plot(brillouin, energy(brillouin), color = 'C0', label = 'Low E')
+        ax.plot(first_ex, energy(first_ex, low = False), color = 'C1', label = 'High E')
+        ax.plot(second_ex, energy(second_ex, low = False), color = 'C1') # Only use one label to avoid double-tagging
+
+        ## The labelling is very tedious, there is little value to be found here
+
+        # Plot and annotate the Brillouin zone boundaries - this is painfully manual
+        xvals = [-2*np.pi/a, -np.pi/a, np.pi/a, 2*np.pi/a]
+        for n, v in enumerate(xvals):
+            ax.axvline(x=v, color = 'black', linestyle = '--')
+
+            offset = 0.3
+            if v < 0:
+                sign = '-'
+                if n == 0:
+                    text = f'${sign}$'+r'$\frac{2\pi}{a}$'
+                else:
+                    n = text = f'${sign}$'+r'$\frac{\pi}{a}$'
+            elif v > 0:
+                sign = '+'
+                offset = -offset
+                if n == 3:
+                    text = f'${sign}$'+r'$\frac{2\pi}{a}$'
+                else:
+                    n = text = f'${sign}$'+r'$\frac{\pi}{a}$'
+
+            # Label the Brillouin range
+            text
+            ax.text(v + offset, 1.75 , text,
+                     horizontalalignment='center', fontsize=16)
+
+        # Make the plot pretty
+        ax.set_xlabel('$k$')
+        ax.set_ylabel('$\omega$')
+        ax.set_title('Extended zone scheme');
+        plt.legend(bbox_to_anchor=(.5, -.25), loc='lower center', ncol=2)
+
+        plt.savefig('A3-3-extended.svg', facecolor='white', transparent=False, bbox_inches='tight')
+
+        plt.show()
+        ```
+
+3. What is the effective mass of an electron near the bottom of the lower band?
+
+    To find the effective mass, we expand the energy around the minimum which gives
+
+    $$
+    E= \mathrm{ constant }+\frac{2 t^{2}(k a)^{2}}{\sqrt{\left(\epsilon_{A}-\epsilon_{B}\right)^{2}+16 t^{2}}}
+    $$
+
+    which set equal to $\hbar^2 k^2 / (2m^*)$ and find
+
+    $$
+    m^{*}=\frac{\hbar^{2} \sqrt{\left(\epsilon_{A}-\epsilon_{B}\right)^{2}+16 t^{2}}}{4 t^{2} a^{2}}
+    $$
+
+4. If each atom ($A$ and $B$) are monovalent, is the system a conductor or insulator? Justify your response
+
+    If each atom is monovalent, there are now two electrons per unit cell, and this fills exactly the lower band and therefore the system is insulating.
+
+5. Consider the material LiF, and use the above results to justify why it is observed to be an excellent insulator.
+
+    For LiF we can expect a much lower energy for electrons on F than on Li (F has a large electron affinity, Li has a low ionization energy). So we can set $\epsilon_A \ll \epsilon_B$. What happens in this limit is that the bands are extremely far apart – thus a very good insulator.
+
+    If you are really keen, one can look at the eigenvectors in the lower band, and one will find that they are almost completely on the lower energy atoms. Thus the free electron is transferred almost completely from the higher to the lower energy atom.
+
+## Exercise 4 - Two-dimensional crystal structure
+
+Consider the following two-dimensional diatomic crystal:
+
+![](../images/A4-1-diatomic.png)
+
+1. Sketch the Wigner-Seitz unit cell and two other possible primitive unit cells of the crystal
+
+    An example of two possible primitive primative cells are shown below, along with the Wigner-Seitz cell, which is unique.
+
+    ![](../images/A4-1.png)
+
+
+2. If the distance between the filled circles is $a=2.8\mathrm{\unicode{x212B}}$, what is the area of the primitive unit cell? How would this area change if all the empty circles and the filled circles were identical?
+
+    The area of the primitive unit cell is $A = a^2$. If the filled and empty circles are identical particle, the nearest neighbour distance becomes $a^* = \frac{a}{\sqrt{2}}$ and thus the area $A^* = {a^*}^2 = \frac{a^2}{2} = \frac{A}{2}$.
+
+3. Write down one set of primitive lattice vectors and the basis for this crystal. What happens to the number of elements in the basis if all empty and filled circles were identical?
+
+    One set of primitive lattice vectors is
+
+    $$
+    \mathbf{a_1} = a \hat{\mathbf{x}}, \quad \mathbf{a_2} = a \hat{\mathbf{y}}.
+    $$
+
+    With respect to the primitive lattice vectors, the basis is
+
+    \[
+    \huge \bullet ~ \normalsize[0,0], \quad \bigcirc ~ [\frac{1}{2},\frac{1}{2}]
+    \]
+
+    If all atoms were identical, then the basis only has one element (and consequently the PLVs above would cease to be PLVs)
+
+4. Imagine expanding the lattice into the perpendicular direction $z$. We can define a new three-dimensional crystal by considering a periodic structure in the $z$ direction, where the filled circles have been displaced by $\frac{a}{2}$ in both the $x$ and $y$ direction from the empty circles. The figure below shows the new arrangement of the atoms.
+![](../images/A4-1-BCC.png)
+What lattice do we obtain? Write down the basis of the three-dimensional crystal.
+
+    The lattice is a cubic lattice and the basis of the crystal is
+
+    \[
+    \huge \bullet \normalsize ~ [0,0,0], \quad \bigcirc ~ \left[\frac{1}{2},\frac{1}{2},\frac{1}{2}\right].
+    \]
+
+    An example of such a material is Caesium Chloride (CsCl).
+
+## Exercise 5 - Three-dimensional crystal structure
+
+The image below shows the three dimensional structure of zincblende (ZnS) (zinc atoms are yellow, sulphur atoms are grey).
+
+![](../images/A4-2-Zincblende.png)
+
+1. How many atoms are in the unit cell?
+
+    Corner atoms $8 \times 1/8 $ + face atoms ($6 \times 1/2$) + interior atoms ($4 \times 1$) = $1 + 3 + 4 = 8$
+
+2. Draw the plan view of the unit cell
+
+    ![](../images/A4-2-ZnSplan.jpg)
+
+3. Identify the lattice type of zincblende
+
+    The lattice type is Face-centred cubic (FCC)
+
+4. Describe the basis for zincblende
+
+    The basis can be described as Zn at [0,0,0] and S at [1/4, 1/4, 1/4]
+
+5. Given the unit cell length $a=5.41\mathrm{\unicode{x212B}}$, calculate the nearest-neighbour Zn-Zn, Zn-S, and S-S distances
+
+    This is just geometry: Zn-Zn is $a/\sqrt{2} = 3.83\mathrm{\unicode{x212B}}$, Zn-S is $a\sqrt{1/4^2 + 1/4^2 + 1/4^2} = 2.34 \mathrm{\unicode{x212B}}$, and S-S is $a/\sqrt{2} = 3.83\mathrm{\unicode{x212B}}$.

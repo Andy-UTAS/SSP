@@ -4,7 +4,11 @@ comments: true
 
 # The specific heat of solids I
 
+Let's start with a warm up!
+
 ## Introduction
+
+![](images\1-1-header.webp)
 
 We embark on our journey by starting at the nexus of the known and unknown, namely around the turn of the nineteenth and twentieth centuries, where the development of "modern" physics was being applied to systems which had hitherto be poorly understood. Now this is not to say that nothing was known about the systems, on the contrary: empirical laws had been used to great effect to describe the observable world, but with the increasing sophistication of experimental technique and apparatus, the cracks in certain rules started to appear.
 
@@ -22,7 +26,7 @@ We embark on our journey by starting at the nexus of the known and unknown, name
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F01specificheatI.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F1-1-specificheatI.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
@@ -30,7 +34,7 @@ We embark on our journey by starting at the nexus of the known and unknown, name
 
 Consider the heat capacity of a solid.
 
-??? Question "1.1 Explain the concept of heat capacity in a manner understandable to someone _without_ a science background."
+??? Question "1.1.1 Explain the concept of heat capacity in a manner understandable to someone _without_ a science background."
 
     The heat capacity is the a measure of how much heat, or how much energy transfer, is required to change the temperature of a material.
 
@@ -75,12 +79,12 @@ The insight of Boltzmann was to consider a solid as a collection of constituent 
 Whilst this may seem like a major leap forward, it is worth considering what the explaination for this behaviour had been prior to this proposal: _nothing_. Then, using the recently minted ideas such as the _equipartition theorem_, it was clear why the $C/N= 3 k_\mathrm{B}$. To see this, recall that for a *gas* in thermal equilibrium, we have
 
 $$
-C_V/N = f/2 k_\mathrm{B}
+C_V/N = f/2 \times k_\mathrm{B}
 $$
 
 where $f$ is the number of thermodynamic degrees of freedom, or stated another way: each degree of freedom contributes $k_\mathrm{B}/2$ to the heat capacity. Immediately, we can see that the Dulong–Petit law is of this form, but suggests that the number of DoF is six, i.e. twice that of an ideal monatomic gas.
 
-??? Question "1.2 What is the difference between the heat capacities $C_V$ and $C_P$? What is the relationship between the two quantities, and what is the implication for the heat capacity of solids?"
+??? Question "1.1.2 What is the difference between the heat capacities $C_V$ and $C_P$? What is the relationship between the two quantities, and what is the implication for the heat capacity of solids?"
 
     As the heat capacity of an object is defined through $\frac{\partial Q}{\partial T}$, one must consider the different thermodynamic processes (e.g. isochoric versus isobraic) as the heat supplied to the system will be different (e.g. $dQ = dU$ versus $dQ = dU + PdV$). It then follows that we define the _heat capacity at constant volume_ $C_V$ and the _heat capacity at constant pressure_ $C_P$.
 
@@ -174,7 +178,7 @@ Like Boltzmann's model, Einstein's model was based around atoms in an harmonic p
 
 To see the implications, we can make use of our knowledge of statistical physics and the quantum harmonic oscillator: using the energy eigenstates of the system $E_n$, we can calculate the partition function $Z$, then the expectation value for the energy $\langle E \rangle$, and ultimately the heat cavity $C$.
 
-??? Question "1.3 Beginning with the energy eigenstates of a single one-dimensional harmonic oscillator, show that the heat capacity for a single oscillator is $C = k_{\mathrm{B}}(\beta\hbar\omega)^2\frac{\exp(\beta\hbar\omega)}{(\exp(\beta\hbar\omega)-1)^2}$"
+??? Question "1.1.3 Beginning with the energy eigenstates of a single one-dimensional harmonic oscillator, show that the heat capacity for a single oscillator is $C = k_{\mathrm{B}}(\beta\hbar\omega)^2\frac{\exp(\beta\hbar\omega)}{(\exp(\beta\hbar\omega)-1)^2}$"
 
     In one dimension, the energy eigenstates $E_n$ of a single harmonic oscillator are given by:
 
@@ -219,7 +223,7 @@ C = 3k_{\mathrm{B}}(\beta\hbar\omega)^2\frac{\exp(\beta\hbar\omega)}{(\exp(\beta
 $$
 
 
-??? Question "1.4 Produce a plot the specific heat $C$ versus temperature for realistic values of $\omega$, providing your code."
+??? Question "1.1.4 Produce a plot the specific heat $C$ versus temperature for realistic values of $\omega$, providing your code."
 
     Code the produce the plot as requested in shown below, along with the output of said code. Note that  
 
@@ -327,15 +331,15 @@ Well if we consider the energy spacing of the harmonic oscillator, $\hbar\omega$
 ### Preliminary provocations
 
   1. What is the high-temperature heat capacity of an atom in a solid with two momentum and two spatial coordinate degrees of freedom?
-  2. Sketch the Bose Einstein distribution as a function of $\omega$ for two different values of $T$
+  2. Sketch the Bose-Einstein distribution as a function of $\omega$ for two different values of $T$
 
 ### Exercise 1: Total heat capacity of a diatomic material
 
 One of the assumptions of the Einstein model states that every atom in a solid oscillates with the same frequency $\omega_0$. However, if the solid contains different types of atoms, it is unreasonable to assume that the atoms oscillate with the same frequency. One example of such a solid is a lithium crystal, which consists of the [two stable isotopes](https://en.wikipedia.org/wiki/Isotopes_of_lithium) $^6$Li (7.5%) and $^7$Li (92.5%) in their natural abundance. Let us extend the Einstein model to take into account the different masses of these different isotopes. Assume that the solid is 1D (1D quantum harmonic oscillator).
 
-  1. Assume that the strength of the returning force $k$ experienced by each atom is the same. What is the difference in the oscillation frequencies of the two different isotopes in the lithium crystal?
+  1. Assume that the strength of the returning force $\kappa$ experienced by each atom is the same. What is the difference in the oscillation frequencies of the two different isotopes in the lithium crystal?
   2. Write down the total energy stored in the vibrations of each atom of the lithium crystal, assuming that all $^6$Li atoms are in $n=2$ vibrational mode and all $^7$Li atoms are in $n=4$ vibrational mode.
-  3. In the case where the oscilators can occupy any vibrational mode, write down the total energy stored in the vibrations of each atom in the lithium crystal at a temperature $T$ by modifying the Einstein model.
+  3. In the case where the oscillators can occupy any vibrational mode, write down the total energy stored in the vibrations of each atom in the lithium crystal at a temperature $T$ by modifying the Einstein model.
   4. Compute the heat capacity of the lithium crystal as a function of $T$.
 
 

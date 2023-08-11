@@ -12,7 +12,8 @@ nav:
       - '1.2 - The specific heat of solids II': 1-intoduction/1-2-specificheatII.md
       - '1.3 - Electrons in metals I': 1-intoduction/1-3-emetalsI.md
       - '1.4 - Electrons in metals II': 1-intoduction/1-4-emetalsII.md
-    - '2: Chemistry 101': 2-chemistry/2-1-chemistry.md
+    - '2: Chemistry':
+      - '2.1 - Chemistry 101': 2-chemistry/2-1-chemistry.md
     - '3: One-dimensional solids':
       - '3.1 - Vibrations': 3-1d/3-1-vibrations.md
       - '3.2 - The diatomic chain': 3-1d/3-2-diatomic.md
@@ -27,17 +28,28 @@ nav:
     - '6: Semiconductors':
       - '6.1 - Semiconductors 101': 6-semiconductors/6-1-semiconductors.md
       - '6.2 - Doping and devices': 6-semiconductors/6-2-devices.md
-    # - 'Solutions':
-    #  - 'Assignments': solutions/assignments.md
-    #  - 'Exercises': solutions/exercises.md
-    #  - 'Practice Exam': solutions/practice-exam.md
     # - '7: Magnetism':
     #   - 'Empty content': placeholder.md
     # - '8: Cool stuff':
     #   - 'Topological insulators': placeholder.md
     #   - 'Superconductors': placeholder.md
     #   - 'Quantum simulators': placeholder.md
-    - Additional resources: additional.md
+    # - 'Solutions':
+    #   - solutions/1-1.md
+    #   - solutions/1-2.md
+    #   - solutions/1-3.md
+    #   - solutions/1-4.md
+    #   - solutions/2-1.md
+    #   - solutions/3-1.md
+    #   - solutions/3-2.md
+    #   - solutions/3-3.md
+    #   - solutions/4-1.md
+    #   - solutions/assignement1.md
+    #   - solutions/assignement2.md
+    #   - solutions/assignement3.md
+    #   - 'Practice Exam': solutions/practice-exam.md
+    - 'Resources':
+      - Additional material: additional.md
 
 theme:
   name: material
@@ -81,7 +93,8 @@ markdown_extensions:
       permalink: True
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
-  - pymdownx.tabbed # Enabeles content tabs
+  - pymdownx.tabbed: # Enabeles content tabs
+      alternate_style: true
   - pymdownx.superfences # Enables nesting of code and content in tabs
   - pymdownx.snippets # Allows for a global list of acronyms
   - pymdownx.caret

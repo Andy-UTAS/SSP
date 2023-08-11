@@ -1,636 +1,500 @@
-# Assignment 3: One-dimensional solids (welcome to the diatomic party)
+# Assignment 3: the reciprocal lattice, scattering, and semiconductors
 
-The third assignment can be found [here](../assignments/Assignment three.pdf)
+The third assignment can be found [here](../assignments/assignmentsix.pdf)
 
-## Exercise 1 - Dispersion
+## Exercise 1 - The reciprocal lattice
 
-1. Use the dispersion relation to compute the group velocity $v_g$
+Following the normal conventions, let us denote $\mathbf{a}_i$ and $\mathbf{b}_i$ as the real-space and reciprocal space lattice vectors.
 
-    The group velocity is given by
+1. A construction of lattice vectors can be achieved using the relation
+\[
+\mathbf{b}_i = 2\pi \frac{\mathbf{a}_j \times \mathbf{a}_k}{\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)}
+\]
+Explicitly compute $\mathbf{a}_1 \cdot \mathbf{b}_1$, $\mathbf{a}_2 \cdot \mathbf{b}_1$, and $\mathbf{a}_3 \cdot \mathbf{b}_1$. Do these computations accord with the definition of the reciprocal lattice?
 
+    The computation of these vectors is aided by knowledge of [properties of the scalar triple product](https://en.wikipedia.org/wiki/Triple_product#Scalar_triple_product). In calculating the product:
+
+    $$
+    \mathbf{a}_i \cdot \mathbf{b}_1 = 2\pi \frac{\mathbf{a}_i \cdot (\mathbf{a}_2 \times \mathbf{a}_3)}{\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)}
+    $$
+
+    it should be immediately obvious that $\mathbf{a}_2 \times \mathbf{a}_3$ is orthogonal to both $\mathbf{a}_2$ and $\mathbf{a}_3$, so the dot product between $\mathbf{a}_2$ and $\mathbf{a}_3$ will be zero. In the case of $\mathbf{a}_1$, we then have identical vector products on both numerator and denominator and therefore the product evaluates to $2\pi$.
+
+    The construction of the reciprocal lattice is baser around the identity
+
+    $$
+    e^{i\mathbf{G}\cdot\mathbf{R}} = 1
+    $$
+
+    for any lattice point $\mathbf{R}$ and any reciprocal lattice point $\mathbf{G}$. That relation only holds when
+
+    $$
+    \mathbf{a}_i \cdot \mathbf{b}_j = 2\pi \delta_{ij}
+    $$
+
+    and hence our relations above are looking good.
+
+2. The volume of a primitive unit cell with lattice vectors $\mathbf{a}_i$ is given by $V = \left|\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3) \right|$. Find the volume of the corresponding primitive unit cell in reciprocal space.
+
+    The volume in reciprocal space $V'$ should be computed using the same method as provided:
+
+    $$
     \begin{align}
-    v_g(k) & =\frac{\partial \omega(k)}{\partial k}\\
-    & = a \sqrt{\frac{\kappa}{m}}\cos\left(\frac{ka}{2}\right) \frac{\sin(ka/2)}{|\sin(ka/2)|}
+    V' & = \left|\mathbf{b}_1 \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right| \\
+    & = 2\pi \left| \frac{(\mathbf{a}_2 \times \mathbf{a}_3)}{\mathbf{a}_1 \cdot (\mathbf{a}_2 \times \mathbf{a}_3)} \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right| \\
+    & = \frac{2\pi}{V}\left| (\mathbf{a}_2 \times \mathbf{a}_3) \cdot (\mathbf{b}_2 \times \mathbf{b}_3) \right| \\
+    & = \frac{2\pi}{V}\left| (\mathbf{a}_2 \cdot \mathbf{b}_2)(\mathbf{a}_3 \cdot  \mathbf{b}_3) - ( \mathbf{a}_2 \cdot \mathbf{b}_3)( \mathbf{a}_3 \cdot \mathbf{b}_2) \right| \\
+    & = \frac{(2\pi)^3}{V}
     \end{align}
-
-2. What is the relationship between the group velocity $v_g$ and the density of states $g(\omega)$? Use this to calculate $g(\omega)$
-
-    The relationship is
-
-    $$
-    g(\omega) = \frac{L}{\pi} \left|\frac{1}{v_g}\right|
     $$
 
-    into which the equation from part (i) can be inserted:
+3. Show that the general direction $[hkl]$ in a cubic crystal is normal to the planes with Miller indices $(hkl)$.
 
+    Consider a (real-space) lattice with basis vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$ which are assumed orthogonal (cubic crystal). Let the lengths of these vectors be $a$, $b$, and $c$ respectively. The plane $(hkl)$ will have intercepts with the axes at (a/h, 0, 0), (0, b/k, 0), (0, 0, c/l), and from these 3 points, one can construct a vector normal to the plane (which defines the plane) by taking the cross products between any two vectors between the points above. For example,     consider
+
+    $$
     \begin{align}
-    g(\omega) & = \frac{L}{a \pi} \sqrt{\frac{m}{\kappa}}\frac{1}{\cos(ka/2)}\\
-    & = \frac{L}{a \pi} \sqrt{\frac{m}{\kappa}}\frac{1}{\sqrt{1-\sin^2(ka/2)}}\\
-    & = \frac{2L}{a \pi} \frac{1}{\sqrt{4\kappa / m - \omega^2}}
+    \mathbf{n} & = (\mathbf{a}/h - \mathbf{b}/k) \times (\mathbf{a}/h - \mathbf{c}/k) \\
+    & = \frac{abc}{hkl} \left( \frac{h}{a^2}\mathbf{a} + \frac{k}{b^2}\mathbf{b} + \frac{l}{c^2}\mathbf{c} \right)
     \end{align}
+    $$
 
-3. Sketch or plot both $v_g$ and $g(\omega)$
+    and this is only parallel to the vector $[hkl]$ in the case of $a = b = c$.
 
-    The group velocity is shown below
+4. Is the above statement true for an orthorhombic crystal? Justify your response.
 
-    ![](../images/A3-1-v.svg)
+    No, it is not true, see the question above!
 
-    and was produced using the following code:
+5. Show that the distance between two adjacent Miller planes $(hkl)$ of any lattice is $d=2\pi/|\mathbf{G}_{\textrm{min}}|$, where $\mathbf{G}_{\textrm{min}}$ is the shortest reciprocal lattice vector perpendicular to these Miller planes.
 
-    ``` python
-    fig, ax = plt.subplots()
-    k = np.linspace(-np.pi+0.01, np.pi-0.01, 300)
-    ax.plot(k[0:149], np.sin(k[0:149])/(np.sqrt(1-np.cos(k[0:149]))), color = 'C0');
-    ax.plot(k[150:300], np.sin(k[150:300])/(np.sqrt(1-np.cos(k[150:300]))), color = 'C0');
-    ax.set_title('Group velocity')
-    ax.set_xlabel(r'$k$');
-    ax.set_ylabel('$v(k)$');
-    plt.xticks([-np.pi, 0, np.pi], [r'$-\pi/a$', 0, r'$\pi/a$']);
-    plt.yticks([-np.sqrt(2), 0, np.sqrt(2)], [r'$-2\sqrt{\frac{\kappa}{m}}$', 0, r'$2\sqrt{\frac{\kappa}{m}}$']);
-    plt.tight_layout();
+    The unit vector normal to the plane can be computed via
 
-    plt.savefig('A3-1-v.pdf', facecolor='white', transparent=False)
+    $$
+    \hat{\mathbf{n}} = \frac{\mathbf{G}}{|\mathbf{G}|}.
+    $$
 
-    plt.show()
-    ```
+    Let us consider a very simple case in which we have the miller planes $(h00)$. For lattice planes, there is always a plane intersecting the zero lattice point $(0,0,0)$. As such, the distance from this plane to the closest next one is given by
 
-    The density of states is shown below
+    $$
+    d = \hat{\mathbf{n}} \cdot \frac{\mathbf{a_1}}{h} = \frac{2\pi}{|\mathbf{G}|}
+    $$
 
-    ![](../images/A3-1-dos.svg)
+6. Find the family of Miller planes of the BCC lattice that has the highest density of lattice points. It may of useful to think about the density of lattice points per unit area on a Miller plane which is given by $\rho=d/V$.
 
-    and was produced using the (near identical) code:
+    Since $\rho=d/V$, to maximise $\rho$ me must either must maximize $d$ or minimise $V$, the latter of which is fixed. Therefore, to maximise $d$, we minimize must $|\mathbf{G}|$ and thus the smallest possible reciprocal lattice vectors are the (100) family of planes (in terms of FCC primitive lattice vectors).
 
-    ``` python
-    fig, ax = plt.subplots()
+## Exercise 2 - Lattice planes
 
-    w = np.linspace(0, 0.95, 300);
-    g = 1/np.sqrt(1-w**2);
+In assignment five, you looked at the  structure of zincblende (ZnS) (zinc atoms are yellow, sulphur atoms are grey).
 
-    ax.plot(w, g, 'C0');
-    ax.set_xlabel(r'$\omega$');
-    ax.set_ylabel('$g(\omega)$');
-    ax.set_title('Density of states')
-    plt.xticks([0, 1], [0, r'$2\sqrt{\frac{k}{m}}$']);
-    plt.yticks([0.5, 1], [0, r'$\frac{L}{2\pi a}\sqrt{\frac{\kappa}{m}}$']);
-    plt.tight_layout();
+![](../images/A5-2-Zincblende.png)
 
-    plt.savefig('A3-1-dos.pdf', facecolor='white', transparent=False)
+1. Draw a simplified plan view (don't worry about indicating heights) down the [001] axis, and indicate the [210] direction and the (210) family of planes
 
-    plt.show()
-    ```
+    The plan, planes and reciprocal lattice vector are shown below:
 
-4. Consider the dispersion curve below:
+    ![](../images/A5-2-210.png){: .center}
 
-    ![](../images/A3-1.svg)
+2. The confidence tester: explain why the family of planes above is or is not a family of lattice planes.
 
+    * If it is a family of lattice planes, do nothing and be content with your decision
+    * If it is not a family of lattice planes, what would be a family of lattice planes in the same direction?
 
-    1. Sketch the group velocity $v_g(k)$
+    The lattice type is a Face-centred cubic (FCC), and clearly the lattice planes do capture all atoms, and thus the spacing must be decreased, or the reciprocal lattice vector doubled, so (420) would define a family of lattice planes.
 
-        One needs to sketch the derivative, which could be done by hand or computationally
+## Exercise 3 - Scattering
 
-        ![](../images/A3-1-4-gv.svg)
+1. What is the origin of the Laue condition? That is, why is the amplitude of a scattered wave zero if $\mathbf{k'} - \mathbf{k} \ne \mathbf{G}$?
 
-        with the code to compute and plot the derivative shown below:
+    If $\mathbf{k'} - \mathbf{k} \ne \mathbf{G}$, then the argument of the exponent has a phase factor dependent on the real-space lattice points. Because we sum over each of these lattice points, each argument has a different phase. Summing over all these phases results in an average amplitude of 0, resulting in no intensity peaks.
 
-        ``` python
-        k = k_vals[1] - k_vals[0]
-        y = nn(k_vals)
-        gradient = np.gradient(y, dk)
-        fig, ax = plt.subplots()
-        ax.plot(k_vals[k_vals<0], gradient[k_vals<0], 'C0');
-        ax.plot(k_vals[k_vals>.1], gradient[k_vals>.1], 'C0');
-        ax.set_xlabel(r'$k$');
-        ax.set_ylabel(r'$\frac{\partial\omega}{\partial k}$');
-        ax.set_xlim(-2,2)
-        ax.set_title('Group velocity')
-        plt.xticks([-np.pi/a, 0, np.pi/a], [r'$-\pi/a$', 0, r'$\pi/a$']);
-        plt.tight_layout();
+2. Consider a two-dimensional crystal with a rectangular lattice and lattice vectors $\mathbf{a}_1 = (0.468, 0) \mathrm{nm}$ and $\mathbf{a}_2 = (0, 0.342) \mathrm{nm}$ (so that $\mathbf{a}_1$ points along $x$-axis and $\mathbf{a}_2$ points along $y$-axis)
 
-        plt.savefig('A3-1-gv.pdf', facecolor='white', transparent=False)
+    1. Sketch the reciprocal lattice of this crystal
 
-        plt.show()
-        ```
+    ![](../images/A5-3-i.svg){: .center}
 
-    2. Produce a visualisation (e.g. a plot or histogram) of the density of states $g(\omega)$
+    2. Consider an X-ray diffraction experiment performed on this crystal using monochromatic X-rays with wavelength $0.166\mathrm{nm}$. Assuming elastic scattering, find the magnitude of the wave vectors of the incident and reflected X-rays
 
-        A histogram well displays the density of states
+    With elastic scattering, we have $|k| = |k'| = 2\pi\lambda = 37.9 \mathrm{nm^{-1}}$
 
-        ![](../images/A3-1-4-dos.svg)
+    3. On your sketch of the reciprocal lattice, draw the "scattering triangle" corresponding to the diffraction from (210) planes. Explicitly, use the Laue condition $\Delta \mathbf{k} = \mathbf{G}$ for constructive interference of diffracted X-rays
 
-        which can be compute using the following code:
-
-        ``` python
-        k_dos = np.linspace(0, np.pi/a, 25) # dk value (2\pi/L)
-
-        # Make the band plot
-        fig, (ax, ax2) = plt.subplots(ncols=2, sharey=True, figsize=(12, 5))
-        ax.plot(k_vals, nn(k_vals));
-        ax.vlines(k_dos, 0, nn(k_dos),
-                 colors=(0.5, 0.5, 0.5, 0.5))
-
-        ax.hlines(
-           np.hstack(nn(k_dos)),
-           np.hstack(k_dos),
-           np.pi/a,
-           colors=(0.5, 0.5, 0.5, 0.5)
-        )
-
-        ax.set_xlabel('$k$')
-        ax.set_ylabel(r'$ω$')
-        ax.set_xticks([0, np.pi/2])
-        ax.set_xticklabels(['$0$', r'$\pi/a$'])
-        ax.set_yticks([])
-        ax.set_yticklabels([])
-        ax.set_xlim(-0.05, max(k) + .05)
-
-        k = np.linspace(0, np.pi, 1000)
-        omegas = nn(k)
-
-        ax2.hist(omegas, orientation='horizontal', bins=75)
-        ax2.set_xlabel(r'$g(ω)$')
-        ax2.set_xticks([])
-
-        plt.savefig('A3-1-4-dos.pdf', facecolor='white', transparent=False, bbox_inches='tight')
-
-        plt.show()
-        ```  
-
-## Exercise 2 - Normal modes of a one-dimensional diatomic chain
-
-1. What is the difference between an acoustic mode and optical mode? Describe the motion of atoms in the unit cell for long wavelength oscillations.
-
-    In acoustic waves, the dispersion goes to zero and $k$ and $\omega \sim k$ for small $k$, whereas optical modes have an intercept with $\omega = c k$ where $c$ is the speed of light.
-
-    In the acoustic case, all atoms in a unit cell move in-phase with a slow spatial modulation, whereas in the optical case, adjacent atoms move out of phase with one another.
+    ![](../images/A5-3-iii.svg){: .center}
 
 
-2. Derive the dispersion relation for the longitudinal oscillations of a one-dimensional diatomic mass-and-spring crystal with unit cell length $a$ and where each unit cell contains one atom of mass $m_1$ and one atom of mass $m_2$ connected by a spring with spring constant $\kappa$.
 
-    ![](../images/3-2.png)
+## Exercise 4 - Structure determination
 
-    From the image, we write the position of the $n^{\textrm{th}}$ particle with mass $m_1$ as $x_n$ and the position of the $n^{\textrm{th}}$ particle with mass $m_2$ as $y_n$. We assume that the equilibrium position of $x_n$ is $n a$ and the equilibrium position is $n a + d$.
+A diffraction experiment with an unknown crystalline powder sample was performed using a tungsten X-ray tube. Tungsten has $K_{\alpha}$ [emission lines](https://physics.nist.gov/cgi-bin/XrayTrans/search.pl?element=W&trans=KL2&trans=KL3&lower=&upper=&units=eV) $K_{\alpha_1} = 59 318.8\mathrm{eV}$ and $K_{\alpha_2} = 57 981.9\mathrm{eV}$, and the ratio of intensities of the emissions lines is $\alpha_2/\alpha_1 \approx 0.115$.
 
-    We then write the equations of motion for the deviations from the equilibrium positions as $\delta x_n$ and $\delta y_n$
+1. Explain how X-ray tubes produce X-rays, and describe how one would go about performing a powder diffraction experiment.
+
+    This is a more detailed response than I would expect, but for a complete picutre: in an X-ray tube, electrons are emitted from the filament and accelerated towards the anode, and two forms of radiation are produced from the interaction between the electrons and the anode. The first kind is Bremsstrahlung radiation, which will be emitted as the electron is decelerated by the atomic nuclei of the anode. The emission spectrum is continuous, with the approximate shape described by Kramers' Law:
+
+    $$
+    I(\lambda)d\lambda = K \left(\frac{\lambda}{\lambda_{\textrm{min}}}-1\right)\frac{1}{\lambda^2}d\lambda
+    $$
+
+    where the cutoff wavelength, $\lambda_{\textrm{min}}$ is given by the Duane-Hunt law:
+
+    $$
+    \lambda_{\textrm{min}} = \frac{hc}{eV}.
+    $$
+
+    The key point relating to the distribution is that with an increased acceleration voltage, the Bremsstrahlung radiation intensity increases and shifts towards higher frequencies.
+
+    The second kind of radiation is the characteristic X-ray emission, which occurs when a high-lying electron decays to a (vacant) lower energy level, resulting in the emission of a photon. The bombardment of the anode by energetic electrons results in the emission of inner-shell electrons from the atoms in the anode. Such vacancies are filled by the decay of outer-shell electrons and due to the unique energy structure of each element, each atom emits photons of distinct frequencies, completely     analogous to atomic optical spectra.
+
+    The combination of these effects means that the expected emission spectrum would expect a smooth, continuous spectrum punctuated by emissions of characteristic X-rays.
+
+    Powder diffraction experiments are performed by placing a crystalline sample in powdered form in an X-ray beamline and collecting the scattered radiation from the sample. The diffraction pattern will by design form rings rather than spots, as every possible crystal orientation is assured by using a powder rather than a monocrystalline sample.
+
+
+
+2. A plot of the data measured from the experiment when $K_{\alpha_1}$ emission was used is shown below:
+![](../images/A-6-scattering.svg)
+
+    1. Following the recipe discussed in class, produce a table with columns of angle, plane separation, ratio of the square of first plane separation to plane separation, $N = h^2 + k^2 + l^2$, ${hkl}$, and $a$ (assuming some kind of cubic lattice)
+
+        This should be relatively straightforward, given the example we did in class was trickier and the code used to do the analysis was freely distributed. The peaks as found from the data are shown below:
+
+        ![](../images/A-6-peaks.svg)
+
+        ??? example "Peak finding code"
+            ``` python
+            peaks, _ = find_peaks(data['Intensity'])
+
+            fig, ax = plt.subplots()
+
+            ax.plot(data['Angle'], data['Intensity']/maxamp, label = r'W $K_{\alpha_1}$', color = 'C0')
+            ax.plot(data['Angle'][peaks], data['Intensity'][peaks]/maxamp, "x", color = 'C1', label = 'Peaks')
+            ax.set_xlabel(r'Angle [2$\theta$]')
+            ax.set_xlim((19,82))
+            ax.set_ylabel('Intensity [arb]')
+            ax.set_title('X-ray scattering of unknown material');
+            plt.legend()
+
+            loc = matplotlib.ticker.MultipleLocator(1)
+            ax.xaxis.set_minor_locator(loc)
+            ax.tick_params(which='minor')
+
+            if True:
+            plt.savefig('A-6-peaks.svg', facecolor='white', transparent=False, bbox_inches='tight')
+
+            plt.show()
+            ```
+
+        from which the following data table can be constructed:
+
+        | Peak number | $2\theta$ | $d~[\mathrm{pm}]$ | $d_a^2/d^2$ | $N$ | ${hkl}$ | $a~[\mathrm{pm}]$ |
+        | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+        | 1  |	20.461 | 58.84 |	 1.00  | 1  | [1, 0, 0] | 58.84 |
+        | 2  |	29.086 | 41.61 |	 1.99  | 2  | [1, 1, 0] | 58.84 |
+        | 3  |	35.828 | 33.97 |	 2.99  | 3  | [1, 1, 1] | 58.84 |
+        | 4  |	41.609 | 29.42 |	 3.99  | 4  | [2, 0, 0] | 58.84 |
+        | 5  |	46.788 | 26.32 |	 4.99  | 5  | [2, 1, 0] | 58.84 |
+        | 6  |	51.567 | 24.02 |	 5.99  | 6  | [2, 1, 1] | 58.84 |
+        | 7  |	60.302 | 20.80 |	 7.99  | 8  | [2, 2, 0] | 58.84 |
+        | 8  |	64.380 | 19.61 |	 8.99  | 9  | [2, 2, 1] | 58.84 |
+        | 9  |	68.327 | 18.61 |	 9.99  | 10 | [3, 0, 0] | 58.84 |
+        | 10 | 	72.164 | 17.74 |	10.99  | 11 | [3, 1, 0] | 58.84 |
+        | 11 | 	75.920 | 16.98 |	11.99  | 12 | [3, 1, 1] | 58.84 |
+        | 12 | 	79.617 | 16.32 |	12.99  | 13 | [2, 2, 2] | 58.84 |
+
+        The difficulty of finding the multiplier to make all values of $d_a^2/d^2$ an integer is not present in this example, so the process should be straightforward to find $a=58.84 \mathrm{pm}$
+
+    2. Use the table above to determine the lattice structure of the crystal
+
+        The lattice is a simple cubic lattice, which can be inferred by the calculated values of N above and the selection rule for simple cubic lattices ($N$ is all integers excluding $7, 15, 23, \ldots$), and this is directly visible from the diffraction data: peak 7 is clearly missing.
+
+3. The basis of the lattice is given by $X = [0,0,0]$ and $Y = [1/2, 1/2, \beta], [1/2, 1/2, (1 - \beta)] , [1/2, \beta, 1/2], [(1 - \beta), 1/2, 1/2], [1/2, 1/2, \beta],$ and $[(1 - \beta), 1/2, 1/2]$ where $X$ and $Y$ are different atomic species, and $\beta \approx 0.2$.
+
+    1. Draw the unit cell for the crystal using your lattice and the basis specified above.
+
+        Below is the crystal structure (many unit cells) and can be well described as a simple cubic with a neat prism inside. The material is $\textrm{LaB}_6$, which is the most gorgeous shade of pink, and is a neat material for making hot cathode emitters (electron sources).
+
+        ![](../images/A6-1-LaB_6.jpg)
+
+    2. Explain how the intensity of the peaks could be used to determine $\beta$, and obtain an expression for the ratio of the first two diffraction peaks. Note: You do not need to solve this equation for $\beta$, just arrive at something that could be used to calculate $\beta$.
+
+        The intensity of the peaks is related to the square (well, modulus squared) of the structure factor $S$. As we have been using it in class, the structure factor is
+
+        $$
+        S_{(hkl)} = \sum_\alpha f_\alpha e^{i\mathbf{G}\cdot\mathbf{R}_\alpha}
+        $$
+
+        which in reality means that one must compute
+
+        $$
+        S_{(hkl)} = \sum_\alpha f_\alpha e^{2\pi i(hkl)\cdot[xyz]_\alpha}
+        $$
+
+        This is not so difficult, but can be a bit tedious depending on the basis of the unit cell. Given we are looking at the intensities of the first two peaks, this means we will need to look at $S_{(100)}$:
+
+        $$
+        \begin{aligned}
+        S_{(100)} & = f_\textrm{X} + f_\textrm{Y}\left( e^{i\pi} + e^{i\pi} + e^{2\pi i \beta} + e^{2\pi i (1-\beta)} + e^{i\pi} + e^{i\pi} \right) \\
+        & = f_\textrm{X} + f_\textrm{Y}\left( e^{2\pi i \beta} + e^{-2\pi i \beta} e^{2\pi i} - 4 \right) \\
+        & = f_\textrm{X} + f_\textrm{Y}\left( 2\cos(2\pi\beta) - 4 \right) \\
+        & = f_\textrm{X} - 2 f_\textrm{Y}\left( 1 + \sin^2(\pi\beta) \right) \\
+        \end{aligned}
+        $$
+
+        and $S_{(110)}$:
+
+        $$
+        \begin{aligned}
+        S_{(110)} & = f_\textrm{X} + f_\textrm{Y}\left( e^{2\pi i} + e^{2\pi i} + 2\left( e^{2\pi i \beta}e^{i\pi} + e^{2\pi i (1-\beta)}e^{i\pi} \right) \right) \\
+        & = f_\textrm{X} + f_\textrm{Y}\left( 2 - 2\left( e^{2\pi i \beta} + e^{-2\pi i \beta} e^{2\pi i} \right) \right) \\
+        & = f_\textrm{X} + f_\textrm{Y}\left( 2 - \cos(2\pi\beta) \right) \\
+        & = f_\textrm{X} + f_\textrm{Y}\left( 1 - 2\sin^2(\pi\beta) \right) \\
+        \end{aligned}
+        $$
+
+        One could then look at the ratio $I_{(100)}/I_{(110)} = |S_{(100)}|^2/|S_{(110)}|^2$ and try and solve for $\beta$, but that will be a mess, so one should solve it numerically. The real value is $\beta = 0.1981$, although I am not sure exactly what the ratio of $I_{(100)}/I_{(110)}$ would return.
+
+4. Imagine the experiment was altered such that both $K_{\alpha_1}$ and $K_{\alpha_2}$ emission lines were present. How would this alter the data as recorded above? Would you expect that one could still uniquely determine the crystal structure of the sample?
+
+    Shown below is the spectrum with both emission lines:
+
+    ![](../images/A6-1-bothemissions.svg)
+
+    With two emission lines, one would expect to have essentially to diffraction patterns superimposed, but as there is sufficient energy separation between the two emission lines, one can resolve the two peaks (well, in simulated data). The question explicitly states that the ratio of intensities for emission from the different transitions is $\alpha_2/\alpha_1 \approx 0.115$, meaning the $K_{\alpha_2}$ peaks will be noticeably smaller. The main point is that there will be two distinct diffraction patterns, and provided one can uniquely distinguish from which emission line the peak comes, one would actually be able to better determine the crystal structure, as one effectively has double the number of peaks. This method is used more broadly, that is, not using monochromatic X-rays but rather polychromatic X-rays in order to get more information per unit diffraction, but one must know well the illuminating radiation. This is usually called "pink" beam illumination.
+
+5. Now imagine that the experiment were altered such that only $K_{\alpha_1}$ radiation were used, but a monocrystalline sample were used. What would be the difference in the recorded diffraction pattern?
+
+    If one were to use a monocrystalline sample, the diffraction pattern would have distinct Bragg spots rather than rings, but then we need to care much more about crystal orientation (it also usually very difficult to get large monocrystalline samples). The image below shows diffraction from monocrystalline silicon:
+
+    ![](../images/A6-1-MonocrystalSi.jpg){: .center}
+
+6. Unfortunately, the beautiful single crystal was dropped before it could be used, resulting in a sample that is neither amorphous nor monocrystalline, rather something between the two. How would this alter the appearance of the diffraction pattern?
+
+    With a sample between monocrystalline and amorphous, there are extended regions of order and one can imagine either the Bragg spots blurring out around the optical axis (around $\theta$ in polar coordinates), or the rings "sharpening up", that is still ring-like but with more intensity at the Bragg spots. The image below shows both powder and grain-oriented diffraction from aluminium:
+
+    ![](../images/A6-1-Grain-orientedAl.png){: .center}
+
+## Exercise 5 - The nearly-free electron model
+
+Consider an electron in a weak periodic potential in one dimension $V(X) = V(x+a)$. It is natural to write the potential as
+\[
+V(x) = \sum_G e^{iGx} V_G
+\]
+where the sum is over the reciprocal lattice $G = 2\pi n/a$ and $V_G* = V_{-G}$ assures the potential $V(x)$ is real.
+
+1. Explain why for k near to a Brillouin zone boundary (such as $k$ near $\pi/a$) the electron wavefunction should be taken to be  
+\[
+\psi = A e^{ikx} + B e^{i(k+G)x}
+\]
+where $G$ is a reciprocal lattice vector such that $|k|$ is close to $|k+G|$.
+
+    A periodic lattice can only scatter a wave by a reciprocal lattice vector (Bragg diffraction). In the nearly free electron picture, the scattering perturbation is weak, so that we can treat the scattered wave in perturbation theory. In this case, there is an energy denominator which suppresses mixing of $k$-vectors which have greatly different unperturbed energies. Thus, the only mixing that can occur is between two states with similar energies that are separated by a reciprocal lattice vector.     Degenerate perturbation theory tells us that we should first diagonalize within the degenerate space spanned by only these two eigenstates.
+
+2. We have seen that with the above wavefunction, the energy (that is, the eigenvalues) at this wavevector are given by
+\[
+E = \frac{\hbar^2 k^2}{2m} + V_0 \pm |V_G|
+\]
+where $G$ is chosen such that $|k| = |k+G|$.
+
+    1. Give a qualitative explanation of why these two states are separated in energy by $2|V_G|$
+
+        If we consider only the $V_{2n\pi/a}$ and $V_{-2n\pi/a}$ Fourier modes of the potential then we have $V = 2 V_{2n\pi/a} \cos(2n\pi r/a)$. Assuming $V_{2n\pi/a} > 0$, then the higher energy state is the $\psi = \cos(2n\pi r/a)$ which puts the maximum amplitude of the wavefunction exactly at the maxima of the potential. Similarly, the lower energy wavefunction is the $\sin(2n\pi r/a)$ which has the minimum amplitude of the wavefunction at the maximum of the potential. In the case of $V_{2n\pi /a} < 0$ the sin is the higher energy wavefunction.
+
+    2. Provide a sketch or plot of the energy as a function of $k$ in both the extended and reduced zone schemes. Note that one need not compute $E$ for all $k$, emphasis should be on the general features of the energy spectrum.
+
+        These plots below are actually calculated by solving the eigenvalue problem as outlined in the next question for all $k$ (where the perturbation is valid, that is where the term in $\delta k$ to second order is small compared $|V_{2n\pi/a}|^2$).  
+
+        In the reduced zone scheme, one should have something like:
+
+        ![](../images/A6-2-reduced.svg)
+
+        ??? example "Reduced-zone scheme code"
+
+            ``` python
+            # Use colors from the default color cycle
+            default_colors = plt.rcParams['axes.prop_cycle'].by_key()['color']
+            blue, orange, *_ = default_colors
+
+            def energy(k, V=1):
+                k = (k + np.pi) % (2*np.pi) - np.pi
+                k_vals = k + 2*np.pi * np.arange(-1, 2)
+                h = np.diag(k_vals**2) + V * (1 - np.identity(3))
+                return np.linalg.eigvalsh(h)
+
+            energy = np.vectorize(energy, signature="(),()->(m)")
+
+            fig, ax = plt.subplots(1, 1)
+
+            momenta = np.linspace(-np.pi, np.pi, 400)
+            energies = energy(momenta, 0)
+            max_en = 41
+            energies[energies > max_en] = np.nan
+            ax.plot(momenta, energies, c=blue, label = 'Free electron')
+            energies = energy(momenta, 2)
+            max_en = 41
+            energies[energies > max_en] = np.nan
+            ax.plot(momenta, energies, c=orange, label = 'Nearly free electron')
+
+            ax.set_xlabel("$ka$")
+            ax.set_ylabel("$E$")
+            ax.set_ylim(-.5, max_en + 5)
+            ax.set_xticks(np.pi * np.arange(-1, 2))
+            ax.set_xticklabels(r"$-\pi$ $0$ $\pi$".split())
+
+
+            def legend_without_duplicate_labels(ax):
+                handles, labels = ax.get_legend_handles_labels()
+                unique = [(h, l) for i, (h, l) in enumerate(zip(handles, labels)) if l not in labels[:i]]
+                ax.legend(*zip(*unique))
+
+            legend_without_duplicate_labels(ax)
+
+            if True:
+                plt.savefig('A-6-reduced.svg', facecolor='white', transparent=False, bbox_inches='tight')
+
+            plt.show()
+            ```
+
+        Whereas in the extended zone scheme, one should have:
+
+        ![](../images/A6-2-extended.svg)
+
+        ??? example "Extended-zone scheme code"
+
+            ``` python
+            fig, ax = plt.subplots(1, 1)
+
+            momenta = np.linspace(-3*np.pi, 3*np.pi, 400)
+            energies = energy(momenta, 0)
+            max_en = 41
+            energies[energies > max_en] = np.nan
+            energies[~((abs(momenta) // np.pi).reshape(-1, 1) == np.arange(3).reshape(1, -1))] = np.nan
+            ax.plot(momenta, energies, c=blue, label = 'Free electron')
+            energies = energy(momenta, 2)
+            max_en = 41
+            energies[energies > max_en] = np.nan
+            energies[~((abs(momenta) // np.pi).reshape(-1, 1) == np.arange(3).reshape(1, -1))] = np.nan
+            ax.plot(momenta, energies, c=orange, label = 'Nearly free electron')
+
+            ax.set_xlabel("$ka$")
+            ax.set_ylabel("$E$")
+            ax.set_ylim(-.5, max_en + 5)
+            ax.set_xticks(np.pi * np.arange(-3, 4))
+            ax.set_xticklabels(fr"${i}\pi$".replace("1", "") if i else "$0$" for i in range(-3, 4))
+
+            legend_without_duplicate_labels(ax)
+
+            if True:
+                plt.savefig('A-6-extended.svg', facecolor='white', transparent=False, bbox_inches='tight')
+
+            plt.show()
+            ```
+
+
+3. Let us look at the case where $k$ is not at the Brillouin zone boundary, but rather close to the boundary. Following the same method as used to achieve the above result, show that at the point $k = n\pi/a + \delta k$ the energy to second order in $\delta k$ is given by
+\[
+E_{\pm}=\frac{\hbar^{2}(n \pi / a)^{2}}{2 m}+V_{0} \pm\left|V_{2 n \pi / a}\right|+\frac{\hbar^{2}(\delta k)^{2}}{2 m}\left(1 \pm \frac{\hbar^{2}(n \pi / a)^{2}}{m\left|V_{2 n \pi / a}\right|}\right)
+\]
+
+    Technically the wavefunction should have a normalisation
+
+    $$
+    \psi = (A e^{ikx} + B e^{i(k+G)x})/\sqrt{L}
+    $$
+
+    but it is rarely the case that one is actually probing for normalisation compliance, and in any case, to maintain normalization we can insist that $|A|^2 + |B|^2 = 1$. Taking $k$ and $k+G$ both on a Brillouin zone boundary we have $k = n\pi/a$ and $k+G = -n\pi/a$, where here we have chosen the $n^{\textrm{th}}$ zone boundary, and we must have $G = -2n\pi/a$ the reciprocal lattice vector. The Hamiltonian $H$ in question is the usual Kinetic term plus $V(x)$. From here, one can either use the     variational method or diagonalise the Hamiltonian the degenerate space, the latter of which was done in class and is done here.
+
+    We must compute the matrix elements:
 
     $$
     \begin{aligned}
-    &m_{1} \ddot{\delta x}_{n} \quad=-\kappa\left(\delta x_{n}-\delta y_{n-1}\right)-\kappa\left(\delta x_{n}-\delta y_{n}\right) \\
-    &m_{2} \dot{\delta} y_{n}=-\kappa\left(\delta y_{n}-\delta x_{n}\right)-\kappa\left(\delta y_{n}-\delta x_{n+1}\right)
+    \langle k|H| k\rangle &=\hbar^{2}(\delta k+n \pi / a)^{2} /(2 m)+V_{0} \\
+    \langle k+G|H| k+G\rangle &=\hbar^{2}(\delta k-n \pi / a)^{2} /(2 m)+V_{0} \\
+    \langle k|H| k+G\rangle &=V_{2 n \pi / a} \\
+    \langle k+G|H| k\rangle &=V_{-2 n \pi / a}
     \end{aligned}
     $$
 
-    We then assume solutions of the form
+    which means that me must diagonalise the matrix
 
     $$
-    \begin{aligned}
-    \delta x_{n} &=A_{x} e^{i k a n-i \omega t} \\
-    \delta y_{n} &=A_{y} e^{i k a n-i \omega t}
-    \end{aligned}
+    \left(\begin{array}{cc}
+    \hbar^{2}(\delta k+n \pi / a)^{2} /(2 m)+V_{0} & V_{2 n \pi / a} \\
+    V_{-2 n \pi / a} & \hbar^{2}(\delta k-n \pi / a)^{2} /(2 m)+V_{0}
+    \end{array}\right).
     $$
 
-    from which we obtain the equations
+    Performing the diagonalisation, one finds
 
     $$
-    \begin{aligned}
-    -m_{1} \omega^{2} A_{x} e^{i k n a} &=-2 \kappa A_{x} e^{i k n a}+\kappa A_{y}\left(e^{i k n a}+e^{i k(n-1) a}\right) \\
-    -m_{2} \omega^{2} A_{y} e^{i k n a} &=-2 \kappa A_{y} e^{i k n a}+\kappa A_{x}\left(e^{i k n a}+e^{i k(n+1) a}\right)
-    \end{aligned}
+    E_{\pm}=\frac{\hbar^{2}\left[(\delta k)^{2}+(n \pi / a)^{2}\right]}{2 m}+V_{0} \pm \sqrt{\left[\frac{\hbar^{2} 2(\delta k) n \pi / a}{2 m}\right]^{2}+\left|V_{2 n \pi / a}\right|^{2}}
     $$
 
-    which simplify to
+    and the square root should be expanded and the common terms in $\delta k$ collected to obtain the result
 
     $$
-    \begin{aligned}
-    \omega^{2} A_{x} &=2\left(\kappa / m_{1}\right) A_{x}-\left(\kappa / m_{1}\right)\left(1+e^{-i k a}\right) A_{y} \\
-    \omega^{2} A_{y} &=2\left(\kappa / m_{2}\right) A_{y}-\left(\kappa / m_{2}\right)\left(1+e^{i k a}\right) A_{x}
-    \end{aligned}
+    E_{\pm}=\frac{\hbar^{2}(n \pi / a)^{2}}{2 m}+V_{0} \pm\left|V_{2 n \pi / a}\right|+\frac{\hbar^{2}(\delta k)^{2}}{2 m}\left(1 \pm \frac{\hbar^{2}(n \pi / a)^{2}}{m\left|V_{2 n \pi / a}\right|}\right)
     $$
 
-    which defines an eigenvalue problem for $\omega^2$. Therefore we must find the roots of the determinant
+    as required.
+
+4. Calculate the effective mass of an electron at this wavevector
+
+    The effective mass can be obtained from
 
     $$
-    \left|\begin{array}{cc}
-    2\left(\kappa / m_{1}\right)-\omega^{2} & -\left(\kappa / m_{1}\right)\left(1+e^{-i k a}\right) \\
-    -\left(\kappa / m_{2}\right)\left(1+e^{i k a}\right) & 2\left(\kappa / m_{2}\right)-\omega^{2}
-    \end{array}\right|
+    \frac{1}{2m^*} = \frac{1}{2m}\left(1 \pm \frac{\hbar^{2}(n \pi / a)^{2}}{m\left|V_{2 n \pi / a}\right|}\right)
     $$
 
-    which yields the equation
+    or equivalently
 
     $$
-    \begin{aligned}
-    &0=\omega^{4}-\omega^{2}\left(2 \kappa\left(1 / m_{1}+1 / m_{2}\right)\right)+\frac{\kappa^{2}}{m_{1} m_{2}}\left(4-\left(1+e^{i k a}\right)\left(1+e^{-i k a}\right)\right) \\
-    &\left.0=\omega^{4}-\omega^{2}\left(\frac{2\left(m_{1}+m_{2}\right) \kappa}{m_{1} m_{2}}\right)+\frac{\kappa^{2}}{m_{1} m_{2}}(2-2 \cos (k a))\right)
-    \end{aligned}
+    m^{*}=\left|\frac{m}{1 \pm \frac{\hbar^{2}(n \pi / a)^{2}}{m\left|V_{2 n \pi / a}\right|}}\right|
     $$
 
-    and ultimately
+## Exercise 6 - Semiconductors: holes
 
-    $$
-    \begin{aligned}
-    \omega^{2} &=\frac{\kappa}{m_{1} m_{2}}\left(m_{1}+m_{2} \pm \sqrt{m_{1}^{2}+m_{2}^{2}+2 m_{1} m_{2} \cos (k a)}\right) \\
-    &=\frac{\kappa}{m_{1} m_{2}}\left(m_{1}+m_{2} \pm \sqrt{\left(m_{1}+m_{2}\right)^{2}-4 m_{1} m_{2} \sin ^{2}(k a / 2)}\right)
-    \end{aligned}
-    $$
+1. In the context of semiconductor physics, what is meant by a hole and why is it useful?
 
-3. Determine the frequencies of the acoustic and optical modes at $k=0$ and at the Brillouin zone boundary
+    A hole is the absence of an electron in an otherwise filled valence band. This is useful since instead of describing the dynamics of all the (many) electrons in the band, it is equivalent to describe the dynamics of just the (few) holes.
 
-    At $k=0$, $\cos(ka)=1$ and therefore the acoustic mode has zero energy whereas the optical mode has energy
 
-    $$
-    \omega = \sqrt{\frac{2\kappa(m_1+m_2)}{m_1 m_2}}
-    $$
 
-    At the Brilllouin zone boundary, $\cos(ka)=-1$ and so the energies of the two modes are
+2. An electron near the top of the valence band in a semiconductor has energy
+\[
+E = -10^{-37}|k|^2
+\]
+where $E$ is in Joules, and $k$ is in $\mathrm{m^{-1}}$. An electron is removed from a state $k = 2 \times 10^8 \mathrm{m^{-1}} \hat{x}$, where $\hat{x}$ is the unit
+vector in the $x-$direction. For a hole, calculate (including the sign)
 
-    $$
-    \omega = \sqrt{\frac{2\kappa(m_1)}{m_1 m_2}} \quad \sqrt{\frac{2\kappa(m_2)}{m_1 m_2}}
-    $$
+    1. the effective mass
 
-4. Determine the sound velocity, and show that the group velocity is zero at the zone boundary ()
+        Effective mass $\hbar^2 k^2/(2m^∗) = 10^{-37} k^2$. So $m^∗ = 5 \times 10^{-32} \mathrm{kg}$ or $.05$ the mass of the electron. This mass is positive in the usual convention.
 
-    To find the sound velocity, one must expand around $k=0$ for the acoustic mode and then one end with an equation of the from $\omega = v k$ with
+    2. the energy
 
-    $$
-    v = a \sqrt{\frac{\kappa}{2(m_1 + m_2)}}
-    $$
+        The energy is $E = 10^{-37} k^2 = 4\times 10^{-21} \mathrm{J}$, or about $0.025\mathrm{eV}$. This energy is positive (it takes energy to "push" the hole down into the fermi sea, like pushing a balloon under water).
 
-    The group velocity $v_g$ is given by $\mathrm{d}\omega/\mathrm{k}$ and whilst the form of $\omega$ is a bit ugly, if we write $f = \omega^2$, we are interested in the derivative of the function $g = f^{1/2}$. So by the chain rule,
+    3. the velocity
 
-    $$
-    \frac{\mathrm{d}g}{\mathrm{k}} = \frac{\mathrm{d}g}{\mathrm{d}f} \frac{\mathrm{d}f}{\mathrm{d}k}
-    $$
+        Getting the velocity (and momentum) right are tricky. First, note that the velocity of an eigenstate is the same whether or not the state is filled with an electron. It is always true that the velocity of an electron in a state is $\nabla_k E_k/\hbar$ where $E_k$ is the electron energy. Thus the hole velocity here is negative $v = -\hbar k/m^∗ = -3.8 \times 10^5 \mathrm{m/s}$ (i.e. the velocity is in the negative $\hat{x}$) direction.    
 
-    which means
+    4. the momentum
 
-    $$
-    v_g = \frac{1}{2}\frac{1}{f^{1/2}} \frac{\mathrm{d}f}{\mathrm{d}k}.
-    $$
+        For momentum, since a filled band carries no (crystal) momentum, and for electrons crystal momentum is always $\hbar k$, the removal of an electron leaves the band with net momentum $-\hbar k$ which we assign as the momentum of the hole. Thus we obtain hole momentum $-\hbar k = -2.1 \times 10^{-26} \mathrm{kg ~ m/s}$ which is also in the negative \hat{x} direction (this matches well to the intuition that $p = mv$ with a positive effective mass for holes).
 
-    Now $f$ is well behaved around $k = \pm\pi/a$, so we only need look at $\frac{\mathrm{d}f}{\mathrm{d}k}$. Again, $f$ is a bit ugly, but is essentially
 
-    $$
-    f = c_1 \pm \sqrt{c_2 + c_3 \cos(k a)}
-    $$
+3. If there is a density $p = 10^5 \mathrm{m^{-3}}$ of such holes all having almost exactly this same momentum, calculate the current density and its sign.
 
-    with constants $c_i$, and therefore, once again using the chain rule
+    With $p$ the density of such holes, the total current density is $p e v = -6 \times 10^{-9} \mathrm{A/m^2}$ also in the negative \hat{x} direction (noting that the charge of the hole is positive).
 
-    $$
-    \mathrm{d}f/\mathrm{d}k \sim \pm \frac{c_4 \sin(k a)}{\sqrt{c_2 + c_3 \cos(k a)}}
-    $$
+## Exercise 7 - Semiconductor devices
 
-    which goes to zero for $k = \pi/a$ and therefore $v_g \rightarrow 0$
+Choose a semiconductor device of interest (a few examples are provided below, but choose anything), research it, and explain what the device is and how it functions, with an emphasis on the material covered in this course.
 
-5. Sketch or plot the dispersion in both the reduced and extended zone scheme
+* Zener diode
+* Laser diode
+* Solar cell
+* Hall effect sensor
 
-    The dispersion in the reduced zone scheme:
-
-    ![](../images/A3-2-brillouin.svg)
-
-    The dispersion in the extended zone scheme:
-
-    ![](../images/A3-2-extended.svg)
-
-    The above plots were computed using the code below:
-
-    ??? example "Much code"
-        ``` python
-        # Define a function to return the dispersion
-
-        def dispersion_diatomic(k, kappa = 1, m1 = 2, m2 = 1, acoustic=True):
-
-            cons = m1 + m2
-            sq = np.sqrt((cons ** 2) - (4 * m1 * m2 * np.sin(k * a/2) ** 2))
-            if acoustic:
-                sq *= -1
-            return np.sqrt(kappa/(m1*m2) * (cons + sq)/m)
-
-
-        scale = 3 # Set the sclae for plotting past the Brillouin zone
-        a = 2 # Set the lattice constant
-
-        brillouin = np.linspace(-np.pi/a, np.pi/a, 500) # k values in the Brillouin zone
-        ks = brillouin * scale # k values further afield - obviously less well sampled
-
-        kappa = 1
-
-        # Plot the dispersion
-        fig, ax = plt.subplots()
-        ax.plot(brillouin, dispersion_diatomic(brillouin), color = 'C0', label = 'Acoustic')
-        ax.plot(brillouin, dispersion_diatomic(brillouin, acoustic = False), color = 'C1', label = 'Optical')
-
-        ## The labelling is very tedious, there is little value to be found here
-
-        # Plot and annotate the Brillouin zone boundary
-        xvals = [-np.pi/a, np.pi/a]
-        for v in xvals:
-            ax.axvline(x=v, color = 'black')
-
-            offset = 0.3
-            if v < 0:
-                sign = '-'
-            elif v > 0:
-                sign = '+'
-                offset = -offset
-
-            # Label the Brillouin range
-            ax.text(v + offset, .1 , f'$k ={sign}\pi/a$',
-                     horizontalalignment='center', fontsize=16)
-
-        # Make the plot pretty
-        ax.set_xlabel('$k$')
-        ax.set_ylabel('$\omega$')
-        ax.set_xlim(1.1*min(xvals),1.1*max(xvals))
-        plt.legend(bbox_to_anchor=(.5, -.125), loc='lower center', ncol=2)
-
-        draw_classic_axes(ax)
-        plt.savefig('A3-2-brillouin.svg', facecolor='white', transparent=False, bbox_inches='tight')
-
-        plt.show()
-
-        # Make arrays for the first and second Brillouin zones
-        # first Bz
-        brillouin = np.linspace(-np.pi/a, np.pi/a, 500)
-        # second Bz
-        # You may be tempted to have a single array here, but if you do this, your plot will be ugly!
-        # Verify this for yourself: you will find the function "numpy.concatenate" useful.
-        first_ex = np.linspace(-2*np.pi/a, -np.pi/a,250)
-        second_ex = np.flip(first_ex * -1)
-
-        # Plot the Brillouin zones
-        fig, ax = plt.subplots()
-
-        ax.plot(brillouin, dispersion_diatomic(brillouin), color = 'C0', label = 'acoustic')
-        ax.plot(first_ex, dispersion_diatomic(first_ex, acoustic = False), color = 'C1', label = 'optical')
-        ax.plot(second_ex, dispersion_diatomic(second_ex, acoustic = False), color = 'C1') # Only use one label to avoid double-tagging
-
-        ## The labelling is very tedious, there is little value to be found here
-
-        # Plot and annotate the Brillouin zone boundaries - this is painfully manual
-        xvals = [-2*np.pi/a, -np.pi/a, np.pi/a, 2*np.pi/a]
-        for n, v in enumerate(xvals):
-            ax.axvline(x=v, color = 'black', linestyle = '--')
-
-            offset = 0.3
-            if v < 0:
-                sign = '-'
-                if n == 0:
-                    text = f'${sign}$'+r'$\frac{2\pi}{a}$'
-                else:
-                    n = text = f'${sign}$'+r'$\frac{\pi}{a}$'
-            elif v > 0:
-                sign = '+'
-                offset = -offset
-                if n == 3:
-                    text = f'${sign}$'+r'$\frac{2\pi}{a}$'
-                else:
-                    n = text = f'${sign}$'+r'$\frac{\pi}{a}$'
-
-            # Label the Brillouin range
-            text
-            ax.text(v + offset, .1 , text,
-                     horizontalalignment='center', fontsize=16)
-
-        omega_plus = np.sqrt(2*kappa/m)
-        omega_minus = np.sqrt(2*kappa/2*m)
-        gap = (omega_plus + omega_minus) / 2 # Band gap for arrows
-
-        # Label the 1st Bz
-        ax.text(0, gap - offset/2 , '1st Brillouin zone',
-                 horizontalalignment='center', fontsize=16)
-        ax.annotate(text='', xy=(-np.pi/a, gap), xytext=(np.pi/a, gap),
-                    arrowprops=dict(arrowstyle='<->', shrinkA=0, shrinkB=0))
-
-        # Label the 2nd Bz (<0)
-        ax.text(-3*np.pi/(2*a), gap + 1.75 * offset , '2nd Brillouin\nzone',
-                 horizontalalignment='center', fontsize=16)
-        ax.annotate(text='', xy=(-2*np.pi/a, gap-.1), xytext=(-np.pi/a, gap-.1),
-                    arrowprops=dict(arrowstyle='<->', shrinkA=0, shrinkB=0))
-
-        # Label the 2nd Bz(>0)
-        ax.text(3*np.pi/(2*a), gap + 1.75 * offset , '2nd Brillouin\nzone',
-                 horizontalalignment='center', fontsize=16)
-        ax.annotate(text='', xy=(np.pi/a, gap-.1), xytext=(2*np.pi/a, gap-.1),
-                    arrowprops=dict(arrowstyle='<->', shrinkA=0, shrinkB=0))
-
-        # Make the plot pretty
-        ax.set_xlabel('$k$')
-        ax.set_ylabel('$\omega$')
-        ax.set_title('Extended zone scheme');
-        plt.legend(bbox_to_anchor=(.5, -.25), loc='lower center', ncol=2)
-
-        plt.savefig('A3-2-extended.svg', facecolor='white', transparent=False, bbox_inches='tight')
-
-        plt.show()
-
-        ```
-
-6. Assuming that there are $N$ unit cells, how many different normal modes are there? And how many branches of excitation are there?
-
-    If there are $N$ unit cells, therefore $2N$ atoms, there are $2N$ modes. As there are 2 modes for $k$ in the reduced zone scheme, there are two branches
-
-7. What happens when $m_1 = m_2 $
-
-    When the masses as equal, the unit cell is now of size $a/2$ to the Brillouin zone is double in size, and the gap between the branches vanishes, and the system looks identical to the monatomic chain (the image from the extended zone scheme works well here)
-
-## Exercise 3 - Diatomic tight binding chain
-
-We have seen the both the diatomic chain and the tight-binding chain, so we are going to combine the two. Consider the system shown below
-
-![](../images/3-3.png)
-
-Suppose that the _onsite_ energy of atom $A$ is different for atom $B$, that is $\langle n | H | n \rangle = \epsilon_A$ for $| n \rangle $ being on site $A$ and $\langle n | H | n \rangle = \epsilon_B$ for $| n \rangle$ being on site $B$. We assume that the hopping $-t$ is unchanged from the monatomic case.
-
-1. Derive the dispersion curve for electrons
-
-    The unit cell $a$ is the distance from an $A$ atom to another $A$ atom. Let $\phi_n^A$ be the amplitude of the wavefunction on the $n^{\mathrm{th}}$ site of type $A$ and $\phi_n^B$ be the amplitude of the wavefunction on the $n^{\mathrm{th}}$ site of type $B$. We assume a trial wavefunction of the form
-
-    $$
-    | \psi \rangle = \sum_n (\phi_n^A + \phi_n^B) | \psi \rangle
-    $$
-
-    and put this into the Schrödinger equation and find an _effective_ Schrödinger equation of the form
-
-    $$
-    \begin{aligned}
-    E \phi_{n}^{A} &=\epsilon_{A} \phi_{n}^{A}-t\left(\phi_{n}^{B}+\phi_{n-1}^{B}\right) \\
-    E \phi_{n}^{B} &=\epsilon_{B} \phi_{n}^{B}-t\left(\phi_{n}^{A}+\phi_{n+1}^{A}\right)
-    \end{aligned}
-    $$
-
-    Assuming solutions of the form
-
-    $$
-    \begin{aligned}
-    \phi_{n}^{A} &=A e^{i k n a} \\
-    \phi_{n}^{B} &=B e^{i k n a}
-    \end{aligned}
-    $$
-
-    gives
-
-    $$
-    \begin{aligned}
-    E A &=\epsilon_{A} A-t\left(1+e^{-i k a}\right) B \\
-    E B &=\epsilon_{B} B-t\left(1+e^{i k a}\right) A
-    \end{aligned}
-    $$
-
-    again giving a $2 \times 2$ eigenvalue problem. We solve for the roots of the determinant
-
-    $$
-    \left|\begin{array}{cc}
-    \epsilon_{A}-E & -t\left(1+e^{-i k a}\right) \\
-    -t\left(1+e^{i k a}\right) & \epsilon_{B}-E
-    \end{array}\right|
-    $$
-
-    which givens the equation
-
-    $$
-    0=E^{2}-E\left(\epsilon_{A}+\epsilon_{B}\right)+\left(\epsilon_{A} \epsilon_{B}-t^{2}(2+2 \cos (k a))\right)
-    $$
-
-    $$
-    E_{\pm}(k)=\frac{1}{2}\left(\epsilon_{A}+\epsilon_{B} \pm \sqrt{\left(\epsilon_{A}-\epsilon_{B}\right)^{2}+4 t^{2}(2+2 \cos (k a))}\right)
-    $$
-
-2. Sketch or plot the above dispersion relation in both the reduced and extended zone schemes
-
-    The dispersion in the reduced zone scheme:
-
-    ![](../images/A3-3-brillouin.svg)
-
-    The dispersion in the extended zone scheme:
-
-    ![](../images/A3-3-extended.svg)
-
-    The above plots were computed using the code below:
-
-    ??? example "Very code"
-        ``` python
-        def energy(k, ea = 5, eb = 3, t = 1, low = True):
-
-        const = ea - eb
-        sqrt = np.sqrt(const ** 2 + 4 * t ** 2 * (2+2*np.cos(k*a)))
-        if low:
-            sqrt *= -1
-
-        return 1/2 * (ea + eb + sqrt)
-
-        scale = 3 # Set the sclae for plotting past the Brillouin zone
-        a = 2 # Set the lattice constant
-
-        brillouin = np.linspace(-np.pi/a, np.pi/a, 500) # k values in the Brillouin zone
-        ks = brillouin * scale # k values further afield - obviously less well sampled
-
-        # Plot the dispersion
-        fig, ax = plt.subplots()
-        ax.plot(brillouin, energy(brillouin), color = 'C0', label = 'Low E')
-        ax.plot(brillouin, energy(brillouin, low = False), color = 'C1', label = 'High E')
-
-        ## The labelling is very tedious, there is little value to be found here
-
-        # Plot and annotate the Brillouin zone boundary
-        xvals = [-np.pi/a, np.pi/a]
-        for v in xvals:
-            ax.axvline(x=v, color = 'black')
-
-            offset = 0.3
-            if v < 0:
-                sign = '-'
-            elif v > 0:
-                sign = '+'
-                offset = -offset
-
-            # Label the Brillouin range
-            ax.text(v + offset, 2 , f'$k ={sign}\pi/a$',
-                     horizontalalignment='center', fontsize=16)
-
-        # Make the plot pretty
-        ax.set_xlabel('$k$')
-        ax.set_ylabel('$E$')
-        ax.set_xlim(1.1*min(xvals),1.1*max(xvals))
-        plt.legend(bbox_to_anchor=(.5, -.25), loc='lower center', ncol=2)
-
-        plt.savefig('A3-3-brillouin.svg', facecolor='white', transparent=False, bbox_inches='tight')
-
-        plt.show()
-
-        # Make arrays for the first and second Brillouin zones
-        # first Bz
-        brillouin = np.linspace(-np.pi/a, np.pi/a, 500)
-        # second Bz
-        # You may be tempted to have a single array here, but if you do this, your plot will be ugly!
-        # Verify this for yourself: you will find the function "numpy.concatenate" useful.
-        first_ex = np.linspace(-2*np.pi/a, -np.pi/a,250)
-        second_ex = np.flip(first_ex * -1)
-
-        # Plot the Brillouin zones
-        fig, ax = plt.subplots()
-
-        ax.plot(brillouin, energy(brillouin), color = 'C0', label = 'Low E')
-        ax.plot(first_ex, energy(first_ex, low = False), color = 'C1', label = 'High E')
-        ax.plot(second_ex, energy(second_ex, low = False), color = 'C1') # Only use one label to avoid double-tagging
-
-        ## The labelling is very tedious, there is little value to be found here
-
-        # Plot and annotate the Brillouin zone boundaries - this is painfully manual
-        xvals = [-2*np.pi/a, -np.pi/a, np.pi/a, 2*np.pi/a]
-        for n, v in enumerate(xvals):
-            ax.axvline(x=v, color = 'black', linestyle = '--')
-
-            offset = 0.3
-            if v < 0:
-                sign = '-'
-                if n == 0:
-                    text = f'${sign}$'+r'$\frac{2\pi}{a}$'
-                else:
-                    n = text = f'${sign}$'+r'$\frac{\pi}{a}$'
-            elif v > 0:
-                sign = '+'
-                offset = -offset
-                if n == 3:
-                    text = f'${sign}$'+r'$\frac{2\pi}{a}$'
-                else:
-                    n = text = f'${sign}$'+r'$\frac{\pi}{a}$'
-
-            # Label the Brillouin range
-            text
-            ax.text(v + offset, 1.75 , text,
-                     horizontalalignment='center', fontsize=16)
-
-        # Make the plot pretty
-        ax.set_xlabel('$k$')
-        ax.set_ylabel('$\omega$')
-        ax.set_title('Extended zone scheme');
-        plt.legend(bbox_to_anchor=(.5, -.25), loc='lower center', ncol=2)
-
-        plt.savefig('A3-3-extended.svg', facecolor='white', transparent=False, bbox_inches='tight')
-
-        plt.show()
-        ```
-
-3. What is the effective mass of an electron near the bottom of the lower band?
-
-    To find the effective mass, we expand the energy around the minimum which gives
-
-    $$
-    E= \mathrm{ constant }+\frac{2 t^{2}(k a)^{2}}{\sqrt{\left(\epsilon_{A}-\epsilon_{B}\right)^{2}+16 t^{2}}}
-    $$
-
-    which set equal to $\hbar^2 k^2 / (2m^*)$ and find
-
-    $$
-    m^{*}=\frac{\hbar^{2} \sqrt{\left(\epsilon_{A}-\epsilon_{B}\right)^{2}+16 t^{2}}}{4 t^{2} a^{2}}
-    $$
-
-4. If each atom ($A$ and $B$) are monovalent, is the system a conductor or insulator? Justify your response
-
-    If each atom is monovalent, there are now two electrons per unit cell, and this fills exactly the lower band and therefore the system is insulating.
-
-5. Consider the material LiF, and use the above results to justify why it is observed to be an excellent insulator.
-
-    For LiF we can expect a much lower energy for electrons on F than on Li (F has a large electron affinity, Li has a low ionization energy). So we can set $\epsilon_A \ll \epsilon_B$. What happens in this limit is that the bands are extremely far apart – thus a very good insulator.
-
-    If you are really keen, one can look at the eigenvectors in the lower band, and one will find that they are almost completely on the lower energy atoms. Thus the free electron is transferred almost completely from the higher to the lower energy atom.
+No solution provided.

@@ -1,4 +1,4 @@
-# Additional resources
+# Additional material
 
 This page is the space for additional resources which may prove to be of some use and/or interest for curious individuals.
 

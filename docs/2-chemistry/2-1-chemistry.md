@@ -1,6 +1,6 @@
 # Chemisty 101
 
-Also known as _the physicist's guide to chemistry_[^1].
+Also known as _the physicists' guide to chemistry_[^1].
 
 ## Introduction
 
@@ -23,7 +23,7 @@ Our journey thus far has been considering the basic properties of solids, and ou
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F05chemistry101.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F2-1-chemistry101.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
@@ -229,7 +229,7 @@ $$
 H_{ij} = \langle i | \hat{H} | j \rangle
 $$
 
-??? question  "5.1 Compute the matrix elements of the Hamiltonian $\hat{H}$"
+??? question  "2.1.1 Compute the matrix elements of the Hamiltonian $\hat{H}$"
 
     Crank the handle!
 
@@ -258,7 +258,7 @@ $$
 
 The matrix is thus defined by two parameters, the __onsite energy__ which gives the energy of an electron occupying either of the orbitals, and the so-called __hopping integral__ which is the energy associated with the exchange of the electronic states[^2].
 
-??? question  "5.2 Using the matrix computed above, calculate the energy eigenstates for the system and their energies"
+??? question  "2.1.2 Using the matrix computed above, calculate the energy eigenstates for the system and their energies"
 
     From above, we have the Schrödinger equation in the form
 
@@ -307,6 +307,7 @@ On the other hand, if each atom has 0 or 2 electrons in the outermost shell, the
 ---
 
 ## Exercises
+
 ### Preliminary provocations
 
   1. Is the assumption that the atomic orbitals are orthogonal always a reasonable assumption?

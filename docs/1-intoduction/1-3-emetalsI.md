@@ -1,5 +1,7 @@
 # Electrons in metals I
 
+Drude does not ryhme with dude
+
 ## Introduction
 
 ![](images/03_metals.jpg)
@@ -20,7 +22,7 @@ Metals are awesome, and this has long been known. People have been drawn to thei
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F03metalsI.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F1-3-metalsI.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
@@ -140,7 +142,7 @@ where $R_H=-1/ne$ is the *Hall coefficient*. So by measuring the Hall voltage an
 
 While most materials have $R_\mathrm{H}<0$, interestingly some materials are found to have $R_\mathrm{H}>0$.
 
-??? question "3.1 What would be the implications of a negative hall coefficient?"
+??? question "1.3.1 What would be the implications of a negative hall coefficient?"
 
     With the density is negative, or that the charge carrier has a positive charge and thus not an electron.
 
@@ -247,7 +249,7 @@ So unfortunately, whilst the Drude model gives us a "broad brushstrokes" picture
 
 We apply a magnetic field $\bf B$ along the $z$-direction to a planar (two-dimensional) sample that sits in the $xy$ plane. The sample has width $W$ in the $y$-direction, length $L$ in the $x$-direction and we apply a current $I$ along the $x$-direction.
 
-??? question "What is the relation between the electric field and the electric potential?"
+??? question "1.3.2 What is the relation between the electric field and the electric potential?"
     $V_b - V_a = -\int_{\Gamma} \mathbf{E} \cdot d\mathbf{\ell}$ if $\Gamma$ is a path from $a$ to $b$.
 
 1. Suppose we measure a Hall voltage $V_H$. Express the Hall resistance $R_{xy} = V_H/I$ as a function of magnetic field. Does $R_{xy}$ depend on the geometry of the sample? Also express $R_{xy}$ in terms of the Hall coefficient $R_H$.
@@ -260,31 +262,33 @@ We apply a magnetic field $\bf B$ along the $z$-direction to a planar (two-dimen
 
 Consider an electron in free space experiencing a magnetic field $\mathbf{B}$ along the $z$-direction. Assume that the electron starts at the origin with a velocity $v_0$ along the $x$-direction.
 
-  1. Write down the Newton's equation of motion for the electron, compute $\frac{d\mathbf{v}}{{dt}}$.
-  2. What is the shape of the motion of the electron? Calculate the characteristic frequency and time-period $T_c$ of this motion for $B=1$ Tesla.
-  3. Now we accelerate the electron by adding an electric field $\mathbf{E} = E \hat{x}$. Adjust the differential equation for $\frac{d\mathbf{v}}{{dt}}$ found in (1) to include $\mathbf{E}$. Sketch the motion of the electron.
+1. Write down the Newton's equation of motion for the electron, compute $\frac{d\mathbf{v}}{{dt}}$.
+2. What is the shape of the motion of the electron? Calculate the characteristic frequency and time-period $T_c$ of this motion for $B=1$ Tesla.
+3. Now we accelerate the electron by adding an electric field $\mathbf{E} = E \hat{x}$. Adjust the differential equation for $\frac{d\mathbf{v}}{{dt}}$ found in (1) to include $\mathbf{E}$. Sketch the motion of the electron.
 
 
 ### Exercise 3: Temperature dependence of resistance in the Drude model
 
-   We consider copper, which has a density of 8960 kg/m$^3$, an atomic weight of 63.55 g/mol, and a room-temperature resistivity of $ρ=1.68\cdot 10^{-8}$ $\Omega$m. Each copper atom provides one free electron.
+We consider copper, which has a density of 8960 kg/m$^3$, an atomic weight of 63.55 g/mol, and a room-temperature resistivity of $ρ=1.68\cdot 10^{-8}$ $\Omega$m. Each copper atom provides one free electron.
 
-  1. Calculate the Drude scattering time $τ$ at room temperature.
-  2. Assuming that electrons move with the thermal velocity $\langle v \rangle = \sqrt{\frac{8k_BT}{\pi m}}$, calculate the electron mean free path $\lambda$, defined as the average distance an electron travels in between scattering events.
-  3. The Drude model assumes that $\lambda$ is independent of temperature. How does the electrical resistivity $ρ$ depend on temperature under this assumption? Sketch $ρ(T)$.
-  5. The empirical observation known as Matthiessen's Rule states that $ρ(T) \propto T$. Discuss this result with reference to your answer above.
+1. Calculate the Drude scattering time $τ$ at room temperature.
+2. Assuming that electrons move with the thermal velocity $\langle v \rangle = \sqrt{\frac{8k_BT}{\pi m}}$, calculate the electron mean free path $\lambda$, defined as the average distance an electron travels in between scattering events.
+3. The Drude model assumes that $\lambda$ is independent of temperature. How does the electrical resistivity $ρ$ depend on temperature under this assumption? Sketch $ρ(T)$.
+4. The empirical observation known as Matthiessen's Rule states that $ρ(T) \propto T$. Discuss this result with reference to your answer above.
 
 ### Exercise 4: The Hall conductivity matrix and the Hall coefficient
 We apply a magnetic field $\bf B$ along the $z$-direction to a current carrying 2D sample in the xy plane. In this situation, the electric field $\mathbf{E}$ is related to the current density $\mathbf{j}$ by the resistivity matrix:
 
 $$\mathbf{E} = \begin{pmatrix} ρ_{xx} & ρ_{xy} \\ ρ_{yx} & ρ_{yy} \end{pmatrix} \mathbf{j}$$
 
-  1. Sketch the expressions for $ρ_{xx}$ and $ρ_{xy}$ derived in the lecture notes as a function of the magnetic field $\bf{B}$.
-  2. Invert the resistivity matrix to obtain the conductivity matrix,
+1. Sketch the expressions for $ρ_{xx}$ and $ρ_{xy}$ derived in the lecture notes as a function of the magnetic field $\bf{B}$.
+2. Invert the resistivity matrix to obtain the conductivity matrix,
 
-     $$ \begin{pmatrix} \sigma_{xx} & \sigma_{xy} \\ \sigma_{yx} & \sigma_{yy} \end{pmatrix}$$
+   $$
+   \begin{pmatrix} \sigma_{xx} & \sigma_{xy} \\ \sigma_{yx} & \sigma_{yy} \end{pmatrix}
+   $$
 
-     allowing you to express $\mathbf{j}$ as a function of $\mathbf{E}$.
+   allowing you to express $\mathbf{j}$ as a function of $\mathbf{E}$.
 
 
 --8<-- "includes/abbreviations.md"

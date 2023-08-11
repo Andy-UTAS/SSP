@@ -4,7 +4,11 @@ comments: true
 
 # The specific heat of solids II
 
+Play it cool...
+
 ## Introduction
+
+![](images\1-2-header.jpg)
 
 Previously, we saw how an empirical observation describing the behaviour of the specific heat of solids motivated the development of atomic-scale models of solids in order to understand and predict their behaviour. This marked the beginning of using theories which involved the quantisation of certain observables to accurately predict previously unexplained behaviour, but as we shall see, one must continue down the rabbit hole of quantisation in order to better model physical systems.
 
@@ -21,7 +25,7 @@ Previously, we saw how an empirical observation describing the behaviour of the 
 !!! info "Computational content"
 
     The Jupyter notebook associated with this section can be accessed by clicking the icon below:
-    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F02specificheatII.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
+    [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2F1-2-specificheatII.ipynb&branch=master){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
 ---
 
@@ -36,7 +40,7 @@ The Einstein model did _much_ better than the Boltzmann model at explaining the 
 
 Indeed, it was known that at low temperatures, the heat capacity displayed cubic behaviour, that is $C \propto T^3$.
 
-??? question "2.1 Using the [provided data](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2FHeat_capacity_Ag.csv&branch=master) for the heat capacity of silver, verify the cubic behaviour of the heat capacity at low temperatures. Ensure to include you code."
+??? question "1.2.1 Using the [provided data](https://jove2021.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAndy-UTAS%2FSolid-state&urlpath=tree%2FSolid-state%2FHeat_capacity_Ag.csv&branch=master) for the heat capacity of silver, verify the cubic behaviour of the heat capacity at low temperatures. Ensure to include you code."
 
     ``` python
     # Import the data from the supplied .csv file
@@ -74,7 +78,7 @@ Indeed, it was known that at low temperatures, the heat capacity displayed cubic
       <figcaption> The heat capacity of silver at low temperature, $T<25~\mathrm{K}$, follows well a cubic relationship in temperature.</figcaption>
     </figure>
 
-??? question "2.2 How does $C$ predicted by the Einstein model behave at low $T$?"
+??? question "1.2.2 How does $C$ predicted by the Einstein model behave at low $T$?"
 
     From the Einstein model, we have
 
@@ -116,7 +120,7 @@ $$
 
 which is very similar to the equivalent expression from Einstein's treatment, other than the sum over wavevectors. It is also interesting to note that the oscillation modes also obey Bose statistics - we shall discuss this more later.
 
-??? question "2.3 From Where does the factor of 3 in the above expression originate?"
+??? question "1.2.3 From Where does the factor of 3 in the above expression originate?"
 
     The factor 3 comes from the three possible normal modes of polarization for each wavevector $\mathbf{k}$.
 
@@ -273,7 +277,7 @@ $$
 
 which produces the desired $T^3$ dependence, but critically, and unlike the result of Einstein, does not have any free parameters rather only requiring knowledge material density and the sound velocity.
 
-??? question  "2.4 What is the physical reason for the difference in the low-temperature behaviour of $C$ for the Einstein and Debye models?"
+??? question  "1.2.4 What is the physical reason for the difference in the low-temperature behaviour of $C$ for the Einstein and Debye models?"
 
     In the Einstein model, once the temperature was below the energy associated with the oscillator, there was no capacity for the heat to absorb heat. In contrast, in the Debye model, there exist vibrational modes of the solid do have the capacity to absorb heat.
 
@@ -291,7 +295,7 @@ $$
 \langle E \rangle = \int_0^{\omega_{\textrm{cutoff}}} \textrm{d} \omega ~ g(\omega)~\hbar\omega ~ n_{\textrm{B}}(\beta\hbar\omega) + E_{ZP}
 $$
 
-??? question "2.5 Verify that the expected high-temperature behaviour for $C$ is recovered when using Debye's interpolation"
+??? question "1.2.5 Verify that the expected high-temperature behaviour for $C$ is recovered when using Debye's interpolation"
 
     For high temperature:
 
@@ -307,7 +311,7 @@ $$
 
     which by design returns $3 k_{\textrm{B}} T N$, which is exactly the Dulong-Petit law.
 
-??? question "2.6 Explicitly evaluate the cutoff frequency, and express the solution in terms of the Debye frequency"
+??? question "1.2.6 Explicitly evaluate the cutoff frequency, and express the solution in terms of the Debye frequency"
 
     An educated guess would probably land you in the correct spot: given the arbitrary definition of the Debye frequency, it is likely that $\omega_{\textrm{cutoff}} = \omega_d$. Let's have a look:
 
@@ -366,7 +370,7 @@ Consider the probability to find an atom of a 1D solid that originally had a pos
 2. Determine the energy of a two-dimensional solid as a function of $T$ using the Debye approximation.
 You do not have to solve the integral.
 3. Calculate the heat capacity in the high $T$ limit.
-4. At low $T$, show that $C_V=KT^{n}$. Find $n$. Express $K$ as an indefinite integral (similarly to what done during the lecture).
+4. At low $T$, show that $C_V=KT^{n}$. Find $n$. Express $K$ as an indefinite integral.
 
 
 ###  Exercise 3: Different oscillation modes

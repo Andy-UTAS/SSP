@@ -74,7 +74,7 @@ $$
 \langle1|H|2\rangle = \langle2|H|3\rangle = -t.
 $$
 
-??? question  "3.3.1: Apply the exact same logic and mathematics to arrive at the above matrix equation"
+??? question  "3.3.1 Apply the exact same logic and mathematics to arrive at the above matrix equation"
 
 Obtaining solutions to such a problem can be unwieldy, but fortunately, we have the perfect tool for the job.
 
@@ -82,7 +82,7 @@ Obtaining solutions to such a problem can be unwieldy, but fortunately, we have 
 
 We can use our computational toolkit to solve for the eigenvalues of a matrix. For example, with $\epsilon_0 = 2$ and $t=1$, we find that the eigenvalues for the matrix above are approximately $(0.59, 2.00, 3.41)$. But what use is this? Well, let's look at a simple case of varying $t$.
 
-??? question  "3.3.2: Make a plot of the energy eigenvalues as a function of $t$ running from $(0, \epsilon)$ and interpret your result. Ensure to include your code."
+??? question  "3.3.2 Make a plot of the energy eigenvalues as a function of $t$ running from $(0, \epsilon)$ and interpret your result. Ensure to include your code."
 
 <!-- Using the definitions that already exist in this section's notebook, one can do something like the following
 
@@ -155,7 +155,7 @@ The density of states is not a particularly useful concept with few states, but 
 
         LOL: good luck! That would be one big matrix, much large than my meagre computer can handle.
 
-??? question  "3.3.3: How do these results compare with what we have seen previously?"
+??? question  "3.3.3 How do these results compare with what we have seen previously?"
 
 <!-- The numerical results mostly agree with the models we developed earlier: for example, in the Sommerfeld model, the DoS in 1D is proportional to $\frac{1}{\sqrt{E}}$ and the large $n$ histograms reflect this proportionality for small energies $E$. But for larger values of $E$, there is  significant deviation form this behaviour. -->
 
@@ -203,7 +203,7 @@ $$
 \phi_n = \frac{e^{-ikna}}{\sqrt{N}}
 $$
 
-??? question  "3.3.4: How does this form of solution compare to the assumed form of solutions for oscillations?"
+??? question  "3.3.4 How does this form of solution compare to the assumed form of solutions for oscillations?"
 
 <!-- In the case of oscillations, we considered solutions of the form $e^{i\omega t - ikna}$, which was because we were looking for time dependent solutions. In this case, we are seeking variational solution to the time-independent Schödinger equation, and therefore do not require any time dependence. -->
 
@@ -275,7 +275,7 @@ Let us now consider a system of $N$ atoms. Due to the spin degeneracy, at each v
         ![](images/3-3-monovalentbandwithE.svg)
 
 
-??? question  "3.3.5: What is the implication of the plots shown in the _band filling_ content block?"
+??? question  "3.3.5 What is the implication of the plots shown in the _band filling_ content block?"
 
 <!-- This is the existence of conduction and insulation! For monovalent systems in the presence of an electric field, there can be an imbalance of electrons with either $+k$ or $-k$, so there will be a net charge migration, whereas with divalent atoms, one can never achieve a preference for either $\pm k$. -->
 
@@ -291,6 +291,7 @@ Let us now consider a system of $N$ atoms. Due to the spin degeneracy, at each v
 ---
 
 ## Exercises
+
 ### Preliminary provocations
 
   1. Compare the expression of the effective mass with Newton's second law. Do you observe any similarities?
