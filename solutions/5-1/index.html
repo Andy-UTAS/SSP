@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://andy-utas.github.io/solutions/4-2/">
+        <link rel="canonical" href="https://andy-utas.github.io/solutions/5-1/">
       
       
       
@@ -17,7 +17,7 @@
     
     
       
-        <title>Crystals in reciprocal space - Solid-state physics</title>
+        <title>The nearly free electron model - Solid-state physics</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crystals-in-reciprocal-space" class="md-skip">
+        <a href="#the-nearly-free-electron-model" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Crystals in reciprocal space
+              The nearly free electron model
             
           </span>
         </div>
@@ -782,29 +782,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preliminary-provocations" class="md-nav__link">
-    Preliminary provocations
+  <a href="#exercise-1-blochs-theorem" class="md-nav__link">
+    Exercise 1: Bloch's theorem
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-1-directions-and-spacings-of-miller-planes" class="md-nav__link">
-    Exercise 1: Directions and Spacings of Miller planes
+  <a href="#exercise-2-the-central-equation-in-1d" class="md-nav__link">
+    Exercise 2: the central equation in 1D
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-2-the-reciprocal-lattice-of-the-bcc-and-fcc-lattices" class="md-nav__link">
-    Exercise 2: The reciprocal lattice of the BCC and FCC lattices
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-3-miller-planes-and-reciprocal-lattice-vectors" class="md-nav__link">
-    Exercise 3: Miller planes and reciprocal lattice vectors
+  <a href="#exercise-3-the-tight-binding-model-vs-the-nearly-free-electron-model" class="md-nav__link">
+    Exercise 3: the tight binding model vs. the nearly free electron model
   </a>
   
 </li>
@@ -830,108 +823,264 @@
                   
 
 
-<div><h1 id="crystals-in-reciprocal-space">Crystals in reciprocal space<a class="headerlink" href="#crystals-in-reciprocal-space" title="Permanent link">¶</a></h1>
+<div><h1 id="the-nearly-free-electron-model">The nearly free electron model<a class="headerlink" href="#the-nearly-free-electron-model" title="Permanent link">¶</a></h1>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">¶</a></h2>
-<h3 id="preliminary-provocations">Preliminary provocations<a class="headerlink" href="#preliminary-provocations" title="Permanent link">¶</a></h3>
+<h4 id="exercise-1-blochs-theorem">Exercise 1: Bloch's theorem<a class="headerlink" href="#exercise-1-blochs-theorem" title="Permanent link">¶</a></h4>
+<p>Suppose we have a crystal with lattice vectors <script type="math/tex">\mathbf{a}_ 1</script>, <script type="math/tex">\mathbf{a}_ 2</script>, and <script type="math/tex">\mathbf{a}_ 3</script>.</p>
 <ol>
 <li>
-<p>Calculate <script type="math/tex">\mathbf{a}_1 \cdot \mathbf{b}_1</script> and <script type="math/tex">\mathbf{a}_2 \cdot \mathbf{b}_1</script> using the definitions of the reciprocal lattice vectors given in the lecture. Is the result what you expected?</p>
-<p>We expect <script type="math/tex">\mathbf{a_i}\cdot\mathbf{b_j} = 2\pi\delta_{ij}</script>.</p>
+<p>What can be said about the symmetry of the Hamiltonian <script type="math/tex">\hat{H}</script> of this crystal?</p>
+<p>It must obey the crystal symmetry, such as the translational symmetry of the lattice described by the lattice vectors <script type="math/tex">\mathbf{a}_1, \mathbf{a}_2</script> and <script type="math/tex">\mathbf{a}_3</script>.</p>
+</li>
+<li>
+<p>Now define the translation operator <script type="math/tex">\hat{T}_{\alpha,\beta,\gamma}</script> so that <script type="math/tex; mode=display">\hat{T}_{\alpha,\beta,\gamma} \psi(\mathbf{r}) = \psi(\mathbf{r} - \alpha \mathbf{a}_1 - \beta \mathbf{a}_2 - \gamma \mathbf{a}_3),</script> where <script type="math/tex">\alpha</script>, <script type="math/tex">\beta</script>, <script type="math/tex">\gamma</script> are integers. Show that <script type="math/tex">\hat{T}_{\alpha,\beta,\gamma}</script> and <script type="math/tex">\hat{H}</script> commute.</p>
+<p>From the periodicity of the wavefunction with the real space lattice vectors, it follows that the kinetic part of the Hamiltonian, here denoted <script type="math/tex">\hat{K}</script>, will commute with the translation operator <script type="math/tex">\hat{T}_{\alpha, \beta, \gamma}</script>.</p>
+<p>
+<script type="math/tex; mode=display">\begin{align*}
+[\hat{T}_{\alpha,\beta,\gamma},\hat{H}]&= \left(V(\mathbf{r}-\alpha \mathbf{a}_1-\beta \mathbf{a}_2 - \gamma \mathbf{a}_3)-V(\mathbf{r})\right)\hat{T}_{\alpha,\beta,\gamma}=0\\
+\end{align*}</script>
+</p>
+<p>Where we used that the lattice potential is periodic with integer lattice constants.</p>
+</li>
+<li>
+<p>Show that the Bloch wavefunctions defined in the lecture notes are eigenfunctions of <script type="math/tex">\hat{T}_{\alpha,\beta,\gamma}</script>. What are the corresponding eigenvalues? What does this say about the eigenfunctions of <script type="math/tex">\hat{H}</script>.</p>
+<p>
+<script type="math/tex; mode=display">\begin{align*}
+\hat{T}_{\alpha,\beta,\gamma}u_n(\mathbf{r})e^{i\mathbf{k}\cdot\mathbf{r}}&=e^{-i\mathbf{k}\cdot (\alpha \mathbf{a}_1+\beta \mathbf{a}_2 + \gamma \mathbf{a}_3)} u_n(\mathbf{r})e^{i\mathbf{k}\cdot \mathbf{r}}\\
+\end{align*}</script>
+</p>
+<p>The eigenfunctions of <script type="math/tex">\hat{H}</script> must also be Bloch waves.</p>
+</li>
+<li>
+<p>By applying <script type="math/tex">\hat{H}</script> to the Bloch wavefunction, show that the Schrödinger equation can be rewritten as <script type="math/tex; mode=display">\left[ \frac{\mathbf{\hat{p}}^2}{2m} + \frac{\hbar}{m} \mathbf{k} \cdot \mathbf{\hat{p}} + \frac{\hbar^2 \mathbf{k}^2}{2m} + V(\mathbf{r}) \right] u_{n,\mathbf{k}}(\mathbf{r}) = E_{n,\mathbf{k}} u_{n,\mathbf{k}}(\mathbf{r}),</script> where <script type="math/tex">\mathbf{\hat{p}} =-i\hbar\nabla</script>.</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation*}
+\nabla^2\psi_n(\mathbf{r})=e^{i\mathbf{k}\cdot\mathbf{r}}\left[ \nabla^2 u_n(\mathbf{r})-k^2u_n(\mathbf{r})+2i\mathbf{k}\nabla u_n(\mathbf{r}) \right].
+\end{equation*}</script>
+</p>
+<p>Once this is explicitly written in the Schr. eqn, the complex exponentials cancel out.</p>
+</li>
+<li>
+<p>What is <script type="math/tex">u_{n,\mathbf{k}}(\mathbf{r})</script> in case of free electrons? Is your answer consistent with the equation above?</p>
+<p>
+<script type="math/tex">u_n(\mathbf{r})</script> becomes a normalization constant that is independent of position. Hence, the momentum operators return zero, and the only term that remains is <script type="math/tex">\hbar^2k^2/2m</script> (which is indeed the free electron dispersion).</p>
 </li>
 </ol>
-<h3 id="exercise-1-directions-and-spacings-of-miller-planes">Exercise 1: Directions and Spacings of Miller planes<a class="headerlink" href="#exercise-1-directions-and-spacings-of-miller-planes" title="Permanent link">¶</a></h3>
+<h4 id="exercise-2-the-central-equation-in-1d">Exercise 2: the central equation in 1D<a class="headerlink" href="#exercise-2-the-central-equation-in-1d" title="Permanent link">¶</a></h4>
+<p>Let's consider a 1D crystal with a period <script type="math/tex">a</script>. Let <script type="math/tex">k_0</script> be any wave number of an electron in the first Brillouin zone.</p>
 <ol>
 <li>
-<p>Explain the terms Miller planes and Miller indices.</p>
-<p>A Miller plane is a plane that intersects an infinite number of lattice points. Miller indices are a set of 3 integers which specify a set of parallel planes.</p>
+<p>What <script type="math/tex">k_n</script> are equivalent to <script type="math/tex">k_0</script> in this crystal?</p>
+<p>All <script type="math/tex">k_n</script> that differ by an integer multiple of <script type="math/tex">2\pi/a</script> from <script type="math/tex">k_0</script> have the exact same wavefunction.</p>
 </li>
 <li>
-<p>Consider a cubic crystal with one atom in the basis and a set of orthogonal primitive lattice vectors <script type="math/tex">a\hat{x}</script>, <script type="math/tex">a\hat{y}</script> and <script type="math/tex">a\hat{z}</script>. Show that the direction <script type="math/tex">[hkl]</script> in this crystal is normal to the planes with Miller indices <script type="math/tex">(hkl)</script>.</p>
-<p>The <script type="math/tex">(hkl)</script> plane intersects the lattice vectors at position vectors of <script type="math/tex">\frac{\mathbf{a_1}}{h}, \frac{\mathbf{a_2}}{k}, \frac{\mathbf{a_1}}{l}</script>. Can you define two vectors inside the <script type="math/tex">(hkl)</script> plane that span the plane? How do you compute a vector that is orthogonal to two other vectors?</p>
+<p>First, we assume that the electrons with these <script type="math/tex">k_n</script> are free. In that case, what are the wavefunctions <script type="math/tex">\phi_n(x)</script> and energies <script type="math/tex">E_n</script> of these electrons?</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation*}
+\phi_n(x)=\frac{1}{\sqrt{\Omega}} \exp\left[i \left(k_0+\frac{2\pi n}{a}\right)x \right]
+\end{equation*}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+E_n=\frac{\hbar^2}{2m}\left(k_0+\frac{2\pi n}{a}\right)^2
+\end{equation}</script>
+</p>
 </li>
 <li>
-<p>Show that this is not true in general. Consider for instance an orthorhombic crystal, for which the primitive lattice vectors are still orthogonal but have different lengths.</p>
-<p>The procedure described in the previous subquestion also applies here.</p>
+<p>Make a sketch of the dispersion relation using a repeated Brillouin zone representation. Indicate some <script type="math/tex">k_n</script> and <script type="math/tex">E_n</script> as well as the first Brillouin zone in your sketch.</p>
 </li>
+</ol>
+<p><img alt="" class="center" src="5-1-Ex2-3.png"></p>
+<p>We will now introduce a weak periodic potential <script type="math/tex">V(x) = V(x+na)</script> in our system. This causes coupling between eigenstates <script type="math/tex">\left| \phi_n\right></script> in the free electron case. In order to find the right eigenstates of the system with that potential, we need an 'LCAO-like' trial eigenstate given by <script type="math/tex; mode=display">\left|\psi\right> = \sum_{n=-\infty}^{\infty}C_n \left|\phi_n\right></script>
+</p>
+<ol>
 <li>
-<p>Any set of Miller indices corresponds to a family of planes separated by a distance <script type="math/tex">d</script>. Show that the spacing <script type="math/tex">d</script> of the <script type="math/tex">(hkl)</script> set of planes in a cubic crystal with lattice parameter <script type="math/tex">a</script> is <script type="math/tex">d = \frac{a}{\sqrt{h^2 + k^2 + l^2}}</script>.</p>
-<details class="note">
+<p>Using the trial eigenstate above and the Schrödinger equation, show that <script type="math/tex; mode=display">E C_m = \varepsilon_m C_m+\sum_{n=-\infty}^{\infty} V_{n}C_{m-n},</script> where <script type="math/tex">V_n</script> are the Fourier components of the potential defined <a href="#physical-meaning-of-w">above</a>. Find an expression for <script type="math/tex">\varepsilon_m</script>. <em><strong>NB:</strong> This equation is also known as the central equation (in 1D).</em></p>
+<details class="hint">
 <summary>Hint</summary>
-<p>Recall that a family of lattice planes is an infinite set of equally separated parallel planes which taken all together contain all points of the lattice.</p>
-<p>Try computing the distance between the plane that contains the site <script type="math/tex">(0,0,0)</script> of the conventional unit cell and a plane defined by the <script type="math/tex">(hkl)</script> indices.</p>
+<ul>
+<li>Apply <script type="math/tex">\left<\phi_m\right|</script> to the Schrödinger equation.</li>
+<li>To evaluate <script type="math/tex">\left<\phi_m\right| \hat{H} \left| \phi_n\right></script>, it may be helpful to separate the kinetic energy and potential energy of the Hamiltonian.</li>
+</ul>
 </details>
-<p>We can calculate the distance between two planes by calculating the projection of any vector connecting the two planes onto a unit vector that is normal to the plane.</p>
-</li>
-</ol>
-<h3 id="exercise-2-the-reciprocal-lattice-of-the-bcc-and-fcc-lattices">Exercise 2: The reciprocal lattice of the BCC and FCC lattices<a class="headerlink" href="#exercise-2-the-reciprocal-lattice-of-the-bcc-and-fcc-lattices" title="Permanent link">¶</a></h3>
-<p>The content on this page investigates how to construct the reciprocal lattice from a real-space lattice. We will now zoom in the properties of the FCC and BCC lattices, which are two of the most common lattices encountered in crystal structures. We analyse the reciprocal lattices and the shape of the first Brillouin zone. This helps us understanding e.g. the periodicity of 3D band structures and the Fermi surface database shown in the Attic.</p>
-<p>We consider a bcc lattice of which the conventional unit cell has a side length <script type="math/tex">a</script> and volume <script type="math/tex">V=a^3</script>.</p>
-<ol>
-<li>
-<p>Write down the primitive lattice vectors of the BCC lattice. Calculate the volume of the primitive unit cell. Is the volume the expected fraction of <script type="math/tex">V</script>?</p>
-<p>A possible set of BCC primitive lattice vectors is:</p>
+<p>First the kinetic term,</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\left\langle\phi_m|\hat{K}|\phi_n\right\rangle=C_m\frac{\hbar^2k_m^2}{2m}
+\end{equation}</script>
+</p>
+<p>And the potential term,</p>
 <p>
 <script type="math/tex; mode=display">\begin{align}
-  \mathbf{a_1} & = \frac{a}{2} \left(-\hat{\mathbf{x}}+\hat{\mathbf{y}}+\hat{\mathbf{z}} \right) \\
-  \mathbf{a_2} & = \frac{a}{2} \left(\hat{\mathbf{x}}-\hat{\mathbf{y}}+\hat{\mathbf{z}} \right) \\
-  \mathbf{a_3} & = \frac{a}{2} \left(\hat{\mathbf{x}}+\hat{\mathbf{y}}-\hat{\mathbf{z}} \right).
-  \end{align}</script>
+\left\langle\phi_m|V(x)|\psi\right\rangle=\sum_{n=-\infty}^{\infty}C_n\int_0^a V(x) e^{-i\frac{2\pi}{a}(m-n)x}dx
+\end{align}</script>
 </p>
-<p>We expect that the volume of the primitive unit cell equals <script type="math/tex">a^3/2</script> because the conventional unit cell has volume <script type="math/tex">a^3</script> and contains two lattice points. We confirm this by calculating the volume of the primitive unit cell using <script type="math/tex">|\mathbf{a_1}\times\mathbf{a_2}\cdot\mathbf{a_3}| = a^3/2</script>.</p>
+<p>then relabel indices and combine both expressions to find the final answer and expression for <script type="math/tex">\varepsilon_m</script> (which is the free electron dispersion).</p>
 </li>
 <li>
-<p>Calculate the reciprocal lattice vectors associated with the primitive lattice vectors you found in the previous subquestion.</p>
+<p>Why is the dispersion relation only affected near <script type="math/tex">k=0</script> and at the edge of the Brillouin zone (see also figures <a href="#repeated-vs-reduced-vs-extended-brillouin-zone">above</a>)?</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>To answer this question, only consider two free electron wavefunctions in the Hamiltonian and ignore all the others. Between what two of free electron wavefunctions does the coupling give significant contribution to the energy levels of the free electron wavefunctions?</p>
+<p>From the expression for the energy, it is clear that the difference with respect to the free electron model is given by the Fourier component <script type="math/tex">V_{m-n}</script>, describing the coupling between two states <script type="math/tex">m</script> and <script type="math/tex">n</script>. The question becomes: when does this term contribute significantly? For that we look at two orthogonal states <script type="math/tex">\phi_n</script> and <script type="math/tex">\phi_m</script>, and construct the Hamiltonian in the basis (<script type="math/tex">\phi_n</script>,<script type="math/tex">\phi_m</script>),  </p>
+</details>
 <p>
-<script type="math/tex; mode=display">\begin{align}
-  \mathbf{b_1} & = \frac{2 \pi}{a} \left(\hat{\mathbf{y}}+\hat{\mathbf{z}} \right) \\
-  \mathbf{b_2} & = \frac{2 \pi}{a} \left(\hat{\mathbf{x}}+\hat{\mathbf{z}} \right) \\
-  \mathbf{b_3} & = \frac{2 \pi}{a} \left(\hat{\mathbf{x}}+\hat{\mathbf{y}} \right),
-  \end{align}</script>
+<script type="math/tex; mode=display">\begin{equation}
+  \hat{H}=
+  \begin{pmatrix}
+  \dfrac{\hbar^2 k_n^2}{2m} & V_{n-m}\\
+  V_{m-n} & \dfrac{\hbar^2 k_m^2}{2m}
+  \end{pmatrix}
+  \end{equation}</script>
 </p>
-</li>
-<li>
-<p>Sketch the reciprocal lattice. Which type of lattice is it? What is the volume of its conventional unit cell?</p>
-<p>The reciprocal lattice forms an FCC lattice. Given the lattice vectors, the volume of the conventional unit cell is <script type="math/tex">(4\pi/a)^3</script>.</p>
-</li>
-<li>
-<p>Describe the shape of the 1st Brillouin zone. How many sides does it have? (Note that the Brillouin zones are sketched in the Fermi surface periodic table in the Attic). Calculate the volume of the 1st Brillouin zone and check if it is the expected fraction of the volume you found in the previous subquestion.</p>
-<p>Because the 1st Brillouin Zone is the Wigner-Seitz cell of the reciprocal lattice, we need to construct the Wigner-Seitz cell of the FCC lattice. For visualisation, it is convenient to look at FCC lattice introduced in the previous section and count the nearest neighbours of each lattice point. We see that each lattice point contains 12 nearest neighbours and thus the Wigner-Seitz cell contains 12 sides! The volume of the 1st Brillouin zone is the same as the volume of any other primitive unit cell. Therefore, it is given by <script type="math/tex">\mathbf{b_1}\cdot(\mathbf{b_2}\times\mathbf{b_3})| = \tfrac{1}{4} (4\pi/a)^3</script>. This is one quarter of the conventional unit cell calculated in subquestion 3, which is as expected because the conventional unit cell of the FCC lattice contains 4 lattice points.</p>
-</li>
-<li>
-<p>Based on the insight gained in this question, argue what lattice is the reciprocal lattice of the <em>FCC</em> lattice.</p>
-<p>The BCC and FCC lattices are reciprocal to each other.</p>
+<p>The eigenvalues of this fellow are</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+  E=\frac{\hbar^2(k_n^2+k_m^2)}{4m}\pm\sqrt{\frac{\hbar^4}{16m^2}(k_n^2-k_m^2)^2+|V_{n-m}|^2}.
+  \end{equation}</script>
+</p>
+<p>This clearly displays that only if <script type="math/tex">|k_n|\approx |k_m|</script>, the band structure will be affected (given that the potential is weak, and therefore small). This nicely demonstrates how an avoided crossing arises.</p>
 </li>
 </ol>
-<h3 id="exercise-3-miller-planes-and-reciprocal-lattice-vectors">Exercise 3: Miller planes and reciprocal lattice vectors<a class="headerlink" href="#exercise-3-miller-planes-and-reciprocal-lattice-vectors" title="Permanent link">¶</a></h3>
-<p>Consider a family of Miller planes <script type="math/tex">(hkl)</script> in a crystal.</p>
+<h4 id="exercise-3-the-tight-binding-model-vs-the-nearly-free-electron-model">Exercise 3: the tight binding model vs. the nearly free electron model<a class="headerlink" href="#exercise-3-the-tight-binding-model-vs-the-nearly-free-electron-model" title="Permanent link">¶</a></h4>
+<p>Consider a 1D crystal with a periodic potential given by delta peaks: <script type="math/tex; mode=display">V(x) = -\lambda \sum_{n=-\infty}^{\infty} \delta(x+na),</script> where <script type="math/tex">\lambda>0</script>. In this exercise, we will find the band structure of this crystal in two ways:</p>
+<ul>
+<li>By means of the nearly free electron model explained in this lecture.</li>
+<li>By means of the <a href="/3-1d/3-1-vibrations/">tight binding model</a>.</li>
+</ul>
+<!-- A comment to separate two lists -->
+
 <ol>
 <li>
-<p>Prove that the reciprocal lattice vector <script type="math/tex">\mathbf{G} = h \mathbf{b}_1 + k \mathbf{b}_2 + l \mathbf{b}_3</script> is perpendicular to the Miller plane <script type="math/tex">(hkl)</script>.</p>
-<details class="note">
+<p>We first find the band structure using the nearly free electron model. To this end, we consider the effect of the potential on the free electron wavefunctions given by <script type="math/tex">\psi_1(x) \propto e^{ikx}</script> and <script type="math/tex">\psi_2(x) \propto e^{i[k-2\pi/a]x}</script> on the interval <script type="math/tex">k=[0,\pi/a]</script>. Derive a dispersion relation of the lower band using the Schödinger equation and the trial eigenstate <script type="math/tex; mode=display">\Psi(x) = \alpha \psi_1(x) + \beta \psi_2(x).</script>
+</p>
+<details class="hint">
 <summary>Hint</summary>
-<p>Choose two vectors that lie within the Miller plane and are not parallel to each other.</p>
+<p>Using the Schrödinger equation and the trial eigenstate, first derive a 2×2 eigenvalue problem given by <script type="math/tex; mode=display">E \begin{pmatrix}\alpha \\ \beta\end{pmatrix} = \begin{pmatrix}\varepsilon_0(k)+V_0 & V_1^* \\ V_1 & \varepsilon_0(k - 2\pi/a) + V_0\end{pmatrix} \begin{pmatrix}\alpha \\ \beta\end{pmatrix}.</script> What are <script type="math/tex">\varepsilon_0(k)</script>, <script type="math/tex">V_0</script> and <script type="math/tex">V_1</script>?</p>
 </details>
-<p>To prove this, we can show that <script type="math/tex">\mathbf{G}</script> is orthogonal to two non-parallel vectors in the Miller plane. We therefore first find two vectors in the Miller plane, such as <script type="math/tex">\mathbf{v_1} = \mathbf{a_1}/h-\mathbf{a_2}/k</script> and <script type="math/tex">\mathbf{v_2} = \mathbf{a_2}/h - \mathbf{a_3}/l</script>. We then show that <script type="math/tex">\mathbf{G}\cdot \mathbf{v_{1,2}}=0</script>
+<p>We construct the Hamiltonian (note that we have exactly one delta-peak per unit cell of the lattice),</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation*}
+\hat{H}=
+\begin{pmatrix}
+\left\langle\psi_1|\hat{H}|\psi_1\right\rangle & \left\langle\psi_1|\hat{H}|\psi_2\right\rangle\\
+\left\langle\psi_2|\hat{H}|\psi_1\right\rangle & \left\langle\psi_2|\hat{H}|\psi_2\right\rangle
+\end{pmatrix}
+\end{equation*}</script>
+</p>
+<p>The bottom band means we have to pick the lowest energy band, i.e. the dispersion with the lowest eigenvalues, which is</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation*}
+E_-(k) = -\frac{\lambda}{a}+\frac{\hbar^2}{4m}\left[k^2+\left(k-\frac{2\pi}{a}\right)^2 \right]-\sqrt{\left(\frac{\hbar^2}{4m}\left[k^2-\left(k-\frac{2\pi}{a}\right)^2 \right]\right)^2 + \left(\frac{\lambda}{a}\right)^2}
+\end{equation*}</script>
 </p>
 </li>
 <li>
-<p>Show that the distance between two adjacent Miller planes <script type="math/tex">(hkl)</script> of any lattice is  <script type="math/tex">d = 2\pi/|\mathbf{G}_\textrm{min}|</script>, where <script type="math/tex">\mathbf{G}_\textrm{min}</script> is the shortest reciprocal lattice vector perpendicular to these Miller planes.</p>
-<p>We compute the distance between two parallel planes by projecting any vector connecting the two planes onto a unit vector perpendicular to the planes. Using the result of subquestion 1, the unit vector is</p>
+<p>Make a sketch of the lower band.</p>
+<p>See the notes.</p>
+</li>
+<li>
+<p>We now use a tight binding model approach to derive the dispersion relation.
+    We know from that the corresponding dispersion is
+    <script type="math/tex; mode=display">
+    E = \varepsilon_0 - 2 t \cos (ka).
+    </script>
+    Find an expression for <script type="math/tex">\varepsilon_0=\left<n\right| \hat{H} \left|n\right></script> and <script type="math/tex">-t=\left<n-1\right| \hat{H} \left| n \right></script>, using the bound state wavefunction around a single <script type="math/tex">\delta</script>-peak, centered at site <script type="math/tex">n</script>: <script type="math/tex; mode=display">
+    |n\rangle = \kappa e^{- \kappa | x-na | }
+    , </script>
+    where <script type="math/tex">\kappa = -\frac{m \lambda}{\hbar^2}</script>.</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>To ease the calculating <script type="math/tex">\epsilon_0</script> and <script type="math/tex">t</script>, calculate them for <script type="math/tex">| n = 0 \rangle </script> and <script type="math/tex"> | n = 1 \rangle </script>.</p>
+<p>You may also make use of the results obtained in <a href="/2-chemistry/2-1-chemistry/#exercise-2-application-of-the-lcao-model-to-the-delta-function-potential">here</a> or found on <a href="https://en.wikipedia.org/wiki/Delta_potential">wikipedia</a>.</p>
+</details>
+<p>We split the Hamiltonian into two parts <script type="math/tex">H=H_n+H_{\overline{n}}</script>, where <script type="math/tex">H_n</script> describes a particle in a single delta-function potential well, and <script type="math/tex">H_\hat{n}</script> is the perturbation by the other delta functions:</p>
 <p>
-<script type="math/tex; mode=display">
-  \hat{\mathbf{n}} = \frac{\mathbf{G}}{|\mathbf{G}|}
-  </script>
+<script type="math/tex; mode=display">\begin{align}
+H_n = & \frac{-\hbar^2}{2m}\frac{\partial^2}{\partial x^2} - \lambda\delta(x-na) \\
+H_\overline{n} = & - \lambda \sum_{m\neq n}\delta(x-ma)
+\end{align}</script>
 </p>
-<p>For lattice planes, there is always a plane intersecting the zero lattice point (0,0,0). As such, we can project the vector <script type="math/tex">\mathbf{a_1}/h</script> onto <script type="math/tex">\mathbf{\hat{n}}</script>, yielding a distance:</p>
+<p>such that <script type="math/tex">H_n|n\rangle = \epsilon_0|n\rangle = -\hbar^2\kappa^2/2m |n\rangle</script> with <script type="math/tex">\kappa=m\lambda/\hbar^2</script>. We can now calculate</p>
 <p>
 <script type="math/tex; mode=display">
-  d = \hat{\mathbf{n}} \cdot \frac{\mathbf{a_1}}{h} = \frac{2 \pi}{|\mathbf{G}|}
-  </script>
+\langle n | H |n \rangle = \epsilon_0 + \langle n |H_\overline{n}|n\rangle
+</script>
+</p>
+<p>Note that the last term represents the change in energy of the wavefunction <script type="math/tex">|n\rangle</script> that is centered at the <script type="math/tex">n</script>-th delta function caused by the presence of the other delta functions. This term yields</p>
+<p>
+<script type="math/tex; mode=display">
+\langle n |H_\overline{n}|n\rangle = -\kappa \lambda \sum_{m \neq 0 }\int e^{-2\kappa|x|}\delta(x-ma)  = -\kappa \lambda \sum_{m \neq 0 } e^{-2\kappa|ma|} = -2\kappa\lambda(\frac{1}{1-e^{-2\kappa a}}-1)
+</script>
+</p>
+<p>Note that the result should not depend on <script type="math/tex">n</script>, so we chose <script type="math/tex">n=0</script> for convenience.</p>
+<p>Similarly, we can calculate</p>
+<p>
+<script type="math/tex; mode=display">
+\langle n-1 | H |n \rangle = \epsilon_0\langle n-1  |n \rangle + \langle n-1 |H_\overline{n}|n\rangle
+</script>
+</p>
+<p>where <script type="math/tex">\langle n-1|n\rangle</script> is the overlap between two neighbouring wavefunctions:</p>
+<p>
+<script type="math/tex; mode=display">
+\langle n-1|n\rangle = 2\kappa\int_0^\infty e^{-\kappa|x-a/2|}e^{-\kappa|x+a/2|} = e^{-\kappa a}(1+\kappa a)
+</script>
+</p>
+<p>and</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+\langle n-1|H_\overline{n}|n\rangle = & -\kappa \lambda \sum_{m \neq 0 }\int e^{-\kappa|x-a|} \delta(x-ma)  e^{-\kappa|x|} \\
+=& -\kappa \lambda \sum_{m \neq 0 } e^{-\kappa a|m-1|} e^{-\kappa a |m|} =-\kappa \lambda(e^{ka}+e^{-ka}) \sum_{m=1}^{m=\infty} e^{-2\kappa a m}
+\end{align}</script>
+</p>
+<p>In the limit <script type="math/tex">\kappa a \gg 1</script> (i.e., where the distance between the delta functions is large compared to the width of the isolated orbitals), the onsite energy becomes</p>
+<p>
+<script type="math/tex; mode=display">
+\langle n|H|n \rangle = \epsilon_0(1-4 e^{-2\kappa a})
+</script>
+</p>
+<p>and the hopping becomes</p>
+<p>
+<script type="math/tex; mode=display">
+\langle n-1|H|n \rangle = \epsilon_0 (\kappa a  - 2) e^{-\kappa a} \approx \epsilon_0 \kappa a e^{-\kappa a}
+</script>
 </p>
 </li>
 <li>
-<p>In exercise 2, you derived the reciprocal lattice vectors of the BCC lattice from a set of primitive lattice vectors. Use these vectors to find the family of Miller planes that has the highest density of lattice points <script type="math/tex">\rho</script>. Use that <script type="math/tex">\rho = d/V</script>, where <script type="math/tex">V</script> is the volume of the primitive unit cell and <script type="math/tex">d</script> is the distance between adjacent planes derived in the previous subquestion. Formulate the Miller plane indices with respect to the primitive lattice vectors.</p>
-<p>Since <script type="math/tex">\rho=d / V</script>, we must maximize <script type="math/tex">d</script> and therefore find the smallest <script type="math/tex">|\mathbf{G}|</script>. Using the primitive reciprocal lattice vectors derived in the previous question, we observe that all <script type="math/tex">\{\mathbf{b_i}\}</script> have the same length and we cannot combine them to obtain an even shorter vector. Therefore, we have that the {100} family of planes (in terms of the BCC primitive lattice vectors) has the highest density of lattice points. In terms of the conventional lattice vectors, this is the {110} family of planes.</p>
+<p>Compare the bands obtained in exercise 1 and 2: what are the minima and bandwidths (difference between maximum and minimum) of those bands?</p>
+<table>
+<thead>
+<tr>
+<th>..</th>
+<th>Lower Band minimum</th>
+<th>Lower Band Width</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TB model</td>
+<td>
+<script type="math/tex">\varepsilon_0-2t</script>
+</td>
+<td>
+<script type="math/tex">4t</script>
+</td>
+</tr>
+<tr>
+<td>NFE model</td>
+<td>
+<script type="math/tex">E_-(0)</script>
+</td>
+<td>
+<script type="math/tex">E_{-}(\pi/2)-E_-(0)</script>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>For what <script type="math/tex">a</script> and <script type="math/tex">\lambda</script> is the nearly free electron model more accurate? And for what <script type="math/tex">a</script> and <script type="math/tex">\lambda</script> is the tight binding model more accurate?</p>
+<p>Notice which approximations were made! For large <script type="math/tex">\lambda a</script>, the tight binding is more accurate, while for small <script type="math/tex">\lambda a</script>, the nearly free electron model is more accurate. The transition point for the regimes lies around <script type="math/tex">\lambda a\approx \hbar^2/m</script>.</p>
 </li>
 </ol></div>
 

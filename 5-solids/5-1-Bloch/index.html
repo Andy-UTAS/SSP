@@ -1209,7 +1209,7 @@ which shows that each Bloch wave can be written as a sum over plane waves that d
 <li>Contains discontinuities</li>
 </ul>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">¶</a></h2>
-<h4 id="exercise-1-blochs-theorem">Exercise 1: Bloch's theorem<a class="headerlink" href="#exercise-1-blochs-theorem" title="Permanent link">¶</a></h4>
+<h3 id="exercise-1-blochs-theorem">Exercise 1: Bloch's theorem<a class="headerlink" href="#exercise-1-blochs-theorem" title="Permanent link">¶</a></h3>
 <p>Suppose we have a crystal with lattice vectors <script type="math/tex">\mathbf{a}_ 1</script>, <script type="math/tex">\mathbf{a}_ 2</script>, and <script type="math/tex">\mathbf{a}_ 3</script>.</p>
 <ol>
 <li>What can be said about the symmetry of the Hamiltonian <script type="math/tex">\hat{H}</script> of this crystal?</li>
@@ -1218,16 +1218,16 @@ which shows that each Bloch wave can be written as a sum over plane waves that d
 <li>By applying <script type="math/tex">\hat{H}</script> to the Bloch wavefunction, show that the Schrödinger equation can be rewritten as <script type="math/tex; mode=display">\left[ \frac{\mathbf{\hat{p}}^2}{2m} + \frac{\hbar}{m} \mathbf{k} \cdot \mathbf{\hat{p}} + \frac{\hbar^2 \mathbf{k}^2}{2m} + V(\mathbf{r}) \right] u_{n,\mathbf{k}}(\mathbf{r}) = E_{n,\mathbf{k}} u_{n,\mathbf{k}}(\mathbf{r}),</script> where <script type="math/tex">\mathbf{\hat{p}} =-i\hbar\nabla</script>.</li>
 <li>What is <script type="math/tex">u_{n,\mathbf{k}}(\mathbf{r})</script> in case of free electrons? Is your answer consistent with the equation above?</li>
 </ol>
-<h4 id="exercise-2-the-central-equation-in-1d">Exercise 2: the central equation in 1D<a class="headerlink" href="#exercise-2-the-central-equation-in-1d" title="Permanent link">¶</a></h4>
+<h3 id="exercise-2-the-central-equation-in-1d">Exercise 2: the central equation in 1D<a class="headerlink" href="#exercise-2-the-central-equation-in-1d" title="Permanent link">¶</a></h3>
 <p>Let's consider a 1D crystal with a period <script type="math/tex">a</script>. Let <script type="math/tex">k_0</script> be any wave number of an electron in the first Brillouin zone.</p>
 <ol>
 <li>What <script type="math/tex">k_n</script> are equivalent to <script type="math/tex">k_0</script> in this crystal?</li>
 <li>First, we assume that the electrons with these <script type="math/tex">k_n</script> are free. In that case, what are the wavefunctions <script type="math/tex">\phi_n(x)</script> and energies <script type="math/tex">E_n</script> of these electrons?</li>
-<li>
-<p>Make a sketch of the dispersion relation using a repeated Brillouin zone representation. Indicate some <script type="math/tex">k_n</script> and <script type="math/tex">E_n</script> as well as the first Brillouin zone in your sketch.</p>
+<li>Make a sketch of the dispersion relation using a repeated Brillouin zone representation. Indicate some <script type="math/tex">k_n</script> and <script type="math/tex">E_n</script> as well as the first Brillouin zone in your sketch.</li>
+</ol>
 <p>We will now introduce a weak periodic potential <script type="math/tex">V(x) = V(x+na)</script> in our system. This causes coupling between eigenstates <script type="math/tex">\left| \phi_n\right></script> in the free electron case. In order to find the right eigenstates of the system with that potential, we need an 'LCAO-like' trial eigenstate given by <script type="math/tex; mode=display">\left|\psi\right> = \sum_{n=-\infty}^{\infty}C_n \left|\phi_n\right></script>
 </p>
-</li>
+<ol>
 <li>
 <p>Using the trial eigenstate above and the Schrödinger equation, show that <script type="math/tex; mode=display">E C_m = \varepsilon_m C_m+\sum_{n=-\infty}^{\infty} V_{n}C_{m-n},</script> where <script type="math/tex">V_n</script> are the Fourier components of the potential defined <a href="#physical-meaning-of-w">above</a>. Find an expression for <script type="math/tex">\varepsilon_m</script>. <em><strong>NB:</strong> This equation is also known as the central equation (in 1D).</em></p>
 <details class="hint">
@@ -1242,15 +1242,15 @@ which shows that each Bloch wave can be written as a sum over plane waves that d
 <p>Why is the dispersion relation only affected near <script type="math/tex">k=0</script> and at the edge of the Brillouin zone (see also figures <a href="#repeated-vs-reduced-vs-extended-brillouin-zone">above</a>)?</p>
 <details class="hint">
 <summary>Hint</summary>
-<p>To answer this question, only consider consider two free electron wavefunctions in the Hamiltonian and ignore all the others. Between what two of free electron wavefunctions does the coupling give significant contribution to the energy levels of the free electron wavefunctions?</p>
+<p>To answer this question, only consider two free electron wavefunctions in the Hamiltonian and ignore all the others. Between what two of free electron wavefunctions does the coupling give significant contribution to the energy levels of the free electron wavefunctions?</p>
 </details>
 </li>
 </ol>
-<h4 id="exercise-3-the-tight-binding-model-vs-the-nearly-free-electron-model">Exercise 3: the tight binding model vs. the nearly free electron model<a class="headerlink" href="#exercise-3-the-tight-binding-model-vs-the-nearly-free-electron-model" title="Permanent link">¶</a></h4>
+<h3 id="exercise-3-the-tight-binding-model-vs-the-nearly-free-electron-model">Exercise 3: the tight binding model vs. the nearly free electron model<a class="headerlink" href="#exercise-3-the-tight-binding-model-vs-the-nearly-free-electron-model" title="Permanent link">¶</a></h3>
 <p>Consider a 1D crystal with a periodic potential given by delta peaks: <script type="math/tex; mode=display">V(x) = -\lambda \sum_{n=-\infty}^{\infty} \delta(x+na),</script> where <script type="math/tex">\lambda>0</script>. In this exercise, we will find the band structure of this crystal in two ways:</p>
 <ul>
 <li>By means of the nearly free electron model explained in this lecture.</li>
-<li>By means of the tight binding model explained in <a href="/7_tight_binding">lecture 7</a>.</li>
+<li>By means of the <a href="/3-1d/3-1-vibrations/">tight binding model</a></li>
 </ul>
 <!-- A comment to separate two lists -->
 
@@ -1266,8 +1266,25 @@ which shows that each Bloch wave can be written as a sum over plane waves that d
 <li>
 <p>Make a sketch of the lower band.</p>
 </li>
-<li>We now use the tight binding model, where we know that the dispersion relation can be described by <script type="math/tex; mode=display">E = \varepsilon_0 - 2 t \cos (ka).</script> Find an expression for <script type="math/tex">\varepsilon_0=\left<n\right| \hat{H} \left|n\right></script> and <script type="math/tex">-t=\left<n-1\right| \hat{H} \left| n \right></script>, where <script type="math/tex">|n\rangle</script> is the wavefunction of a single <script type="math/tex">\delta</script>-peak well at site <script type="math/tex">n</script>. You may make use of the results obtained in <a href="/5_atoms_and_lcao/#exercise-2-application-of-the-lcao-model">exercise 2 of lecture 5</a> or <a href="https://en.wikipedia.org/wiki/Delta_potential">look up the wavefunction</a>.</li>
-<li>Compare the bands obtained in exercise 1 and 2: what are the minima and bandwidths (difference between maximum and minimum) of those bands?</li>
+<li>
+<p>We now use a tight binding model approach to derive the dispersion relation.
+    We know from that the corresponding dispersion is
+    <script type="math/tex; mode=display">
+    E = \varepsilon_0 - 2 t \cos (ka).
+    </script>
+    Find an expression for <script type="math/tex">\varepsilon_0=\left<n\right| \hat{H} \left|n\right></script> and <script type="math/tex">-t=\left<n-1\right| \hat{H} \left| n \right></script>, using the bound state wavefunction around a single <script type="math/tex">\delta</script>-peak, centered at site <script type="math/tex">n</script>: <script type="math/tex; mode=display">
+    |n\rangle = \kappa e^{- \kappa | x-na | }
+    , </script>
+    where <script type="math/tex">\kappa = -\frac{m \lambda}{\hbar^2}</script>.</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>To ease the calculating <script type="math/tex">\epsilon_0</script> and <script type="math/tex">t</script>, calculate them for <script type="math/tex">| n = 0 \rangle </script> and <script type="math/tex"> | n = 1 \rangle </script>.</p>
+<p>You may also make use of the results obtained in <a href="/2-chemistry/2-1-chemistry/#exercise-2-application-of-the-lcao-model-to-the-delta-function-potential">here</a> or found on <a href="https://en.wikipedia.org/wiki/Delta_potential">wikipedia</a>.</p>
+</details>
+</li>
+<li>
+<p>Compare the bands obtained in exercise 1 and 2: what are the minima and bandwidths (difference between maximum and minimum) of those bands?</p>
+</li>
 <li>For what <script type="math/tex">a</script> and <script type="math/tex">\lambda</script> is the nearly free electron model more accurate? And for what <script type="math/tex">a</script> and <script type="math/tex">\lambda</script> is the tight binding model more accurate?</li>
 </ol></div>
 
