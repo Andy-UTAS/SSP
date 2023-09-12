@@ -781,36 +781,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-3-sommerfeld" class="md-nav__link">
-    Exercise 3 - Sommerfeld
+  <a href="#exercise-2-sommerfeld" class="md-nav__link">
+    Exercise 2 - Sommerfeld
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-4-chemistry" class="md-nav__link">
-    Exercise 4 - chemistry
+  <a href="#exercise-3-chemistry" class="md-nav__link">
+    Exercise 3 - chemistry
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-5-bonding-not-lcao" class="md-nav__link">
-    Exercise 5 - Bonding: not LCAO
+  <a href="#exercise-4-bonding-not-lcao" class="md-nav__link">
+    Exercise 4 - Bonding: not LCAO
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-6-bonding-lcao" class="md-nav__link">
-    Exercise 6 - Bonding: LCAO
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercise-4-one-dimensional-oscillations" class="md-nav__link">
-    Exercise 4 - One-dimensional oscillations
+  <a href="#exercise-5-one-dimensional-oscillations" class="md-nav__link">
+    Exercise 5 - One-dimensional oscillations
   </a>
   
 </li>
@@ -878,7 +871,7 @@ E_d = \hbar \omega_{d} = k_{\mathrm{B}} T_d
 <p>where <script type="math/tex">v_s</script> is the speed of sound in the material. Therefore, one would expect the materials with large <script type="math/tex">v_s</script> to have the highest <script type="math/tex">T_d</script>. Consequently, a good guess for the highest <script type="math/tex">T_d</script> would be diamond (and indeed, it is the highest). For low <script type="math/tex">T_d</script>, low speed of sound materials will be compressible - a small spring constant in the Einstein/Debye models - so the nobel gasses or soft metals (e.g. group I) would be good candidates.</p>
 </li>
 </ol>
-<h2 id="exercise-3-sommerfeld">Exercise 3 - Sommerfeld<a class="headerlink" href="#exercise-3-sommerfeld" title="Permanent link">¶</a></h2>
+<h2 id="exercise-2-sommerfeld">Exercise 2 - Sommerfeld<a class="headerlink" href="#exercise-2-sommerfeld" title="Permanent link">¶</a></h2>
 <ol>
 <li>
 <p>In your own words, explain what is the Fermi energy, Fermi temperature and the Fermi surface</p>
@@ -942,32 +935,8 @@ E_F = \frac{\hbar^2 (2\pi N/A)}{2m} = \frac{\hbar^2\pi N/A}{m}
 </script>
 </p>
 </li>
-<li>
-<p>Using the above result, show that for a two-dimensional free-electron gas that the chemical potential <script type="math/tex">\mu</script> is independent of temperature when <script type="math/tex">T \ll \mu</script>
-</p>
-<p>From above, we have the density of states which we note to be temperature independent. Thus, for a fixed density of electrons, the chemical potential is fixed by</p>
-<p>
-<script type="math/tex; mode=display">
-n = \int_0^{\infty} \mathrm{d}E~g(E)~\frac{1}{\exp\left(\beta(E-\mu)\right)+1}.
-</script>
-</p>
-<p>The connection one must make is that except for corrections exponentially small in <script type="math/tex">\beta\mu</script>, the value of the integral is independent of <script type="math/tex">\beta</script> and thus one can assume that the dependence of <script type="math/tex">n</script> on <script type="math/tex">\mu</script> is temperature independent.</p>
-<p>If one wants to do the maths, we write the density of states as a constant <script type="math/tex">g</script> (see above) and then the integral above can be recast</p>
-<p>
-<script type="math/tex; mode=display">
-n = g \int_{-\mu}^{\infty} \mathrm{d}x~\frac{1}{\exp(\beta x)+1} = g \int_{-\mu}^{\infty} \mathrm{d}x \frac{\exp(-\beta x)}{\exp(-\beta x)+1} = \frac{g}{\beta} \log(\exp(\beta \mu)+1)
-</script>
-</p>
-<p>And for large <script type="math/tex">\beta\mu</script> (small) we can expand to have</p>
-<p>
-<script type="math/tex; mode=display">
-n/g = \mu + \mathcal{O}\left(\exp(-\beta\mu)\right)
-</script>
-</p>
-<p>which means that provided <script type="math/tex">T \ll \mu</script>, there is no dependence on the temperature.</p>
-</li>
 </ol>
-<h2 id="exercise-4-chemistry">Exercise 4 - chemistry<a class="headerlink" href="#exercise-4-chemistry" title="Permanent link">¶</a></h2>
+<h2 id="exercise-3-chemistry">Exercise 3 - chemistry<a class="headerlink" href="#exercise-3-chemistry" title="Permanent link">¶</a></h2>
 <ol>
 <li>
 <p>Explain using the simplest language you can muster why is the periodic table important?</p>
@@ -981,7 +950,7 @@ n/g = \mu + \mathcal{O}\left(\exp(-\beta\mu)\right)
 <p>which can be written in shorthand as [Rn]7s<script type="math/tex">^2</script>5f<script type="math/tex">^4</script>.</p>
 </li>
 <li>
-<p>Using any tools at your disposal (i.e. use a computer) produce a plot of the energy eigenstate described by <script type="math/tex">|5, 2, 0 \rangle</script>. You must include your code and you will be partially assessed on presentation: producing content that is digestible and visually pleasing is an important part of modern science!</p>
+<p>Using any tools at your disposal (i.e. use a computer) produce a plot of the energy eigenstate described by <script type="math/tex">|5, 2, 0 \rangle</script>. You will be partially assessed on presentation: producing content that is digestible and visually pleasing is an important part of modern science!</p>
 <p>The electronic states of hydrogen can be found in many places (e.g. <a href="https://en.wikipedia.org/wiki/Hydrogen_atom">Wikipedia</a>) and are given by</p>
 <p>
 <script type="math/tex; mode=display">
@@ -991,7 +960,7 @@ n/g = \mu + \mathcal{O}\left(\exp(-\beta\mu)\right)
 <p>where <script type="math/tex">\rho = 2r/n a_0^*</script>, <script type="math/tex">a_0^*=4\pi\epsilon_0\hbar^2/\mu e^2</script> is the reduced Bohr radius, <script type="math/tex">\mu = m_e M/(m_e + M)</script> is the reduced mass, <script type="math/tex">L_{n-\ell -1}^{2\ell +1}(\rho )</script> is the generalised Laguerre polynomial and <script type="math/tex">Y_{\ell }^{m}(\theta ,\varphi )</script> is the spherical harmonic function.</p>
 </li>
 </ol>
-<h2 id="exercise-5-bonding-not-lcao">Exercise 5 - Bonding: not LCAO<a class="headerlink" href="#exercise-5-bonding-not-lcao" title="Permanent link">¶</a></h2>
+<h2 id="exercise-4-bonding-not-lcao">Exercise 4 - Bonding: not LCAO<a class="headerlink" href="#exercise-4-bonding-not-lcao" title="Permanent link">¶</a></h2>
 <ol>
 <li>
 <p>In you own words, explain why ionic bonds occur, and what properties one would expect from and ionic solid.</p>
@@ -1040,103 +1009,7 @@ U=\frac{-\left|p_{1}\right|\left|p_{2}\right|}{4 \pi \epsilon_{0} r^{3}}=\frac{-
 <p>corresponding to a force which is attractive and proportional to <script type="math/tex">1/r7</script>. Note that while for a single isolated atom <script type="math/tex">\langle p \rangle = 0</script> the result is proportional instead to <script type="math/tex">\langle |p|^2 \rangle \sim \langle |r|^2 \rangle</script> with r the position of an electron, is nonzero.</p>
 </li>
 </ol>
-<h2 id="exercise-6-bonding-lcao">Exercise 6 - Bonding: LCAO<a class="headerlink" href="#exercise-6-bonding-lcao" title="Permanent link">¶</a></h2>
-<p>In our formulation of the LCAO formulation we assumed that orbitals were orthogonal, with the justification that the qualitative behaviour was still going to be fine.</p>
-<p>Assume that we introduce a trial wavefunction:</p>
-<p>
-<script type="math/tex; mode=display">
-|\psi \rangle = \sum_{i=1}^{N} \phi_i |i\rangle
-</script>
-</p>
-<p>however, we are not going to enforce that the state be orthogonal. Rather, we define an overlap matrix <script type="math/tex">\mathcal{S}</script> with elements</p>
-<p>
-<script type="math/tex; mode=display">
-\mathcal{S}_{i,j} = \langle i | j \rangle
-</script>
-</p>
-<ol>
-<li>
-<p>Show that with the above conditions, one arrives at an <em>effective</em> Schrödinger equation</p>
-<p>
-<script type="math/tex; mode=display">
-\mathcal{H} \phi = E\mathcal{S}\phi
-</script>
-</p>
-<p>where</p>
-<p>
-<script type="math/tex; mode=display">
-\mathcal{H}_{i,j} = \langle i | \hat{H} | j \rangle
-</script>
-</p>
-<p>and <script type="math/tex">\phi</script> is the vector of the coefficients for the <script type="math/tex">\phi_i</script>.</p>
-<p>This is the variational method 101. It is necessary to compute <script type="math/tex">E</script> through</p>
-<p>
-<script type="math/tex; mode=display">
-E=\frac{\langle\psi|H| \psi\rangle}{\langle\psi \mid \psi\rangle}=\frac{\sum_{n, m} \phi_{n}^{*} \mathcal{H}_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}}
-</script>
-</p>
-<p>which must then be minimised with respect to the <script type="math/tex">\phi_n</script>. This is most simply done by differentiating with respect to <script type="math/tex">\phi_n^*</script> and solving for the root(s):</p>
-<p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-0 =\frac{\partial E}{\partial \phi_{n}^{*}} & =\frac{\sum_{m} \mathcal{H}_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}}-\left(\frac{\sum_{n, m} \phi_{n}^{*} \mathcal{H}_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}}\right) \frac{\sum_{n, m} S_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}} \\
-& =\sum_{m} \mathcal{H}_{n m} \phi_{m}-E \sum_{m} S_{n m} \phi_{m}
-\end{aligned}
-</script>
-</p>
-<p>where we have used the definition of <script type="math/tex">E</script> above to simplify the 2nd term in the top line. This is exactly the result required.</p>
-</li>
-<li>
-<p>Consider the case where N=2 (i.e. the diatomic case) and the orbitals are <script type="math/tex">s</script> (<script type="math/tex">l=0</script>) orbitals. Use the above equation to solve for the energy eigenvalues of the system.</p>
-<p>Firstly, the reason we consider <script type="math/tex">s</script> states is because an <script type="math/tex">s</script> orbital can be taken to be manifestly positive everywhere (it has no nodes), so overlaps <script type="math/tex">S_{ij}</script> must be real and positive, making life a little easier.</p>
-<p>In order to solve the equation</p>
-<p>
-<script type="math/tex; mode=display">
-\mathcal{H} \phi = E\mathcal{S}\phi
-</script>
-</p>
-<p>it is simplest to solve the eigenvalue problem</p>
-<p>
-<script type="math/tex; mode=display">
-\mathcal{S}^{-1}\mathcal{H} \phi = E\phi.
-</script>
-</p>
-<p>As we normally do, we write the Hamiltonian <script type="math/tex">\mathcal{H}</script> as</p>
-<p>
-<script type="math/tex; mode=display">
-\mathcal{H}=\left(\begin{array}{cc}
-\epsilon & t \\
-t^{*} & \epsilon
-\end{array}\right)
-</script>
-</p>
-<p>with <script type="math/tex">t</script> the hopping and <script type="math/tex">\epsilon = \epsilon_0 + V_{\mathrm{cross}}</script>, and the overlap matrix is just</p>
-<p>
-<script type="math/tex; mode=display">
-\mathcal{S}=\left(\begin{array}{cc}
-1 & S \\
-S & 1
-\end{array}\right)
-</script>
-</p>
-<p>where we have defined the only non-trivial element <script type="math/tex">\mathcal{S}_{12} = S</script>. We then need to diagonalise</p>
-<p>
-<script type="math/tex; mode=display">
-\mathcal{S}^{-1} \mathcal{H}=\frac{1}{1-S^{2}}\left(\begin{array}{cc}
-\epsilon-S t & t-\epsilon S \\
-t-\epsilon S & \epsilon-S t
-\end{array}\right)
-</script>
-</p>
-<p>which has eigenvalues</p>
-<p>
-<script type="math/tex; mode=display">\begin{equation}
-E_{\pm} = \frac{1}{1-S^2}\left( |\epsilon - S t| \pm |t - \epsilon S| \right).
-\end{equation}</script>
-</p>
-</li>
-</ol>
-<h2 id="exercise-4-one-dimensional-oscillations">Exercise 4 - One-dimensional oscillations<a class="headerlink" href="#exercise-4-one-dimensional-oscillations" title="Permanent link">¶</a></h2>
+<h2 id="exercise-5-one-dimensional-oscillations">Exercise 5 - One-dimensional oscillations<a class="headerlink" href="#exercise-5-one-dimensional-oscillations" title="Permanent link">¶</a></h2>
 <ol>
 <li>
 <p>Explain what is meant by a <em>normal mode</em> and a <em>phonon</em></p>
@@ -1323,7 +1196,7 @@ U = \int d\omega~g(\omega)~\hbar \omega \left(n_{\textrm{B}}(\omega)+1/2\right)
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2023</span>
       
     
   </small>

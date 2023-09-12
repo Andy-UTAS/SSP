@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Practice exam
 
 The practice exam can be found [here](exams/Mockexam.pdf), and it was written to provide a flavour for the style of examination one can expect from the course as taught by me, rather than the past examinations which have followed a different course structure. Given this is pitched as a learning tool, I have included some discussion that would not be expected in an exam, but in addition to helping you achieve the best possible result on the exam, I care much more about you learning and understanding the content: hopefully this resource proves useful.

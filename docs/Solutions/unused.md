@@ -1,3 +1,132 @@
+---
+search:
+  exclude: true
+---
+
+## Exercise 2 - Sommerfeld
+
+5. Using the above result, show that for a two-dimensional free-electron gas that the chemical potential $\mu$ is independent of temperature when $T \ll \mu$
+
+    From above, we have the density of states which we note to be temperature independent. Thus, for a fixed density of electrons, the chemical potential is fixed by
+
+    $$
+    n = \int_0^{\infty} \mathrm{d}E~g(E)~\frac{1}{\exp\left(\beta(E-\mu)\right)+1}.
+    $$
+
+    The connection one must make is that except for corrections exponentially small in $\beta\mu$, the value of the integral is independent of $\beta$ and thus one can assume that the dependence of $n$ on $\mu$ is temperature independent.
+
+    If one wants to do the maths, we write the density of states as a constant $g$ (see above) and then the integral above can be recast
+
+    $$
+    n = g \int_{-\mu}^{\infty} \mathrm{d}x~\frac{1}{\exp(\beta x)+1} = g \int_{-\mu}^{\infty} \mathrm{d}x \frac{\exp(-\beta x)}{\exp(-\beta x)+1} = \frac{g}{\beta} \log(\exp(\beta \mu)+1)
+    $$
+
+    And for large $\beta\mu$ (small) we can expand to have
+
+    $$
+    n/g = \mu + \mathcal{O}\left(\exp(-\beta\mu)\right)
+    $$
+
+    which means that provided $T \ll \mu$, there is no dependence on the temperature.
+
+    ## Exercise 6 - Bonding: LCAO
+
+    In our formulation of the LCAO formulation we assumed that orbitals were orthogonal, with the justification that the qualitative behaviour was still going to be fine.
+
+    Assume that we introduce a trial wavefunction:
+
+    \[
+    |\psi \rangle = \sum_{i=1}^{N} \phi_i |i\rangle
+    \]
+
+    however, we are not going to enforce that the state be orthogonal. Rather, we define an overlap matrix $\mathcal{S}$ with elements
+
+    \[
+    \mathcal{S}_{i,j} = \langle i | j \rangle
+    \]
+
+## Exercise 5 - Bonding: LCAO
+
+1. Show that with the above conditions, one arrives at an _effective_ Schrödinger equation
+
+    \[
+    \mathcal{H} \phi = E\mathcal{S}\phi
+    \]
+
+    where
+
+    \[
+    \mathcal{H}_{i,j} = \langle i | \hat{H} | j \rangle
+    \]
+
+    and $\phi$ is the vector of the coefficients for the $\phi_i$.
+
+    This is the variational method 101. It is necessary to compute $E$ through
+
+    $$
+    E=\frac{\langle\psi|H| \psi\rangle}{\langle\psi \mid \psi\rangle}=\frac{\sum_{n, m} \phi_{n}^{*} \mathcal{H}_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}}
+    $$
+
+    which must then be minimised with respect to the $\phi_n$. This is most simply done by differentiating with respect to $\phi_n^*$ and solving for the root(s):
+
+    $$
+    \begin{aligned}
+    0 =\frac{\partial E}{\partial \phi_{n}^{*}} & =\frac{\sum_{m} \mathcal{H}_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}}-\left(\frac{\sum_{n, m} \phi_{n}^{*} \mathcal{H}_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}}\right) \frac{\sum_{n, m} S_{n m} \phi_{m}}{\sum_{n, m} \phi_{n}^{*} S_{n m} \phi_{m}} \\
+    & =\sum_{m} \mathcal{H}_{n m} \phi_{m}-E \sum_{m} S_{n m} \phi_{m}
+    \end{aligned}
+    $$
+
+    where we have used the definition of $E$ above to simplify the 2nd term in the top line. This is exactly the result required.
+
+2. Consider the case where N=2 (i.e. the diatomic case) and the orbitals are $s$ ($l=0$) orbitals. Use the above equation to solve for the energy eigenvalues of the system.
+
+    Firstly, the reason we consider $s$ states is because an $s$ orbital can be taken to be manifestly positive everywhere (it has no nodes), so overlaps $S_{ij}$ must be real and positive, making life a little easier.
+
+    In order to solve the equation
+
+    \[
+    \mathcal{H} \phi = E\mathcal{S}\phi
+    \]
+
+    it is simplest to solve the eigenvalue problem
+
+    \[
+    \mathcal{S}^{-1}\mathcal{H} \phi = E\phi.
+    \]
+
+    As we normally do, we write the Hamiltonian $\mathcal{H}$ as
+
+    $$
+    \mathcal{H}=\left(\begin{array}{cc}
+    \epsilon & t \\
+    t^{*} & \epsilon
+    \end{array}\right)
+    $$
+
+    with $t$ the hopping and $\epsilon = \epsilon_0 + V_{\mathrm{cross}}$, and the overlap matrix is just
+
+    $$
+    \mathcal{S}=\left(\begin{array}{cc}
+    1 & S \\
+    S & 1
+    \end{array}\right)
+    $$
+
+    where we have defined the only non-trivial element $\mathcal{S}_{12} = S$. We then need to diagonalise
+
+    $$
+    \mathcal{S}^{-1} \mathcal{H}=\frac{1}{1-S^{2}}\left(\begin{array}{cc}
+    \epsilon-S t & t-\epsilon S \\
+    t-\epsilon S & \epsilon-S t
+    \end{array}\right)
+    $$
+
+    which has eigenvalues
+
+    \begin{equation}
+    E_{\pm} = \frac{1}{1-S^2}\left( |\epsilon - S t| \pm |t - \epsilon S| \right).
+    \end{equation}
+
 ## Exercise 2 - Drude: mixed ion-electron conductors (MIECs)
 
 1. Calculate the electrical resistivity $\rho$

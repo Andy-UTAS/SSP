@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://andy-utas.github.io/solutions/2-1/">
+        <link rel="canonical" href="https://andy-utas.github.io/solutions/5-2/">
       
       
       
@@ -17,7 +17,7 @@
     
     
       
-        <title>Chemisty 101 - Solid-state physics</title>
+        <title>Band structure - Solid-state physics</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chemisty-101" class="md-skip">
+        <a href="#band-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chemisty 101
+              Band structure
             
           </span>
         </div>
@@ -767,55 +767,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    Exercises
-  </a>
-  
-    <nav class="md-nav" aria-label="Exercises">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#preliminary-provocations" class="md-nav__link">
-    Preliminary provocations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-1-shell-filling-model-of-atoms" class="md-nav__link">
-    Exercise 1: Shell-filling model of atoms
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-2-application-of-the-lcao-model-to-the-delta-function-potential" class="md-nav__link">
-    Exercise 2: Application of the LCAO model to the delta-function potential
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-3-polarisation-of-a-hydrogen-molecule" class="md-nav__link">
-    Exercise 3: Polarisation of a hydrogen molecule
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -830,212 +781,7 @@
                   
 
 
-<div><h1 id="chemisty-101">Chemisty 101<a class="headerlink" href="#chemisty-101" title="Permanent link">¶</a></h1>
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">¶</a></h2>
-<h3 id="preliminary-provocations">Preliminary provocations<a class="headerlink" href="#preliminary-provocations" title="Permanent link">¶</a></h3>
-<ol>
-<li>Is the assumption that the atomic orbitals are orthogonal always a reasonable assumption?</li>
-<li>What happens if the hopping <script type="math/tex">t</script> is chosen to be negative?</li>
-<li>How does the size of the Hamiltonian matrix change with the number of atoms?</li>
-<li>How does the size of the Hamiltonian matrix change if each atom now has two orbitals?</li>
-<li>Assuming that we have two atoms with a single orbital each, what is the size of the Hamiltonian matrix if we also consider the spin of the electron?</li>
-</ol>
-<h3 id="exercise-1-shell-filling-model-of-atoms">Exercise 1: Shell-filling model of atoms<a class="headerlink" href="#exercise-1-shell-filling-model-of-atoms" title="Permanent link">¶</a></h3>
-<ol>
-<li>Describe the shell-filling model of atoms.</li>
-<li>
-<p>Use Madelung’s rule to deduce the atomic shellfilling configuration of the element tungsten, which has atomic number 74.</p>
-<p>The atomic number of Tungsten is 74:
-<script type="math/tex; mode=display">
-1\textrm{s}^2 2\textrm{s}^2 2\textrm{p}^6 3\textrm{s}^23p^64s^23d^{10}4p^65s^24d^{10}5p^66s^24f^{14}5d^4
-</script>
-</p>
-</li>
-<li>
-<p>Although Madelung’s rule for the filling of electronic shells holds extremely well, there are a number of exceptions to the rule. Here are a few of them:
-  <script type="math/tex; mode=display">\textrm{Cu} = [\textrm{Ar}] 4\textrm{s}^1 3\textrm{d}^{10}</script>
-<script type="math/tex; mode=display">\textrm{Pd} = [\textrm{Kr}] 5\textrm{s}^0 4\textrm{d}^{10}</script>
-<script type="math/tex; mode=display">\textrm{Ag} = [\textrm{Kr}] 5\textrm{s}^1 4\textrm{d}^{10}</script>
-<script type="math/tex; mode=display">\textrm{Au} = [\textrm{Xe}] 6\textrm{s}^1 4\textrm{f}^{14} 5\textrm{d}^{10}</script>
-  What should the electron configurations be if these elements followed Madelung’s rule and the Aufbau principle?
-  What could be the reason for the deficiency of Madelung's rule?</p>
-<p>
-<script type="math/tex; mode=display">
-\begin{align}
-\textrm{Cu} &= [\textrm{Ar}]4s^23d^9\\
-\textrm{Pd} &= [\textrm{Kr}]5s^24d^8\\
-\textrm{Ag} &= [\textrm{Kr}]5s^24d^9\\
-\textrm{Au} &= [\textrm{Xe}]6s^24f^{14}5d^9
-\end{align}
-</script>
-</p>
-<p>The wheels fall off as <script type="math/tex">V(\mathbf{r}) \ne 1/|r|</script>
-</p>
-</li>
-</ol>
-<h3 id="exercise-2-application-of-the-lcao-model-to-the-delta-function-potential">Exercise 2: Application of the LCAO model to the delta-function potential<a class="headerlink" href="#exercise-2-application-of-the-lcao-model-to-the-delta-function-potential" title="Permanent link">¶</a></h3>
-<p>Consider an electron moving in 1D between two negative delta-function shaped potential wells.
-The complete Hamiltonian of this one-dimensional system is then:
-<script type="math/tex; mode=display">
-\hat{H} = \frac{\hat{p}^2}{2m}-V_0\delta(x_1-x)-V_0\delta(x_2-x),
-</script>
-where <script type="math/tex">V_0>0</script> is the potential strength, <script type="math/tex">\hat{p}</script> the momentum of the electron, and <script type="math/tex">x_1</script>, <script type="math/tex">x_2</script> the positions of the potential wells.</p>
-<details class="hint">
-<summary>Properties of a single <script type="math/tex">\delta</script>-function potential</summary>
-<p>A delta function <script type="math/tex">\delta(x_0 - x)</script> centered at <script type="math/tex">x_0</script> is defined to be zero everywhere except for <script type="math/tex">x_0</script>, where it tends to infinity.
-Further, a delta function has the property:
-<script type="math/tex; mode=display">
-\int_{-\infty}^{\infty} f(x)\delta(x_0-x)dx = f(x_0).
-</script>
-</p>
-<p>The procedure to find the energy and a wave function of a state bound in a <script type="math/tex">\delta</script>-function potential, <script type="math/tex">V=-V_0\delta(x-x_0)</script>, is similar to that of a quantum well:</p>
-<ol>
-<li>Assume that we have a bound state with energy <script type="math/tex">E<0</script>.</li>
-<li>Compute the wave function <script type="math/tex">\phi</script> in different regions of space: namely <script type="math/tex">x < x_0</script> and <script type="math/tex">x > x_0</script>.</li>
-<li>Apply the boundary conditions at <script type="math/tex">x = x_0</script>. The wave function <script type="math/tex">\phi</script> must be continuous, but <script type="math/tex">d\phi/dx</script> is not. Instead due to the presence of the delta-function:
-   <script type="math/tex; mode=display">
-   \frac{d\phi}{dx}\Bigr|_{x_0+\epsilon} - \frac{d\phi}{dx}\Bigr|_{x_0-\epsilon}= -\frac{2mV_0}{\hbar^2}\phi(x_0).
-   </script>
-</li>
-<li>Find at which energy the boundary conditions at <script type="math/tex">x = x_0</script> are satisfied. This is the energy of the bound state.</li>
-<li>Normalize the wave function.</li>
-</ol>
-</details>
-<p>Let us apply the LCAO model to solve this problem. Consider the trial wave function for the ground state to be a linear combination of two orbitals <script type="math/tex">|1\rangle</script> and <script type="math/tex">|2\rangle</script>:
-<script type="math/tex; mode=display">|\psi\rangle = \phi_1|1\rangle + \phi_2|2\rangle.</script>
-The orbitals <script type="math/tex">|1\rangle</script> and <script type="math/tex">|2\rangle</script> correspond to the wave functions of the electron when there is only a single delta peak present:</p>
-<p>
-<script type="math/tex; mode=display">H_1 |1\rangle = \epsilon_1 |1\rangle,</script>
-<script type="math/tex; mode=display">H_2 |2\rangle = \epsilon_2 |2\rangle.</script>
-</p>
-<p>We start of by calculating the wavefunction of an electron bound to a single delta-peak.
-To do so, you first need to set up the Schrödinger equation of a single electron bound to a single delta-peak.
-You do not have to solve the Schrödinger equation twice—you can use the symmetry of the system to calculate the wavefunction of the other electron bound to the second delta-peak.</p>
-<ol>
-<li>
-<p>Find the expressions for the wave functions of the states <script type="math/tex">|1\rangle</script> and <script type="math/tex">|2\rangle</script>: <script type="math/tex">\psi_1(x)</script> and <script type="math/tex">\psi_2(x)</script>. Also find an expression for their energies <script type="math/tex">\epsilon_1</script> and <script type="math/tex">\epsilon_2</script>. Remember that you need to normalize the wave functions.</p>
-<p>
-<script type="math/tex; mode=display">
-  \psi(x) =
-  \begin{cases}
-      &\sqrt{κ}e^{κ(x-x_1)}, x<x_1\\
-      &\sqrt{κ}e^{-κ(x-x_1)}, x>x_1
-  \end{cases}
-  </script>
-</p>
-<p>Where <script type="math/tex">κ = \sqrt{\frac{-2mE}{ħ^2}} = \frac{mV_0}{ħ^2}</script>. The energy is given by <script type="math/tex">ϵ_1 = ϵ_2 = -\frac{mV_0^2}{2ħ^2}</script>. The wave function of a single delta peak is given by</p>
-<p>
-<script type="math/tex; mode=display">
-    \psi_1(x) = \frac{\sqrt{mV_0}}{ħ}e^{-\frac{mV_0}{ħ^2}|x-x_1|}
-  </script>
-<script type="math/tex">\psi_2(x)</script> can be found by replacing <script type="math/tex">x_1</script> by <script type="math/tex">x_2</script>
-</p>
-</li>
-<li>
-<p>Construct the LCAO Hamiltonian. To simplify the calculations, assume that the orbitals are orthogonal.</p>
-<p>
-<script type="math/tex; mode=display">
-  H = -\frac{mV_0^2}{ħ^2}\begin{pmatrix}
-      1/2+\exp(-\frac{2mV_0}{ħ^2}|x_2-x_1|) &
-      \exp(-\frac{mV_0}{ħ^2}|x_2-x_1|)\\
-      \exp(-\frac{mV_0}{ħ^2}|x_2-x_1|) &
-      1/2+\exp(-\frac{2mV_0}{ħ^2}|x_2-x_1|)
-  \end{pmatrix}
-  </script>
-</p>
-</li>
-<li>
-<p>Diagonalize the LCAO Hamiltonian and find an expression for the eigenenergies of the system. It was previously mentioned that <script type="math/tex">V_0>0</script>. Using this, determine which energy corresponds to the bonding energy.</p>
-<p>
-<script type="math/tex; mode=display">
-  ϵ_{\pm} = \beta(1/2+\exp(-2\alpha) \pm \exp(-\alpha))
-  </script>
-  Where <script type="math/tex">\beta = -\frac{mV_0^2}{ħ^2}</script> and <script type="math/tex">α = \frac{mV_0}{ħ^2}|x_2-x_1|</script>
-</p>
-</li>
-</ol>
-<h3 id="exercise-3-polarisation-of-a-hydrogen-molecule">Exercise 3: Polarisation of a hydrogen molecule<a class="headerlink" href="#exercise-3-polarisation-of-a-hydrogen-molecule" title="Permanent link">¶</a></h3>
-<p>Consider a hydrogen molecule as a one-dimensional system with two identical nuclei at <script type="math/tex">x=-\frac{d}{2}</script> and <script type="math/tex">x=+\frac{d}{2}</script>, so that the center of the molecule is at <script type="math/tex">x=0</script>.
-Each atom contains a single electron with charge <script type="math/tex">-e</script>.
-The LCAO Hamiltonian of the system is given by</p>
-<p>
-<script type="math/tex; mode=display">
-H_{\textrm{eff}} = \begin{pmatrix}
-          E_0&&-t \\
-          -t&&E_0
-          \end{pmatrix}.
-</script>
-</p>
-<details class="hint">
-<summary>The electric potential is given by</summary>
-<p>
-<script type="math/tex; mode=display">
-V_{\mathbf{E}}=-\int_{C} \mathbf{E} \cdot \mathrm{d} \boldsymbol{\ell}
-</script>
-</p>
-</details>
-<ol>
-<li>
-<p>Let us add an electric field <script type="math/tex">\mathcal{E} \hat{\bf{x}}</script> to the system. Which term needs to be added to the Hamiltonian of each electron?</p>
-<p>
-<script type="math/tex; mode=display">
-  H_{\mathcal{E}} = ex\mathcal{E},
-</script>
-</p>
-</li>
-<li>
-<p>Compute the LCAO Hamiltonian of the system in presence of the electric field. What are the new onsite energies of the two orbitals?</p>
-<p>
-<script type="math/tex; mode=display">
-  \hat{H} = \begin{pmatrix}
-  E_0  & -t\\
-  -t & E_0
-  \end{pmatrix} +\begin{pmatrix}
-  ⟨1|ex\mathcal{E}|1⟩ & ⟨1|ex\mathcal{E}|2⟩\\
-  ⟨2|ex\mathcal{E}|1⟩ & ⟨2|ex\mathcal{E}|2⟩
-  \end{pmatrix} = \begin{pmatrix}
-  E_0 - \gamma & -t\\
-  -t & E_0 + \gamma
-  \end{pmatrix},
-  </script>
-  where <script type="math/tex">\gamma = e d \mathcal{E}/2</script> and have used <script type="math/tex; mode=display">⟨1|ex\mathcal{E}|1⟩ = -e d \mathcal{E}/2⟨1|1⟩ = -e d \mathcal{E}/2</script>
-</p>
-</li>
-<li>
-<p>Diagonalize the modified LCAO Hamiltonian. Find the ground state wavefunction <script type="math/tex">\psi</script>.</p>
-<p>The eigenstates of the Hamiltonian are given by:
-  <script type="math/tex; mode=display">
-      E_{\pm} = E_0\pm\sqrt{t^2+\gamma^2}
-  </script>
-  The ground state wave function is:
-  <script type="math/tex; mode=display">
-      \begin{split}
-          |\psi⟩ &= \frac{t}{\sqrt{(\gamma+\sqrt{\gamma^2+t^2})^2+t^2}}\begin{pmatrix}
-          \frac{\gamma+\sqrt{t^2+\gamma^2}}{t}\\
-          1
-          \end{pmatrix}\\
-          |\psi⟩ &= \frac{\gamma+\sqrt{t^2+\gamma^2}}{\sqrt{(\gamma+\sqrt{\gamma^2+t^2})^2+t^2}}|1⟩+\frac{t}{\sqrt{(\gamma+\sqrt{\gamma^2+t^2})^2+t^2}}|2⟩
-      \end{split}
-  </script>
-</p>
-</li>
-<li>
-<p>Find the polarisation <script type="math/tex">P</script> of the molecule in the ground state.</p>
-<details class="hint">
-<summary>Reminder: polarisation</summary>
-<p>The polarisation <script type="math/tex">P</script> of a molecule with <script type="math/tex">n\leq 2</script> electrons at its ground state <script type="math/tex">|\psi\rangle</script> is:
-<script type="math/tex; mode=display">
-P = n e \langle\psi|\hat{x}|\psi\rangle.
-</script>
-Use that ground state you found in 3.2 is a linear superposition of two orthogonal orbitals centered at <script type="math/tex">-\frac{d}{2}</script> and <script type="math/tex">+\frac{d}{2}</script>.</p>
-</details>
-<p>
-<script type="math/tex; mode=display">
-    P = -\frac{2\gamma^2}{\mathcal{E}}(\frac{1}{\sqrt{\gamma^2+t^2}})
-</script>
-</p>
-</li>
-</ol></div>
+<h1 id="band-structure">Band structure<a class="headerlink" href="#band-structure" title="Permanent link">¶</a></h1>
 
   <hr>
 <div class="md-source-file">

@@ -180,49 +180,65 @@ Extended BZ (n-th band within n-th BZ):
 * Contains discontinuities
 
 ## Exercises
-#### Exercise 1: Bloch's theorem
+
+### Exercise 1: Bloch's theorem
 Suppose we have a crystal with lattice vectors $\mathbf{a}_ 1$, $\mathbf{a}_ 2$, and $\mathbf{a}_ 3$.
 
-1. What can be said about the symmetry of the Hamiltonian $\hat{H}$ of this crystal?
-2. Now define the translation operator $\hat{T}_{\alpha,\beta,\gamma}$ so that $$\hat{T}_{\alpha,\beta,\gamma} \psi(\mathbf{r}) = \psi(\mathbf{r} - \alpha \mathbf{a}_1 - \beta \mathbf{a}_2 - \gamma \mathbf{a}_3),$$ where $\alpha$, $\beta$, $\gamma$ are integers. Show that $\hat{T}_{\alpha,\beta,\gamma}$ and $\hat{H}$ commute.
-3. Show that the Bloch wavefunctions defined in the lecture notes are eigenfunctions of $\hat{T}_{\alpha,\beta,\gamma}$. What are the corresponding eigenvalues? What does this say about the eigenfunctions of $\hat{H}$.
-4. By applying $\hat{H}$ to the Bloch wavefunction, show that the Schrödinger equation can be rewritten as $$\left[ \frac{\mathbf{\hat{p}}^2}{2m} + \frac{\hbar}{m} \mathbf{k} \cdot \mathbf{\hat{p}} + \frac{\hbar^2 \mathbf{k}^2}{2m} + V(\mathbf{r}) \right] u_{n,\mathbf{k}}(\mathbf{r}) = E_{n,\mathbf{k}} u_{n,\mathbf{k}}(\mathbf{r}),$$ where $\mathbf{\hat{p}} =-i\hbar\nabla$.
-5. What is $u_{n,\mathbf{k}}(\mathbf{r})$ in case of free electrons? Is your answer consistent with the equation above?
+  1. What can be said about the symmetry of the Hamiltonian $\hat{H}$ of this crystal?
+  2. Now define the translation operator $\hat{T}_{\alpha,\beta,\gamma}$ so that $$\hat{T}_{\alpha,\beta,\gamma} \psi(\mathbf{r}) = \psi(\mathbf{r} - \alpha \mathbf{a}_1 - \beta \mathbf{a}_2 - \gamma \mathbf{a}_3),$$ where $\alpha$, $\beta$, $\gamma$ are integers. Show that $\hat{T}_{\alpha,\beta,\gamma}$ and $\hat{H}$ commute.
+  3. Show that the Bloch wavefunctions defined in the lecture notes are eigenfunctions of $\hat{T}_{\alpha,\beta,\gamma}$. What are the corresponding eigenvalues? What does this say about the eigenfunctions of $\hat{H}$.
+  4. By applying $\hat{H}$ to the Bloch wavefunction, show that the Schrödinger equation can be rewritten as $$\left[ \frac{\mathbf{\hat{p}}^2}{2m} + \frac{\hbar}{m} \mathbf{k} \cdot \mathbf{\hat{p}} + \frac{\hbar^2 \mathbf{k}^2}{2m} + V(\mathbf{r}) \right] u_{n,\mathbf{k}}(\mathbf{r}) = E_{n,\mathbf{k}} u_{n,\mathbf{k}}(\mathbf{r}),$$ where $\mathbf{\hat{p}} =-i\hbar\nabla$.
+  5. What is $u_{n,\mathbf{k}}(\mathbf{r})$ in case of free electrons? Is your answer consistent with the equation above?
 
-#### Exercise 2: the central equation in 1D
+### Exercise 2: the central equation in 1D
 Let's consider a 1D crystal with a period $a$. Let $k_0$ be any wave number of an electron in the first Brillouin zone.
 
-1. What $k_n$ are equivalent to $k_0$ in this crystal?
-2. First, we assume that the electrons with these $k_n$ are free. In that case, what are the wavefunctions $\phi_n(x)$ and energies $E_n$ of these electrons?
-3. Make a sketch of the dispersion relation using a repeated Brillouin zone representation. Indicate some $k_n$ and $E_n$ as well as the first Brillouin zone in your sketch.
+  1. What $k_n$ are equivalent to $k_0$ in this crystal?
+  2. First, we assume that the electrons with these $k_n$ are free. In that case, what are the wavefunctions $\phi_n(x)$ and energies $E_n$ of these electrons?
+  3. Make a sketch of the dispersion relation using a repeated Brillouin zone representation. Indicate some $k_n$ and $E_n$ as well as the first Brillouin zone in your sketch.
 
-    We will now introduce a weak periodic potential $V(x) = V(x+na)$ in our system. This causes coupling between eigenstates $\left| \phi_n\right>$ in the free electron case. In order to find the right eigenstates of the system with that potential, we need an 'LCAO-like' trial eigenstate given by $$\left|\psi\right> = \sum_{n=-\infty}^{\infty}C_n \left|\phi_n\right>$$
+  We will now introduce a weak periodic potential $V(x) = V(x+na)$ in our system. This causes coupling between eigenstates $\left| \phi_n\right>$ in the free electron case. In order to find the right eigenstates of the system with that potential, we need an 'LCAO-like' trial eigenstate given by $$\left|\psi\right> = \sum_{n=-\infty}^{\infty}C_n \left|\phi_n\right>$$
 
-4. Using the trial eigenstate above and the Schrödinger equation, show that $$E C_m = \varepsilon_m C_m+\sum_{n=-\infty}^{\infty} V_{n}C_{m-n},$$ where $V_n$ are the Fourier components of the potential defined [above](#physical-meaning-of-w). Find an expression for $\varepsilon_m$. _**NB:** This equation is also known as the central equation (in 1D)._
+  4. Using the trial eigenstate above and the Schrödinger equation, show that $$E C_m = \varepsilon_m C_m+\sum_{n=-\infty}^{\infty} V_{n}C_{m-n},$$ where $V_n$ are the Fourier components of the potential defined [above](#physical-meaning-of-w). Find an expression for $\varepsilon_m$. _**NB:** This equation is also known as the central equation (in 1D)._
 
     ??? hint
         - Apply $\left<\phi_m\right|$ to the Schrödinger equation.
         - To evaluate $\left<\phi_m\right| \hat{H} \left| \phi_n\right>$, it may be helpful to separate the kinetic energy and potential energy of the Hamiltonian.
 
-5. Why is the dispersion relation only affected near $k=0$ and at the edge of the Brillouin zone (see also figures [above](#repeated-vs-reduced-vs-extended-brillouin-zone))?
+  5. Why is the dispersion relation only affected near $k=0$ and at the edge of the Brillouin zone (see also figures [above](#repeated-vs-reduced-vs-extended-brillouin-zone))?
 
     ??? hint
-        To answer this question, only consider consider two free electron wavefunctions in the Hamiltonian and ignore all the others. Between what two of free electron wavefunctions does the coupling give significant contribution to the energy levels of the free electron wavefunctions?
+        To answer this question, only consider two free electron wavefunctions in the Hamiltonian and ignore all the others. Between what two of free electron wavefunctions does the coupling give significant contribution to the energy levels of the free electron wavefunctions?
 
-#### Exercise 3: the tight binding model vs. the nearly free electron model
-Consider a 1D crystal with a periodic potential given by delta peaks: $$V(x) = -\lambda \sum_{n=-\infty}^{\infty} \delta(x+na),$$ where $\lambda>0$. In this exercise, we will find the band structure of this crystal in two ways:
+### Exercise 3: the tight binding model vs. the nearly free electron model
+  Consider a 1D crystal with a periodic potential given by delta peaks: $$V(x) = -\lambda \sum_{n=-\infty}^{\infty} \delta(x+na),$$ where $\lambda>0$. In this exercise, we will find the band structure of this crystal in two ways:
 
-- By means of the nearly free electron model explained in this lecture.
-- By means of the tight binding model explained in [lecture 7](/7_tight_binding).
+  - By means of the nearly free electron model explained in this lecture.
+  - By means of the [tight binding model](/3-1d/3-1-vibrations/)
 
 <!-- A comment to separate two lists -->
 
-1. We first find the band structure using the nearly free electron model. To this end, we consider the effect of the potential on the free electron wavefunctions given by $\psi_1(x) \propto e^{ikx}$ and $\psi_2(x) \propto e^{i[k-2\pi/a]x}$ on the interval $k=[0,\pi/a]$. Derive a dispersion relation of the lower band using the Schödinger equation and the trial eigenstate $$\Psi(x) = \alpha \psi_1(x) + \beta \psi_2(x).$$
+  1. We first find the band structure using the nearly free electron model. To this end, we consider the effect of the potential on the free electron wavefunctions given by $\psi_1(x) \propto e^{ikx}$ and $\psi_2(x) \propto e^{i[k-2\pi/a]x}$ on the interval $k=[0,\pi/a]$. Derive a dispersion relation of the lower band using the Schödinger equation and the trial eigenstate $$\Psi(x) = \alpha \psi_1(x) + \beta \psi_2(x).$$
 
     ??? hint
         Using the Schrödinger equation and the trial eigenstate, first derive a 2×2 eigenvalue problem given by $$E \begin{pmatrix}\alpha \\ \beta\end{pmatrix} = \begin{pmatrix}\varepsilon_0(k)+V_0 & V_1^* \\ V_1 & \varepsilon_0(k - 2\pi/a) + V_0\end{pmatrix} \begin{pmatrix}\alpha \\ \beta\end{pmatrix}.$$ What are $\varepsilon_0(k)$, $V_0$ and $V_1$?
 
-2. Make a sketch of the lower band.
-3. We now use the tight binding model, where we know that the dispersion relation can be described by $$E = \varepsilon_0 - 2 t \cos (ka).$$ Find an expression for $\varepsilon_0=\left<n\right| \hat{H} \left|n\right>$ and $-t=\left<n-1\right| \hat{H} \left| n \right>$, where $|n\rangle$ is the wavefunction of a single $\delta$-peak well at site $n$. You may make use of the results obtained in [exercise 2 of lecture 5](/5_atoms_and_lcao/#exercise-2-application-of-the-lcao-model) or [look up the wavefunction](https://en.wikipedia.org/wiki/Delta_potential).
-4. Compare the bands obtained in exercise 1 and 2: what are the minima and bandwidths (difference between maximum and minimum) of those bands?
-5. For what $a$ and $\lambda$ is the nearly free electron model more accurate? And for what $a$ and $\lambda$ is the tight binding model more accurate?
+  2. Make a sketch of the lower band.
+  3. We now use a tight binding model approach to derive the dispersion relation.
+    We know from that the corresponding dispersion is
+    $$
+    E = \varepsilon_0 - 2 t \cos (ka).
+    $$
+    Find an expression for $\varepsilon_0=\left<n\right| \hat{H} \left|n\right>$ and $-t=\left<n-1\right| \hat{H} \left| n \right>$, using the bound state wavefunction around a single $\delta$-peak, centered at site $n$: $$
+    |n\rangle = \kappa e^{- \kappa | x-na | }
+    , $$
+    where $\kappa = -\frac{m \lambda}{\hbar^2}$.
+
+    ??? hint
+
+        To ease the calculating $\epsilon_0$ and $t$, calculate them for $| n = 0 \rangle $ and $ | n = 1 \rangle $.
+
+        You may also make use of the results obtained in [here](/2-chemistry/2-1-chemistry/#exercise-2-application-of-the-lcao-model-to-the-delta-function-potential) or found on [wikipedia](https://en.wikipedia.org/wiki/Delta_potential).
+
+  4. Compare the bands obtained in exercise 1 and 2: what are the minima and bandwidths (difference between maximum and minimum) of those bands?
+  5. For what $a$ and $\lambda$ is the nearly free electron model more accurate? And for what $a$ and $\lambda$ is the tight binding model more accurate?
