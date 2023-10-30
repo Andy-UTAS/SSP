@@ -267,34 +267,59 @@ This, however only means that the electron current is opposite of the hole curre
 
 ## Exercises
 
-#### Exercise 1: Energy, mass, velocity and cyclotron motion of electrons and holes
+### Preliminary provocations
+
+  In this set of warm-up exercises we consider a two-dimensional semiconductor.
+
+  1. Write down an integral expression for the number of electrons in the conduction band. How does the dimensionality come in?
+  2. Write down an integral expression for the number of holes in the valence band.
+  3. Make a sketch of the density of states (=band structure) of this semiconductor.
+  4. Solve the integrals of questions 1 and 2 assuming the Fermi energy is in the gap and far away from the band edges compared to $k_bT$.
+  5. Find the Fermi energy
+
+### Exercise 1: Energy, mass, velocity and cyclotron motion of electrons and holes
 
   1. Consider the top of the valence band of a semiconductor (see [above](#semiconductors-materials-with-two-bands)). Does an electron near the top of the valence band have a positive or a negative effective mass? Does the electron's energy increase or decrease as $k$ increases from 0? Does the electron have a positive or negative group velocity for $k>0$?
   2. Answer the same last 3 questions for a hole in the valence band.
   3. We now consider an electron in a 2D semiconductor near the bottom of the conduction band described by an energy dispersion $E=E_{G}+\frac{\hbar^2}{2m^*}(k_x^2+k_y^2)$. The electron's velocity is given by $\mathbf{v}=\nabla_\mathbf{k} E/\hbar = \frac{1}{\hbar}(\frac{\partial E}{\partial k_x}\mathbf{\hat{x}} + \frac{\partial E}{\partial k_y}\mathbf{\hat{y}})$. Suppose we turn on a magnetic field $B$ in the $z$-direction. Write down the equation of motion for this electron (neglecting collisions). What is the shape of the motion of the electron? What is the characteristic 'cyclotron' frequency of this motion? What is the direction of the Lorentz force with respect to $\nabla_\mathbf{k} E$?
   4. Suppose we now consider a hole near the bottom of the conduction band and turn on a magnetic field $B$ in the $z$-direction. Is the direction of the circular motion (i.e., the chirality) of the hole the same as that of the electron? Would the chirality change if we instead consider a hole (or electron) near the top of the valence band?
 
-#### Exercise 2: holes in Drude and tight binding model
+### Exercise 2: a 1D semiconductor
+  Suppose we have a 1D semiconductor with a conduction band described by
 
-1. Recall from the [Drude model](/3_drude_model/) that electrons give rise to a negative Hall coefficient. Explain why the Hall coefficient is positive if holes are the charge carriers in a material.
-2. What would be the Hall coefficient if both carriers with equal concentration are present? Assume that both electrons and holes can move freely and have the same scattering time.
+  $$E_{cb} = E_G - 2 t_{cb} [\cos(ka)-1],$$
 
-    Recall that the dispersion relation of a [1D single orbital tight binding chain](/7_tight_binding/) is given by
-    $$E(k)=\varepsilon + 2t \cos(ka),$$
-    where $a$ is the lattice constant and $\varepsilon$ and $t$ are tight binding parameters.
+  and a valence band described by
 
-3. What is the group velocity and effective mass of this band for holes compared to that of electrons?
-4. Give an integral expression of the hole concentration in this band given the chemical potential $\mu$ and temperature $T$.
-5. Show that the sum of the electron and hole concentration in this band is constant as a function of the temperature.
+  $$E_{vb} = 2 t_{vb} [\cos(ka)-1].$$
 
-#### Exercise 3: a 1D semiconductor
-Suppose we have a 1D semiconductor with a conduction band described by $$E_{cb} = E_G - 2 t_{cb} [\cos(ka)-1],$$ and a valence band described by $$E_{vb} = 2 t_{vb} [\cos(ka)-1].$$ Furthermore, the chemical potential is set at $0 < \mu < E_G$.
+  Furthermore, the chemical potential is set at $0 < \mu < E_G$.
 
-1. Derive an expression for the group velocity and effective mass for electrons in the conduction bands and holes in the valence band.
+  1. Make a sketch of the band structure.
+  2. Derive an expression for the group velocity and effective mass for electrons in the conduction bands and holes in the valence band.
+  3. Assume that the Fermi level is far away from both bands. That is, $|E_G - \mu| \gg k_B T$ and $\mu\gg k_B T$. In that case, it is acceptable to approximate the bands for low $k$. Why is it acceptable? Write down an approximate expression of these bands.
+  4. Write down an expression for the density of states _per unit length_ for both bands using the approximated expressions. Compare with the actual density of states per unit length.
+  5. Calculate the electron density in the conduction band and the hole density in the valence band.
+  6. What would the chemical potential $\mu$ be in case of an intrinsic semiconductor?
 
-    Assume that the Fermi level is far away from both bands. That is, $|E - \mu| \gg k_B T$. In that case, it is acceptable to approximate the bands for low $k$.
+### Exercise 3: Holes and electrons in a 1D tight-binding energy band
+  Recall that the dispersion relation of a [1D single orbital tight binding chain](../../3-1d/3-3-tightbinding) is given by
 
-2. Why is it acceptable? Write down an approximate expression of these bands.
-3. Write down an expression for the density of states _per unit length_ for both bands using the approximated expressions. Compare with the actual density of states per unit length.
-4. Calculate the electron density in the conduction band and the hole density in the valence band.
-5. What would the chemical potential $\mu$ be in case of an intrinsic semiconductor?
+  $$E(k)=\varepsilon + 2t \cos(ka),$$
+
+  where $a$ is the lattice constant and $\varepsilon$ and $t$ are tight binding parameters.
+
+  1. What is the group velocity and effective mass of this band for holes compared to that of electrons?
+  2. Give an integral expression of the hole concentration in this band given the chemical potential $\mu$ and temperature $T$.
+  3. Show that the sum of the electron and hole concentration in this band is constant as a function of the temperature.
+
+### Exercise 4: The Hall coefficient when both electrons and holes are present in the system
+
+  1. Recall from the [Drude model](../../1-intoduction/1-4-emetalsI) that electrons give rise to a negative Hall coefficient. Explain why the Hall coefficient is positive if holes are the charge carriers in a material.
+  2. Recall that the Hall coefficient $R_H$ describes the change of the transverse resistivity $\rho_{xy}$ due to a change in $B$: $\rho_{xy} = \frac{E_y}{J_x}=R_H B$. When both electrons and holes are present in a system, the Hall coefficient is given by
+
+      $$
+      R_H = \frac{n_h \mu_{h}^{2}-n_e \mu_{e}^{2}}{e\left(n_h \mu_{h}+n_e \mu_{e}\right)^{2}}.
+      $$
+
+      What would be the Hall coefficient if the electrons and holes have equal concentrations and equal mobilities?

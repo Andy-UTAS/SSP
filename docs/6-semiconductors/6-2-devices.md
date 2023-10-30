@@ -254,61 +254,68 @@ A $pn$-junction has a **depletion layer** in its middle with the potential in a 
 
 ## Exercises
 
+### Preliminary provocations
+
+  1. Write down the law of mass action. Does the intrinsic carrier concentration depend on the Fermi energy?
+  2. Write down the approximate charge balance condition for a doped semiconductor in the intrinsic regime.
+  3. Write down the charge balance condition in case there are only donors and no acceptors
+  4. Again considering only donors, compute the Fermi energy in the extrinsic regime
+  5. Draw the band diagram of the PN diode. Suppose you want to send a current through the diode by a applying a voltage. On which side should you connect the positive-voltage terminal to get a large current?
+
 ### Exercise 1: Crossover between extrinsic and intrinsic regimes
 
-In the lecture we have identified the intrinsic and extrinsic regimes.
-Let us now work out what happens when the semiconductor is at the border between these two regimes, and the dopant concentration $|N_D - N_A|$ is comparable to the intrinsic one $n_i$.
+  In the lecture we have identified the intrinsic and extrinsic regimes. Let us now work out what happens when the semiconductor is at the border between these two regimes, and the dopant concentration $|N_D - N_A|$ is comparable to the intrinsic one $n_i$.
 
-1. Write down the law of mass action and the charge balance condition for a doped semiconductor.
-2. Solve this system of equations for $n_e$ and $n_h$ only assuming $E_G \gg k_B T$.
-3. Verify that your solution reproduces intrinsic regime when $|N_D - N_A| ≪ n_i$ and the extrinsic regime when $|N_D - N_A| ≫ n_i$
+  1. Write down the law of mass action and the charge balance condition for a doped semiconductor.
+  2. Solve this system of equations for $n_e$ and $n_h$ only assuming $E_G \gg k_B T$.
+  3. Verify that your solution reproduces intrinsic regime when $|N_D - N_A| ≪ n_i$ and the extrinsic regime when $|N_D - N_A| ≫ n_i$
 
 ### Exercise 2: Donor ionization
 
-Let us examine when the full donor ionization is a good assumption.
-For that we consider a doped semiconductor in the extrinsic regime.
+  Let us examine when the full donor ionization is a good assumption. For that we consider a doped semiconductor in the extrinsic regime.
 
-1. Assume that all dopants are ionized, determine the position of the Fermi level.
-2. Write down the concentration of dopants that are not ionized.
-3. Determine at what donor concentration one cannot assume anymore that all donors are ionized in germanium at room temperature.
+  1. Assume that all dopants are ionized, determine the position of the Fermi level.
+  2. Write down the concentration of dopants that are not ionized.
+  3. Determine at what donor concentration one cannot assume anymore that all donors are ionized in germanium at room temperature.
 
 ### Exercise 3: Performance of a diode
 
-Consider a pn-junction diode as follows
+  Consider a pn-junction diode as follows
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/PN_diode_with_electrical_symbol.svg/800px-PN_diode_with_electrical_symbol.svg.png" width="50%" alt="pn diode"></img>
+  <p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/PN_diode_with_electrical_symbol.svg/800px-PN_diode_with_electrical_symbol.svg.png" width="50%" alt="pn diode"></img>
+  </p>
 
-??? info "source"
-
+??? info "Source"
     By Raffamaiden [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)), [Link](https://commons.wikimedia.org/wiki/File:PN_diode_with_electrical_symbol.svg)
 
-The current flowing through a diode as a function of applied bias voltage is given by the Shockley diode equation:
+  The current flowing through a diode as a function of applied bias voltage is given by the Shockley diode equation:
 
-$$ I(V) = I_s(T)\left(e^{\frac{eV}{kT}}-1\right)$$
+  $$ I(V) = I_s(T)\left(e^{\frac{eV}{kT}}-1\right)$$
 
-where $I_s(T)$ is the saturation current.
+  where $I_s(T)$ is the saturation current.
 
-1. What is the significance of adding dopant atoms to an intrinsic semiconductor?
-   Can two intrinsic semiconductors joined together make a diode?
-2. Discuss which processes carry current in a diode under reverse bias.
-3. Based on this, estimate how the saturation current $I_s$ depends on temperature.
+  1. What is the significance of adding dopant atoms to an intrinsic semiconductor?
+     Can two intrinsic semiconductors joined together make a diode?
+  2. Discuss which processes carry current in a diode under reverse bias.
+  3. Based on this, estimate how the saturation current $I_s$ depends on temperature.
 
 ### Exercise 4: Quantum well heterojunction in detail
-Consider a a quantum well formed from a layer of GaAs of thickness $L$, surrounded by layers of Al$_{x}$Ga$_{1−x}$As.
+  Consider a a quantum well formed from a layer of GaAs of thickness $L$, surrounded by layers of Al$_{x}$Ga$_{1−x}$As.
 
-![Quantum Well](https://upload.wikimedia.org/wikipedia/commons/4/45/Quantum_well.svg)
+  ![Quantum Well](https://upload.wikimedia.org/wikipedia/commons/4/45/Quantum_well.svg){: .center}
 
-??? info "source"
+??? info "Source"
 
     Vectorised by User:Sushant savla from the work by Gianderiu - [Quantum well.svg](https://commons.wikimedia.org/w/index.php?curid=73413676), [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0 "Creative Commons Attribution-Share Alike 3.0").
 
-Assume that the band gap of the Al$_{x}$Ga$_{1−x}$As is substantially larger than that of GaAs.
-The electron effective mass in GaAs is 0.068 $m_{e}$, the hole effective mass is 0.45 $m_{e}$ with $m_{e}$ the mass of the electron.
+  Assume that the band gap of the Al$_{x}$Ga$_{1−x}$As is substantially larger than that of GaAs.
+  The electron effective mass in GaAs is 0.068 $m_{e}$, the hole effective mass is 0.45 $m_{e}$ with $m_{e}$ the mass of the electron.
 
-1. Sketch the band diagram of this quantum well.
-2. Write down the Schrödinger's equation for electrons and holes
-3. Find the energies of electron and holes in the quantum well as a function of $k_x, k_y$.
-4. Calculate the density of states of electron and holes in this quantum well.
-5. If we want to design a quantum well with a bandgap 0.1 eV larger than that of bulk $GaAs$, what thickness $L$ do we need?
-6. Why is this structure more useful for making a laser than a normal pn-junction?
-7. What would be the advantage of doping the Al$_{x}$Ga$_{1−x}$As compared to the $GaAs$ in this quantum well?
+  1. Sketch the band diagram of this quantum well.
+  2. Write down the Schrödinger's equation for electrons and holes
+  3. Find the energies of electron and holes in the quantum well as a function of $k_x, k_y$.
+  4. Calculate the density of states of electron and holes in this quantum well.
+  5. If we want to design a quantum well with a bandgap 0.1 eV larger than that of bulk $GaAs$, what thickness $L$ do we need?
+  6. Why is this structure more useful for making a laser than a normal pn-junction?
+  7. What would be the advantage of doping the Al$_{x}$Ga$_{1−x}$As compared to the $GaAs$ in this quantum well?

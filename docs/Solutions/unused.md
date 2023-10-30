@@ -192,6 +192,83 @@ search:
 
     Note that using software to do this kind of grunt work is absolutely fine (encouraged even)
 
+## Exercise 1 - Dispersion
+
+1. Use the dispersion relation to compute the group velocity $v_g$
+
+    The group velocity is given by
+
+    \begin{align}
+    v_g(k) & =\frac{\partial \omega(k)}{\partial k}\\
+    & = a \sqrt{\frac{\kappa}{m}}\cos\left(\frac{ka}{2}\right) \frac{\sin(ka/2)}{|\sin(ka/2)|}
+    \end{align}
+
+2. What is the relationship between the group velocity $v_g$ and the density of states $g(\omega)$? Use this to calculate $g(\omega)$
+
+    The relationship is
+
+    $$
+    g(\omega) = \frac{L}{\pi} \left|\frac{1}{v_g}\right|
+    $$
+
+    into which the equation from part (i) can be inserted:
+
+    \begin{align}
+    g(\omega) & = \frac{L}{a \pi} \sqrt{\frac{m}{\kappa}}\frac{1}{\cos(ka/2)}\\
+    & = \frac{L}{a \pi} \sqrt{\frac{m}{\kappa}}\frac{1}{\sqrt{1-\sin^2(ka/2)}}\\
+    & = \frac{2L}{a \pi} \frac{1}{\sqrt{4\kappa / m - \omega^2}}
+    \end{align}
+
+3. Sketch or plot both $v_g$ and $g(\omega)$
+
+    The group velocity is shown below
+
+    ![](../images/A3-1-v.svg)
+
+    and was produced using the following code:
+
+    ``` python
+    fig, ax = plt.subplots()
+    k = np.linspace(-np.pi+0.01, np.pi-0.01, 300)
+    ax.plot(k[0:149], np.sin(k[0:149])/(np.sqrt(1-np.cos(k[0:149]))), color = 'C0');
+    ax.plot(k[150:300], np.sin(k[150:300])/(np.sqrt(1-np.cos(k[150:300]))), color = 'C0');
+    ax.set_title('Group velocity')
+    ax.set_xlabel(r'$k$');
+    ax.set_ylabel('$v(k)$');
+    plt.xticks([-np.pi, 0, np.pi], [r'$-\pi/a$', 0, r'$\pi/a$']);
+    plt.yticks([-np.sqrt(2), 0, np.sqrt(2)], [r'$-2\sqrt{\frac{\kappa}{m}}$', 0, r'$2\sqrt{\frac{\kappa}{m}}$']);
+    plt.tight_layout();
+
+    plt.savefig('A3-1-v.pdf', facecolor='white', transparent=False)
+
+    plt.show()
+    ```
+
+    The density of states is shown below
+
+    ![](../images/A3-1-dos.svg)
+
+    and was produced using the (near identical) code:
+
+    ``` python
+    fig, ax = plt.subplots()
+
+    w = np.linspace(0, 0.95, 300);
+    g = 1/np.sqrt(1-w**2);
+
+    ax.plot(w, g, 'C0');
+    ax.set_xlabel(r'$\omega$');
+    ax.set_ylabel('$g(\omega)$');
+    ax.set_title('Density of states')
+    plt.xticks([0, 1], [0, r'$2\sqrt{\frac{k}{m}}$']);
+    plt.yticks([0.5, 1], [0, r'$\frac{L}{2\pi a}\sqrt{\frac{\kappa}{m}}$']);
+    plt.tight_layout();
+
+    plt.savefig('A3-1-dos.pdf', facecolor='white', transparent=False)
+
+    plt.show()
+    ```
+
 ## Exercise 3 - Quantum thermal expansion
 
 In a _content unpacking_ session, we discussed thermal expansion arising from the anharmonic term in the interatomic potential. Assume masses $m_1$ and $m_2$ for the interacting particles and let's consider an anharmonic perturbation $\delta V$
@@ -639,3 +716,33 @@ Consider a tight binding model of atoms on a (two-dimensional) square lattice wh
 
             plt.show()
             ```
+
+## Exercise 2 - Lattice planes
+
+In assignment five, you looked at the  structure of zincblende (ZnS) (zinc atoms are yellow, sulphur atoms are grey).
+
+![](../images/A5-2-Zincblende.png)
+
+1. Draw a simplified plan view (don't worry about indicating heights) down the [001] axis, and indicate the [210] direction and the (210) family of planes
+
+    The plan, planes and reciprocal lattice vector are shown below:
+
+    ![](../images/A5-2-210.png){: .center}
+
+2. The confidence tester: explain why the family of planes above is or is not a family of lattice planes.
+
+    * If it is a family of lattice planes, do nothing and be content with your decision
+    * If it is not a family of lattice planes, what would be a family of lattice planes in the same direction?
+
+    The lattice type is a Face-centred cubic (FCC), and clearly the lattice planes do capture all atoms, and thus the spacing must be decreased, or the reciprocal lattice vector doubled, so (420) would define a family of lattice planes.
+
+## Exercise 7 - Semiconductor devices
+
+Choose a semiconductor device of interest (a few examples are provided below, but choose anything), research it, and explain what the device is and how it functions, with an emphasis on the material covered in this course.
+
+* Zener diode
+* Laser diode
+* Solar cell
+* Hall effect sensor
+
+No solution provided.
