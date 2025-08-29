@@ -13,9 +13,8 @@ This site exists to enhance the distribution of course information and content f
 
     Solid-state physics is where the rubber meets the road: abstract concepts will be applied in an effort to model realistic and complex systems. There are delights are to be had, but like most truly rewarding endeavours, said delights do not come for free. In undertaking this course, it is expected that:
 
-    - You will view the video content __before__ any scheduled face-to-face sessions
-    - Prescribed problems and reading will be undertaken before any face-to-face sessions
     - You will attend all face-to-face sessions, and actively contribute to discussions and problem solving
+    - Prescribed problems and reading will be undertaken __before__ any face-to-face sessions
     - If you are experiencing difficulties, that you will get in contact as soon as is reasonably possible
 
 !!! info "Course objectives"
@@ -23,7 +22,7 @@ This site exists to enhance the distribution of course information and content f
     The purpose of this course is to provide an introduction to the world of solid-state physics. At the conclusion of your journey, you should:
 
     - Be familiar with the main models of solid-state physics, and their application to real-world systems
-    - Have proficiency parsing and extracting information from applied solid-state systems, with an eye to identification the relevant theoretical framework(s) and the concise formulation of physics to be investigated
+    - Have proficiency parsing and extracting information from applied solid-state systems, with an eye to the identification of the relevant theoretical framework(s) and the concise formulation of the physics to be investigated
     - Have experience identifying and applying appropriate approximations and physical insight to make difficult problems more tractable
     - Be familiar with experimental and analytical apparatus relevant to probing solid-state systems, in addition to some of the main systems and devices one might encounter _in the wild_
     - Have had some fun!

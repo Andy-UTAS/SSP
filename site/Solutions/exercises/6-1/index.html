@@ -1,0 +1,1605 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://andy-utas.github.io/solutions/exercises/6-1/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Semiconductors 101 - Solid-state physics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#semiconductors-101" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Solid-state physics" class="md-header__button md-logo" aria-label="Solid-state physics" data-md-component="logo">
+      
+  <img src="../../../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Solid-state physics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Semiconductors 101
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    andy-utas.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Solid-state physics" class="md-nav__button md-logo" aria-label="Solid-state physics" data-md-component="logo">
+      
+  <img src="../../../logo.png" alt="logo">
+
+    </a>
+    Solid-state physics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Andy-UTAS/andy-utas.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    andy-utas.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../particulars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course particulars
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    1: An introduction to solid-state physics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            1: An introduction to solid-state physics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-intoduction/1-1-specificheatI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.1 - The specific heat of solids I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-intoduction/1-2-specificheatII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.2 - The specific heat of solids II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-intoduction/1-3-emetalsI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.3 - Electrons in metals I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-intoduction/1-4-emetalsII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.4 - Electrons in metals II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    2: Chemistry
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            2: Chemistry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-chemistry/2-1-chemistry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.1 - Chemistry 101
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    3: One-dimensional solids
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            3: One-dimensional solids
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-1d/3-1-vibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 - Vibrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-1d/3-2-diatomic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2 - The diatomic chain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-1d/3-3-tightbinding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.3 - The tight binding model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    4: Crystallography
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            4: Crystallography
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-crystal/4-1-realspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.1 - Crystals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-crystal/4-2-kspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.2 - Crystals in reciprocal space
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-crystal/4-3-scattering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3 - Scattering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    5: Electrons in solids
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            5: Electrons in solids
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5-solids/5-1-Bloch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.1 - The nearly free electron model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5-solids/5-2-Bands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.2 - Band structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    6: Semiconductors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            6: Semiconductors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6-semiconductors/6-1-semiconductors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.1 - Semiconductors 101
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6-semiconductors/6-2-devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.2 - Doping and devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../additional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Additional material
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Solutions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exams
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Exams
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exams/exam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preliminary-provocations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preliminary provocations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1-energy-mass-velocity-and-cyclotron-motion-of-electrons-and-holes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1: Energy, mass, velocity and cyclotron motion of electrons and holes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2-a-1d-semiconductor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2: a 1D semiconductor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-holes-and-electrons-in-a-1d-tight-binding-energy-band" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3: Holes and electrons in a 1D tight-binding energy band
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-4-the-hall-coefficient-when-both-electrons-and-holes-are-present-in-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 4: The Hall coefficient when both electrons and holes are present in the system
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><h1 id="semiconductors-101">Semiconductors 101<a class="headerlink" href="#semiconductors-101" title="Permanent link">¶</a></h1>
+<h3 id="preliminary-provocations">Preliminary provocations<a class="headerlink" href="#preliminary-provocations" title="Permanent link">¶</a></h3>
+<p>In this set of warm-up exercises we consider a two-dimensional semiconductor.</p>
+<ol>
+<li>
+<p>Write down an integral expression for the number of electrons in the conduction band. How does the dimensionality come in?</p>
+<p>The dimensionality of the system enters the integral implicitly with the density of states, which in 2D and expressed per unit volume is a constant:</p>
+<p>
+<script type="math/tex; mode=display">
+g_{2 D}(E)=\frac{2_s}{2 \pi} \frac{m}{\hbar^2}
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+n_e = \int_{E_c}^\infty f(E)g_e(E)dE = \int_{E_c}^\infty\frac{m_e}{\pi\hbar^2}\frac{1}{e^{(E-E_F)/k_BT}+1}dE.
+</script>
+</p>
+</li>
+<li>
+<p>Write down an integral expression for the number of holes in the valence band.</p>
+<p>Following the derivation in the lecture notes, whenever calculating the hole-dependent quantities, replace all relevant physical quantities with their hole equivalents.</p>
+<ol>
+<li>For example, state the integral in terms of the electron energy scale using <script type="math/tex">E \equiv E_e </script> and <script type="math/tex">E_F \equiv E_{F,e}</script> with <script type="math/tex">f_n(E) = 1 -f(E)</script>:
+    <script type="math/tex; mode=display">
+    n_h = \int_{-\infty}^{E_v} f_h(E)g_h(E)dE  = \int_{-\infty}^{E_v}\frac{m_h}{\pi\hbar^2}\left(\frac{1}{e^{-(E-E_F)/k_BT}+1}\right)dE
+    </script>
+</li>
+<li>Next, using <script type="math/tex">E_h = -E</script>, change the integration element and the corresponding integration limits, and the energy variable:
+    <script type="math/tex; mode=display">
+    n_h = \int_{-E_v}^\infty\frac{m_h}{\pi\hbar^2}\frac{1}{e^{(E_h+E_F)/k_BT}+1}dE_h,
+    </script>
+</li>
+</ol>
+<p>remembering that <script type="math/tex">E_{F,h} = - E_F</script>.</p>
+</li>
+<li>
+<p>Make a sketch of the density of states (=band structure) of this semiconductor.</p>
+<p><img alt="" class="center" src="6-1-Ex0-3.svg"></p>
+</li>
+<li>
+<p>Solve the integrals of questions 1 and 2 assuming the Fermi energy is in the gap and far away from the band edges compared to <script type="math/tex">k_bT</script>.</p>
+<p>Assuming that the Fermi energy is in the gap <script type="math/tex">(E_v < E_F < E_c)</script> and far away from the band edges compared to <script type="math/tex">k_BT</script>;</p>
+<p>
+<script type="math/tex; mode=display">
+  E_F-E_v \gg k_BT \text{ and } E_c - E_F \gg k_BT,
+  </script>
+</p>
+<p>the Fermi-Dirac distribution can be approximated as Boltzmann distribution:</p>
+<p>
+<script type="math/tex; mode=display">
+  f(E)_{e/h} \approx \exp\left[-(E_{e/h}\pm E_F)/k_BT\right].
+  </script>
+</p>
+<p>and the integrals for <script type="math/tex">n_h</script> and <script type="math/tex">n_e</script> simplify to:</p>
+<p>
+<script type="math/tex; mode=display">
+  n_h \approx \int_{-E_v}^\infty\frac{m_h}{\pi\hbar^2}e^{-(E_h+E_F)/k_BT}dE_h = N_V e^{(E_v-E_F)/k_BT}
+  </script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+  n_e \approx \int_{E_c}^\infty\frac{m_e}{\pi\hbar^2}e^{-(E-E_F)/k_BT}dE = N_C e^{-(E_c+E_F)/k_BT}
+  </script>
+</p>
+<p>where</p>
+<p>
+<script type="math/tex; mode=display">
+  N_{V,C}= \frac{m_{h,e} k_B T}{\pi\hbar^2}
+  </script>
+</p>
+</li>
+<li>
+<p>Find the Fermi energy</p>
+<p>Under the assumption of the charge balance (<script type="math/tex">n_e = n_h</script>), the Fermi energy can be found by dividing the results of the previous question:
+<script type="math/tex; mode=display">
+1 = \frac{n_h}{n_e} = \left(\frac{N_V}{N_C}\right) e^{(E_v+E_c-2E_F)/k_BT} = \left(\frac{m_h}{m_e}\right) e^{(E_v+E_c-2E_F)/k_BT},
+</script>
+and taking the logarithm of both sides of the equation:
+<script type="math/tex; mode=display">
+E_F = \frac{E_V+E_C}{2} + \frac{k_B T}{2}\ln{\left(\frac{m_h}{m_e}\right)}.
+</script>
+</p>
+</li>
+</ol>
+<h3 id="exercise-1-energy-mass-velocity-and-cyclotron-motion-of-electrons-and-holes">Exercise 1: Energy, mass, velocity and cyclotron motion of electrons and holes<a class="headerlink" href="#exercise-1-energy-mass-velocity-and-cyclotron-motion-of-electrons-and-holes" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Consider the top of the valence band of a semiconductor (see <a href="#semiconductors-materials-with-two-bands">above</a>). Does an electron near the top of the valence band have a positive or a negative effective mass? Does the electron's energy increase or decrease as <script type="math/tex">k</script> increases from 0? Does the electron have a positive or negative group velocity for <script type="math/tex">k>0</script>?</p>
+<p>Electrons near the top of the valence band have a negative effective mass, their energy decreases as <script type="math/tex">k</script> increases from 0, and they have a negative group velocity for <script type="math/tex">k>0</script>.</p>
+</li>
+<li>
+<p>Answer the same last 3 questions for a hole in the valence band.</p>
+<p>Holes near the top of the valence band have a positive effective mass, their energy increases as <script type="math/tex">k</script> increases from 0, and they have a negative group velocity for <script type="math/tex">k>0</script>.</p>
+</li>
+<li>
+<p>We now consider an electron in a 2D semiconductor near the bottom of the conduction band described by an energy dispersion <script type="math/tex">E=E_{G}+\frac{\hbar^2}{2m^*}(k_x^2+k_y^2)</script>. The electron's velocity is given by <script type="math/tex">\mathbf{v}=\nabla_\mathbf{k} E/\hbar = \frac{1}{\hbar}(\frac{\partial E}{\partial k_x}\mathbf{\hat{x}} + \frac{\partial E}{\partial k_y}\mathbf{\hat{y}})</script>. Suppose we turn on a magnetic field <script type="math/tex">B</script> in the <script type="math/tex">z</script>-direction. Write down the equation of motion for this electron (neglecting collisions). What is the shape of the motion of the electron? What is the characteristic 'cyclotron' frequency of this motion? What is the direction of the Lorentz force with respect to <script type="math/tex">\nabla_\mathbf{k} E</script>?</p>
+<p>The equation of motion for an electron near the bottom of the conduction band is:</p>
+<p>
+<script type="math/tex; mode=display">
+m^* \frac{d\mathbf{v}}{dt} = -e\mathbf{v} \times \mathbf{B}
+</script>
+</p>
+<p>and when replacing we get two coupled equations:</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+\dot{k_x} &= -\frac{e}{m^*}B k_y\\
+\dot{k_y} &= +\frac{e}{m^*}B k_x
+\end{align}</script>
+</p>
+<p>The solution to this equation is circular motion of cyclotron frequency of <script type="math/tex">\omega_c = \frac{eB}{m^*}</script>, where the Lorentz
+force is perpendicular to <script type="math/tex">\nabla_\mathbf{k} E</script>.</p>
+</li>
+<li>
+<p>Suppose we now consider a hole near the bottom of the conduction band and turn on a magnetic field <script type="math/tex">B</script> in the <script type="math/tex">z</script>-direction. Is the direction of the circular motion (i.e., the chirality) of the hole the same as that of the electron? Would the chirality change if we instead consider a hole (or electron) near the top of the valence band?</p>
+<p>A hole near the bottom of the conduction band will have the same chirality as an electron.
+The chirality would be just the opposite if we would consider the valence band (for both electrons and holes).</p>
+</li>
+</ol>
+<h3 id="exercise-2-a-1d-semiconductor">Exercise 2: a 1D semiconductor<a class="headerlink" href="#exercise-2-a-1d-semiconductor" title="Permanent link">¶</a></h3>
+<p>Suppose we have a 1D semiconductor with a conduction band described by</p>
+<p>
+<script type="math/tex; mode=display">E_{cb} = E_G - 2 t_{cb} [\cos(ka)-1],</script>
+</p>
+<p>and a valence band described by</p>
+<p>
+<script type="math/tex; mode=display">E_{vb} = 2 t_{vb} [\cos(ka)-1].</script>
+</p>
+<p>Furthermore, the chemical potential is set at <script type="math/tex">0 < \mu < E_G</script>.</p>
+<ol>
+<li>
+<p>Make a sketch of the band structure.</p>
+<p><img alt="" class="center" src="6-1-Ex2-1.svg"></p>
+</li>
+<li>
+<p>Derive an expression for the group velocity and effective mass for electrons in the conduction bands and holes in the valence band.</p>
+<p>For the electrons in the conduction band we find</p>
+<p>
+<script type="math/tex; mode=display">
+v_{cb,e} = \frac{2at_{cb}}{\hbar}\sin (ka)
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+m_{cb,e} =  \frac{\hbar^2}{2a^2t_{cb}\cos (ka)}.
+</script>
+</p>
+<p>For the holes in the valence band we obtain</p>
+<p>
+<script type="math/tex; mode=display">
+v_{vb,h} = -\frac{2at_{vb}}{\hbar}\sin (ka)
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+m_{vb,h} =  -\frac{\hbar^2}{2a^2t_{vb}\cos (ka)}.
+</script>
+</p>
+</li>
+<li>
+<p>Assume that the Fermi level is far away from both bands. That is, <script type="math/tex">|E_G - \mu| \gg k_B T</script> and <script type="math/tex">\mu\gg k_B T</script>. In that case, it is acceptable to approximate the bands for low <script type="math/tex">k</script>. Why is it acceptable? Write down an approximate expression of these bands.</p>
+<p>This approximation indicates the chemical potential is "well below" the conduction band and "well above" the valence band.
+This way, only a few electrons occupy the states near the bottom of the conduction band and only a few holes occupy the states near the top of the valence band.
+This allows us the approximate the bottom of the conduction band and the top of the valence band as parabolic dispersions.
+In addition, the Fermi-Dirac distribution can be approximated as the Boltzmann distribution.</p>
+<p>The dispersions of the valence and conduction band are approximately equal to</p>
+<p>
+<script type="math/tex; mode=display">
+E_{cb} \approx E_G + t_{cb}(ka)^2
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+E_{vb} \approx -t_{vb}(ka)^2
+</script>
+</p>
+</li>
+<li>
+<p>Write down an expression for the density of states <em>per unit length</em> for both bands using the approximated expressions. Compare with the actual density of states per unit length.</p>
+<p>For the density of states for both the electrons and holes we find</p>
+<p>
+<script type="math/tex; mode=display">
+g_e(E) = \frac{1}{\pi a \sqrt{t_{cb}(E-E_G)}}, \:\: \text{if} \:\: E > E_G,
+</script>
+</p>
+<p>and</p>
+<p>
+<script type="math/tex; mode=display">
+g_h(E_h) = \frac{1}{\pi a \sqrt{t_{vb}E_h}}, \:\: \text{if} \:\: E_h > 0,
+</script>
+</p>
+<p>where <script type="math/tex">E_h = -E</script>.</p>
+</li>
+<li>
+<p>Calculate the electron density in the conduction band and the hole density in the valence band.</p>
+<p>The electron density in the conduction band is given by</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+n_e &= \int_{E_G}^{\infty} f(E)g_c(E)dE\\
+&\approx \int_{E_G}^{\infty} e^{-\beta (E-\mu)} g_c(E) dE\\
+&=\sqrt{\frac{k_B T}{\pi t_{cb}}}\frac{e^{\beta (\mu - E_G)}}{a}.
+\end{align}</script>
+</p>
+<p>Analogously, we find for the hole density</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+n_h &= \int_{0}^{\infty} f(E_h) g_h(E_h) dE_h\\
+&\approx \sqrt{\frac{k_B T}{\pi t_{vb}}}\frac{e^{-\beta \mu}}{a}.
+\end{align}</script>
+</p>
+</li>
+<li>
+<p>What would the chemical potential <script type="math/tex">\mu</script> be in case of an intrinsic semiconductor?</p>
+<p>In the intrinsic regime <script type="math/tex">n_e = n_h</script>.
+Solving this for <script type="math/tex">\mu</script> results in</p>
+<p>
+<script type="math/tex; mode=display">
+\mu = \frac{1}{2}E_G + \frac{k_B T}{4}ln(\frac{t_{cb}}{t_{vb}})
+</script>
+</p>
+</li>
+</ol>
+<h3 id="exercise-3-holes-and-electrons-in-a-1d-tight-binding-energy-band">Exercise 3: Holes and electrons in a 1D tight-binding energy band<a class="headerlink" href="#exercise-3-holes-and-electrons-in-a-1d-tight-binding-energy-band" title="Permanent link">¶</a></h3>
+<p>Recall that the dispersion relation of a <a href="../../3-1d/3-3-tightbinding">1D single orbital tight binding chain</a> is given by</p>
+<p>
+<script type="math/tex; mode=display">E(k)=\varepsilon + 2t \cos(ka),</script>
+</p>
+<p>where <script type="math/tex">a</script> is the lattice constant and <script type="math/tex">\varepsilon</script> and <script type="math/tex">t</script> are tight binding parameters.</p>
+<ol>
+<li>
+<p>What is the group velocity and effective mass of this band for holes compared to that of electrons?</p>
+<p>For electrons we find</p>
+<p>
+<script type="math/tex; mode=display">
+m_e = -\frac{\hbar^2}{2ta^2\cos(ka)}
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+v_e = -\frac{2ta\sin(ka)}{\hbar},
+</script>
+</p>
+<p>and for holes we obtained</p>
+<p>
+<script type="math/tex; mode=display">
+m_h = -m_e
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+v_h = v_e.
+</script>
+</p>
+<p>Thus the effective masses of electrons an hole will be of opposite sign, while the group velocities will be the same!</p>
+</li>
+<li>
+<p>Give an integral expression of the hole concentration in this band given the chemical potential <script type="math/tex">\mu</script> and temperature <script type="math/tex">T</script>.</p>
+<p>The number of holes is defined as</p>
+<p>
+<script type="math/tex; mode=display">
+N_h = \int_{-\varepsilon-2t}^{-\varepsilon+2t} f(E_h, E_{F,h}) g_h(E_h)d E_h,
+</script>
+</p>
+<p>where <script type="math/tex">g_h(E_h)</script> is the density of states of the holes in terms of hole energy <script type="math/tex">E_h</script>.</p>
+</li>
+<li>
+<p>Show that the sum of the electron and hole concentration in this band is constant as a function of the temperature.</p>
+</li>
+</ol>
+<h3 id="exercise-4-the-hall-coefficient-when-both-electrons-and-holes-are-present-in-the-system">Exercise 4: The Hall coefficient when both electrons and holes are present in the system<a class="headerlink" href="#exercise-4-the-hall-coefficient-when-both-electrons-and-holes-are-present-in-the-system" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Recall from the <a href="../../1-intoduction/1-4-emetalsI">Drude model</a> that electrons give rise to a negative Hall coefficient. Explain why the Hall coefficient is positive if holes are the charge carriers in a material.</p>
+<p>
+<script type="math/tex; mode=display">
+R_{H,h} = \frac{1}{ne}
+</script>
+</p>
+</li>
+<li>
+<p>Recall that the Hall coefficient <script type="math/tex">R_H</script> describes the change of the transverse resistivity <script type="math/tex">\rho_{xy}</script> due to a change in <script type="math/tex">B</script>: <script type="math/tex">\rho_{xy} = \frac{E_y}{J_x}=R_H B</script>. When both electrons and holes are present in a system, the Hall coefficient is given by</p>
+<p>
+<script type="math/tex; mode=display">
+  R_H = \frac{n_h \mu_{h}^{2}-n_e \mu_{e}^{2}}{e\left(n_h \mu_{h}+n_e \mu_{e}\right)^{2}}.
+  </script>
+</p>
+<p>What would be the Hall coefficient if the electrons and holes have equal concentrations and equal mobilities?</p>
+<p>Filling in <script type="math/tex">n_e = n_h</script> and <script type="math/tex">\mu_e=\mu_h</script> results in <script type="math/tex">R_H = 0</script>.</p>
+</li>
+</ol></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 29, 2025 05:42:12 UTC">August 29, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Content prepared and curated by <a href="mailto:andrew.mcculloch@utas.edu.au">A J McCulloch</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.sections", "search.highlight", "search.highlight", "content.code.annotate", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://unpkg.com/thebelab@0.5.0/lib/index.js"></script>
+      
+        <script src="../../../scripts/mathjaxhelper.js"></script>
+      
+        <script src="../../../scripts/thebelabhelper.js"></script>
+      
+        <script src="../../../scripts/x3dom.js"></script>
+      
+    
+  </body>
+</html>

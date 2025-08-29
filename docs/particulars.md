@@ -2,7 +2,7 @@
 
 ## Administration
 
-The solid-state component of the course will run for seven weeks, beginning in week 7 and concluding at the end of semester. In years gone by, the solid-state physics and semiconductor physics components of the course have been explicitly differentiated; however, in my teaching of the course, the two will be more closely intertwined, with semiconductors being considered a flourish to the foundations that we shall construct during our adventures in describing matter.
+The solid-state component of the course will run for seven weeks, beginning in week 7 and concluding at the end of semester. In years gone by, the solid-state physics and semiconductor physics components of the course were explicitly differentiated; however, in my teaching of the course, the two will be more closely intertwined, with semiconductors being considered a flourish to the foundational content that we shall construct during our adventures describing matter.
 
 !!! Danger "Prerequisite knowledge"
 
@@ -11,25 +11,25 @@ The solid-state component of the course will run for seven weeks, beginning in w
     - The principles and machinery of quantum mechanics. Explicitly, an understanding of how physical systems and their evolution are modelled using the Schrödinger equation, along with a fluency in common examples (e.g. particle in a box, harmonic oscillator, the hydrogen atom), and a vague familiarity with Dirac notation is assumed.
     - Thermodynamic quantities and concepts abound, with statistical mechanics looming large in the background. Conveniently, you have just completed a course in statistical mechanics, but it will be assumed that you are comfortable with the content
 
-    It is my intention that you will be required to call upon many of the other tools from the toolbox that you have been developing during your studies, with the explicit aim of further honing these tools, and maybe adding a few to the kit.
+    <u>It is my intention that</u> you will be required to call upon many of the other tools from the toolbox that you have been developing during your studies, with the explicit aim of further honing these tools, and maybe adding a few to the kit.
 
 ### Delivery of content
 
-The course will operate in a flipped-mode configuration, whereby the undergirding principle is that your out-of-class time is used to consume prepared content (e.g. _lectures_) and scheduled times are used for applications of the prepared content, and discussions in a problem-based learning framework. I prefer to refer to the lecture-style material as the _content download_, and interactive, active-learning sessions as the _content unpacking_ component.
+The course will operate in a largely conventional configuration: workshops will be held three times per week, with a tutorial taking place at the end of the week. Workshops are designed to be interactive, and will include problem solving and coding examples, whereas tutorials will exclusively be used for discussions and problem solving. An important running note is that problems for tutorials will be released at the start of the week, and each class member will be assigned a problem, which can be tackled individually or with your classmates; however, those assigned to each problem will be required to present their solution of the problem to the rest of the class. **It is important to note** that solutions to tutorial problems will not be immediately distributed: as a class you will be preparing these for one another through your work, so it is important to participate and contribute to this process.
 
 ### Subject matter
 
-The content for this course draws heavily from off the excellent text [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&) by [Steven H. Simon](https://www-thphys.physics.ox.ac.uk/people/SteveSimon/), and the book is a prescribed text for the course, that is, it is assumed that you will access to this book. This particular text was chosen because of its concise discussion of the content, its accessibility, and the wry whit which permeates the content, in concert with the availability of [freely distributed pre-print of the book](http://www-thphys.physics.ox.ac.uk/people/SteveSimon/condmat2012/LectureNotes2012.pdf). I will be working from the printed text, and I encourage you to do the same.
+The content for this course draws heavily from off the excellent text [The Oxford Solid State Basics](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771?cc=au&lang=en&) by [Steven H. Simon](https://www-thphys.physics.ox.ac.uk/people/SteveSimon/); indeed, the book is the prescribed text for the course. This means that it is assumed that you will access to this book. This particular text was chosen because of its concise discussion of the content, its accessibility, and the wry whit which permeates the content, in concert with the availability of [freely distributed pre-print of the book](http://www-thphys.physics.ox.ac.uk/people/SteveSimon/condmat2012/LectureNotes2012.pdf). I will be working from the printed text, and I encourage you to do the same.
 
 !!! warning "Unsupported material"
 
     Steven himself has said that the preprint is roughly 85% of the book; however, if you elect to work from the preprint, you do so at your own risk.
 
-#### Course outline
+### Course outline
 
 !!! summary "Course summary"
 
-    This subject is designed to serve as _an introduction_ into the field of solid-state physics. Solid-state physics is the largest field of condensed matter physics, which itself is the largest branch of physics, and so there is only so material we will cover. The trajectory we shall take begins with _bulk_ descriptors of solids, into considering the fundamental nature of solids, collective behaviour within solids, and the place of these systems in the real world.
+    This subject is designed to serve as _an introduction_ into the field of solid-state physics. Solid-state physics is the largest field of condensed matter physics, which itself is the largest branch of physics, and so there is only so much material we will cover. The trajectory we shall take begins with _bulk_ descriptors of solids, into considering the fundamental nature of solids, collective behaviour within solids, and the place of these systems in the real world.
 
 A rough outline of the course is as follows:
 
@@ -38,13 +38,16 @@ A rough outline of the course is as follows:
   3. Solids in one dimension
   4. The geometry of solids
   5. Electrons in solids
-  6. Magnetism
+  6. Applications
+  7. Magnetism
 
 with approximately one week devoted to each topic, but with the natural ebb and flow ultimately dictating the timeline.
 
-#### The notes
+### The notes
 
-The notes are designed to be consumed in concert to the video content, with certain aspects highlighted differently in the different media, and in extreme cases with different paths used to arrive at the same destination. One of my aims is to expose you to different ways of thinking about problems, not just have the same method and then just "press play".
+The notes are designed to be consumed in concert to the workshops, with certain aspects highlighted differently in the different media, and in extreme cases with different paths used to arrive at the same destination. One of my aims is to expose you to different ways of thinking about problems, not just have the same method and then just "press play".
+
+#### Structure of sections
 
 !!! danger  "Expected competencies"
 
@@ -58,37 +61,9 @@ The notes are designed to be consumed in concert to the video content, with cert
 
     Computational content, which is normally just the jupyter notebook associated with the section, also appears at the top of the page, but may also contain links to other software or pertinent computational material.
 
-#### The videos
+### The content
 
-The video content is hosted on [Echo360](https://echo360.net.au/) and is available only to those enrolled at the University of Tasmania, and is best accessed through the course [MyLO page](https://mylo.utas.edu.au/d2l/home/602930).
-
-<!-- ??? abstract "_Content download_: table of contents"
-
-    A brief summary of the topics discussed in the _content download_ sessions is shown below:
-
-    | Video       | Topic (click for details and timestamps)                   |
-    | ----------- | ------------------------------------ |
-    | [w0v01](https://echo360.net.au/media/869c549b-1931-4270-b435-943f3b155385/public) | An introduction to solid-state physics |
-    | [w1v01](https://echo360.net.au/media/54d72d00-5a24-49a3-bbc4-babd903c46c9/public) | The Einstein model of solids  |
-    | [w1v02](https://echo360.net.au/media/e2bdac93-c9a4-4839-a691-dc9af24ee1b8/public) | The Debye model of solids  |
-    | [w1v03](https://echo360.net.au/media/7253bad5-f5e9-4540-8fb5-8e693fddf613/public) | The Drude model of metals |
-    | [w2v01](https://echo360.net.au/media/9491b718-25c6-4123-b757-9bc31211b228/public) | The Sommerfeld free-electron model |
-    | [w2v02](https://echo360.net.au/media/f19fdb45-3a0f-4556-b02c-7ce29e061592/public)  | Chemistry 101 |
-    | [w3v01](https://echo360.net.au/media/d836fd83-6d43-4702-9cf0-dbd820bfcbe0/public)  | The 1D harmonic chain |
-    | [w3v02](https://echo360.net.au/media/97f94b59-947a-4f14-84df-1e91e8f01ddd/public)  | The quantum chain |
-    | [w3v03](https://echo360.net.au/media/74883cca-458e-476b-8a99-2a2c3ef0ca40/public)  | The diatomic chain |
-    | [w4v01](https://echo360.net.au/media/c8f15462-67ba-4750-ac1a-5b3a236c73b1/public) | The tight binding model |
-    | [w4v02](https://echo360.net.au/media/68464290-10ca-4f5a-92f1-68d842f6e900/public) | Crystals |
-    | [w4v03](https://echo360.net.au/media/0d2d4946-5d42-4bb8-b3da-b57882be1f1c/public) | Crystals in three dimensions |
-    | [w5v01](https://echo360.net.au/media/8e3737b2-7b07-4857-a368-482ab1ac639a/public) | The reciprocal lattice (part I) |
-    | [w5v02](https://echo360.net.au/media/3972a157-587f-49b8-a308-edf0d17e15d8/public) | The reciprocal lattice (part II) |
-    | [w5v03](https://echo360.net.au/media/ab6c99c0-7958-4f9e-af81-4712aef64c7d/public) | Scattering (part I) |
-    | [w5v04](https://echo360.net.au/media/c4e058a1-d7e5-4312-b1cc-1caaa9ee3f73/public) | Scattering (part II) |
-    | [w6v01](https://echo360.net.au/media/2a8e919b-742c-4a2f-8849-d7b8affe7d1e/public) | Scattering (part III) |
-
-    !!! note "Timestamps"
-
-        Timestamps detailing the topics discussed for each video are available in the video descriptions. -->
+Course content is available only to those enrolled at the University of Tasmania, and is best accessed through the course [MyLO page](https://mylo.utas.edu.au/d2l/home/729400).
 
 ---
 
@@ -99,24 +74,30 @@ The video content is hosted on [Echo360](https://echo360.net.au/) and is availab
   <figcaption> You are not on this journey alone: there are many avenues available to you to help you on the journey (depending on your inclination to play antiquated video games, you may recognise this as a scene from <a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda">The Legend of Zelda</a>).</figcaption>
 </figure>
 
-### "_We are all in this together_"
+### "_We are all in this together_" :fontawesome-solid-virus-covid:{ title="Can you tell that I developed this site during the COVID-19 pandemic? " }
 
-The course materials as consumed through the _content download_ components are necessarily an individual effort, but in all other facets I strongly encourage collaboration. The structure of _content unpacking_ sessions is deliberately geared towards discussion, the exchange of ideas, and collective problem solving moreso than the execution of a solution finding program.  
+Your progress through the course is necessarily subjective and thus an individual experience, but the you needn't undertake the journey alone. Indeed, I strongly encourage collaboration and the structure of workshop and tutorial sessions is deliberately geared towards discussion, the exchange of ideas, and collective problem solving more so than the execution of a solution finding program.
+
+To mediate collective input, there are a plethora of community-based platforms, all of which I will contribute to with the goal of enhancing and facilitating your learning experience. These are listed below in order of utility:
+
+  - [:fontawesome-brands-discourse:](https://discourse.utasphys.cloud.edu.au/c/ssp/9): [Discourse](https://www.discourse.org/) is a discussion platform (think [StackExchange](https://stackexchange.com/)) but specifically for physics at UTAS. The prime reason for using this service is that questions remain within class topics, meaning that students that take this class in the future can also look over our discussions :material-test-tube:{ title="This is a test feature, but hopefully it catches on" }
+  - [:fontawesome-brands-discord:](https://discord.gg/ZDP4S4c6): [Discord](https://discord.com/) is a synchronous communication platform (messaging service) which can be great for immediate communication and discussion between a community.
+  - [:material-forum-outline:](https://mylo.utas.edu.au/d2l/le/729400/discussions/List): The KYA322 discussion board on MyLO can be used for all manner of discussion and is the supported message platform of UTAS. It is no coincidence that I recommend it below the other platforms.
+
 
 ### Computational resources
 
 [<i class="fab fa-python fa-5x"></i>](https://jove2021.cloud.edu.au/){ .md-button .md-button--primary class="text-center" style="margin-left: 45%"}
 
-As part of the course, it will be expected that you perform calculation and computations. You are welcome to do this in which ever language you prefer, but it is __strongly__ recommended that you use `Python`, and indeed, this is the only language that will be supported. In order to ensure equitable and easy access to Python computing resources, a [Jupyter Notebook](https://jupyter.org/) server has been established, which allows for one to write and execute code via a web browser. The server is named Jove[^1], and access is through the [JupyterHub portal](https://jove2021.cloud.edu.au/). You will need to create an account to start using the server, but beyond this is should be click and go.
+As part of the course, it will be expected that you perform calculations and computations. You are welcome to do this in which ever language you prefer, but it is __strongly__ recommended that you use `Python`, and indeed, this is the only language that will be formally supported. In order to ensure equitable and easy access to Python computing resources, a [Jupyter Notebook](https://jupyter.org/) server has been established, which allows for one to write and execute code via a web browser. The server is named Jove[^1], and access is through the [JupyterHub portal](https://jove2021.cloud.edu.au/). You will need to create an account to start using the server, but beyond this is should be click and go. Should you experience any issues using the platform, please refer to the notes on computation as hosted on [POLUS](https://polus.utasphys.cloud.edu.au/reference/computation/#cloud-usage) and if you have issues accessing the server (e.g. a 404 error) please [contact me](mailto:andrew.mcculloch@utas.edu.au) directly and describe the problem.
 
-Should you have a machine upon which you already have, or you wish to deploy, your own instance of `Python`, this is perfectly acceptable, but note that you will have to manually import the distributed materials into Jupyter. This can be effectively accomplished using the [clone functionality of GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) as  this is where the [course content](https://github.com/Andy-UTAS/Solid-state) is hosted.
+Should you have a machine upon which you already have, or you wish to deploy, your own instance of `Python`, this is perfectly acceptable, but note that you will have to manually import the distributed materials into Jupyter. This can be effectively accomplished using the [clone functionality of GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) as this is where the [course content](https://github.com/Andy-UTAS/Solid-state) is hosted.
 
 [^1]: For those wondering, [Jove is an alternate name](https://en.wikipedia.org/wiki/Jupiter_(mythology)) for the Roman god Jupiter.
 
 ---
 
-## Bug catcher
-
-Finally, this is more of a request than anything else, but should you find any errors in the content - this site, the distributed notebooks, the content download sessions, whatever - please let me know so I can correct the content, which is a major boon for everyone involved. Thanks!
+!!! bug "Gotta catch 'em all"
+    This site was developed and is maintained and hosted solely by [me](https://discover.utas.edu.au/andrew.mcculloch). If you come across mistakes, bugs, or have ideas for content or any other quality-of-life improvements, [please get in contact](mailto:andrew.mcculloch@utas.edu.au)!
 
 --8<-- "includes/abbreviations.md"
