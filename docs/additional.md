@@ -60,6 +60,14 @@ Pre-recorded content sessions, so called _content download_ sessions were create
     | [w5v03](https://echo360.net.au/media/ab6c99c0-7958-4f9e-af81-4712aef64c7d/public) | Scattering (part I) |
     | [w5v04](https://echo360.net.au/media/c4e058a1-d7e5-4312-b1cc-1caaa9ee3f73/public) | Scattering (part II) |
     | [w6v01](https://echo360.net.au/media/2a8e919b-742c-4a2f-8849-d7b8affe7d1e/public) | Scattering (part III) |
+    | [w6v02](https://echo360.net.au/media/17fe89fc-6bc9-4f9a-a9fb-99454bbd89ad/public) | Waves in reciprocal space |
+    | [w6v03](https://echo360.net.au/media/365ad3ad-b265-4c6d-b957-73df907e1cc2/public) | The nearly-free electron model (part I) |
+    | [w6v04](https://echo360.net.au/media/f06319c9-4280-4f42-a4bb-ad6e93de8318/public) | The nearly-free electron model (part II) |
+    | [w7v01](https://echo360.net.au/media/50a564be-fe6e-43d6-ba73-bbc3b57951b5/public) | Band structure (part I) |
+    | [w7v02](https://echo360.net.au/media/daa48111-02d8-422c-9188-4c0612d0dbca/public) | Band structure (part II) |
+    | [w7v03](https://echo360.net.au/media/046ea6c2-5519-4b18-b4da-6b8231b680aa/public) | Optical properties of materials |
+    | [w7v04](https://echo360.net.au/media/8db91020-12d7-4c57-a42d-09c4000777e6/public) | Band dynamics |
+    | [w7v05](https://echo360.net.au/media/81121a85-d496-47e4-9473-2b2969f058f6/public) | Semiconductor devices |
 
     !!! note "Timestamps"
 

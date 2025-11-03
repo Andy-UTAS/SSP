@@ -13,7 +13,7 @@ This question focuses on the physics of solids without considering the microscop
 
 1. What is the Einstein model of a solid? List both the successes and the shortcomings of the model.
 
-    The Einstein model builds on the Boltzmann model for solids, which described matter as being comprised of particles interacting through a harmonic potential which was modelled using statistical mechanics. Einsein's model was to say the each particle was in an identical harmonic potential (characterised by oscillation frequency $\omega$), which was basically injecting a basic form of quantum mechanics. This had the effect of explaining the low-temperature behaviour of the heat capacity (name that is "freezes out"), but under predicts the heat capacity as there are no additional ways to store energy.
+    The Einstein model builds on the Boltzmann model for solids, which described matter as being comprised of particles interacting through a harmonic potential which was modelled using statistical mechanics. Einstein's model was to say the each particle was in an identical harmonic potential (characterised by oscillation frequency $\omega$), which was basically injecting a basic form of quantum mechanics. This had the effect of explaining the low-temperature behaviour of the heat capacity (name that is "freezes out"), but under predicts the heat capacity as there are no additional ways to store energy.
 
 2. State the assumptions of the Debye model of heat capacity for a solid.
 
